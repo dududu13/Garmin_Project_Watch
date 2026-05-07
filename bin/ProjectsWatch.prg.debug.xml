@@ -1,0 +1,1744 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<debugInfo>
+<manifest filename="D:\gduriez\Perso\Dossiers\DossiersVS\ProjectsWatch\manifest.xml"/>
+<pcToLineNum>
+<entry filename="D:\\gduriez\\Perso\\Dossiers\\DossiersVS\\ProjectsWatch\\source\\ProjectsWatchApp.mc" id="5" lineNum="15" parent="globals" pc="268435460" symbol="&lt;init&gt;"/>
+<entry filename="d:\\gduriez\\Perso\\Dossiers\\DossiersVS\\ProjectsWatch\\bin\\gen\\006-B4565-00\\source\\Rez.mcgen" id="9" lineNum="7" parent="globals/Rez" pc="268435474" symbol="&lt;init&gt;"/>
+<entry filename="D:\\gduriez\\Perso\\Dossiers\\DossiersVS\\ProjectsWatch\\source\\ProjectsWatchApp.mc" id="10" lineNum="43" parent="globals/ProjectsWatchApp" pc="268435494" symbol="&lt;init&gt;"/>
+<entry filename="D:\\gduriez\\Perso\\Dossiers\\DossiersVS\\ProjectsWatch\\source\\settingsAnalogView.mc" id="11" lineNum="6" parent="globals/SettingsAnalogView" pc="268435506" symbol="&lt;init&gt;"/>
+<entry filename="D:\\gduriez\\Perso\\Dossiers\\DossiersVS\\ProjectsWatch\\source\\MenuView.mc" id="12" lineNum="8" parent="globals/MenuView" pc="268435518" symbol="&lt;init&gt;"/>
+<entry filename="D:\\gduriez\\Perso\\Dossiers\\DossiersVS\\ProjectsWatch\\source\\ProjectsWatchApp.mc" id="13" lineNum="68" parent="globals" pc="268435530" symbol="getApp"/>
+<entry filename="D:\\gduriez\\Perso\\Dossiers\\DossiersVS\\ProjectsWatch\\source\\ProjectsWatchApp.mc" id="13" lineNum="69" parent="globals" pc="268435540" symbol="getApp"/>
+<entry filename="D:\\gduriez\\Perso\\Dossiers\\DossiersVS\\ProjectsWatch\\source\\ProjectsWatchView.mc" id="14" lineNum="6" parent="globals/ProjectsWatchView" pc="268435552" symbol="&lt;init&gt;"/>
+<entry filename="D:\\gduriez\\Perso\\Dossiers\\DossiersVS\\ProjectsWatch\\source\\MenusDelegate.mc" id="15" lineNum="8" parent="globals/MenusDelegate" pc="268435564" symbol="&lt;init&gt;"/>
+<entry filename="D:\\gduriez\\Perso\\Dossiers\\DossiersVS\\ProjectsWatch\\source\\ProjectsWatchApp.mc" id="16" lineNum="53" parent="globals/ProjectsWatchApp" pc="268435576" symbol="getSettingsView"/>
+<entry filename="D:\\gduriez\\Perso\\Dossiers\\DossiersVS\\ProjectsWatch\\source\\ProjectsWatchApp.mc" id="16" lineNum="54" parent="globals/ProjectsWatchApp" pc="268435579" symbol="getSettingsView"/>
+<entry filename="D:\\gduriez\\Perso\\Dossiers\\DossiersVS\\ProjectsWatch\\source\\ProjectsWatchApp.mc" id="16" lineNum="55" parent="globals/ProjectsWatchApp" pc="268435620" symbol="getSettingsView"/>
+<entry filename="D:\\gduriez\\Perso\\Dossiers\\DossiersVS\\ProjectsWatch\\source\\ProjectsWatchApp.mc" id="17" lineNum="58" parent="globals/ProjectsWatchApp" pc="268435653" symbol="onSettingsChanged"/>
+<entry filename="D:\\gduriez\\Perso\\Dossiers\\DossiersVS\\ProjectsWatch\\source\\ProjectsWatchApp.mc" id="17" lineNum="59" parent="globals/ProjectsWatchApp" pc="268435655" symbol="onSettingsChanged"/>
+<entry filename="D:\\gduriez\\Perso\\Dossiers\\DossiersVS\\ProjectsWatch\\source\\ProjectsWatchApp.mc" id="17" lineNum="60" parent="globals/ProjectsWatchApp" pc="268435663" symbol="onSettingsChanged"/>
+<entry filename="D:\\gduriez\\Perso\\Dossiers\\DossiersVS\\ProjectsWatch\\source\\ProjectsWatchApp.mc" id="18" lineNum="50" parent="globals/ProjectsWatchApp" pc="268435671" symbol="getInitialView"/>
+<entry filename="D:\\gduriez\\Perso\\Dossiers\\DossiersVS\\ProjectsWatch\\source\\ProjectsWatchApp.mc" id="18" lineNum="51" parent="globals/ProjectsWatchApp" pc="268435673" symbol="getInitialView"/>
+<entry filename="D:\\gduriez\\Perso\\Dossiers\\DossiersVS\\ProjectsWatch\\source\\ProjectsWatchApp.mc" id="19" lineNum="45" parent="globals/ProjectsWatchApp" pc="268435699" symbol="initialize"/>
+<entry filename="D:\\gduriez\\Perso\\Dossiers\\DossiersVS\\ProjectsWatch\\source\\ProjectsWatchApp.mc" id="19" lineNum="46" parent="globals/ProjectsWatchApp" pc="268435701" symbol="initialize"/>
+<entry filename="D:\\gduriez\\Perso\\Dossiers\\DossiersVS\\ProjectsWatch\\source\\settingsAnalogView.mc" id="20" lineNum="67" parent="globals/SettingsAnalogView" pc="268435714" symbol="next"/>
+<entry filename="D:\\gduriez\\Perso\\Dossiers\\DossiersVS\\ProjectsWatch\\source\\settingsAnalogView.mc" id="20" lineNum="68" parent="globals/SettingsAnalogView" pc="268435716" symbol="next"/>
+<entry filename="D:\\gduriez\\Perso\\Dossiers\\DossiersVS\\ProjectsWatch\\source\\settingsAnalogView.mc" id="20" lineNum="69" parent="globals/SettingsAnalogView" pc="268435755" symbol="next"/>
+<entry filename="D:\\gduriez\\Perso\\Dossiers\\DossiersVS\\ProjectsWatch\\source\\settingsAnalogView.mc" id="20" lineNum="70" parent="globals/SettingsAnalogView" pc="268435770" symbol="next"/>
+<entry filename="D:\\gduriez\\Perso\\Dossiers\\DossiersVS\\ProjectsWatch\\source\\settingsAnalogView.mc" id="21" lineNum="61" parent="globals/SettingsAnalogView" pc="268435782" symbol="prev"/>
+<entry filename="D:\\gduriez\\Perso\\Dossiers\\DossiersVS\\ProjectsWatch\\source\\settingsAnalogView.mc" id="21" lineNum="62" parent="globals/SettingsAnalogView" pc="268435784" symbol="prev"/>
+<entry filename="D:\\gduriez\\Perso\\Dossiers\\DossiersVS\\ProjectsWatch\\source\\settingsAnalogView.mc" id="21" lineNum="63" parent="globals/SettingsAnalogView" pc="268435823" symbol="prev"/>
+<entry filename="D:\\gduriez\\Perso\\Dossiers\\DossiersVS\\ProjectsWatch\\source\\settingsAnalogView.mc" id="21" lineNum="64" parent="globals/SettingsAnalogView" pc="268435838" symbol="prev"/>
+<entry filename="D:\\gduriez\\Perso\\Dossiers\\DossiersVS\\ProjectsWatch\\source\\settingsAnalogView.mc" id="22" lineNum="50" parent="globals/SettingsAnalogView" pc="268435850" symbol="dessineIndicateurAnalogique"/>
+<entry filename="D:\\gduriez\\Perso\\Dossiers\\DossiersVS\\ProjectsWatch\\source\\settingsAnalogView.mc" id="22" lineNum="51" parent="globals/SettingsAnalogView" pc="268435853" symbol="dessineIndicateurAnalogique"/>
+<entry filename="D:\\gduriez\\Perso\\Dossiers\\DossiersVS\\ProjectsWatch\\source\\settingsAnalogView.mc" id="22" lineNum="52" parent="globals/SettingsAnalogView" pc="268435869" symbol="dessineIndicateurAnalogique"/>
+<entry filename="D:\\gduriez\\Perso\\Dossiers\\DossiersVS\\ProjectsWatch\\source\\settingsAnalogView.mc" id="22" lineNum="53" parent="globals/SettingsAnalogView" pc="268435888" symbol="dessineIndicateurAnalogique"/>
+<entry filename="D:\\gduriez\\Perso\\Dossiers\\DossiersVS\\ProjectsWatch\\source\\settingsAnalogView.mc" id="22" lineNum="54" parent="globals/SettingsAnalogView" pc="268435929" symbol="dessineIndicateurAnalogique"/>
+<entry filename="D:\\gduriez\\Perso\\Dossiers\\DossiersVS\\ProjectsWatch\\source\\settingsAnalogView.mc" id="22" lineNum="55" parent="globals/SettingsAnalogView" pc="268435940" symbol="dessineIndicateurAnalogique"/>
+<entry filename="D:\\gduriez\\Perso\\Dossiers\\DossiersVS\\ProjectsWatch\\source\\settingsAnalogView.mc" id="22" lineNum="56" parent="globals/SettingsAnalogView" pc="268435961" symbol="dessineIndicateurAnalogique"/>
+<entry filename="D:\\gduriez\\Perso\\Dossiers\\DossiersVS\\ProjectsWatch\\source\\settingsAnalogView.mc" id="22" lineNum="57" parent="globals/SettingsAnalogView" pc="268435973" symbol="dessineIndicateurAnalogique"/>
+<entry filename="D:\\gduriez\\Perso\\Dossiers\\DossiersVS\\ProjectsWatch\\source\\settingsAnalogView.mc" id="22" lineNum="58" parent="globals/SettingsAnalogView" pc="268436015" symbol="dessineIndicateurAnalogique"/>
+<entry filename="D:\\gduriez\\Perso\\Dossiers\\DossiersVS\\ProjectsWatch\\source\\settingsAnalogView.mc" id="23" lineNum="20" parent="globals/SettingsAnalogView" pc="268436028" symbol="initialize"/>
+<entry filename="D:\\gduriez\\Perso\\Dossiers\\DossiersVS\\ProjectsWatch\\source\\settingsAnalogView.mc" id="23" lineNum="21" parent="globals/SettingsAnalogView" pc="268436031" symbol="initialize"/>
+<entry filename="D:\\gduriez\\Perso\\Dossiers\\DossiersVS\\ProjectsWatch\\source\\settingsAnalogView.mc" id="23" lineNum="22" parent="globals/SettingsAnalogView" pc="268436046" symbol="initialize"/>
+<entry filename="D:\\gduriez\\Perso\\Dossiers\\DossiersVS\\ProjectsWatch\\source\\settingsAnalogView.mc" id="23" lineNum="23" parent="globals/SettingsAnalogView" pc="268436055" symbol="initialize"/>
+<entry filename="D:\\gduriez\\Perso\\Dossiers\\DossiersVS\\ProjectsWatch\\source\\settingsAnalogView.mc" id="23" lineNum="24" parent="globals/SettingsAnalogView" pc="268436064" symbol="initialize"/>
+<entry filename="D:\\gduriez\\Perso\\Dossiers\\DossiersVS\\ProjectsWatch\\source\\settingsAnalogView.mc" id="23" lineNum="26" parent="globals/SettingsAnalogView" pc="268436073" symbol="initialize"/>
+<entry filename="D:\\gduriez\\Perso\\Dossiers\\DossiersVS\\ProjectsWatch\\source\\settingsAnalogView.mc" id="23" lineNum="28" parent="globals/SettingsAnalogView" pc="268436091" symbol="initialize"/>
+<entry filename="D:\\gduriez\\Perso\\Dossiers\\DossiersVS\\ProjectsWatch\\source\\settingsAnalogView.mc" id="23" lineNum="29" parent="globals/SettingsAnalogView" pc="268436106" symbol="initialize"/>
+<entry filename="D:\\gduriez\\Perso\\Dossiers\\DossiersVS\\ProjectsWatch\\source\\settingsAnalogView.mc" id="23" lineNum="30" parent="globals/SettingsAnalogView" pc="268436144" symbol="initialize"/>
+<entry filename="D:\\gduriez\\Perso\\Dossiers\\DossiersVS\\ProjectsWatch\\source\\settingsAnalogView.mc" id="23" lineNum="31" parent="globals/SettingsAnalogView" pc="268436156" symbol="initialize"/>
+<entry filename="D:\\gduriez\\Perso\\Dossiers\\DossiersVS\\ProjectsWatch\\source\\settingsAnalogView.mc" id="23" lineNum="32" parent="globals/SettingsAnalogView" pc="268436161" symbol="initialize"/>
+<entry filename="D:\\gduriez\\Perso\\Dossiers\\DossiersVS\\ProjectsWatch\\source\\settingsAnalogView.mc" id="23" lineNum="32" parent="globals/SettingsAnalogView" pc="268436178" symbol="initialize"/>
+<entry filename="D:\\gduriez\\Perso\\Dossiers\\DossiersVS\\ProjectsWatch\\source\\settingsAnalogView.mc" id="23" lineNum="33" parent="globals/SettingsAnalogView" pc="268436186" symbol="initialize"/>
+<entry filename="D:\\gduriez\\Perso\\Dossiers\\DossiersVS\\ProjectsWatch\\source\\settingsAnalogView.mc" id="23" lineNum="34" parent="globals/SettingsAnalogView" pc="268436212" symbol="initialize"/>
+<entry filename="D:\\gduriez\\Perso\\Dossiers\\DossiersVS\\ProjectsWatch\\source\\settingsAnalogView.mc" id="24" lineNum="37" parent="globals/SettingsAnalogView" pc="268436225" symbol="onUpdate"/>
+<entry filename="D:\\gduriez\\Perso\\Dossiers\\DossiersVS\\ProjectsWatch\\source\\settingsAnalogView.mc" id="24" lineNum="38" parent="globals/SettingsAnalogView" pc="268436227" symbol="onUpdate"/>
+<entry filename="D:\\gduriez\\Perso\\Dossiers\\DossiersVS\\ProjectsWatch\\source\\settingsAnalogView.mc" id="24" lineNum="39" parent="globals/SettingsAnalogView" pc="268436244" symbol="onUpdate"/>
+<entry filename="D:\\gduriez\\Perso\\Dossiers\\DossiersVS\\ProjectsWatch\\source\\settingsAnalogView.mc" id="24" lineNum="40" parent="globals/SettingsAnalogView" pc="268436258" symbol="onUpdate"/>
+<entry filename="D:\\gduriez\\Perso\\Dossiers\\DossiersVS\\ProjectsWatch\\source\\settingsAnalogView.mc" id="24" lineNum="41" parent="globals/SettingsAnalogView" pc="268436279" symbol="onUpdate"/>
+<entry filename="D:\\gduriez\\Perso\\Dossiers\\DossiersVS\\ProjectsWatch\\source\\settingsAnalogView.mc" id="24" lineNum="42" parent="globals/SettingsAnalogView" pc="268436307" symbol="onUpdate"/>
+<entry filename="D:\\gduriez\\Perso\\Dossiers\\DossiersVS\\ProjectsWatch\\source\\settingsAnalogView.mc" id="24" lineNum="43" parent="globals/SettingsAnalogView" pc="268436343" symbol="onUpdate"/>
+<entry filename="D:\\gduriez\\Perso\\Dossiers\\DossiersVS\\ProjectsWatch\\source\\settingsAnalogView.mc" id="24" lineNum="44" parent="globals/SettingsAnalogView" pc="268436404" symbol="onUpdate"/>
+<entry filename="D:\\gduriez\\Perso\\Dossiers\\DossiersVS\\ProjectsWatch\\source\\settingsAnalogView.mc" id="24" lineNum="45" parent="globals/SettingsAnalogView" pc="268436459" symbol="onUpdate"/>
+<entry filename="D:\\gduriez\\Perso\\Dossiers\\DossiersVS\\ProjectsWatch\\source\\MenuView.mc" id="25" lineNum="235" parent="globals/MenuView" pc="268436471" symbol="next"/>
+<entry filename="D:\\gduriez\\Perso\\Dossiers\\DossiersVS\\ProjectsWatch\\source\\MenuView.mc" id="25" lineNum="236" parent="globals/MenuView" pc="268436473" symbol="next"/>
+<entry filename="D:\\gduriez\\Perso\\Dossiers\\DossiersVS\\ProjectsWatch\\source\\MenuView.mc" id="25" lineNum="237" parent="globals/MenuView" pc="268436484" symbol="next"/>
+<entry filename="D:\\gduriez\\Perso\\Dossiers\\DossiersVS\\ProjectsWatch\\source\\MenuView.mc" id="26" lineNum="230" parent="globals/MenuView" pc="268436496" symbol="prev"/>
+<entry filename="D:\\gduriez\\Perso\\Dossiers\\DossiersVS\\ProjectsWatch\\source\\MenuView.mc" id="26" lineNum="231" parent="globals/MenuView" pc="268436498" symbol="prev"/>
+<entry filename="D:\\gduriez\\Perso\\Dossiers\\DossiersVS\\ProjectsWatch\\source\\MenuView.mc" id="26" lineNum="232" parent="globals/MenuView" pc="268436509" symbol="prev"/>
+<entry filename="D:\\gduriez\\Perso\\Dossiers\\DossiersVS\\ProjectsWatch\\source\\MenuView.mc" id="27" lineNum="118" parent="globals/MenuView" pc="268436521" symbol="modifie"/>
+<entry filename="D:\\gduriez\\Perso\\Dossiers\\DossiersVS\\ProjectsWatch\\source\\MenuView.mc" id="27" lineNum="119" parent="globals/MenuView" pc="268436524" symbol="modifie"/>
+<entry filename="D:\\gduriez\\Perso\\Dossiers\\DossiersVS\\ProjectsWatch\\source\\MenuView.mc" id="27" lineNum="120" parent="globals/MenuView" pc="268436540" symbol="modifie"/>
+<entry filename="D:\\gduriez\\Perso\\Dossiers\\DossiersVS\\ProjectsWatch\\source\\MenuView.mc" id="28" lineNum="88" parent="globals/MenuView" pc="268436584" symbol="ajoutSautDeLigne"/>
+<entry filename="D:\\gduriez\\Perso\\Dossiers\\DossiersVS\\ProjectsWatch\\source\\MenuView.mc" id="28" lineNum="90" parent="globals/MenuView" pc="268436587" symbol="ajoutSautDeLigne"/>
+<entry filename="D:\\gduriez\\Perso\\Dossiers\\DossiersVS\\ProjectsWatch\\source\\MenuView.mc" id="28" lineNum="91" parent="globals/MenuView" pc="268436600" symbol="ajoutSautDeLigne"/>
+<entry filename="D:\\gduriez\\Perso\\Dossiers\\DossiersVS\\ProjectsWatch\\source\\MenuView.mc" id="28" lineNum="92" parent="globals/MenuView" pc="268436633" symbol="ajoutSautDeLigne"/>
+<entry filename="D:\\gduriez\\Perso\\Dossiers\\DossiersVS\\ProjectsWatch\\source\\MenuView.mc" id="28" lineNum="93" parent="globals/MenuView" pc="268436639" symbol="ajoutSautDeLigne"/>
+<entry filename="D:\\gduriez\\Perso\\Dossiers\\DossiersVS\\ProjectsWatch\\source\\MenuView.mc" id="28" lineNum="95" parent="globals/MenuView" pc="268436690" symbol="ajoutSautDeLigne"/>
+<entry filename="D:\\gduriez\\Perso\\Dossiers\\DossiersVS\\ProjectsWatch\\source\\MenuView.mc" id="28" lineNum="96" parent="globals/MenuView" pc="268436706" symbol="ajoutSautDeLigne"/>
+<entry filename="D:\\gduriez\\Perso\\Dossiers\\DossiersVS\\ProjectsWatch\\source\\MenuView.mc" id="28" lineNum="97" parent="globals/MenuView" pc="268436739" symbol="ajoutSautDeLigne"/>
+<entry filename="D:\\gduriez\\Perso\\Dossiers\\DossiersVS\\ProjectsWatch\\source\\MenuView.mc" id="28" lineNum="98" parent="globals/MenuView" pc="268436745" symbol="ajoutSautDeLigne"/>
+<entry filename="D:\\gduriez\\Perso\\Dossiers\\DossiersVS\\ProjectsWatch\\source\\MenuView.mc" id="28" lineNum="102" parent="globals/MenuView" pc="268436799" symbol="ajoutSautDeLigne"/>
+<entry filename="D:\\gduriez\\Perso\\Dossiers\\DossiersVS\\ProjectsWatch\\source\\MenuView.mc" id="29" lineNum="123" parent="globals/MenuView" pc="268436802" symbol="testeRCAndDrawLabel"/>
+<entry filename="D:\\gduriez\\Perso\\Dossiers\\DossiersVS\\ProjectsWatch\\source\\MenuView.mc" id="29" lineNum="124" parent="globals/MenuView" pc="268436805" symbol="testeRCAndDrawLabel"/>
+<entry filename="D:\\gduriez\\Perso\\Dossiers\\DossiersVS\\ProjectsWatch\\source\\MenuView.mc" id="29" lineNum="125" parent="globals/MenuView" pc="268436827" symbol="testeRCAndDrawLabel"/>
+<entry filename="D:\\gduriez\\Perso\\Dossiers\\DossiersVS\\ProjectsWatch\\source\\MenuView.mc" id="29" lineNum="126" parent="globals/MenuView" pc="268436840" symbol="testeRCAndDrawLabel"/>
+<entry filename="D:\\gduriez\\Perso\\Dossiers\\DossiersVS\\ProjectsWatch\\source\\MenuView.mc" id="29" lineNum="127" parent="globals/MenuView" pc="268436852" symbol="testeRCAndDrawLabel"/>
+<entry filename="D:\\gduriez\\Perso\\Dossiers\\DossiersVS\\ProjectsWatch\\source\\MenuView.mc" id="29" lineNum="128" parent="globals/MenuView" pc="268436874" symbol="testeRCAndDrawLabel"/>
+<entry filename="D:\\gduriez\\Perso\\Dossiers\\DossiersVS\\ProjectsWatch\\source\\MenuView.mc" id="29" lineNum="129" parent="globals/MenuView" pc="268436903" symbol="testeRCAndDrawLabel"/>
+<entry filename="D:\\gduriez\\Perso\\Dossiers\\DossiersVS\\ProjectsWatch\\source\\MenuView.mc" id="29" lineNum="131" parent="globals/MenuView" pc="268436908" symbol="testeRCAndDrawLabel"/>
+<entry filename="D:\\gduriez\\Perso\\Dossiers\\DossiersVS\\ProjectsWatch\\source\\MenuView.mc" id="29" lineNum="132" parent="globals/MenuView" pc="268436928" symbol="testeRCAndDrawLabel"/>
+<entry filename="D:\\gduriez\\Perso\\Dossiers\\DossiersVS\\ProjectsWatch\\source\\MenuView.mc" id="30" lineNum="67" parent="globals/MenuView" pc="268436931" symbol="prepareHauteurs"/>
+<entry filename="D:\\gduriez\\Perso\\Dossiers\\DossiersVS\\ProjectsWatch\\source\\MenuView.mc" id="30" lineNum="68" parent="globals/MenuView" pc="268436934" symbol="prepareHauteurs"/>
+<entry filename="D:\\gduriez\\Perso\\Dossiers\\DossiersVS\\ProjectsWatch\\source\\MenuView.mc" id="30" lineNum="69" parent="globals/MenuView" pc="268436958" symbol="prepareHauteurs"/>
+<entry filename="D:\\gduriez\\Perso\\Dossiers\\DossiersVS\\ProjectsWatch\\source\\MenuView.mc" id="30" lineNum="70" parent="globals/MenuView" pc="268436976" symbol="prepareHauteurs"/>
+<entry filename="D:\\gduriez\\Perso\\Dossiers\\DossiersVS\\ProjectsWatch\\source\\MenuView.mc" id="30" lineNum="71" parent="globals/MenuView" pc="268436986" symbol="prepareHauteurs"/>
+<entry filename="D:\\gduriez\\Perso\\Dossiers\\DossiersVS\\ProjectsWatch\\source\\MenuView.mc" id="30" lineNum="71" parent="globals/MenuView" pc="268437002" symbol="prepareHauteurs"/>
+<entry filename="D:\\gduriez\\Perso\\Dossiers\\DossiersVS\\ProjectsWatch\\source\\MenuView.mc" id="30" lineNum="72" parent="globals/MenuView" pc="268437015" symbol="prepareHauteurs"/>
+<entry filename="D:\\gduriez\\Perso\\Dossiers\\DossiersVS\\ProjectsWatch\\source\\MenuView.mc" id="30" lineNum="74" parent="globals/MenuView" pc="268437025" symbol="prepareHauteurs"/>
+<entry filename="D:\\gduriez\\Perso\\Dossiers\\DossiersVS\\ProjectsWatch\\source\\MenuView.mc" id="30" lineNum="75" parent="globals/MenuView" pc="268437040" symbol="prepareHauteurs"/>
+<entry filename="D:\\gduriez\\Perso\\Dossiers\\DossiersVS\\ProjectsWatch\\source\\MenuView.mc" id="31" lineNum="48" parent="globals/MenuView" pc="268437049" symbol="onLayout"/>
+<entry filename="D:\\gduriez\\Perso\\Dossiers\\DossiersVS\\ProjectsWatch\\source\\MenuView.mc" id="31" lineNum="49" parent="globals/MenuView" pc="268437051" symbol="onLayout"/>
+<entry filename="D:\\gduriez\\Perso\\Dossiers\\DossiersVS\\ProjectsWatch\\source\\MenuView.mc" id="31" lineNum="51" parent="globals/MenuView" pc="268437086" symbol="onLayout"/>
+<entry filename="D:\\gduriez\\Perso\\Dossiers\\DossiersVS\\ProjectsWatch\\source\\MenuView.mc" id="31" lineNum="52" parent="globals/MenuView" pc="268437093" symbol="onLayout"/>
+<entry filename="D:\\gduriez\\Perso\\Dossiers\\DossiersVS\\ProjectsWatch\\source\\MenuView.mc" id="31" lineNum="52" parent="globals/MenuView" pc="268437101" symbol="onLayout"/>
+<entry filename="D:\\gduriez\\Perso\\Dossiers\\DossiersVS\\ProjectsWatch\\source\\MenuView.mc" id="31" lineNum="53" parent="globals/MenuView" pc="268437144" symbol="onLayout"/>
+<entry filename="D:\\gduriez\\Perso\\Dossiers\\DossiersVS\\ProjectsWatch\\source\\MenuView.mc" id="31" lineNum="54" parent="globals/MenuView" pc="268437151" symbol="onLayout"/>
+<entry filename="D:\\gduriez\\Perso\\Dossiers\\DossiersVS\\ProjectsWatch\\source\\MenuView.mc" id="31" lineNum="55" parent="globals/MenuView" pc="268437161" symbol="onLayout"/>
+<entry filename="D:\\gduriez\\Perso\\Dossiers\\DossiersVS\\ProjectsWatch\\source\\MenuView.mc" id="31" lineNum="56" parent="globals/MenuView" pc="268437179" symbol="onLayout"/>
+<entry filename="D:\\gduriez\\Perso\\Dossiers\\DossiersVS\\ProjectsWatch\\source\\MenuView.mc" id="31" lineNum="59" parent="globals/MenuView" pc="268437197" symbol="onLayout"/>
+<entry filename="D:\\gduriez\\Perso\\Dossiers\\DossiersVS\\ProjectsWatch\\source\\MenuView.mc" id="31" lineNum="61" parent="globals/MenuView" pc="268437212" symbol="onLayout"/>
+<entry filename="D:\\gduriez\\Perso\\Dossiers\\DossiersVS\\ProjectsWatch\\source\\MenuView.mc" id="31" lineNum="61" parent="globals/MenuView" pc="268437227" symbol="onLayout"/>
+<entry filename="D:\\gduriez\\Perso\\Dossiers\\DossiersVS\\ProjectsWatch\\source\\MenuView.mc" id="31" lineNum="62" parent="globals/MenuView" pc="268437238" symbol="onLayout"/>
+<entry filename="D:\\gduriez\\Perso\\Dossiers\\DossiersVS\\ProjectsWatch\\source\\MenuView.mc" id="31" lineNum="63" parent="globals/MenuView" pc="268437266" symbol="onLayout"/>
+<entry filename="D:\\gduriez\\Perso\\Dossiers\\DossiersVS\\ProjectsWatch\\source\\MenuView.mc" id="31" lineNum="64" parent="globals/MenuView" pc="268437274" symbol="onLayout"/>
+<entry filename="D:\\gduriez\\Perso\\Dossiers\\DossiersVS\\ProjectsWatch\\source\\MenuView.mc" id="32" lineNum="182" parent="globals/MenuView" pc="268437303" symbol="calculeItem0"/>
+<entry filename="D:\\gduriez\\Perso\\Dossiers\\DossiersVS\\ProjectsWatch\\source\\MenuView.mc" id="32" lineNum="183" parent="globals/MenuView" pc="268437306" symbol="calculeItem0"/>
+<entry filename="D:\\gduriez\\Perso\\Dossiers\\DossiersVS\\ProjectsWatch\\source\\MenuView.mc" id="32" lineNum="187" parent="globals/MenuView" pc="268437318" symbol="calculeItem0"/>
+<entry filename="D:\\gduriez\\Perso\\Dossiers\\DossiersVS\\ProjectsWatch\\source\\MenuView.mc" id="32" lineNum="188" parent="globals/MenuView" pc="268437345" symbol="calculeItem0"/>
+<entry filename="D:\\gduriez\\Perso\\Dossiers\\DossiersVS\\ProjectsWatch\\source\\MenuView.mc" id="32" lineNum="190" parent="globals/MenuView" pc="268437363" symbol="calculeItem0"/>
+<entry filename="D:\\gduriez\\Perso\\Dossiers\\DossiersVS\\ProjectsWatch\\source\\MenuView.mc" id="32" lineNum="191" parent="globals/MenuView" pc="268437377" symbol="calculeItem0"/>
+<entry filename="D:\\gduriez\\Perso\\Dossiers\\DossiersVS\\ProjectsWatch\\source\\MenuView.mc" id="32" lineNum="196" parent="globals/MenuView" pc="268437392" symbol="calculeItem0"/>
+<entry filename="D:\\gduriez\\Perso\\Dossiers\\DossiersVS\\ProjectsWatch\\source\\MenuView.mc" id="32" lineNum="196" parent="globals/MenuView" pc="268437406" symbol="calculeItem0"/>
+<entry filename="D:\\gduriez\\Perso\\Dossiers\\DossiersVS\\ProjectsWatch\\source\\MenuView.mc" id="32" lineNum="197" parent="globals/MenuView" pc="268437421" symbol="calculeItem0"/>
+<entry filename="D:\\gduriez\\Perso\\Dossiers\\DossiersVS\\ProjectsWatch\\source\\MenuView.mc" id="32" lineNum="197" parent="globals/MenuView" pc="268437441" symbol="calculeItem0"/>
+<entry filename="D:\\gduriez\\Perso\\Dossiers\\DossiersVS\\ProjectsWatch\\source\\MenuView.mc" id="32" lineNum="201" parent="globals/MenuView" pc="268437462" symbol="calculeItem0"/>
+<entry filename="D:\\gduriez\\Perso\\Dossiers\\DossiersVS\\ProjectsWatch\\source\\MenuView.mc" id="32" lineNum="202" parent="globals/MenuView" pc="268437489" symbol="calculeItem0"/>
+<entry filename="D:\\gduriez\\Perso\\Dossiers\\DossiersVS\\ProjectsWatch\\source\\MenuView.mc" id="32" lineNum="202" parent="globals/MenuView" pc="268437500" symbol="calculeItem0"/>
+<entry filename="D:\\gduriez\\Perso\\Dossiers\\DossiersVS\\ProjectsWatch\\source\\MenuView.mc" id="32" lineNum="203" parent="globals/MenuView" pc="268437506" symbol="calculeItem0"/>
+<entry filename="D:\\gduriez\\Perso\\Dossiers\\DossiersVS\\ProjectsWatch\\source\\MenuView.mc" id="32" lineNum="204" parent="globals/MenuView" pc="268437525" symbol="calculeItem0"/>
+<entry filename="D:\\gduriez\\Perso\\Dossiers\\DossiersVS\\ProjectsWatch\\source\\MenuView.mc" id="32" lineNum="205" parent="globals/MenuView" pc="268437540" symbol="calculeItem0"/>
+<entry filename="D:\\gduriez\\Perso\\Dossiers\\DossiersVS\\ProjectsWatch\\source\\MenuView.mc" id="32" lineNum="209" parent="globals/MenuView" pc="268437560" symbol="calculeItem0"/>
+<entry filename="D:\\gduriez\\Perso\\Dossiers\\DossiersVS\\ProjectsWatch\\source\\MenuView.mc" id="32" lineNum="210" parent="globals/MenuView" pc="268437594" symbol="calculeItem0"/>
+<entry filename="D:\\gduriez\\Perso\\Dossiers\\DossiersVS\\ProjectsWatch\\source\\MenuView.mc" id="32" lineNum="215" parent="globals/MenuView" pc="268437618" symbol="calculeItem0"/>
+<entry filename="D:\\gduriez\\Perso\\Dossiers\\DossiersVS\\ProjectsWatch\\source\\MenuView.mc" id="32" lineNum="216" parent="globals/MenuView" pc="268437641" symbol="calculeItem0"/>
+<entry filename="D:\\gduriez\\Perso\\Dossiers\\DossiersVS\\ProjectsWatch\\source\\MenuView.mc" id="32" lineNum="219" parent="globals/MenuView" pc="268437665" symbol="calculeItem0"/>
+<entry filename="D:\\gduriez\\Perso\\Dossiers\\DossiersVS\\ProjectsWatch\\source\\MenuView.mc" id="32" lineNum="220" parent="globals/MenuView" pc="268437679" symbol="calculeItem0"/>
+<entry filename="D:\\gduriez\\Perso\\Dossiers\\DossiersVS\\ProjectsWatch\\source\\MenuView.mc" id="32" lineNum="223" parent="globals/MenuView" pc="268437694" symbol="calculeItem0"/>
+<entry filename="D:\\gduriez\\Perso\\Dossiers\\DossiersVS\\ProjectsWatch\\source\\MenuView.mc" id="32" lineNum="224" parent="globals/MenuView" pc="268437714" symbol="calculeItem0"/>
+<entry filename="D:\\gduriez\\Perso\\Dossiers\\DossiersVS\\ProjectsWatch\\source\\MenuView.mc" id="33" lineNum="78" parent="globals/MenuView" pc="268437733" symbol="prepareTab"/>
+<entry filename="D:\\gduriez\\Perso\\Dossiers\\DossiersVS\\ProjectsWatch\\source\\MenuView.mc" id="33" lineNum="79" parent="globals/MenuView" pc="268437736" symbol="prepareTab"/>
+<entry filename="D:\\gduriez\\Perso\\Dossiers\\DossiersVS\\ProjectsWatch\\source\\MenuView.mc" id="33" lineNum="80" parent="globals/MenuView" pc="268437744" symbol="prepareTab"/>
+<entry filename="D:\\gduriez\\Perso\\Dossiers\\DossiersVS\\ProjectsWatch\\source\\MenuView.mc" id="33" lineNum="81" parent="globals/MenuView" pc="268437764" symbol="prepareTab"/>
+<entry filename="D:\\gduriez\\Perso\\Dossiers\\DossiersVS\\ProjectsWatch\\source\\MenuView.mc" id="33" lineNum="82" parent="globals/MenuView" pc="268437782" symbol="prepareTab"/>
+<entry filename="D:\\gduriez\\Perso\\Dossiers\\DossiersVS\\ProjectsWatch\\source\\MenuView.mc" id="33" lineNum="83" parent="globals/MenuView" pc="268437800" symbol="prepareTab"/>
+<entry filename="D:\\gduriez\\Perso\\Dossiers\\DossiersVS\\ProjectsWatch\\source\\MenuView.mc" id="34" lineNum="114" parent="globals/MenuView" pc="268437824" symbol="isRC"/>
+<entry filename="D:\\gduriez\\Perso\\Dossiers\\DossiersVS\\ProjectsWatch\\source\\MenuView.mc" id="34" lineNum="115" parent="globals/MenuView" pc="268437826" symbol="isRC"/>
+<entry filename="D:\\gduriez\\Perso\\Dossiers\\DossiersVS\\ProjectsWatch\\source\\MenuView.mc" id="35" lineNum="105" parent="globals/MenuView" pc="268437841" symbol="supprimeSautDeLigne"/>
+<entry filename="D:\\gduriez\\Perso\\Dossiers\\DossiersVS\\ProjectsWatch\\source\\MenuView.mc" id="35" lineNum="106" parent="globals/MenuView" pc="268437844" symbol="supprimeSautDeLigne"/>
+<entry filename="D:\\gduriez\\Perso\\Dossiers\\DossiersVS\\ProjectsWatch\\source\\MenuView.mc" id="35" lineNum="107" parent="globals/MenuView" pc="268437860" symbol="supprimeSautDeLigne"/>
+<entry filename="D:\\gduriez\\Perso\\Dossiers\\DossiersVS\\ProjectsWatch\\source\\MenuView.mc" id="35" lineNum="108" parent="globals/MenuView" pc="268437866" symbol="supprimeSautDeLigne"/>
+<entry filename="D:\\gduriez\\Perso\\Dossiers\\DossiersVS\\ProjectsWatch\\source\\MenuView.mc" id="35" lineNum="110" parent="globals/MenuView" pc="268437911" symbol="supprimeSautDeLigne"/>
+<entry filename="D:\\gduriez\\Perso\\Dossiers\\DossiersVS\\ProjectsWatch\\source\\MenuView.mc" id="36" lineNum="28" parent="globals/MenuView" pc="268437914" symbol="initialize"/>
+<entry filename="D:\\gduriez\\Perso\\Dossiers\\DossiersVS\\ProjectsWatch\\source\\MenuView.mc" id="36" lineNum="29" parent="globals/MenuView" pc="268437916" symbol="initialize"/>
+<entry filename="D:\\gduriez\\Perso\\Dossiers\\DossiersVS\\ProjectsWatch\\source\\MenuView.mc" id="36" lineNum="30" parent="globals/MenuView" pc="268437928" symbol="initialize"/>
+<entry filename="D:\\gduriez\\Perso\\Dossiers\\DossiersVS\\ProjectsWatch\\source\\MenuView.mc" id="36" lineNum="31" parent="globals/MenuView" pc="268437937" symbol="initialize"/>
+<entry filename="D:\\gduriez\\Perso\\Dossiers\\DossiersVS\\ProjectsWatch\\source\\MenuView.mc" id="36" lineNum="32" parent="globals/MenuView" pc="268437946" symbol="initialize"/>
+<entry filename="D:\\gduriez\\Perso\\Dossiers\\DossiersVS\\ProjectsWatch\\source\\MenuView.mc" id="36" lineNum="33" parent="globals/MenuView" pc="268437955" symbol="initialize"/>
+<entry filename="D:\\gduriez\\Perso\\Dossiers\\DossiersVS\\ProjectsWatch\\source\\MenuView.mc" id="36" lineNum="34" parent="globals/MenuView" pc="268437988" symbol="initialize"/>
+<entry filename="D:\\gduriez\\Perso\\Dossiers\\DossiersVS\\ProjectsWatch\\source\\MenuView.mc" id="36" lineNum="36" parent="globals/MenuView" pc="268437997" symbol="initialize"/>
+<entry filename="D:\\gduriez\\Perso\\Dossiers\\DossiersVS\\ProjectsWatch\\source\\MenuView.mc" id="36" lineNum="37" parent="globals/MenuView" pc="268438006" symbol="initialize"/>
+<entry filename="D:\\gduriez\\Perso\\Dossiers\\DossiersVS\\ProjectsWatch\\source\\MenuView.mc" id="36" lineNum="38" parent="globals/MenuView" pc="268438024" symbol="initialize"/>
+<entry filename="D:\\gduriez\\Perso\\Dossiers\\DossiersVS\\ProjectsWatch\\source\\MenuView.mc" id="36" lineNum="38" parent="globals/MenuView" pc="268438038" symbol="initialize"/>
+<entry filename="D:\\gduriez\\Perso\\Dossiers\\DossiersVS\\ProjectsWatch\\source\\MenuView.mc" id="36" lineNum="40" parent="globals/MenuView" pc="268438053" symbol="initialize"/>
+<entry filename="D:\\gduriez\\Perso\\Dossiers\\DossiersVS\\ProjectsWatch\\source\\MenuView.mc" id="36" lineNum="41" parent="globals/MenuView" pc="268438061" symbol="initialize"/>
+<entry filename="D:\\gduriez\\Perso\\Dossiers\\DossiersVS\\ProjectsWatch\\source\\MenuView.mc" id="36" lineNum="42" parent="globals/MenuView" pc="268438083" symbol="initialize"/>
+<entry filename="D:\\gduriez\\Perso\\Dossiers\\DossiersVS\\ProjectsWatch\\source\\MenuView.mc" id="37" lineNum="137" parent="globals/MenuView" pc="268438102" symbol="onUpdate"/>
+<entry filename="D:\\gduriez\\Perso\\Dossiers\\DossiersVS\\ProjectsWatch\\source\\MenuView.mc" id="37" lineNum="139" parent="globals/MenuView" pc="268438105" symbol="onUpdate"/>
+<entry filename="D:\\gduriez\\Perso\\Dossiers\\DossiersVS\\ProjectsWatch\\source\\MenuView.mc" id="37" lineNum="140" parent="globals/MenuView" pc="268438116" symbol="onUpdate"/>
+<entry filename="D:\\gduriez\\Perso\\Dossiers\\DossiersVS\\ProjectsWatch\\source\\MenuView.mc" id="37" lineNum="141" parent="globals/MenuView" pc="268438127" symbol="onUpdate"/>
+<entry filename="D:\\gduriez\\Perso\\Dossiers\\DossiersVS\\ProjectsWatch\\source\\MenuView.mc" id="37" lineNum="142" parent="globals/MenuView" pc="268438141" symbol="onUpdate"/>
+<entry filename="D:\\gduriez\\Perso\\Dossiers\\DossiersVS\\ProjectsWatch\\source\\MenuView.mc" id="37" lineNum="143" parent="globals/MenuView" pc="268438149" symbol="onUpdate"/>
+<entry filename="D:\\gduriez\\Perso\\Dossiers\\DossiersVS\\ProjectsWatch\\source\\MenuView.mc" id="37" lineNum="146" parent="globals/MenuView" pc="268438161" symbol="onUpdate"/>
+<entry filename="D:\\gduriez\\Perso\\Dossiers\\DossiersVS\\ProjectsWatch\\source\\MenuView.mc" id="37" lineNum="146" parent="globals/MenuView" pc="268438177" symbol="onUpdate"/>
+<entry filename="D:\\gduriez\\Perso\\Dossiers\\DossiersVS\\ProjectsWatch\\source\\MenuView.mc" id="37" lineNum="147" parent="globals/MenuView" pc="268438193" symbol="onUpdate"/>
+<entry filename="D:\\gduriez\\Perso\\Dossiers\\DossiersVS\\ProjectsWatch\\source\\MenuView.mc" id="37" lineNum="148" parent="globals/MenuView" pc="268438203" symbol="onUpdate"/>
+<entry filename="D:\\gduriez\\Perso\\Dossiers\\DossiersVS\\ProjectsWatch\\source\\MenuView.mc" id="37" lineNum="149" parent="globals/MenuView" pc="268438224" symbol="onUpdate"/>
+<entry filename="D:\\gduriez\\Perso\\Dossiers\\DossiersVS\\ProjectsWatch\\source\\MenuView.mc" id="37" lineNum="150" parent="globals/MenuView" pc="268438246" symbol="onUpdate"/>
+<entry filename="D:\\gduriez\\Perso\\Dossiers\\DossiersVS\\ProjectsWatch\\source\\MenuView.mc" id="37" lineNum="151" parent="globals/MenuView" pc="268438267" symbol="onUpdate"/>
+<entry filename="D:\\gduriez\\Perso\\Dossiers\\DossiersVS\\ProjectsWatch\\source\\MenuView.mc" id="37" lineNum="154" parent="globals/MenuView" pc="268438319" symbol="onUpdate"/>
+<entry filename="D:\\gduriez\\Perso\\Dossiers\\DossiersVS\\ProjectsWatch\\source\\MenuView.mc" id="37" lineNum="155" parent="globals/MenuView" pc="268438340" symbol="onUpdate"/>
+<entry filename="D:\\gduriez\\Perso\\Dossiers\\DossiersVS\\ProjectsWatch\\source\\MenuView.mc" id="37" lineNum="156" parent="globals/MenuView" pc="268438367" symbol="onUpdate"/>
+<entry filename="D:\\gduriez\\Perso\\Dossiers\\DossiersVS\\ProjectsWatch\\source\\MenuView.mc" id="37" lineNum="157" parent="globals/MenuView" pc="268438378" symbol="onUpdate"/>
+<entry filename="D:\\gduriez\\Perso\\Dossiers\\DossiersVS\\ProjectsWatch\\source\\MenuView.mc" id="37" lineNum="158" parent="globals/MenuView" pc="268438401" symbol="onUpdate"/>
+<entry filename="D:\\gduriez\\Perso\\Dossiers\\DossiersVS\\ProjectsWatch\\source\\MenuView.mc" id="37" lineNum="158" parent="globals/MenuView" pc="268438420" symbol="onUpdate"/>
+<entry filename="D:\\gduriez\\Perso\\Dossiers\\DossiersVS\\ProjectsWatch\\source\\MenuView.mc" id="37" lineNum="159" parent="globals/MenuView" pc="268438452" symbol="onUpdate"/>
+<entry filename="D:\\gduriez\\Perso\\Dossiers\\DossiersVS\\ProjectsWatch\\source\\MenuView.mc" id="37" lineNum="161" parent="globals/MenuView" pc="268438476" symbol="onUpdate"/>
+<entry filename="D:\\gduriez\\Perso\\Dossiers\\DossiersVS\\ProjectsWatch\\source\\MenuView.mc" id="37" lineNum="161" parent="globals/MenuView" pc="268438514" symbol="onUpdate"/>
+<entry filename="D:\\gduriez\\Perso\\Dossiers\\DossiersVS\\ProjectsWatch\\source\\MenuView.mc" id="37" lineNum="162" parent="globals/MenuView" pc="268438527" symbol="onUpdate"/>
+<entry filename="D:\\gduriez\\Perso\\Dossiers\\DossiersVS\\ProjectsWatch\\source\\MenuView.mc" id="37" lineNum="164" parent="globals/MenuView" pc="268438548" symbol="onUpdate"/>
+<entry filename="D:\\gduriez\\Perso\\Dossiers\\DossiersVS\\ProjectsWatch\\source\\MenuView.mc" id="37" lineNum="165" parent="globals/MenuView" pc="268438558" symbol="onUpdate"/>
+<entry filename="D:\\gduriez\\Perso\\Dossiers\\DossiersVS\\ProjectsWatch\\source\\MenuView.mc" id="37" lineNum="165" parent="globals/MenuView" pc="268438569" symbol="onUpdate"/>
+<entry filename="D:\\gduriez\\Perso\\Dossiers\\DossiersVS\\ProjectsWatch\\source\\MenuView.mc" id="37" lineNum="168" parent="globals/MenuView" pc="268438602" symbol="onUpdate"/>
+<entry filename="D:\\gduriez\\Perso\\Dossiers\\DossiersVS\\ProjectsWatch\\source\\MenuView.mc" id="37" lineNum="169" parent="globals/MenuView" pc="268438622" symbol="onUpdate"/>
+<entry filename="D:\\gduriez\\Perso\\Dossiers\\DossiersVS\\ProjectsWatch\\source\\MenuView.mc" id="37" lineNum="169" parent="globals/MenuView" pc="268438669" symbol="onUpdate"/>
+<entry filename="D:\\gduriez\\Perso\\Dossiers\\DossiersVS\\ProjectsWatch\\source\\MenuView.mc" id="37" lineNum="173" parent="globals/MenuView" pc="268438685" symbol="onUpdate"/>
+<entry filename="D:\\gduriez\\Perso\\Dossiers\\DossiersVS\\ProjectsWatch\\source\\MenuView.mc" id="37" lineNum="174" parent="globals/MenuView" pc="268438708" symbol="onUpdate"/>
+<entry filename="D:\\gduriez\\Perso\\Dossiers\\DossiersVS\\ProjectsWatch\\source\\MenuView.mc" id="37" lineNum="175" parent="globals/MenuView" pc="268438740" symbol="onUpdate"/>
+<entry filename="D:\\gduriez\\Perso\\Dossiers\\DossiersVS\\ProjectsWatch\\source\\MenuView.mc" id="37" lineNum="176" parent="globals/MenuView" pc="268438750" symbol="onUpdate"/>
+<entry filename="D:\\gduriez\\Perso\\Dossiers\\DossiersVS\\ProjectsWatch\\source\\ProjectsWatchView.mc" id="39" lineNum="60" parent="globals/ProjectsWatchView" pc="268438802" symbol="getParam"/>
+<entry filename="D:\\gduriez\\Perso\\Dossiers\\DossiersVS\\ProjectsWatch\\source\\ProjectsWatchView.mc" id="39" lineNum="61" parent="globals/ProjectsWatchView" pc="268438804" symbol="getParam"/>
+<entry filename="D:\\gduriez\\Perso\\Dossiers\\DossiersVS\\ProjectsWatch\\source\\ProjectsWatchView.mc" id="39" lineNum="62" parent="globals/ProjectsWatchView" pc="268438815" symbol="getParam"/>
+<entry filename="D:\\gduriez\\Perso\\Dossiers\\DossiersVS\\ProjectsWatch\\source\\ProjectsWatchView.mc" id="39" lineNum="64" parent="globals/ProjectsWatchView" pc="268438839" symbol="getParam"/>
+<entry filename="D:\\gduriez\\Perso\\Dossiers\\DossiersVS\\ProjectsWatch\\source\\ProjectsWatchView.mc" id="40" lineNum="31" parent="globals/ProjectsWatchView" pc="268438849" symbol="onShow"/>
+<entry filename="D:\\gduriez\\Perso\\Dossiers\\DossiersVS\\ProjectsWatch\\source\\ProjectsWatchView.mc" id="40" lineNum="32" parent="globals/ProjectsWatchView" pc="268438851" symbol="onShow"/>
+<entry filename="D:\\gduriez\\Perso\\Dossiers\\DossiersVS\\ProjectsWatch\\source\\ProjectsWatchView.mc" id="41" lineNum="78" parent="globals/ProjectsWatchView" pc="268438890" symbol="dessinePresentPastFuture"/>
+<entry filename="D:\\gduriez\\Perso\\Dossiers\\DossiersVS\\ProjectsWatch\\source\\ProjectsWatchView.mc" id="41" lineNum="79" parent="globals/ProjectsWatchView" pc="268438893" symbol="dessinePresentPastFuture"/>
+<entry filename="D:\\gduriez\\Perso\\Dossiers\\DossiersVS\\ProjectsWatch\\source\\ProjectsWatchView.mc" id="41" lineNum="80" parent="globals/ProjectsWatchView" pc="268438930" symbol="dessinePresentPastFuture"/>
+<entry filename="D:\\gduriez\\Perso\\Dossiers\\DossiersVS\\ProjectsWatch\\source\\ProjectsWatchView.mc" id="41" lineNum="81" parent="globals/ProjectsWatchView" pc="268438942" symbol="dessinePresentPastFuture"/>
+<entry filename="D:\\gduriez\\Perso\\Dossiers\\DossiersVS\\ProjectsWatch\\source\\ProjectsWatchView.mc" id="41" lineNum="82" parent="globals/ProjectsWatchView" pc="268438984" symbol="dessinePresentPastFuture"/>
+<entry filename="D:\\gduriez\\Perso\\Dossiers\\DossiersVS\\ProjectsWatch\\source\\ProjectsWatchView.mc" id="41" lineNum="83" parent="globals/ProjectsWatchView" pc="268439017" symbol="dessinePresentPastFuture"/>
+<entry filename="D:\\gduriez\\Perso\\Dossiers\\DossiersVS\\ProjectsWatch\\source\\ProjectsWatchView.mc" id="41" lineNum="84" parent="globals/ProjectsWatchView" pc="268439023" symbol="dessinePresentPastFuture"/>
+<entry filename="D:\\gduriez\\Perso\\Dossiers\\DossiersVS\\ProjectsWatch\\source\\ProjectsWatchView.mc" id="41" lineNum="85" parent="globals/ProjectsWatchView" pc="268439065" symbol="dessinePresentPastFuture"/>
+<entry filename="D:\\gduriez\\Perso\\Dossiers\\DossiersVS\\ProjectsWatch\\source\\ProjectsWatchView.mc" id="41" lineNum="86" parent="globals/ProjectsWatchView" pc="268439102" symbol="dessinePresentPastFuture"/>
+<entry filename="D:\\gduriez\\Perso\\Dossiers\\DossiersVS\\ProjectsWatch\\source\\ProjectsWatchView.mc" id="41" lineNum="87" parent="globals/ProjectsWatchView" pc="268439144" symbol="dessinePresentPastFuture"/>
+<entry filename="D:\\gduriez\\Perso\\Dossiers\\DossiersVS\\ProjectsWatch\\source\\ProjectsWatchView.mc" id="42" lineNum="91" parent="globals/ProjectsWatchView" pc="268439190" symbol="dessineHour"/>
+<entry filename="D:\\gduriez\\Perso\\Dossiers\\DossiersVS\\ProjectsWatch\\source\\ProjectsWatchView.mc" id="42" lineNum="92" parent="globals/ProjectsWatchView" pc="268439193" symbol="dessineHour"/>
+<entry filename="D:\\gduriez\\Perso\\Dossiers\\DossiersVS\\ProjectsWatch\\source\\ProjectsWatchView.mc" id="42" lineNum="93" parent="globals/ProjectsWatchView" pc="268439203" symbol="dessineHour"/>
+<entry filename="D:\\gduriez\\Perso\\Dossiers\\DossiersVS\\ProjectsWatch\\source\\ProjectsWatchView.mc" id="42" lineNum="94" parent="globals/ProjectsWatchView" pc="268439241" symbol="dessineHour"/>
+<entry filename="D:\\gduriez\\Perso\\Dossiers\\DossiersVS\\ProjectsWatch\\source\\ProjectsWatchView.mc" id="42" lineNum="95" parent="globals/ProjectsWatchView" pc="268439249" symbol="dessineHour"/>
+<entry filename="D:\\gduriez\\Perso\\Dossiers\\DossiersVS\\ProjectsWatch\\source\\ProjectsWatchView.mc" id="42" lineNum="96" parent="globals/ProjectsWatchView" pc="268439253" symbol="dessineHour"/>
+<entry filename="D:\\gduriez\\Perso\\Dossiers\\DossiersVS\\ProjectsWatch\\source\\ProjectsWatchView.mc" id="42" lineNum="97" parent="globals/ProjectsWatchView" pc="268439275" symbol="dessineHour"/>
+<entry filename="D:\\gduriez\\Perso\\Dossiers\\DossiersVS\\ProjectsWatch\\source\\ProjectsWatchView.mc" id="42" lineNum="98" parent="globals/ProjectsWatchView" pc="268439283" symbol="dessineHour"/>
+<entry filename="D:\\gduriez\\Perso\\Dossiers\\DossiersVS\\ProjectsWatch\\source\\ProjectsWatchView.mc" id="42" lineNum="100" parent="globals/ProjectsWatchView" pc="268439293" symbol="dessineHour"/>
+<entry filename="D:\\gduriez\\Perso\\Dossiers\\DossiersVS\\ProjectsWatch\\source\\ProjectsWatchView.mc" id="42" lineNum="102" parent="globals/ProjectsWatchView" pc="268439300" symbol="dessineHour"/>
+<entry filename="D:\\gduriez\\Perso\\Dossiers\\DossiersVS\\ProjectsWatch\\source\\ProjectsWatchView.mc" id="42" lineNum="103" parent="globals/ProjectsWatchView" pc="268439307" symbol="dessineHour"/>
+<entry filename="D:\\gduriez\\Perso\\Dossiers\\DossiersVS\\ProjectsWatch\\source\\ProjectsWatchView.mc" id="42" lineNum="103" parent="globals/ProjectsWatchView" pc="268439314" symbol="dessineHour"/>
+<entry filename="D:\\gduriez\\Perso\\Dossiers\\DossiersVS\\ProjectsWatch\\source\\ProjectsWatchView.mc" id="42" lineNum="104" parent="globals/ProjectsWatchView" pc="268439321" symbol="dessineHour"/>
+<entry filename="D:\\gduriez\\Perso\\Dossiers\\DossiersVS\\ProjectsWatch\\source\\ProjectsWatchView.mc" id="42" lineNum="105" parent="globals/ProjectsWatchView" pc="268439328" symbol="dessineHour"/>
+<entry filename="D:\\gduriez\\Perso\\Dossiers\\DossiersVS\\ProjectsWatch\\source\\ProjectsWatchView.mc" id="42" lineNum="105" parent="globals/ProjectsWatchView" pc="268439336" symbol="dessineHour"/>
+<entry filename="D:\\gduriez\\Perso\\Dossiers\\DossiersVS\\ProjectsWatch\\source\\ProjectsWatchView.mc" id="42" lineNum="106" parent="globals/ProjectsWatchView" pc="268439343" symbol="dessineHour"/>
+<entry filename="D:\\gduriez\\Perso\\Dossiers\\DossiersVS\\ProjectsWatch\\source\\ProjectsWatchView.mc" id="42" lineNum="107" parent="globals/ProjectsWatchView" pc="268439350" symbol="dessineHour"/>
+<entry filename="D:\\gduriez\\Perso\\Dossiers\\DossiersVS\\ProjectsWatch\\source\\ProjectsWatchView.mc" id="42" lineNum="107" parent="globals/ProjectsWatchView" pc="268439358" symbol="dessineHour"/>
+<entry filename="D:\\gduriez\\Perso\\Dossiers\\DossiersVS\\ProjectsWatch\\source\\ProjectsWatchView.mc" id="42" lineNum="108" parent="globals/ProjectsWatchView" pc="268439365" symbol="dessineHour"/>
+<entry filename="D:\\gduriez\\Perso\\Dossiers\\DossiersVS\\ProjectsWatch\\source\\ProjectsWatchView.mc" id="42" lineNum="109" parent="globals/ProjectsWatchView" pc="268439374" symbol="dessineHour"/>
+<entry filename="D:\\gduriez\\Perso\\Dossiers\\DossiersVS\\ProjectsWatch\\source\\ProjectsWatchView.mc" id="42" lineNum="109" parent="globals/ProjectsWatchView" pc="268439382" symbol="dessineHour"/>
+<entry filename="D:\\gduriez\\Perso\\Dossiers\\DossiersVS\\ProjectsWatch\\source\\ProjectsWatchView.mc" id="42" lineNum="110" parent="globals/ProjectsWatchView" pc="268439401" symbol="dessineHour"/>
+<entry filename="D:\\gduriez\\Perso\\Dossiers\\DossiersVS\\ProjectsWatch\\source\\ProjectsWatchView.mc" id="42" lineNum="111" parent="globals/ProjectsWatchView" pc="268439410" symbol="dessineHour"/>
+<entry filename="D:\\gduriez\\Perso\\Dossiers\\DossiersVS\\ProjectsWatch\\source\\ProjectsWatchView.mc" id="42" lineNum="111" parent="globals/ProjectsWatchView" pc="268439418" symbol="dessineHour"/>
+<entry filename="D:\\gduriez\\Perso\\Dossiers\\DossiersVS\\ProjectsWatch\\source\\ProjectsWatchView.mc" id="42" lineNum="112" parent="globals/ProjectsWatchView" pc="268439437" symbol="dessineHour"/>
+<entry filename="D:\\gduriez\\Perso\\Dossiers\\DossiersVS\\ProjectsWatch\\source\\ProjectsWatchView.mc" id="42" lineNum="113" parent="globals/ProjectsWatchView" pc="268439446" symbol="dessineHour"/>
+<entry filename="D:\\gduriez\\Perso\\Dossiers\\DossiersVS\\ProjectsWatch\\source\\ProjectsWatchView.mc" id="42" lineNum="113" parent="globals/ProjectsWatchView" pc="268439454" symbol="dessineHour"/>
+<entry filename="D:\\gduriez\\Perso\\Dossiers\\DossiersVS\\ProjectsWatch\\source\\ProjectsWatchView.mc" id="42" lineNum="114" parent="globals/ProjectsWatchView" pc="268439473" symbol="dessineHour"/>
+<entry filename="D:\\gduriez\\Perso\\Dossiers\\DossiersVS\\ProjectsWatch\\source\\ProjectsWatchView.mc" id="42" lineNum="115" parent="globals/ProjectsWatchView" pc="268439482" symbol="dessineHour"/>
+<entry filename="D:\\gduriez\\Perso\\Dossiers\\DossiersVS\\ProjectsWatch\\source\\ProjectsWatchView.mc" id="42" lineNum="115" parent="globals/ProjectsWatchView" pc="268439490" symbol="dessineHour"/>
+<entry filename="D:\\gduriez\\Perso\\Dossiers\\DossiersVS\\ProjectsWatch\\source\\ProjectsWatchView.mc" id="42" lineNum="116" parent="globals/ProjectsWatchView" pc="268439509" symbol="dessineHour"/>
+<entry filename="D:\\gduriez\\Perso\\Dossiers\\DossiersVS\\ProjectsWatch\\source\\ProjectsWatchView.mc" id="42" lineNum="117" parent="globals/ProjectsWatchView" pc="268439540" symbol="dessineHour"/>
+<entry filename="D:\\gduriez\\Perso\\Dossiers\\DossiersVS\\ProjectsWatch\\source\\ProjectsWatchView.mc" id="42" lineNum="118" parent="globals/ProjectsWatchView" pc="268439553" symbol="dessineHour"/>
+<entry filename="D:\\gduriez\\Perso\\Dossiers\\DossiersVS\\ProjectsWatch\\source\\ProjectsWatchView.mc" id="42" lineNum="119" parent="globals/ProjectsWatchView" pc="268439566" symbol="dessineHour"/>
+<entry filename="D:\\gduriez\\Perso\\Dossiers\\DossiersVS\\ProjectsWatch\\source\\ProjectsWatchView.mc" id="42" lineNum="121" parent="globals/ProjectsWatchView" pc="268439579" symbol="dessineHour"/>
+<entry filename="D:\\gduriez\\Perso\\Dossiers\\DossiersVS\\ProjectsWatch\\source\\ProjectsWatchView.mc" id="42" lineNum="122" parent="globals/ProjectsWatchView" pc="268439594" symbol="dessineHour"/>
+<entry filename="D:\\gduriez\\Perso\\Dossiers\\DossiersVS\\ProjectsWatch\\source\\ProjectsWatchView.mc" id="42" lineNum="123" parent="globals/ProjectsWatchView" pc="268439609" symbol="dessineHour"/>
+<entry filename="D:\\gduriez\\Perso\\Dossiers\\DossiersVS\\ProjectsWatch\\source\\ProjectsWatchView.mc" id="42" lineNum="124" parent="globals/ProjectsWatchView" pc="268439624" symbol="dessineHour"/>
+<entry filename="D:\\gduriez\\Perso\\Dossiers\\DossiersVS\\ProjectsWatch\\source\\ProjectsWatchView.mc" id="42" lineNum="125" parent="globals/ProjectsWatchView" pc="268439639" symbol="dessineHour"/>
+<entry filename="D:\\gduriez\\Perso\\Dossiers\\DossiersVS\\ProjectsWatch\\source\\ProjectsWatchView.mc" id="42" lineNum="126" parent="globals/ProjectsWatchView" pc="268439657" symbol="dessineHour"/>
+<entry filename="D:\\gduriez\\Perso\\Dossiers\\DossiersVS\\ProjectsWatch\\source\\ProjectsWatchView.mc" id="42" lineNum="128" parent="globals/ProjectsWatchView" pc="268439671" symbol="dessineHour"/>
+<entry filename="D:\\gduriez\\Perso\\Dossiers\\DossiersVS\\ProjectsWatch\\source\\ProjectsWatchView.mc" id="42" lineNum="129" parent="globals/ProjectsWatchView" pc="268439690" symbol="dessineHour"/>
+<entry filename="D:\\gduriez\\Perso\\Dossiers\\DossiersVS\\ProjectsWatch\\source\\ProjectsWatchView.mc" id="42" lineNum="131" parent="globals/ProjectsWatchView" pc="268439706" symbol="dessineHour"/>
+<entry filename="D:\\gduriez\\Perso\\Dossiers\\DossiersVS\\ProjectsWatch\\source\\ProjectsWatchView.mc" id="42" lineNum="132" parent="globals/ProjectsWatchView" pc="268439733" symbol="dessineHour"/>
+<entry filename="D:\\gduriez\\Perso\\Dossiers\\DossiersVS\\ProjectsWatch\\source\\ProjectsWatchView.mc" id="42" lineNum="133" parent="globals/ProjectsWatchView" pc="268439770" symbol="dessineHour"/>
+<entry filename="D:\\gduriez\\Perso\\Dossiers\\DossiersVS\\ProjectsWatch\\source\\ProjectsWatchView.mc" id="43" lineNum="138" parent="globals/ProjectsWatchView" pc="268439820" symbol="dessineMinutes"/>
+<entry filename="D:\\gduriez\\Perso\\Dossiers\\DossiersVS\\ProjectsWatch\\source\\ProjectsWatchView.mc" id="43" lineNum="139" parent="globals/ProjectsWatchView" pc="268439823" symbol="dessineMinutes"/>
+<entry filename="D:\\gduriez\\Perso\\Dossiers\\DossiersVS\\ProjectsWatch\\source\\ProjectsWatchView.mc" id="43" lineNum="140" parent="globals/ProjectsWatchView" pc="268439833" symbol="dessineMinutes"/>
+<entry filename="D:\\gduriez\\Perso\\Dossiers\\DossiersVS\\ProjectsWatch\\source\\ProjectsWatchView.mc" id="43" lineNum="141" parent="globals/ProjectsWatchView" pc="268439871" symbol="dessineMinutes"/>
+<entry filename="D:\\gduriez\\Perso\\Dossiers\\DossiersVS\\ProjectsWatch\\source\\ProjectsWatchView.mc" id="43" lineNum="142" parent="globals/ProjectsWatchView" pc="268439879" symbol="dessineMinutes"/>
+<entry filename="D:\\gduriez\\Perso\\Dossiers\\DossiersVS\\ProjectsWatch\\source\\ProjectsWatchView.mc" id="43" lineNum="143" parent="globals/ProjectsWatchView" pc="268439886" symbol="dessineMinutes"/>
+<entry filename="D:\\gduriez\\Perso\\Dossiers\\DossiersVS\\ProjectsWatch\\source\\ProjectsWatchView.mc" id="43" lineNum="144" parent="globals/ProjectsWatchView" pc="268439893" symbol="dessineMinutes"/>
+<entry filename="D:\\gduriez\\Perso\\Dossiers\\DossiersVS\\ProjectsWatch\\source\\ProjectsWatchView.mc" id="43" lineNum="145" parent="globals/ProjectsWatchView" pc="268439900" symbol="dessineMinutes"/>
+<entry filename="D:\\gduriez\\Perso\\Dossiers\\DossiersVS\\ProjectsWatch\\source\\ProjectsWatchView.mc" id="43" lineNum="145" parent="globals/ProjectsWatchView" pc="268439907" symbol="dessineMinutes"/>
+<entry filename="D:\\gduriez\\Perso\\Dossiers\\DossiersVS\\ProjectsWatch\\source\\ProjectsWatchView.mc" id="43" lineNum="146" parent="globals/ProjectsWatchView" pc="268439914" symbol="dessineMinutes"/>
+<entry filename="D:\\gduriez\\Perso\\Dossiers\\DossiersVS\\ProjectsWatch\\source\\ProjectsWatchView.mc" id="43" lineNum="147" parent="globals/ProjectsWatchView" pc="268439921" symbol="dessineMinutes"/>
+<entry filename="D:\\gduriez\\Perso\\Dossiers\\DossiersVS\\ProjectsWatch\\source\\ProjectsWatchView.mc" id="43" lineNum="147" parent="globals/ProjectsWatchView" pc="268439929" symbol="dessineMinutes"/>
+<entry filename="D:\\gduriez\\Perso\\Dossiers\\DossiersVS\\ProjectsWatch\\source\\ProjectsWatchView.mc" id="43" lineNum="148" parent="globals/ProjectsWatchView" pc="268439935" symbol="dessineMinutes"/>
+<entry filename="D:\\gduriez\\Perso\\Dossiers\\DossiersVS\\ProjectsWatch\\source\\ProjectsWatchView.mc" id="43" lineNum="149" parent="globals/ProjectsWatchView" pc="268439942" symbol="dessineMinutes"/>
+<entry filename="D:\\gduriez\\Perso\\Dossiers\\DossiersVS\\ProjectsWatch\\source\\ProjectsWatchView.mc" id="43" lineNum="149" parent="globals/ProjectsWatchView" pc="268439950" symbol="dessineMinutes"/>
+<entry filename="D:\\gduriez\\Perso\\Dossiers\\DossiersVS\\ProjectsWatch\\source\\ProjectsWatchView.mc" id="43" lineNum="150" parent="globals/ProjectsWatchView" pc="268439956" symbol="dessineMinutes"/>
+<entry filename="D:\\gduriez\\Perso\\Dossiers\\DossiersVS\\ProjectsWatch\\source\\ProjectsWatchView.mc" id="43" lineNum="151" parent="globals/ProjectsWatchView" pc="268439965" symbol="dessineMinutes"/>
+<entry filename="D:\\gduriez\\Perso\\Dossiers\\DossiersVS\\ProjectsWatch\\source\\ProjectsWatchView.mc" id="43" lineNum="151" parent="globals/ProjectsWatchView" pc="268439973" symbol="dessineMinutes"/>
+<entry filename="D:\\gduriez\\Perso\\Dossiers\\DossiersVS\\ProjectsWatch\\source\\ProjectsWatchView.mc" id="43" lineNum="152" parent="globals/ProjectsWatchView" pc="268439992" symbol="dessineMinutes"/>
+<entry filename="D:\\gduriez\\Perso\\Dossiers\\DossiersVS\\ProjectsWatch\\source\\ProjectsWatchView.mc" id="43" lineNum="153" parent="globals/ProjectsWatchView" pc="268440001" symbol="dessineMinutes"/>
+<entry filename="D:\\gduriez\\Perso\\Dossiers\\DossiersVS\\ProjectsWatch\\source\\ProjectsWatchView.mc" id="43" lineNum="153" parent="globals/ProjectsWatchView" pc="268440009" symbol="dessineMinutes"/>
+<entry filename="D:\\gduriez\\Perso\\Dossiers\\DossiersVS\\ProjectsWatch\\source\\ProjectsWatchView.mc" id="43" lineNum="154" parent="globals/ProjectsWatchView" pc="268440028" symbol="dessineMinutes"/>
+<entry filename="D:\\gduriez\\Perso\\Dossiers\\DossiersVS\\ProjectsWatch\\source\\ProjectsWatchView.mc" id="43" lineNum="155" parent="globals/ProjectsWatchView" pc="268440037" symbol="dessineMinutes"/>
+<entry filename="D:\\gduriez\\Perso\\Dossiers\\DossiersVS\\ProjectsWatch\\source\\ProjectsWatchView.mc" id="43" lineNum="155" parent="globals/ProjectsWatchView" pc="268440045" symbol="dessineMinutes"/>
+<entry filename="D:\\gduriez\\Perso\\Dossiers\\DossiersVS\\ProjectsWatch\\source\\ProjectsWatchView.mc" id="43" lineNum="156" parent="globals/ProjectsWatchView" pc="268440064" symbol="dessineMinutes"/>
+<entry filename="D:\\gduriez\\Perso\\Dossiers\\DossiersVS\\ProjectsWatch\\source\\ProjectsWatchView.mc" id="43" lineNum="157" parent="globals/ProjectsWatchView" pc="268440073" symbol="dessineMinutes"/>
+<entry filename="D:\\gduriez\\Perso\\Dossiers\\DossiersVS\\ProjectsWatch\\source\\ProjectsWatchView.mc" id="43" lineNum="157" parent="globals/ProjectsWatchView" pc="268440081" symbol="dessineMinutes"/>
+<entry filename="D:\\gduriez\\Perso\\Dossiers\\DossiersVS\\ProjectsWatch\\source\\ProjectsWatchView.mc" id="43" lineNum="158" parent="globals/ProjectsWatchView" pc="268440100" symbol="dessineMinutes"/>
+<entry filename="D:\\gduriez\\Perso\\Dossiers\\DossiersVS\\ProjectsWatch\\source\\ProjectsWatchView.mc" id="43" lineNum="159" parent="globals/ProjectsWatchView" pc="268440131" symbol="dessineMinutes"/>
+<entry filename="D:\\gduriez\\Perso\\Dossiers\\DossiersVS\\ProjectsWatch\\source\\ProjectsWatchView.mc" id="43" lineNum="160" parent="globals/ProjectsWatchView" pc="268440144" symbol="dessineMinutes"/>
+<entry filename="D:\\gduriez\\Perso\\Dossiers\\DossiersVS\\ProjectsWatch\\source\\ProjectsWatchView.mc" id="43" lineNum="161" parent="globals/ProjectsWatchView" pc="268440157" symbol="dessineMinutes"/>
+<entry filename="D:\\gduriez\\Perso\\Dossiers\\DossiersVS\\ProjectsWatch\\source\\ProjectsWatchView.mc" id="43" lineNum="163" parent="globals/ProjectsWatchView" pc="268440170" symbol="dessineMinutes"/>
+<entry filename="D:\\gduriez\\Perso\\Dossiers\\DossiersVS\\ProjectsWatch\\source\\ProjectsWatchView.mc" id="43" lineNum="164" parent="globals/ProjectsWatchView" pc="268440185" symbol="dessineMinutes"/>
+<entry filename="D:\\gduriez\\Perso\\Dossiers\\DossiersVS\\ProjectsWatch\\source\\ProjectsWatchView.mc" id="43" lineNum="165" parent="globals/ProjectsWatchView" pc="268440200" symbol="dessineMinutes"/>
+<entry filename="D:\\gduriez\\Perso\\Dossiers\\DossiersVS\\ProjectsWatch\\source\\ProjectsWatchView.mc" id="43" lineNum="166" parent="globals/ProjectsWatchView" pc="268440215" symbol="dessineMinutes"/>
+<entry filename="D:\\gduriez\\Perso\\Dossiers\\DossiersVS\\ProjectsWatch\\source\\ProjectsWatchView.mc" id="43" lineNum="167" parent="globals/ProjectsWatchView" pc="268440233" symbol="dessineMinutes"/>
+<entry filename="D:\\gduriez\\Perso\\Dossiers\\DossiersVS\\ProjectsWatch\\source\\ProjectsWatchView.mc" id="43" lineNum="169" parent="globals/ProjectsWatchView" pc="268440243" symbol="dessineMinutes"/>
+<entry filename="D:\\gduriez\\Perso\\Dossiers\\DossiersVS\\ProjectsWatch\\source\\ProjectsWatchView.mc" id="43" lineNum="170" parent="globals/ProjectsWatchView" pc="268440262" symbol="dessineMinutes"/>
+<entry filename="D:\\gduriez\\Perso\\Dossiers\\DossiersVS\\ProjectsWatch\\source\\ProjectsWatchView.mc" id="43" lineNum="172" parent="globals/ProjectsWatchView" pc="268440278" symbol="dessineMinutes"/>
+<entry filename="D:\\gduriez\\Perso\\Dossiers\\DossiersVS\\ProjectsWatch\\source\\ProjectsWatchView.mc" id="43" lineNum="173" parent="globals/ProjectsWatchView" pc="268440305" symbol="dessineMinutes"/>
+<entry filename="D:\\gduriez\\Perso\\Dossiers\\DossiersVS\\ProjectsWatch\\source\\ProjectsWatchView.mc" id="43" lineNum="174" parent="globals/ProjectsWatchView" pc="268440342" symbol="dessineMinutes"/>
+<entry filename="D:\\gduriez\\Perso\\Dossiers\\DossiersVS\\ProjectsWatch\\source\\ProjectsWatchView.mc" id="44" lineNum="179" parent="globals/ProjectsWatchView" pc="268440392" symbol="dessineChamps"/>
+<entry filename="D:\\gduriez\\Perso\\Dossiers\\DossiersVS\\ProjectsWatch\\source\\ProjectsWatchView.mc" id="44" lineNum="180" parent="globals/ProjectsWatchView" pc="268440395" symbol="dessineChamps"/>
+<entry filename="D:\\gduriez\\Perso\\Dossiers\\DossiersVS\\ProjectsWatch\\source\\ProjectsWatchView.mc" id="44" lineNum="181" parent="globals/ProjectsWatchView" pc="268440449" symbol="dessineChamps"/>
+<entry filename="D:\\gduriez\\Perso\\Dossiers\\DossiersVS\\ProjectsWatch\\source\\ProjectsWatchView.mc" id="44" lineNum="182" parent="globals/ProjectsWatchView" pc="268440456" symbol="dessineChamps"/>
+<entry filename="D:\\gduriez\\Perso\\Dossiers\\DossiersVS\\ProjectsWatch\\source\\ProjectsWatchView.mc" id="44" lineNum="183" parent="globals/ProjectsWatchView" pc="268440463" symbol="dessineChamps"/>
+<entry filename="D:\\gduriez\\Perso\\Dossiers\\DossiersVS\\ProjectsWatch\\source\\ProjectsWatchView.mc" id="44" lineNum="184" parent="globals/ProjectsWatchView" pc="268440500" symbol="dessineChamps"/>
+<entry filename="D:\\gduriez\\Perso\\Dossiers\\DossiersVS\\ProjectsWatch\\source\\ProjectsWatchView.mc" id="44" lineNum="185" parent="globals/ProjectsWatchView" pc="268440511" symbol="dessineChamps"/>
+<entry filename="D:\\gduriez\\Perso\\Dossiers\\DossiersVS\\ProjectsWatch\\source\\ProjectsWatchView.mc" id="44" lineNum="186" parent="globals/ProjectsWatchView" pc="268440518" symbol="dessineChamps"/>
+<entry filename="D:\\gduriez\\Perso\\Dossiers\\DossiersVS\\ProjectsWatch\\source\\ProjectsWatchView.mc" id="44" lineNum="187" parent="globals/ProjectsWatchView" pc="268440529" symbol="dessineChamps"/>
+<entry filename="D:\\gduriez\\Perso\\Dossiers\\DossiersVS\\ProjectsWatch\\source\\ProjectsWatchView.mc" id="44" lineNum="188" parent="globals/ProjectsWatchView" pc="268440536" symbol="dessineChamps"/>
+<entry filename="D:\\gduriez\\Perso\\Dossiers\\DossiersVS\\ProjectsWatch\\source\\ProjectsWatchView.mc" id="44" lineNum="189" parent="globals/ProjectsWatchView" pc="268440555" symbol="dessineChamps"/>
+<entry filename="D:\\gduriez\\Perso\\Dossiers\\DossiersVS\\ProjectsWatch\\source\\ProjectsWatchView.mc" id="44" lineNum="190" parent="globals/ProjectsWatchView" pc="268440589" symbol="dessineChamps"/>
+<entry filename="D:\\gduriez\\Perso\\Dossiers\\DossiersVS\\ProjectsWatch\\source\\ProjectsWatchView.mc" id="44" lineNum="191" parent="globals/ProjectsWatchView" pc="268440599" symbol="dessineChamps"/>
+<entry filename="D:\\gduriez\\Perso\\Dossiers\\DossiersVS\\ProjectsWatch\\source\\ProjectsWatchView.mc" id="44" lineNum="191" parent="globals/ProjectsWatchView" pc="268440610" symbol="dessineChamps"/>
+<entry filename="D:\\gduriez\\Perso\\Dossiers\\DossiersVS\\ProjectsWatch\\source\\ProjectsWatchView.mc" id="44" lineNum="192" parent="globals/ProjectsWatchView" pc="268440626" symbol="dessineChamps"/>
+<entry filename="D:\\gduriez\\Perso\\Dossiers\\DossiersVS\\ProjectsWatch\\source\\ProjectsWatchView.mc" id="44" lineNum="194" parent="globals/ProjectsWatchView" pc="268440649" symbol="dessineChamps"/>
+<entry filename="D:\\gduriez\\Perso\\Dossiers\\DossiersVS\\ProjectsWatch\\source\\ProjectsWatchView.mc" id="44" lineNum="195" parent="globals/ProjectsWatchView" pc="268440656" symbol="dessineChamps"/>
+<entry filename="D:\\gduriez\\Perso\\Dossiers\\DossiersVS\\ProjectsWatch\\source\\ProjectsWatchView.mc" id="45" lineNum="45" parent="globals/ProjectsWatchView" pc="268440674" symbol="dessineTout"/>
+<entry filename="D:\\gduriez\\Perso\\Dossiers\\DossiersVS\\ProjectsWatch\\source\\ProjectsWatchView.mc" id="45" lineNum="46" parent="globals/ProjectsWatchView" pc="268440677" symbol="dessineTout"/>
+<entry filename="D:\\gduriez\\Perso\\Dossiers\\DossiersVS\\ProjectsWatch\\source\\ProjectsWatchView.mc" id="45" lineNum="47" parent="globals/ProjectsWatchView" pc="268440686" symbol="dessineTout"/>
+<entry filename="D:\\gduriez\\Perso\\Dossiers\\DossiersVS\\ProjectsWatch\\source\\ProjectsWatchView.mc" id="45" lineNum="48" parent="globals/ProjectsWatchView" pc="268440698" symbol="dessineTout"/>
+<entry filename="D:\\gduriez\\Perso\\Dossiers\\DossiersVS\\ProjectsWatch\\source\\ProjectsWatchView.mc" id="45" lineNum="49" parent="globals/ProjectsWatchView" pc="268440718" symbol="dessineTout"/>
+<entry filename="D:\\gduriez\\Perso\\Dossiers\\DossiersVS\\ProjectsWatch\\source\\ProjectsWatchView.mc" id="45" lineNum="50" parent="globals/ProjectsWatchView" pc="268440726" symbol="dessineTout"/>
+<entry filename="D:\\gduriez\\Perso\\Dossiers\\DossiersVS\\ProjectsWatch\\source\\ProjectsWatchView.mc" id="45" lineNum="51" parent="globals/ProjectsWatchView" pc="268440746" symbol="dessineTout"/>
+<entry filename="D:\\gduriez\\Perso\\Dossiers\\DossiersVS\\ProjectsWatch\\source\\ProjectsWatchView.mc" id="45" lineNum="52" parent="globals/ProjectsWatchView" pc="268440766" symbol="dessineTout"/>
+<entry filename="D:\\gduriez\\Perso\\Dossiers\\DossiersVS\\ProjectsWatch\\source\\ProjectsWatchView.mc" id="46" lineNum="69" parent="globals/ProjectsWatchView" pc="268440787" symbol="dessineFond"/>
+<entry filename="D:\\gduriez\\Perso\\Dossiers\\DossiersVS\\ProjectsWatch\\source\\ProjectsWatchView.mc" id="46" lineNum="70" parent="globals/ProjectsWatchView" pc="268440789" symbol="dessineFond"/>
+<entry filename="D:\\gduriez\\Perso\\Dossiers\\DossiersVS\\ProjectsWatch\\source\\ProjectsWatchView.mc" id="46" lineNum="71" parent="globals/ProjectsWatchView" pc="268440826" symbol="dessineFond"/>
+<entry filename="D:\\gduriez\\Perso\\Dossiers\\DossiersVS\\ProjectsWatch\\source\\ProjectsWatchView.mc" id="46" lineNum="71" parent="globals/ProjectsWatchView" pc="268440835" symbol="dessineFond"/>
+<entry filename="D:\\gduriez\\Perso\\Dossiers\\DossiersVS\\ProjectsWatch\\source\\ProjectsWatchView.mc" id="46" lineNum="72" parent="globals/ProjectsWatchView" pc="268440855" symbol="dessineFond"/>
+<entry filename="D:\\gduriez\\Perso\\Dossiers\\DossiersVS\\ProjectsWatch\\source\\ProjectsWatchView.mc" id="46" lineNum="73" parent="globals/ProjectsWatchView" pc="268440875" symbol="dessineFond"/>
+<entry filename="D:\\gduriez\\Perso\\Dossiers\\DossiersVS\\ProjectsWatch\\source\\ProjectsWatchView.mc" id="46" lineNum="74" parent="globals/ProjectsWatchView" pc="268441005" symbol="dessineFond"/>
+<entry filename="D:\\gduriez\\Perso\\Dossiers\\DossiersVS\\ProjectsWatch\\source\\ProjectsWatchView.mc" id="46" lineNum="75" parent="globals/ProjectsWatchView" pc="268441135" symbol="dessineFond"/>
+<entry filename="D:\\gduriez\\Perso\\Dossiers\\DossiersVS\\ProjectsWatch\\source\\ProjectsWatchView.mc" id="48" lineNum="27" parent="globals/ProjectsWatchView" pc="268441154" symbol="initialize"/>
+<entry filename="D:\\gduriez\\Perso\\Dossiers\\DossiersVS\\ProjectsWatch\\source\\ProjectsWatchView.mc" id="48" lineNum="28" parent="globals/ProjectsWatchView" pc="268441156" symbol="initialize"/>
+<entry filename="D:\\gduriez\\Perso\\Dossiers\\DossiersVS\\ProjectsWatch\\source\\ProjectsWatchView.mc" id="49" lineNum="36" parent="globals/ProjectsWatchView" pc="268441169" symbol="onUpdate"/>
+<entry filename="D:\\gduriez\\Perso\\Dossiers\\DossiersVS\\ProjectsWatch\\source\\ProjectsWatchView.mc" id="49" lineNum="37" parent="globals/ProjectsWatchView" pc="268441172" symbol="onUpdate"/>
+<entry filename="D:\\gduriez\\Perso\\Dossiers\\DossiersVS\\ProjectsWatch\\source\\ProjectsWatchView.mc" id="49" lineNum="38" parent="globals/ProjectsWatchView" pc="268441192" symbol="onUpdate"/>
+<entry filename="D:\\gduriez\\Perso\\Dossiers\\DossiersVS\\ProjectsWatch\\source\\ProjectsWatchView.mc" id="49" lineNum="39" parent="globals/ProjectsWatchView" pc="268441200" symbol="onUpdate"/>
+<entry filename="D:\\gduriez\\Perso\\Dossiers\\DossiersVS\\ProjectsWatch\\source\\ProjectsWatchView.mc" id="49" lineNum="40" parent="globals/ProjectsWatchView" pc="268441220" symbol="onUpdate"/>
+<entry filename="D:\\gduriez\\Perso\\Dossiers\\DossiersVS\\ProjectsWatch\\source\\ProjectsWatchView.mc" id="49" lineNum="42" parent="globals/ProjectsWatchView" pc="268441231" symbol="onUpdate"/>
+<entry filename="D:\\gduriez\\Perso\\Dossiers\\DossiersVS\\ProjectsWatch\\source\\LoadParams.mc" id="50" lineNum="4" parent="globals/LoadParams" pc="268441248" symbol="load"/>
+<entry filename="D:\\gduriez\\Perso\\Dossiers\\DossiersVS\\ProjectsWatch\\source\\LoadParams.mc" id="50" lineNum="5" parent="globals/LoadParams" pc="268441250" symbol="load"/>
+<entry filename="D:\\gduriez\\Perso\\Dossiers\\DossiersVS\\ProjectsWatch\\source\\LoadParams.mc" id="50" lineNum="28" parent="globals/LoadParams" pc="268441262" symbol="load"/>
+<entry filename="D:\\gduriez\\Perso\\Dossiers\\DossiersVS\\ProjectsWatch\\source\\LoadParams.mc" id="50" lineNum="29" parent="globals/LoadParams" pc="268441270" symbol="load"/>
+<entry filename="D:\\gduriez\\Perso\\Dossiers\\DossiersVS\\ProjectsWatch\\source\\Colors.mc" id="52" lineNum="75" parent="globals/Colors" pc="268441285" symbol="colorValuesTab"/>
+<entry filename="D:\\gduriez\\Perso\\Dossiers\\DossiersVS\\ProjectsWatch\\source\\Colors.mc" id="52" lineNum="76" parent="globals/Colors" pc="268441287" symbol="colorValuesTab"/>
+<entry filename="D:\\gduriez\\Perso\\Dossiers\\DossiersVS\\ProjectsWatch\\source\\Colors.mc" id="53" lineNum="17" parent="globals/Colors" pc="268441293" symbol="colorName"/>
+<entry filename="D:\\gduriez\\Perso\\Dossiers\\DossiersVS\\ProjectsWatch\\source\\Colors.mc" id="53" lineNum="18" parent="globals/Colors" pc="268441296" symbol="colorName"/>
+<entry filename="D:\\gduriez\\Perso\\Dossiers\\DossiersVS\\ProjectsWatch\\source\\Colors.mc" id="53" lineNum="19" parent="globals/Colors" pc="268441309" symbol="colorName"/>
+<entry filename="D:\\gduriez\\Perso\\Dossiers\\DossiersVS\\ProjectsWatch\\source\\Colors.mc" id="54" lineNum="127" parent="globals/Colors" pc="268441323" symbol="getColor"/>
+<entry filename="D:\\gduriez\\Perso\\Dossiers\\DossiersVS\\ProjectsWatch\\source\\Colors.mc" id="54" lineNum="128" parent="globals/Colors" pc="268441326" symbol="getColor"/>
+<entry filename="D:\\gduriez\\Perso\\Dossiers\\DossiersVS\\ProjectsWatch\\source\\Colors.mc" id="54" lineNum="129" parent="globals/Colors" pc="268441339" symbol="getColor"/>
+<entry filename="D:\\gduriez\\Perso\\Dossiers\\DossiersVS\\ProjectsWatch\\source\\Colors.mc" id="54" lineNum="130" parent="globals/Colors" pc="268441355" symbol="getColor"/>
+<entry filename="D:\\gduriez\\Perso\\Dossiers\\DossiersVS\\ProjectsWatch\\source\\Colors.mc" id="54" lineNum="131" parent="globals/Colors" pc="268441372" symbol="getColor"/>
+<entry filename="D:\\gduriez\\Perso\\Dossiers\\DossiersVS\\ProjectsWatch\\source\\Colors.mc" id="54" lineNum="134" parent="globals/Colors" pc="268441400" symbol="getColor"/>
+<entry filename="D:\\gduriez\\Perso\\Dossiers\\DossiersVS\\ProjectsWatch\\source\\Colors.mc" id="56" lineNum="21" parent="globals/Colors" pc="268441414" symbol="colorsNames"/>
+<entry filename="D:\\gduriez\\Perso\\Dossiers\\DossiersVS\\ProjectsWatch\\source\\Colors.mc" id="56" lineNum="22" parent="globals/Colors" pc="268441416" symbol="colorsNames"/>
+<entry filename="D:\\gduriez\\Perso\\Dossiers\\DossiersVS\\ProjectsWatch\\source\\MenusDelegate.mc" id="57" lineNum="104" parent="globals/MenusDelegate" pc="268441422" symbol="onBack"/>
+<entry filename="D:\\gduriez\\Perso\\Dossiers\\DossiersVS\\ProjectsWatch\\source\\MenusDelegate.mc" id="57" lineNum="105" parent="globals/MenusDelegate" pc="268441424" symbol="onBack"/>
+<entry filename="D:\\gduriez\\Perso\\Dossiers\\DossiersVS\\ProjectsWatch\\source\\MenusDelegate.mc" id="57" lineNum="106" parent="globals/MenusDelegate" pc="268441446" symbol="onBack"/>
+<entry filename="D:\\gduriez\\Perso\\Dossiers\\DossiersVS\\ProjectsWatch\\source\\MenusDelegate.mc" id="58" lineNum="71" parent="globals/MenusDelegate" pc="268441448" symbol="onPreviousPage"/>
+<entry filename="D:\\gduriez\\Perso\\Dossiers\\DossiersVS\\ProjectsWatch\\source\\MenusDelegate.mc" id="58" lineNum="72" parent="globals/MenusDelegate" pc="268441450" symbol="onPreviousPage"/>
+<entry filename="D:\\gduriez\\Perso\\Dossiers\\DossiersVS\\ProjectsWatch\\source\\MenusDelegate.mc" id="59" lineNum="38" parent="globals/MenusDelegate" pc="268441463" symbol="onSwipe"/>
+<entry filename="D:\\gduriez\\Perso\\Dossiers\\DossiersVS\\ProjectsWatch\\source\\MenusDelegate.mc" id="59" lineNum="39" parent="globals/MenusDelegate" pc="268441466" symbol="onSwipe"/>
+<entry filename="D:\\gduriez\\Perso\\Dossiers\\DossiersVS\\ProjectsWatch\\source\\MenusDelegate.mc" id="59" lineNum="40" parent="globals/MenusDelegate" pc="268441475" symbol="onSwipe"/>
+<entry filename="D:\\gduriez\\Perso\\Dossiers\\DossiersVS\\ProjectsWatch\\source\\MenusDelegate.mc" id="59" lineNum="41" parent="globals/MenusDelegate" pc="268441490" symbol="onSwipe"/>
+<entry filename="D:\\gduriez\\Perso\\Dossiers\\DossiersVS\\ProjectsWatch\\source\\MenusDelegate.mc" id="59" lineNum="43" parent="globals/MenusDelegate" pc="268441500" symbol="onSwipe"/>
+<entry filename="D:\\gduriez\\Perso\\Dossiers\\DossiersVS\\ProjectsWatch\\source\\MenusDelegate.mc" id="59" lineNum="44" parent="globals/MenusDelegate" pc="268441515" symbol="onSwipe"/>
+<entry filename="D:\\gduriez\\Perso\\Dossiers\\DossiersVS\\ProjectsWatch\\source\\MenusDelegate.mc" id="59" lineNum="46" parent="globals/MenusDelegate" pc="268441525" symbol="onSwipe"/>
+<entry filename="D:\\gduriez\\Perso\\Dossiers\\DossiersVS\\ProjectsWatch\\source\\MenusDelegate.mc" id="59" lineNum="47" parent="globals/MenusDelegate" pc="268441540" symbol="onSwipe"/>
+<entry filename="D:\\gduriez\\Perso\\Dossiers\\DossiersVS\\ProjectsWatch\\source\\MenusDelegate.mc" id="59" lineNum="49" parent="globals/MenusDelegate" pc="268441550" symbol="onSwipe"/>
+<entry filename="D:\\gduriez\\Perso\\Dossiers\\DossiersVS\\ProjectsWatch\\source\\MenusDelegate.mc" id="60" lineNum="29" parent="globals/MenusDelegate" pc="268441552" symbol="initialize"/>
+<entry filename="D:\\gduriez\\Perso\\Dossiers\\DossiersVS\\ProjectsWatch\\source\\MenusDelegate.mc" id="60" lineNum="30" parent="globals/MenusDelegate" pc="268441554" symbol="initialize"/>
+<entry filename="D:\\gduriez\\Perso\\Dossiers\\DossiersVS\\ProjectsWatch\\source\\MenusDelegate.mc" id="60" lineNum="31" parent="globals/MenusDelegate" pc="268441566" symbol="initialize"/>
+<entry filename="D:\\gduriez\\Perso\\Dossiers\\DossiersVS\\ProjectsWatch\\source\\MenusDelegate.mc" id="61" lineNum="34" parent="globals/MenusDelegate" pc="268441576" symbol="onTap"/>
+<entry filename="D:\\gduriez\\Perso\\Dossiers\\DossiersVS\\ProjectsWatch\\source\\MenusDelegate.mc" id="61" lineNum="35" parent="globals/MenusDelegate" pc="268441578" symbol="onTap"/>
+<entry filename="D:\\gduriez\\Perso\\Dossiers\\DossiersVS\\ProjectsWatch\\source\\MenusDelegate.mc" id="62" lineNum="10" parent="globals/MenusDelegate" pc="268441585" symbol="menuPrincipalTab"/>
+<entry filename="D:\\gduriez\\Perso\\Dossiers\\DossiersVS\\ProjectsWatch\\source\\MenusDelegate.mc" id="62" lineNum="11" parent="globals/MenusDelegate" pc="268441588" symbol="menuPrincipalTab"/>
+<entry filename="D:\\gduriez\\Perso\\Dossiers\\DossiersVS\\ProjectsWatch\\source\\MenusDelegate.mc" id="62" lineNum="19" parent="globals/MenusDelegate" pc="268441595" symbol="menuPrincipalTab"/>
+<entry filename="D:\\gduriez\\Perso\\Dossiers\\DossiersVS\\ProjectsWatch\\source\\MenusDelegate.mc" id="62" lineNum="20" parent="globals/MenusDelegate" pc="268441602" symbol="menuPrincipalTab"/>
+<entry filename="D:\\gduriez\\Perso\\Dossiers\\DossiersVS\\ProjectsWatch\\source\\MenusDelegate.mc" id="62" lineNum="21" parent="globals/MenusDelegate" pc="268441609" symbol="menuPrincipalTab"/>
+<entry filename="D:\\gduriez\\Perso\\Dossiers\\DossiersVS\\ProjectsWatch\\source\\MenusDelegate.mc" id="62" lineNum="21" parent="globals/MenusDelegate" pc="268441623" symbol="menuPrincipalTab"/>
+<entry filename="D:\\gduriez\\Perso\\Dossiers\\DossiersVS\\ProjectsWatch\\source\\MenusDelegate.mc" id="62" lineNum="22" parent="globals/MenusDelegate" pc="268441638" symbol="menuPrincipalTab"/>
+<entry filename="D:\\gduriez\\Perso\\Dossiers\\DossiersVS\\ProjectsWatch\\source\\MenusDelegate.mc" id="62" lineNum="23" parent="globals/MenusDelegate" pc="268441650" symbol="menuPrincipalTab"/>
+<entry filename="D:\\gduriez\\Perso\\Dossiers\\DossiersVS\\ProjectsWatch\\source\\MenusDelegate.mc" id="63" lineNum="51" parent="globals/MenusDelegate" pc="268441653" symbol="onKey"/>
+<entry filename="D:\\gduriez\\Perso\\Dossiers\\DossiersVS\\ProjectsWatch\\source\\MenusDelegate.mc" id="63" lineNum="52" parent="globals/MenusDelegate" pc="268441655" symbol="onKey"/>
+<entry filename="D:\\gduriez\\Perso\\Dossiers\\DossiersVS\\ProjectsWatch\\source\\MenusDelegate.mc" id="63" lineNum="53" parent="globals/MenusDelegate" pc="268441689" symbol="onKey"/>
+<entry filename="D:\\gduriez\\Perso\\Dossiers\\DossiersVS\\ProjectsWatch\\source\\MenusDelegate.mc" id="63" lineNum="55" parent="globals/MenusDelegate" pc="268441699" symbol="onKey"/>
+<entry filename="D:\\gduriez\\Perso\\Dossiers\\DossiersVS\\ProjectsWatch\\source\\MenusDelegate.mc" id="63" lineNum="56" parent="globals/MenusDelegate" pc="268441716" symbol="onKey"/>
+<entry filename="D:\\gduriez\\Perso\\Dossiers\\DossiersVS\\ProjectsWatch\\source\\MenusDelegate.mc" id="63" lineNum="58" parent="globals/MenusDelegate" pc="268441726" symbol="onKey"/>
+<entry filename="D:\\gduriez\\Perso\\Dossiers\\DossiersVS\\ProjectsWatch\\source\\MenusDelegate.mc" id="63" lineNum="59" parent="globals/MenusDelegate" pc="268441743" symbol="onKey"/>
+<entry filename="D:\\gduriez\\Perso\\Dossiers\\DossiersVS\\ProjectsWatch\\source\\MenusDelegate.mc" id="63" lineNum="61" parent="globals/MenusDelegate" pc="268441753" symbol="onKey"/>
+<entry filename="D:\\gduriez\\Perso\\Dossiers\\DossiersVS\\ProjectsWatch\\source\\MenusDelegate.mc" id="63" lineNum="62" parent="globals/MenusDelegate" pc="268441770" symbol="onKey"/>
+<entry filename="D:\\gduriez\\Perso\\Dossiers\\DossiersVS\\ProjectsWatch\\source\\MenusDelegate.mc" id="63" lineNum="64" parent="globals/MenusDelegate" pc="268441780" symbol="onKey"/>
+<entry filename="D:\\gduriez\\Perso\\Dossiers\\DossiersVS\\ProjectsWatch\\source\\MenusDelegate.mc" id="64" lineNum="67" parent="globals/MenusDelegate" pc="268441782" symbol="onNextPage"/>
+<entry filename="D:\\gduriez\\Perso\\Dossiers\\DossiersVS\\ProjectsWatch\\source\\MenusDelegate.mc" id="64" lineNum="68" parent="globals/MenusDelegate" pc="268441784" symbol="onNextPage"/>
+<entry filename="D:\\gduriez\\Perso\\Dossiers\\DossiersVS\\ProjectsWatch\\source\\MenusDelegate.mc" id="65" lineNum="76" parent="globals/MenusDelegate" pc="268441797" symbol="onSelect"/>
+<entry filename="D:\\gduriez\\Perso\\Dossiers\\DossiersVS\\ProjectsWatch\\source\\MenusDelegate.mc" id="65" lineNum="77" parent="globals/MenusDelegate" pc="268441800" symbol="onSelect"/>
+<entry filename="D:\\gduriez\\Perso\\Dossiers\\DossiersVS\\ProjectsWatch\\source\\MenusDelegate.mc" id="65" lineNum="78" parent="globals/MenusDelegate" pc="268441812" symbol="onSelect"/>
+<entry filename="D:\\gduriez\\Perso\\Dossiers\\DossiersVS\\ProjectsWatch\\source\\MenusDelegate.mc" id="65" lineNum="79" parent="globals/MenusDelegate" pc="268441833" symbol="onSelect"/>
+<entry filename="D:\\gduriez\\Perso\\Dossiers\\DossiersVS\\ProjectsWatch\\source\\MenusDelegate.mc" id="65" lineNum="80" parent="globals/MenusDelegate" pc="268441840" symbol="onSelect"/>
+<entry filename="D:\\gduriez\\Perso\\Dossiers\\DossiersVS\\ProjectsWatch\\source\\MenusDelegate.mc" id="65" lineNum="81" parent="globals/MenusDelegate" pc="268441847" symbol="onSelect"/>
+<entry filename="D:\\gduriez\\Perso\\Dossiers\\DossiersVS\\ProjectsWatch\\source\\MenusDelegate.mc" id="65" lineNum="82" parent="globals/MenusDelegate" pc="268441865" symbol="onSelect"/>
+<entry filename="D:\\gduriez\\Perso\\Dossiers\\DossiersVS\\ProjectsWatch\\source\\MenusDelegate.mc" id="65" lineNum="83" parent="globals/MenusDelegate" pc="268441878" symbol="onSelect"/>
+<entry filename="D:\\gduriez\\Perso\\Dossiers\\DossiersVS\\ProjectsWatch\\source\\MenusDelegate.mc" id="65" lineNum="83" parent="globals/MenusDelegate" pc="268441889" symbol="onSelect"/>
+<entry filename="D:\\gduriez\\Perso\\Dossiers\\DossiersVS\\ProjectsWatch\\source\\MenusDelegate.mc" id="65" lineNum="84" parent="globals/MenusDelegate" pc="268441907" symbol="onSelect"/>
+<entry filename="D:\\gduriez\\Perso\\Dossiers\\DossiersVS\\ProjectsWatch\\source\\MenusDelegate.mc" id="65" lineNum="85" parent="globals/MenusDelegate" pc="268441928" symbol="onSelect"/>
+<entry filename="D:\\gduriez\\Perso\\Dossiers\\DossiersVS\\ProjectsWatch\\source\\MenusDelegate.mc" id="65" lineNum="86" parent="globals/MenusDelegate" pc="268441961" symbol="onSelect"/>
+<entry filename="D:\\gduriez\\Perso\\Dossiers\\DossiersVS\\ProjectsWatch\\source\\MenusDelegate.mc" id="65" lineNum="87" parent="globals/MenusDelegate" pc="268442008" symbol="onSelect"/>
+<entry filename="D:\\gduriez\\Perso\\Dossiers\\DossiersVS\\ProjectsWatch\\source\\MenusDelegate.mc" id="65" lineNum="88" parent="globals/MenusDelegate" pc="268442031" symbol="onSelect"/>
+<entry filename="D:\\gduriez\\Perso\\Dossiers\\DossiersVS\\ProjectsWatch\\source\\MenusDelegate.mc" id="65" lineNum="89" parent="globals/MenusDelegate" pc="268442054" symbol="onSelect"/>
+<entry filename="D:\\gduriez\\Perso\\Dossiers\\DossiersVS\\ProjectsWatch\\source\\MenusDelegate.mc" id="65" lineNum="90" parent="globals/MenusDelegate" pc="268442077" symbol="onSelect"/>
+<entry filename="D:\\gduriez\\Perso\\Dossiers\\DossiersVS\\ProjectsWatch\\source\\MenusDelegate.mc" id="65" lineNum="91" parent="globals/MenusDelegate" pc="268442103" symbol="onSelect"/>
+<entry filename="D:\\gduriez\\Perso\\Dossiers\\DossiersVS\\ProjectsWatch\\source\\MenusDelegate.mc" id="65" lineNum="92" parent="globals/MenusDelegate" pc="268442126" symbol="onSelect"/>
+<entry filename="D:\\gduriez\\Perso\\Dossiers\\DossiersVS\\ProjectsWatch\\source\\MenusDelegate.mc" id="65" lineNum="93" parent="globals/MenusDelegate" pc="268442149" symbol="onSelect"/>
+<entry filename="D:\\gduriez\\Perso\\Dossiers\\DossiersVS\\ProjectsWatch\\source\\MenusDelegate.mc" id="65" lineNum="94" parent="globals/MenusDelegate" pc="268442172" symbol="onSelect"/>
+<entry filename="D:\\gduriez\\Perso\\Dossiers\\DossiersVS\\ProjectsWatch\\source\\MenusDelegate.mc" id="65" lineNum="95" parent="globals/MenusDelegate" pc="268442198" symbol="onSelect"/>
+<entry filename="D:\\gduriez\\Perso\\Dossiers\\DossiersVS\\ProjectsWatch\\source\\MenusDelegate.mc" id="65" lineNum="96" parent="globals/MenusDelegate" pc="268442206" symbol="onSelect"/>
+<entry filename="D:\\gduriez\\Perso\\Dossiers\\DossiersVS\\ProjectsWatch\\source\\MenusDelegate.mc" id="65" lineNum="97" parent="globals/MenusDelegate" pc="268442213" symbol="onSelect"/>
+<entry filename="D:\\gduriez\\Perso\\Dossiers\\DossiersVS\\ProjectsWatch\\source\\MenusDelegate.mc" id="65" lineNum="98" parent="globals/MenusDelegate" pc="268442251" symbol="onSelect"/>
+<entry filename="D:\\gduriez\\Perso\\Dossiers\\DossiersVS\\ProjectsWatch\\source\\MenusDelegate.mc" id="65" lineNum="99" parent="globals/MenusDelegate" pc="268442269" symbol="onSelect"/>
+<entry filename="D:\\gduriez\\Perso\\Dossiers\\DossiersVS\\ProjectsWatch\\source\\MenusDelegate.mc" id="65" lineNum="101" parent="globals/MenusDelegate" pc="268442294" symbol="onSelect"/>
+<entry filename="d:\\gduriez\\Perso\\Dossiers\\DossiersVS\\ProjectsWatch\\bin\\gen\\006-B4565-00\\source\\Rez.mcgen" id="66" lineNum="23" parent="globals/Rez/Styles/prompt_font_enhanced_readability__body_with_title" pc="268442306" symbol="&lt;init&gt;"/>
+<entry filename="d:\\gduriez\\Perso\\Dossiers\\DossiersVS\\ProjectsWatch\\bin\\gen\\006-B4565-00\\source\\Rez.mcgen" id="66" lineNum="24" parent="globals/Rez/Styles/prompt_font_enhanced_readability__body_with_title" pc="268442332" symbol="&lt;init&gt;"/>
+<entry filename="d:\\gduriez\\Perso\\Dossiers\\DossiersVS\\ProjectsWatch\\bin\\gen\\006-B4565-00\\source\\Rez.mcgen" id="67" lineNum="38" parent="globals/Rez/Styles/prompt_font_enhanced_readability__body_no_title" pc="268442349" symbol="&lt;init&gt;"/>
+<entry filename="d:\\gduriez\\Perso\\Dossiers\\DossiersVS\\ProjectsWatch\\bin\\gen\\006-B4565-00\\source\\Rez.mcgen" id="67" lineNum="39" parent="globals/Rez/Styles/prompt_font_enhanced_readability__body_no_title" pc="268442375" symbol="&lt;init&gt;"/>
+<entry filename="d:\\gduriez\\Perso\\Dossiers\\DossiersVS\\ProjectsWatch\\bin\\gen\\006-B4565-00\\source\\Rez.mcgen" id="68" lineNum="68" parent="globals/Rez/Styles/prompt_font__title" pc="268442392" symbol="&lt;init&gt;"/>
+<entry filename="d:\\gduriez\\Perso\\Dossiers\\DossiersVS\\ProjectsWatch\\bin\\gen\\006-B4565-00\\source\\Rez.mcgen" id="68" lineNum="69" parent="globals/Rez/Styles/prompt_font__title" pc="268442418" symbol="&lt;init&gt;"/>
+<entry filename="d:\\gduriez\\Perso\\Dossiers\\DossiersVS\\ProjectsWatch\\bin\\gen\\006-B4565-00\\source\\Rez.mcgen" id="69" lineNum="87" parent="globals/Rez/Styles/system_color_dark__text" pc="268442435" symbol="&lt;init&gt;"/>
+<entry filename="d:\\gduriez\\Perso\\Dossiers\\DossiersVS\\ProjectsWatch\\bin\\gen\\006-B4565-00\\source\\Rez.mcgen" id="70" lineNum="108" parent="globals/Rez/Styles/confirmation_font__body" pc="268442452" symbol="&lt;init&gt;"/>
+<entry filename="d:\\gduriez\\Perso\\Dossiers\\DossiersVS\\ProjectsWatch\\bin\\gen\\006-B4565-00\\source\\Rez.mcgen" id="70" lineNum="109" parent="globals/Rez/Styles/confirmation_font__body" pc="268442478" symbol="&lt;init&gt;"/>
+<entry filename="d:\\gduriez\\Perso\\Dossiers\\DossiersVS\\ProjectsWatch\\bin\\gen\\006-B4565-00\\source\\Rez.mcgen" id="71" lineNum="130" parent="globals/Rez/Styles/confirmation_input__confirm" pc="268442495" symbol="&lt;init&gt;"/>
+<entry filename="d:\\gduriez\\Perso\\Dossiers\\DossiersVS\\ProjectsWatch\\bin\\gen\\006-B4565-00\\source\\Rez.mcgen" id="72" lineNum="134" parent="globals/Rez/Styles/prompt_font__body_with_title" pc="268442512" symbol="&lt;init&gt;"/>
+<entry filename="d:\\gduriez\\Perso\\Dossiers\\DossiersVS\\ProjectsWatch\\bin\\gen\\006-B4565-00\\source\\Rez.mcgen" id="72" lineNum="135" parent="globals/Rez/Styles/prompt_font__body_with_title" pc="268442528" symbol="&lt;init&gt;"/>
+<entry filename="d:\\gduriez\\Perso\\Dossiers\\DossiersVS\\ProjectsWatch\\bin\\gen\\006-B4565-00\\source\\Rez.mcgen" id="73" lineNum="193" parent="globals/Rez/Styles/confirmation_input__delete" pc="268442545" symbol="&lt;init&gt;"/>
+<entry filename="d:\\gduriez\\Perso\\Dossiers\\DossiersVS\\ProjectsWatch\\bin\\gen\\006-B4565-00\\source\\Rez.mcgen" id="74" lineNum="203" parent="globals/Rez/Styles/system_input__action_menu" pc="268442562" symbol="&lt;init&gt;"/>
+<entry filename="d:\\gduriez\\Perso\\Dossiers\\DossiersVS\\ProjectsWatch\\bin\\gen\\006-B4565-00\\source\\Rez.mcgen" id="75" lineNum="216" parent="globals/Rez/Styles/prompt_color_light__body" pc="268442579" symbol="&lt;init&gt;"/>
+<entry filename="d:\\gduriez\\Perso\\Dossiers\\DossiersVS\\ProjectsWatch\\bin\\gen\\006-B4565-00\\source\\Rez.mcgen" id="76" lineNum="233" parent="globals/Rez/Styles/confirmation_color_light__body" pc="268442596" symbol="&lt;init&gt;"/>
+<entry filename="d:\\gduriez\\Perso\\Dossiers\\DossiersVS\\ProjectsWatch\\bin\\gen\\006-B4565-00\\source\\Rez.mcgen" id="77" lineNum="282" parent="globals/Rez/Styles/activity_color_dark__text" pc="268442613" symbol="&lt;init&gt;"/>
+<entry filename="d:\\gduriez\\Perso\\Dossiers\\DossiersVS\\ProjectsWatch\\bin\\gen\\006-B4565-00\\source\\Rez.mcgen" id="78" lineNum="286" parent="globals/Rez/Styles/confirmation_input__keep" pc="268442630" symbol="&lt;init&gt;"/>
+<entry filename="d:\\gduriez\\Perso\\Dossiers\\DossiersVS\\ProjectsWatch\\bin\\gen\\006-B4565-00\\source\\Rez.mcgen" id="79" lineNum="304" parent="globals/Rez/Styles/activity_color_light__text" pc="268442647" symbol="&lt;init&gt;"/>
+<entry filename="d:\\gduriez\\Perso\\Dossiers\\DossiersVS\\ProjectsWatch\\bin\\gen\\006-B4565-00\\source\\Rez.mcgen" id="80" lineNum="360" parent="globals/Rez/Styles/confirmation_color_dark__body" pc="268442664" symbol="&lt;init&gt;"/>
+<entry filename="d:\\gduriez\\Perso\\Dossiers\\DossiersVS\\ProjectsWatch\\bin\\gen\\006-B4565-00\\source\\Rez.mcgen" id="81" lineNum="371" parent="globals/Rez/Styles/prompt_color_dark__title" pc="268442681" symbol="&lt;init&gt;"/>
+<entry filename="d:\\gduriez\\Perso\\Dossiers\\DossiersVS\\ProjectsWatch\\bin\\gen\\006-B4565-00\\source\\Rez.mcgen" id="82" lineNum="392" parent="globals/Rez/Styles/confirmation_font_enhanced_readability__body" pc="268442698" symbol="&lt;init&gt;"/>
+<entry filename="d:\\gduriez\\Perso\\Dossiers\\DossiersVS\\ProjectsWatch\\bin\\gen\\006-B4565-00\\source\\Rez.mcgen" id="82" lineNum="393" parent="globals/Rez/Styles/confirmation_font_enhanced_readability__body" pc="268442724" symbol="&lt;init&gt;"/>
+<entry filename="d:\\gduriez\\Perso\\Dossiers\\DossiersVS\\ProjectsWatch\\bin\\gen\\006-B4565-00\\source\\Rez.mcgen" id="83" lineNum="398" parent="globals/Rez/Styles/prompt_color_light__title" pc="268442741" symbol="&lt;init&gt;"/>
+<entry filename="d:\\gduriez\\Perso\\Dossiers\\DossiersVS\\ProjectsWatch\\bin\\gen\\006-B4565-00\\source\\Rez.mcgen" id="84" lineNum="535" parent="globals/Rez/Styles/system_color_light__text" pc="268442758" symbol="&lt;init&gt;"/>
+<entry filename="d:\\gduriez\\Perso\\Dossiers\\DossiersVS\\ProjectsWatch\\bin\\gen\\006-B4565-00\\source\\Rez.mcgen" id="85" lineNum="547" parent="globals/Rez/Styles/confirmation_input__reject" pc="268442775" symbol="&lt;init&gt;"/>
+<entry filename="d:\\gduriez\\Perso\\Dossiers\\DossiersVS\\ProjectsWatch\\bin\\gen\\006-B4565-00\\source\\Rez.mcgen" id="86" lineNum="646" parent="globals/Rez/Styles/device_info" pc="268442792" symbol="&lt;init&gt;"/>
+<entry filename="d:\\gduriez\\Perso\\Dossiers\\DossiersVS\\ProjectsWatch\\bin\\gen\\006-B4565-00\\source\\Rez.mcgen" id="87" lineNum="661" parent="globals/Rez/Styles/prompt_font__body_no_title" pc="268442809" symbol="&lt;init&gt;"/>
+<entry filename="d:\\gduriez\\Perso\\Dossiers\\DossiersVS\\ProjectsWatch\\bin\\gen\\006-B4565-00\\source\\Rez.mcgen" id="87" lineNum="662" parent="globals/Rez/Styles/prompt_font__body_no_title" pc="268442835" symbol="&lt;init&gt;"/>
+<entry filename="d:\\gduriez\\Perso\\Dossiers\\DossiersVS\\ProjectsWatch\\bin\\gen\\006-B4565-00\\source\\Rez.mcgen" id="88" lineNum="686" parent="globals/Rez/Styles/prompt_font_enhanced_readability__title" pc="268442852" symbol="&lt;init&gt;"/>
+<entry filename="d:\\gduriez\\Perso\\Dossiers\\DossiersVS\\ProjectsWatch\\bin\\gen\\006-B4565-00\\source\\Rez.mcgen" id="88" lineNum="687" parent="globals/Rez/Styles/prompt_font_enhanced_readability__title" pc="268442878" symbol="&lt;init&gt;"/>
+<entry filename="d:\\gduriez\\Perso\\Dossiers\\DossiersVS\\ProjectsWatch\\bin\\gen\\006-B4565-00\\source\\Rez.mcgen" id="89" lineNum="692" parent="globals/Rez/Styles/prompt_color_dark__body" pc="268442895" symbol="&lt;init&gt;"/>
+</pcToLineNum>
+<symbolTable>
+<entry id="8388639" module="true" symbol="Graphics"/>
+<entry id="326" module="true" symbol="system_size__menu_icon"/>
+<entry id="329" module="true" symbol="system_size__subwindow"/>
+<entry id="8390101" object="true" symbol="BufferedBitmap"/>
+<entry id="144" object="true" symbol="MenuView"/>
+<entry id="19" module="true" symbol="globals/Rez/Styles/confirmation_icon_dark__hint_confirm"/>
+<entry field="true" id="181" symbol="nbreCar"/>
+<entry id="16" module="true" symbol="globals/Rez/Styles/confirmation_icon__hint_delete"/>
+<entry id="324" module="true" symbol="system_size__launch_icon"/>
+<entry field="true" id="139" symbol="Field5Color"/>
+<entry id="195" method="true" symbol="dessinePresentPastFuture"/>
+<entry id="250" module="true" symbol="prompt_font_enhanced_readability__body_no_title"/>
+<entry id="151" object="true" symbol="ProjectsWatchView"/>
+<entry id="58" module="true" symbol="globals/Rez/Styles/system_color_dark__background"/>
+<entry id="96" module="true" symbol="globals/Rez/Styles/system_icon_light__hint_button_right_bottom"/>
+<entry id="122" module="true" symbol="globals/Rez/Styles/system_size__menu_header"/>
+<entry id="69" module="true" symbol="globals/Rez/Styles/system_icon_dark__hint_button_left_top"/>
+<entry id="306" module="true" symbol="system_icon_light__warning"/>
+<entry id="298" module="true" symbol="system_icon_light__hint_button_left_top"/>
+<entry id="241" module="true" symbol="prompt_color_dark__background"/>
+<entry id="109" module="true" symbol="globals/Rez/Styles/system_icon_positive__hint_button_right_bottom"/>
+<entry id="8388632" method="true" symbol="&lt;init&gt;"/>
+<entry field="true" id="168" symbol="numParametre"/>
+<entry id="42" module="true" symbol="globals/Rez/Styles/prompt_color_light__body"/>
+<entry id="258" module="true" symbol="prompt_size__body_with_title"/>
+<entry id="114" module="true" symbol="globals/Rez/Styles/system_loc__hint_button_left_bottom"/>
+<entry id="247" module="true" symbol="prompt_font__body_no_title"/>
+<entry id="41" module="true" symbol="globals/Rez/Styles/prompt_color_light__background"/>
+<entry id="22" module="true" symbol="globals/Rez/Styles/confirmation_icon_dark__hint_reject"/>
+<entry id="15" module="true" symbol="globals/Rez/Styles/confirmation_icon__hint_confirm"/>
+<entry field="true" id="8389671" symbol="screenWidth"/>
+<entry id="277" module="true" symbol="system_icon_dark__revert"/>
+<entry id="103" module="true" symbol="globals/Rez/Styles/system_icon_light__warning"/>
+<entry id="8389683" method="true" symbol="onSettingsChanged"/>
+<entry id="231" module="true" symbol="confirmation_input__delete"/>
+<entry id="299" module="true" symbol="system_icon_light__hint_button_right_bottom"/>
+<entry field="true" id="163" symbol="item"/>
+<entry id="8388826" method="true" symbol="next"/>
+<entry id="301" module="true" symbol="system_icon_light__hint_button_right_top"/>
+<entry id="44" module="true" symbol="globals/Rez/Styles/prompt_font__body_no_title"/>
+<entry id="297" module="true" symbol="system_icon_light__hint_button_left_middle"/>
+<entry field="true" id="162" symbol="fenetre_heures"/>
+<entry id="120" module="true" symbol="globals/Rez/Styles/system_loc__subwindow"/>
+<entry id="102" module="true" symbol="globals/Rez/Styles/system_icon_light__search"/>
+<entry id="123" module="true" symbol="globals/Rez/Styles/system_size__menu_icon"/>
+<entry id="126" module="true" symbol="globals/Rez/Styles/system_size__subwindow"/>
+<entry field="true" id="344" symbol="verticalJustification"/>
+<entry id="78" module="true" symbol="globals/Rez/Styles/system_icon_destructive__cancel"/>
+<entry id="108" module="true" symbol="globals/Rez/Styles/system_icon_positive__hint_button_left_top"/>
+<entry id="221" module="true" symbol="confirmation_icon__hint_reject"/>
+<entry field="true" id="337" symbol="scaleY"/>
+<entry field="true" id="336" symbol="scaleX"/>
+<entry id="43" module="true" symbol="globals/Rez/Styles/prompt_color_light__title"/>
+<entry id="28" module="true" symbol="globals/Rez/Styles/confirmation_input__delete"/>
+<entry id="317" module="true" symbol="system_loc__hint_button_left_bottom"/>
+<entry id="312" module="true" symbol="system_icon_positive__hint_button_right_bottom"/>
+<entry id="263" module="true" symbol="system_color_light__background"/>
+<entry field="true" id="128" symbol="BackGroundColor"/>
+<entry id="293" module="true" symbol="system_icon_light__check"/>
+<entry id="45" module="true" symbol="globals/Rez/Styles/prompt_font__body_with_title"/>
+<entry id="227" module="true" symbol="confirmation_icon_light__hint_delete"/>
+<entry id="232" module="true" symbol="confirmation_input__keep"/>
+<entry id="40" module="true" symbol="globals/Rez/Styles/prompt_color_dark__title"/>
+<entry id="304" module="true" symbol="system_icon_light__save"/>
+<entry field="true" id="8388611" module="true" symbol="Toybox"/>
+<entry id="127" module="true" symbol="globals/Rez/Styles/system_size__toast_icon"/>
+<entry id="185" method="true" symbol="prepareTab"/>
+<entry field="true" id="340" symbol="hasGpu"/>
+<entry id="191" method="true" symbol="dessineChamps"/>
+<entry id="110" module="true" symbol="globals/Rez/Styles/system_icon_positive__hint_button_right_middle"/>
+<entry field="true" id="206" symbol="menuView"/>
+<entry field="true" id="8388782" method="true" symbol="size"/>
+<entry field="true" id="183" symbol="nbreTotalElements"/>
+<entry id="210" module="true" symbol="activity_color_dark__background"/>
+<entry id="115" module="true" symbol="globals/Rez/Styles/system_loc__hint_button_left_middle"/>
+<entry field="true" id="341" symbol="hasNightMode"/>
+<entry id="264" module="true" symbol="system_color_light__text"/>
+<entry id="24" module="true" symbol="globals/Rez/Styles/confirmation_icon_light__hint_delete"/>
+<entry id="257" module="true" symbol="prompt_size__body_no_title"/>
+<entry id="290" module="true" symbol="system_icon_destructive__warning"/>
+<entry field="true" id="209" symbol="AppName"/>
+<entry id="202" method="true" symbol="colorValuesTab"/>
+<entry id="292" module="true" symbol="system_icon_light__cancel"/>
+<entry id="190" method="true" symbol="testeRCAndDrawLabel"/>
+<entry id="36" module="true" symbol="globals/Rez/Styles/confirmation_size__body"/>
+<entry field="true" id="149" symbol="PresentColor"/>
+<entry id="173" method="true" symbol="calculeItem0"/>
+<entry id="5" module="true" symbol="globals/Rez/Strings"/>
+<entry id="13" module="true" symbol="globals/Rez/Styles/confirmation_font__body"/>
+<entry id="8388772" module="true" object="true" symbol="Fonts"/>
+<entry id="276" module="true" symbol="system_icon_dark__question"/>
+<entry id="300" module="true" symbol="system_icon_light__hint_button_right_middle"/>
+<entry id="57" module="true" symbol="globals/Rez/Styles/prompt_size__title_icon"/>
+<entry field="true" id="156" symbol="lastParametre"/>
+<entry id="291" module="true" symbol="system_icon_light__about"/>
+<entry id="320" module="true" symbol="system_loc__hint_button_right_bottom"/>
+<entry id="95" module="true" symbol="globals/Rez/Styles/system_icon_light__hint_button_left_top"/>
+<entry field="true" id="338" symbol="button"/>
+<entry id="217" module="true" symbol="confirmation_font_enhanced_readability__body"/>
+<entry id="8388648" module="true" symbol="WatchUi"/>
+<entry id="54" module="true" symbol="globals/Rez/Styles/prompt_size__body_no_title"/>
+<entry field="true" id="208" symbol="PresentPastFuture"/>
+<entry field="true" id="180" symbol="nbreAff"/>
+<entry id="64" module="true" symbol="globals/Rez/Styles/system_icon_dark__check"/>
+<entry id="8389081" method="true" symbol="onBack"/>
+<entry id="236" module="true" symbol="confirmation_loc__hint_delete"/>
+<entry id="203" method="true" symbol="colorsNames"/>
+<entry field="true" id="142" symbol="HourColor"/>
+<entry id="112" module="true" symbol="globals/Rez/Styles/system_input__action_menu"/>
+<entry id="201" method="true" symbol="colorName"/>
+<entry id="2" module="true" symbol="globals/Rez"/>
+<entry id="259" module="true" symbol="prompt_size__title"/>
+<entry id="73" module="true" symbol="globals/Rez/Styles/system_icon_dark__question"/>
+<entry id="318" module="true" symbol="system_loc__hint_button_left_middle"/>
+<entry id="6" module="true" symbol="globals/Rez/Styles"/>
+<entry id="313" module="true" symbol="system_icon_positive__hint_button_right_middle"/>
+<entry id="86" module="true" symbol="globals/Rez/Styles/system_icon_destructive__hint_button_right_top"/>
+<entry id="274" module="true" symbol="system_icon_dark__hint_button_right_middle"/>
+<entry id="117" module="true" symbol="globals/Rez/Styles/system_loc__hint_button_right_bottom"/>
+<entry id="316" module="true" symbol="system_loc__hint_action_menu"/>
+<entry id="104" module="true" symbol="globals/Rez/Styles/system_icon_positive__check"/>
+<entry id="215" module="true" symbol="confirmation_color_light__body"/>
+<entry id="8389124" method="true" symbol="onUpdate"/>
+<entry id="84" module="true" symbol="globals/Rez/Styles/system_icon_destructive__hint_button_right_bottom"/>
+<entry id="200" method="true" symbol="load"/>
+<entry field="true" id="133" symbol="Field2Color"/>
+<entry id="75" module="true" symbol="globals/Rez/Styles/system_icon_dark__save"/>
+<entry id="67" module="true" symbol="globals/Rez/Styles/system_icon_dark__hint_button_left_bottom"/>
+<entry id="176" method="true" symbol="isRC"/>
+<entry id="266" module="true" symbol="system_icon_dark__cancel"/>
+<entry id="212" module="true" symbol="activity_color_light__background"/>
+<entry id="121" module="true" symbol="globals/Rez/Styles/system_size__launch_icon"/>
+<entry id="198" method="true" symbol="getParam"/>
+<entry id="255" module="true" symbol="prompt_loc__title"/>
+<entry id="59" module="true" symbol="globals/Rez/Styles/system_color_dark__text"/>
+<entry id="253" module="true" symbol="prompt_loc__body_no_title"/>
+<entry id="327" module="true" symbol="system_size__menu_item"/>
+<entry id="8388771" module="true" object="true" symbol="Drawables"/>
+<entry field="true" id="8389348" symbol="font"/>
+<entry field="true" id="8389067" symbol="height"/>
+<entry id="305" module="true" symbol="system_icon_light__search"/>
+<entry id="225" module="true" symbol="confirmation_icon_dark__hint_reject"/>
+<entry id="87" module="true" symbol="globals/Rez/Styles/system_icon_destructive__warning"/>
+<entry field="true" id="165" symbol="largEcran"/>
+<entry field="true" id="157" symbol="params"/>
+<entry id="8389079" method="true" symbol="onPreviousPage"/>
+<entry id="8389275" method="true" symbol="getApp"/>
+<entry id="66" module="true" symbol="globals/Rez/Styles/system_icon_dark__hint_action_menu"/>
+<entry id="62" module="true" symbol="globals/Rez/Styles/system_icon_dark__about"/>
+<entry field="true" id="8389066" symbol="width"/>
+<entry id="25" module="true" symbol="globals/Rez/Styles/confirmation_icon_light__hint_keep"/>
+<entry id="192" method="true" symbol="dessineFond"/>
+<entry id="246" module="true" symbol="prompt_color_light__title"/>
+<entry field="true" id="188" symbol="tabLignesMenu"/>
+<entry field="true" id="8389672" symbol="screenHeight"/>
+<entry id="280" module="true" symbol="system_icon_dark__warning"/>
+<entry id="70" module="true" symbol="globals/Rez/Styles/system_icon_dark__hint_button_right_bottom"/>
+<entry id="97" module="true" symbol="globals/Rez/Styles/system_icon_light__hint_button_right_middle"/>
+<entry id="8389122" method="true" symbol="onLayout"/>
+<entry id="93" module="true" symbol="globals/Rez/Styles/system_icon_light__hint_button_left_bottom"/>
+<entry id="35" module="true" symbol="globals/Rez/Styles/confirmation_loc__hint_reject"/>
+<entry id="270" module="true" symbol="system_icon_dark__hint_button_left_bottom"/>
+<entry id="8389376" method="true" symbol="onEnterSleep"/>
+<entry field="true" id="148" symbol="PastFutureColor"/>
+<entry id="74" module="true" symbol="globals/Rez/Styles/system_icon_dark__revert"/>
+<entry id="158" module="true" symbol="Styles"/>
+<entry field="true" id="8389349" symbol="justification"/>
+<entry field="true" id="137" symbol="Field4Color"/>
+<entry field="true" id="335" symbol="scaleRelativeTo"/>
+<entry id="184" method="true" symbol="prepareHauteurs"/>
+<entry id="8389098" method="true" symbol="onTap"/>
+<entry id="308" module="true" symbol="system_icon_positive__hint_action_menu"/>
+<entry id="309" module="true" symbol="system_icon_positive__hint_button_left_bottom"/>
+<entry id="38" module="true" symbol="globals/Rez/Styles/prompt_color_dark__background"/>
+<entry id="307" module="true" symbol="system_icon_positive__check"/>
+<entry id="169" method="true" symbol="prev"/>
+<entry field="true" id="333" symbol="filename"/>
+<entry id="278" module="true" symbol="system_icon_dark__save"/>
+<entry id="18" module="true" symbol="globals/Rez/Styles/confirmation_icon__hint_reject"/>
+<entry id="46" module="true" symbol="globals/Rez/Styles/prompt_font__title"/>
+<entry id="196" method="true" symbol="dessineTout"/>
+<entry field="true" id="332" symbol="compress"/>
+<entry id="55" module="true" symbol="globals/Rez/Styles/prompt_size__body_with_title"/>
+<entry id="323" module="true" symbol="system_loc__subwindow"/>
+<entry field="true" id="161" symbol="element_promptTab"/>
+<entry id="294" module="true" symbol="system_icon_light__discard"/>
+<entry field="true" id="8389892" symbol="background"/>
+<entry id="124" module="true" symbol="globals/Rez/Styles/system_size__menu_item"/>
+<entry id="60" module="true" symbol="globals/Rez/Styles/system_color_light__background"/>
+<entry id="279" module="true" symbol="system_icon_dark__search"/>
+<entry id="118" module="true" symbol="globals/Rez/Styles/system_loc__hint_button_right_middle"/>
+<entry field="true" id="174" symbol="hFont"/>
+<entry field="true" id="334" symbol="exclude"/>
+<entry id="9" module="true" symbol="globals/Rez/Styles/activity_color_light__background"/>
+<entry id="269" module="true" symbol="system_icon_dark__hint_action_menu"/>
+<entry id="3" module="true" symbol="globals/Rez/Drawables"/>
+<entry id="228" module="true" symbol="confirmation_icon_light__hint_keep"/>
+<entry id="90" module="true" symbol="globals/Rez/Styles/system_icon_light__check"/>
+<entry id="125" module="true" symbol="globals/Rez/Styles/system_size__screen"/>
+<entry id="205" method="true" symbol="menuPrincipalTab"/>
+<entry id="81" module="true" symbol="globals/Rez/Styles/system_icon_destructive__hint_button_left_bottom"/>
+<entry id="330" module="true" symbol="system_size__toast_icon"/>
+<entry id="29" module="true" symbol="globals/Rez/Styles/confirmation_input__keep"/>
+<entry id="91" module="true" symbol="globals/Rez/Styles/system_icon_light__discard"/>
+<entry field="true" id="141" symbol="Field6Color"/>
+<entry id="99" module="true" symbol="globals/Rez/Styles/system_icon_light__question"/>
+<entry id="233" module="true" symbol="confirmation_input__reject"/>
+<entry field="true" id="178" symbol="justif"/>
+<entry id="106" module="true" symbol="globals/Rez/Styles/system_icon_positive__hint_button_left_bottom"/>
+<entry id="145" object="true" symbol="MenusDelegate"/>
+<entry id="105" module="true" symbol="globals/Rez/Styles/system_icon_positive__hint_action_menu"/>
+<entry id="8" module="true" symbol="globals/Rez/Styles/activity_color_dark__text"/>
+<entry id="275" module="true" symbol="system_icon_dark__hint_button_right_top"/>
+<entry id="98" module="true" symbol="globals/Rez/Styles/system_icon_light__hint_button_right_top"/>
+<entry id="39" module="true" symbol="globals/Rez/Styles/prompt_color_dark__body"/>
+<entry id="287" module="true" symbol="system_icon_destructive__hint_button_right_bottom"/>
+<entry id="261" module="true" symbol="system_color_dark__background"/>
+<entry id="315" module="true" symbol="system_input__action_menu"/>
+<entry id="11" module="true" symbol="globals/Rez/Styles/confirmation_color_dark__body"/>
+<entry id="71" module="true" symbol="globals/Rez/Styles/system_icon_dark__hint_button_right_middle"/>
+<entry id="61" module="true" symbol="globals/Rez/Styles/system_color_light__text"/>
+<entry id="20" module="true" symbol="globals/Rez/Styles/confirmation_icon_dark__hint_delete"/>
+<entry id="239" module="true" symbol="confirmation_size__body"/>
+<entry id="72" module="true" symbol="globals/Rez/Styles/system_icon_dark__hint_button_right_top"/>
+<entry id="8389377" method="true" symbol="onExitSleep"/>
+<entry id="94" module="true" symbol="globals/Rez/Styles/system_icon_light__hint_button_left_middle"/>
+<entry id="14" module="true" symbol="globals/Rez/Styles/confirmation_font_enhanced_readability__body"/>
+<entry id="235" module="true" symbol="confirmation_loc__hint_confirm"/>
+<entry id="271" module="true" symbol="system_icon_dark__hint_button_left_middle"/>
+<entry id="8388644" module="true" symbol="System"/>
+<entry id="65" module="true" symbol="globals/Rez/Styles/system_icon_dark__discard"/>
+<entry id="30" module="true" symbol="globals/Rez/Styles/confirmation_input__reject"/>
+<entry field="true" id="186" symbol="sautDeLigne"/>
+<entry id="216" module="true" symbol="confirmation_font__body"/>
+<entry id="260" module="true" symbol="prompt_size__title_icon"/>
+<entry id="218" module="true" symbol="confirmation_icon__hint_confirm"/>
+<entry id="8389619" method="true" symbol="onSelect"/>
+<entry id="129" object="true" symbol="Colors"/>
+<entry id="8388645" module="true" symbol="Time"/>
+<entry id="8388769" module="true" object="true" symbol="Rez"/>
+<entry id="119" module="true" symbol="globals/Rez/Styles/system_loc__hint_button_right_top"/>
+<entry id="311" module="true" symbol="system_icon_positive__hint_button_left_top"/>
+<entry id="310" module="true" symbol="system_icon_positive__hint_button_left_middle"/>
+<entry id="8392219" symbol="face"/>
+<entry id="252" module="true" symbol="prompt_font_enhanced_readability__title"/>
+<entry field="true" id="342" symbol="hasTouchScreen"/>
+<entry field="true" id="343" symbol="horizontalJustification"/>
+<entry id="267" module="true" symbol="system_icon_dark__check"/>
+<entry id="88" module="true" symbol="globals/Rez/Styles/system_icon_light__about"/>
+<entry field="true" id="146" symbol="MinutesColor"/>
+<entry id="226" module="true" symbol="confirmation_icon_light__hint_confirm"/>
+<entry id="229" module="true" symbol="confirmation_icon_light__hint_reject"/>
+<entry id="325" module="true" symbol="system_size__menu_header"/>
+<entry id="219" module="true" symbol="confirmation_icon__hint_delete"/>
+<entry id="48" module="true" symbol="globals/Rez/Styles/prompt_font_enhanced_readability__body_with_title"/>
+<entry id="8388640" module="true" symbol="Lang"/>
+<entry id="281" module="true" symbol="system_icon_destructive__cancel"/>
+<entry field="true" id="177" symbol="item0"/>
+<entry id="289" module="true" symbol="system_icon_destructive__hint_button_right_top"/>
+<entry id="302" module="true" symbol="system_icon_light__question"/>
+<entry id="7" module="true" symbol="globals/Rez/Styles/activity_color_dark__background"/>
+<entry field="true" id="154" symbol="couleurFond"/>
+<entry id="100" module="true" symbol="globals/Rez/Styles/system_icon_light__revert"/>
+<entry id="193" method="true" symbol="dessineHour"/>
+<entry field="true" id="166" symbol="largIndicateur"/>
+<entry id="23" module="true" symbol="globals/Rez/Styles/confirmation_icon_light__hint_confirm"/>
+<entry id="245" module="true" symbol="prompt_color_light__body"/>
+<entry id="321" module="true" symbol="system_loc__hint_button_right_middle"/>
+<entry field="true" id="207" symbol="LauncherIcon"/>
+<entry id="21" module="true" symbol="globals/Rez/Styles/confirmation_icon_dark__hint_keep"/>
+<entry id="12" module="true" symbol="globals/Rez/Styles/confirmation_color_light__body"/>
+<entry id="8388610" symbol="statics"/>
+<entry id="8389123" method="true" symbol="onShow"/>
+<entry id="194" method="true" symbol="dessineMinutes"/>
+<entry id="27" module="true" symbol="globals/Rez/Styles/confirmation_input__confirm"/>
+<entry id="8388643" module="true" symbol="Sensor"/>
+<entry id="150" object="true" symbol="ProjectsWatchApp"/>
+<entry id="116" module="true" symbol="globals/Rez/Styles/system_loc__hint_button_left_top"/>
+<entry id="26" module="true" symbol="globals/Rez/Styles/confirmation_icon_light__hint_reject"/>
+<entry id="82" module="true" symbol="globals/Rez/Styles/system_icon_destructive__hint_button_left_middle"/>
+<entry id="244" module="true" symbol="prompt_color_light__background"/>
+<entry id="286" module="true" symbol="system_icon_destructive__hint_button_left_top"/>
+<entry id="262" module="true" symbol="system_color_dark__text"/>
+<entry id="220" module="true" symbol="confirmation_icon__hint_keep"/>
+<entry id="314" module="true" symbol="system_icon_positive__hint_button_right_top"/>
+<entry id="8389350" module="true" symbol="globals"/>
+<entry id="63" module="true" symbol="globals/Rez/Styles/system_icon_dark__cancel"/>
+<entry id="248" module="true" symbol="prompt_font__body_with_title"/>
+<entry id="204" method="true" symbol="getColor"/>
+<entry id="47" module="true" symbol="globals/Rez/Styles/prompt_font_enhanced_readability__body_no_title"/>
+<entry id="107" module="true" symbol="globals/Rez/Styles/system_icon_positive__hint_button_left_middle"/>
+<entry field="true" id="199" symbol="numFont"/>
+<entry id="8388770" module="true" object="true" symbol="Strings"/>
+<entry id="284" module="true" symbol="system_icon_destructive__hint_button_left_bottom"/>
+<entry id="8388702" method="true" symbol="initialize"/>
+<entry field="true" id="8389670" symbol="screenShape"/>
+<entry id="85" module="true" symbol="globals/Rez/Styles/system_icon_destructive__hint_button_right_middle"/>
+<entry id="92" module="true" symbol="globals/Rez/Styles/system_icon_light__hint_action_menu"/>
+<entry id="288" module="true" symbol="system_icon_destructive__hint_button_right_middle"/>
+<entry id="265" module="true" symbol="system_icon_dark__about"/>
+<entry field="true" id="331" symbol="automaticPalette"/>
+<entry id="68" module="true" symbol="globals/Rez/Styles/system_icon_dark__hint_button_left_middle"/>
+<entry id="240" module="true" symbol="device_info"/>
+<entry id="238" module="true" symbol="confirmation_loc__hint_reject"/>
+<entry id="113" module="true" symbol="globals/Rez/Styles/system_loc__hint_action_menu"/>
+<entry field="true" id="164" symbol="itemString"/>
+<entry id="319" module="true" symbol="system_loc__hint_button_left_top"/>
+<entry field="true" id="155" symbol="is24h"/>
+<entry field="true" id="182" symbol="nbreLignesDispoAffichage"/>
+<entry id="8388641" module="true" symbol="Math"/>
+<entry field="true" id="175" symbol="hLigne"/>
+<entry field="true" id="140" symbol="Field6"/>
+<entry field="true" id="138" symbol="Field5"/>
+<entry field="true" id="136" symbol="Field4"/>
+<entry field="true" id="134" symbol="Field3"/>
+<entry field="true" id="132" symbol="Field2"/>
+<entry field="true" id="130" symbol="Field1"/>
+<entry id="51" module="true" symbol="globals/Rez/Styles/prompt_loc__body_with_title"/>
+<entry id="234" module="true" symbol="confirmation_loc__body"/>
+<entry id="8391703" method="true" symbol="getSettingsView"/>
+<entry id="213" module="true" symbol="activity_color_light__text"/>
+<entry field="true" id="131" symbol="Field1Color"/>
+<entry id="224" module="true" symbol="confirmation_icon_dark__hint_keep"/>
+<entry id="187" method="true" symbol="supprimeSautDeLigne"/>
+<entry id="230" module="true" symbol="confirmation_input__confirm"/>
+<entry id="8389280" method="true" symbol="getInitialView"/>
+<entry id="83" module="true" symbol="globals/Rez/Styles/system_icon_destructive__hint_button_left_top"/>
+<entry id="243" module="true" symbol="prompt_color_dark__title"/>
+<entry field="true" id="8389347" symbol="color"/>
+<entry field="true" id="147" symbol="ParametresChanges"/>
+<entry id="8389781" module="true" symbol="SensorHistory"/>
+<entry id="80" module="true" symbol="globals/Rez/Styles/system_icon_destructive__hint_action_menu"/>
+<entry id="101" module="true" symbol="globals/Rez/Styles/system_icon_light__save"/>
+<entry id="34" module="true" symbol="globals/Rez/Styles/confirmation_loc__hint_keep"/>
+<entry id="8389097" method="true" symbol="onKey"/>
+<entry id="56" module="true" symbol="globals/Rez/Styles/prompt_size__title"/>
+<entry id="10" module="true" symbol="globals/Rez/Styles/activity_color_light__text"/>
+<entry id="295" module="true" symbol="system_icon_light__hint_action_menu"/>
+<entry id="211" module="true" symbol="activity_color_dark__text"/>
+<entry id="256" module="true" symbol="prompt_loc__title_icon"/>
+<entry id="37" module="true" symbol="globals/Rez/Styles/device_info"/>
+<entry id="79" module="true" symbol="globals/Rez/Styles/system_icon_destructive__discard"/>
+<entry id="143" object="true" symbol="LoadParams"/>
+<entry id="50" module="true" symbol="globals/Rez/Styles/prompt_loc__body_no_title"/>
+<entry id="76" module="true" symbol="globals/Rez/Styles/system_icon_dark__search"/>
+<entry field="true" id="152" symbol="SecondsColor"/>
+<entry id="111" module="true" symbol="globals/Rez/Styles/system_icon_positive__hint_button_right_top"/>
+<entry id="153" object="true" symbol="SettingsAnalogView"/>
+<entry field="true" id="8389694" symbol="dithering"/>
+<entry id="268" module="true" symbol="system_icon_dark__discard"/>
+<entry id="328" module="true" symbol="system_size__screen"/>
+<entry id="49" module="true" symbol="globals/Rez/Styles/prompt_font_enhanced_readability__title"/>
+<entry field="true" id="339" symbol="hasEnhancedReadabilityMode"/>
+<entry id="251" module="true" symbol="prompt_font_enhanced_readability__body_with_title"/>
+<entry id="197" symbol="fontList"/>
+<entry field="true" id="8391907" symbol="packingFormat"/>
+<entry field="true" id="135" symbol="Field3Color"/>
+<entry id="77" module="true" symbol="globals/Rez/Styles/system_icon_dark__warning"/>
+<entry id="272" module="true" symbol="system_icon_dark__hint_button_left_top"/>
+<entry id="283" module="true" symbol="system_icon_destructive__hint_action_menu"/>
+<entry id="254" module="true" symbol="prompt_loc__body_with_title"/>
+<entry id="31" module="true" symbol="globals/Rez/Styles/confirmation_loc__body"/>
+<entry id="223" module="true" symbol="confirmation_icon_dark__hint_delete"/>
+<entry id="4" module="true" symbol="globals/Rez/Fonts"/>
+<entry id="285" module="true" symbol="system_icon_destructive__hint_button_left_middle"/>
+<entry field="true" id="167" symbol="numEnCours"/>
+<entry id="273" module="true" symbol="system_icon_dark__hint_button_right_bottom"/>
+<entry id="179" method="true" symbol="modifie"/>
+<entry field="true" id="170" symbol="titre"/>
+<entry id="17" module="true" symbol="globals/Rez/Styles/confirmation_icon__hint_keep"/>
+<entry id="242" module="true" symbol="prompt_color_dark__body"/>
+<entry id="214" module="true" symbol="confirmation_color_dark__body"/>
+<entry id="296" module="true" symbol="system_icon_light__hint_button_left_bottom"/>
+<entry id="282" module="true" symbol="system_icon_destructive__discard"/>
+<entry field="true" id="189" symbol="tailleFont"/>
+<entry id="52" module="true" symbol="globals/Rez/Styles/prompt_loc__title"/>
+<entry id="249" module="true" symbol="prompt_font__title"/>
+<entry id="32" module="true" symbol="globals/Rez/Styles/confirmation_loc__hint_confirm"/>
+<entry id="222" module="true" symbol="confirmation_icon_dark__hint_confirm"/>
+<entry id="172" method="true" symbol="ajoutSautDeLigne"/>
+<entry id="303" module="true" symbol="system_icon_light__revert"/>
+<entry id="8389078" method="true" symbol="onNextPage"/>
+<entry id="33" module="true" symbol="globals/Rez/Styles/confirmation_loc__hint_delete"/>
+<entry field="true" id="8390079" symbol="y"/>
+<entry field="true" id="8390078" symbol="x"/>
+<entry id="237" module="true" symbol="confirmation_loc__hint_keep"/>
+<entry id="160" method="true" symbol="dessineIndicateurAnalogique"/>
+<entry id="89" module="true" symbol="globals/Rez/Styles/system_icon_light__cancel"/>
+<entry field="true" id="159" symbol="clock"/>
+<entry field="true" id="171" symbol="L"/>
+<entry id="53" module="true" symbol="globals/Rez/Styles/prompt_loc__title_icon"/>
+<entry id="8389101" method="true" symbol="onSwipe"/>
+<entry id="322" module="true" symbol="system_loc__hint_button_right_top"/>
+</symbolTable>
+<localVars>
+<entry endPc="268435652" name="menuView" stackId="1" startPc="268435579"/>
+<entry arg="true" endPc="268436027" name="dc" stackId="1" startPc="268435850"/>
+<entry endPc="268436026" name="degreeStart" stackId="2" startPc="268435853"/>
+<entry endPc="268436026" name="degreeEnd" stackId="3" startPc="268435853"/>
+<entry endPc="268436026" name="couleurArc" stackId="4" startPc="268435853"/>
+<entry arg="true" endPc="268436224" name="_numParametre" stackId="1" startPc="268436028"/>
+<entry arg="true" endPc="268436224" name="_element_promptTab" stackId="2" startPc="268436028"/>
+<entry arg="true" endPc="268436224" name="_titre" stackId="3" startPc="268436028"/>
+<entry endPc="268436223" name="divis" stackId="4" startPc="268436031"/>
+<entry arg="true" endPc="268436470" name="dc" stackId="1" startPc="268436225"/>
+<entry arg="true" endPc="268436583" name="texte" stackId="1" startPc="268436521"/>
+<entry endPc="268436583" name="sautDejaMis" stackId="2" startPc="268436524"/>
+<entry arg="true" endPc="268436801" name="mySt" stackId="1" startPc="268436584"/>
+<entry arg="true" endPc="268436801" name="nbreCarSaut" stackId="2" startPc="268436584"/>
+<entry arg="true" endPc="268436801" name="diminueNbre" stackId="3" startPc="268436584"/>
+<entry endPc="268436795" name="numero" stackId="4" startPc="268436600"/>
+<entry endPc="268436795" name="newnbre" stackId="5" startPc="268436690"/>
+<entry arg="true" endPc="268436930" name="dc" stackId="1" startPc="268436802"/>
+<entry arg="true" endPc="268436930" name="x" stackId="2" startPc="268436802"/>
+<entry arg="true" endPc="268436930" name="y" stackId="3" startPc="268436802"/>
+<entry arg="true" endPc="268436930" name="font" stackId="4" startPc="268436802"/>
+<entry arg="true" endPc="268436930" name="texte" stackId="5" startPc="268436802"/>
+<entry arg="true" endPc="268436930" name="justif" stackId="6" startPc="268436802"/>
+<entry endPc="268436904" name="texteb" stackId="7" startPc="268436840"/>
+<entry endPc="268437047" name="hTitre" stackId="1" startPc="268436934"/>
+<entry endPc="268437047" name="hDispo" stackId="2" startPc="268436934"/>
+<entry arg="true" endPc="268437302" name="dc" stackId="1" startPc="268437049"/>
+<entry arg="true" endPc="268437732" name="delta" stackId="1" startPc="268437303"/>
+<entry endPc="268437559" name="i" stackId="2" startPc="268437489"/>
+<entry endPc="268437819" name="i" stackId="1" startPc="268437764"/>
+<entry endPc="268437809" name="st" stackId="2" startPc="268437764"/>
+<entry arg="true" endPc="268437840" name="st" stackId="1" startPc="268437824"/>
+<entry arg="true" endPc="268437913" name="st" stackId="1" startPc="268437841"/>
+<entry endPc="268437913" name="sautDejaMis" stackId="2" startPc="268437844"/>
+<entry arg="true" endPc="268438101" name="_titre" stackId="1" startPc="268437914"/>
+<entry arg="true" endPc="268438101" name="_tabLignesMenu" stackId="2" startPc="268437914"/>
+<entry arg="true" endPc="268438101" name="_tailleFont" stackId="3" startPc="268437914"/>
+<entry arg="true" endPc="268438101" name="_item" stackId="4" startPc="268437914"/>
+<entry arg="true" endPc="268438101" name="_left" stackId="5" startPc="268437914"/>
+<entry arg="true" endPc="268438101" name="_sautDeLigne" stackId="6" startPc="268437914"/>
+<entry arg="true" endPc="268438801" name="dc" stackId="1" startPc="268438102"/>
+<entry endPc="268438800" name="y" stackId="2" startPc="268438105"/>
+<entry endPc="268438800" name="coulFond" stackId="3" startPc="268438105"/>
+<entry endPc="268438800" name="coulPP" stackId="4" startPc="268438105"/>
+<entry endPc="268438601" name="i" stackId="5" startPc="268438367"/>
+<entry arg="true" endPc="268438848" name="i" stackId="1" startPc="268438802"/>
+<entry arg="true" endPc="268439189" name="dc" stackId="1" startPc="268438890"/>
+<entry arg="true" endPc="268439189" name="larg" stackId="2" startPc="268438890"/>
+<entry endPc="268439188" name="font" stackId="3" startPc="268438893"/>
+<entry arg="true" endPc="268439819" name="dc" stackId="1" startPc="268439190"/>
+<entry arg="true" endPc="268439819" name="clockTime" stackId="2" startPc="268439190"/>
+<entry arg="true" endPc="268439819" name="larg" stackId="3" startPc="268439190"/>
+<entry endPc="268439818" name="rayon" stackId="4" startPc="268439193"/>
+<entry endPc="268439818" name="vectorFont" stackId="5" startPc="268439193"/>
+<entry endPc="268439818" name="h" stackId="6" startPc="268439193"/>
+<entry endPc="268439818" name="hMax" stackId="7" startPc="268439193"/>
+<entry endPc="268439818" name="hm1" stackId="8" startPc="268439193"/>
+<entry endPc="268439818" name="hp1" stackId="9" startPc="268439193"/>
+<entry endPc="268439818" name="hp2" stackId="10" startPc="268439193"/>
+<entry endPc="268439818" name="hS" stackId="11" startPc="268439193"/>
+<entry endPc="268439818" name="hm1S" stackId="12" startPc="268439193"/>
+<entry endPc="268439818" name="hp1S" stackId="13" startPc="268439193"/>
+<entry endPc="268439818" name="hp2S" stackId="14" startPc="268439193"/>
+<entry endPc="268439818" name="text" stackId="15" startPc="268439193"/>
+<entry endPc="268439818" name="fontHaut" stackId="16" startPc="268439193"/>
+<entry endPc="268439818" name="fontAscent" stackId="17" startPc="268439193"/>
+<entry endPc="268439818" name="fontDescent" stackId="18" startPc="268439193"/>
+<entry endPc="268439818" name="hm1L" stackId="19" startPc="268439193"/>
+<entry endPc="268439818" name="hL" stackId="20" startPc="268439193"/>
+<entry endPc="268439818" name="hp1L" stackId="21" startPc="268439193"/>
+<entry endPc="268439818" name="hp2L" stackId="22" startPc="268439193"/>
+<entry endPc="268439818" name="espL" stackId="23" startPc="268439193"/>
+<entry endPc="268439818" name="minutePourcent" stackId="24" startPc="268439193"/>
+<entry endPc="268439818" name="arcDeCerclePixels" stackId="25" startPc="268439193"/>
+<entry endPc="268439818" name="arcDeCercleTotalPixels" stackId="26" startPc="268439193"/>
+<entry endPc="268439818" name="angleDeg" stackId="27" startPc="268439193"/>
+<entry arg="true" endPc="268440391" name="dc" stackId="1" startPc="268439820"/>
+<entry arg="true" endPc="268440391" name="clockTime" stackId="2" startPc="268439820"/>
+<entry arg="true" endPc="268440391" name="larg" stackId="3" startPc="268439820"/>
+<entry endPc="268440390" name="rayon" stackId="4" startPc="268439823"/>
+<entry endPc="268440390" name="vectorFont" stackId="5" startPc="268439823"/>
+<entry endPc="268440390" name="minutes" stackId="6" startPc="268439823"/>
+<entry endPc="268440390" name="minuteMod" stackId="7" startPc="268439823"/>
+<entry endPc="268440390" name="m" stackId="8" startPc="268439823"/>
+<entry endPc="268440390" name="mm1" stackId="9" startPc="268439823"/>
+<entry endPc="268440390" name="mp1" stackId="10" startPc="268439823"/>
+<entry endPc="268440390" name="mp2" stackId="11" startPc="268439823"/>
+<entry endPc="268440390" name="mS" stackId="12" startPc="268439823"/>
+<entry endPc="268440390" name="mm1S" stackId="13" startPc="268439823"/>
+<entry endPc="268440390" name="mp1S" stackId="14" startPc="268439823"/>
+<entry endPc="268440390" name="mp2S" stackId="15" startPc="268439823"/>
+<entry endPc="268440390" name="text" stackId="16" startPc="268439823"/>
+<entry endPc="268440390" name="fontHaut" stackId="17" startPc="268439823"/>
+<entry endPc="268440390" name="fontAscent" stackId="18" startPc="268439823"/>
+<entry endPc="268440390" name="fontDescent" stackId="19" startPc="268439823"/>
+<entry endPc="268440390" name="mm1L" stackId="20" startPc="268439823"/>
+<entry endPc="268440390" name="mL" stackId="21" startPc="268439823"/>
+<entry endPc="268440390" name="mp1L" stackId="22" startPc="268439823"/>
+<entry endPc="268440390" name="espL" stackId="23" startPc="268439823"/>
+<entry endPc="268440390" name="secondesPourcent" stackId="24" startPc="268439823"/>
+<entry endPc="268440390" name="arcDeCerclePixels" stackId="25" startPc="268439823"/>
+<entry endPc="268440390" name="arcDeCercleTotalPixels" stackId="26" startPc="268439823"/>
+<entry endPc="268440390" name="angleDeg" stackId="27" startPc="268439823"/>
+<entry arg="true" endPc="268440673" name="dc" stackId="1" startPc="268440392"/>
+<entry arg="true" endPc="268440673" name="clockTime" stackId="2" startPc="268440392"/>
+<entry arg="true" endPc="268440673" name="larg" stackId="3" startPc="268440392"/>
+<entry endPc="268440672" name="timeString" stackId="4" startPc="268440395"/>
+<entry endPc="268440672" name="x" stackId="5" startPc="268440395"/>
+<entry endPc="268440672" name="y" stackId="6" startPc="268440395"/>
+<entry endPc="268440672" name="i" stackId="7" startPc="268440511"/>
+<entry endPc="268440662" name="xx" stackId="8" startPc="268440511"/>
+<entry endPc="268440648" name="j" stackId="9" startPc="268440529"/>
+<entry endPc="268440638" name="yy" stackId="10" startPc="268440529"/>
+<entry endPc="268440638" name="text" stackId="11" startPc="268440529"/>
+<entry arg="true" endPc="268440786" name="dc" stackId="1" startPc="268440674"/>
+<entry arg="true" endPc="268440786" name="fenetre_heures" stackId="2" startPc="268440674"/>
+<entry endPc="268440785" name="larg" stackId="3" startPc="268440677"/>
+<entry endPc="268440785" name="clockTime" stackId="4" startPc="268440677"/>
+<entry arg="true" endPc="268441153" name="dc" stackId="1" startPc="268440787"/>
+<entry arg="true" endPc="268441153" name="larg" stackId="2" startPc="268440787"/>
+<entry arg="true" endPc="268441153" name="fenetre_heure" stackId="3" startPc="268440787"/>
+<entry arg="true" endPc="268441247" name="dc" stackId="1" startPc="268441169"/>
+<entry endPc="268441227" name="p" stackId="2" startPc="268441200"/>
+<entry arg="true" endPc="268441322" name="i" stackId="1" startPc="268441293"/>
+<entry endPc="268441322" name="list" stackId="2" startPc="268441296"/>
+<entry arg="true" endPc="268441413" name="thisName" stackId="1" startPc="268441323"/>
+<entry endPc="268441413" name="list" stackId="2" startPc="268441326"/>
+<entry endPc="268441399" name="i" stackId="3" startPc="268441355"/>
+<entry arg="true" endPc="268441551" name="evt" stackId="1" startPc="268441463"/>
+<entry endPc="268441551" name="direction" stackId="2" startPc="268441466"/>
+<entry arg="true" endPc="268441575" name="_menuView" stackId="1" startPc="268441552"/>
+<entry arg="true" endPc="268441584" name="clickEvent" stackId="1" startPc="268441576"/>
+<entry endPc="268441652" name="tab" stackId="1" startPc="268441588"/>
+<entry endPc="268441652" name="display12" stackId="2" startPc="268441588"/>
+<entry endPc="268441652" name="display24" stackId="3" startPc="268441588"/>
+<entry arg="true" endPc="268441781" name="keyEvent" stackId="1" startPc="268441653"/>
+<entry endPc="268442304" name="item" stackId="1" startPc="268441800"/>
+<entry endPc="268442304" name="display12" stackId="2" startPc="268441800"/>
+<entry endPc="268442304" name="display24" stackId="3" startPc="268441800"/>
+<entry endPc="268442004" name="colorsNames" stackId="4" startPc="268441865"/>
+<entry endPc="268442004" name="setttingAnalogView" stackId="5" startPc="268441865"/>
+<entry endPc="268442290" name="colorNum" stackId="6" startPc="268442206"/>
+</localVars>
+<deviceInfo deviceVersion="5c7ae9cf907f88c116a91dc4ffd75be9b5b7d2e9" partNumber="006-B4565-00"/>
+<annotations>
+<annotationEntry annotation="initialized" class="Drawables" module="globals/Rez" symbol="LauncherIcon"/>
+<annotationEntry annotation="initialized" class="Fonts" module="globals/Rez" symbol="PresentPastFuture"/>
+<annotationEntry annotation="initialized" class="Strings" module="globals/Rez" symbol="AppName"/>
+<annotationEntry annotation="initialized" class="Drawables" module="globals/Rez" symbol="fenetre_heures"/>
+</annotations>
+<dataEntryOffsetMappings>
+<dataEntry label="globals" offset="1156" parentId="" symbolId="globals" type="module"/>
+<dataEntry label="globals/Rez" offset="1475" parentId="globals" symbolId="Rez" type="module"/>
+<dataEntry label="globals/ProjectsWatchApp" offset="1537" parentId="globals" symbolId="ProjectsWatchApp" type="class"/>
+<dataEntry label="globals/SettingsAnalogView" offset="1608" parentId="globals" symbolId="SettingsAnalogView" type="class"/>
+<dataEntry label="globals/MenuView" offset="1778" parentId="globals" symbolId="MenuView" type="class"/>
+<dataEntry label="globals/ProjectsWatchView" offset="2074" parentId="globals" symbolId="ProjectsWatchView" type="class"/>
+<dataEntry label="globals/LoadParams" offset="2244" parentId="globals" symbolId="LoadParams" type="class"/>
+<dataEntry label="globals/Colors" offset="2297" parentId="globals" symbolId="Colors" type="class"/>
+<dataEntry label="globals/MenusDelegate" offset="2377" parentId="globals" symbolId="MenusDelegate" type="class"/>
+<dataEntry label="globals/Rez/Drawables" offset="2502" parentId="Rez" symbolId="Drawables" type="module"/>
+<dataEntry label="globals/Rez/Fonts" offset="2546" parentId="Rez" symbolId="Fonts" type="module"/>
+<dataEntry label="globals/Rez/Strings" offset="2581" parentId="Rez" symbolId="Strings" type="module"/>
+<dataEntry label="globals/Rez/Styles" offset="2616" parentId="Rez" symbolId="Styles" type="module"/>
+<dataEntry label="globals/Rez/Styles/prompt_font_enhanced_readability__body_with_title" offset="3731" parentId="Styles" symbolId="prompt_font_enhanced_readability__body_with_title" type="module"/>
+<dataEntry label="globals/Rez/Styles/system_size__menu_header" offset="3775" parentId="Styles" symbolId="system_size__menu_header" type="module"/>
+<dataEntry label="globals/Rez/Styles/system_loc__hint_button_left_bottom" offset="3819" parentId="Styles" symbolId="system_loc__hint_button_left_bottom" type="module"/>
+<dataEntry label="globals/Rez/Styles/prompt_font_enhanced_readability__body_no_title" offset="3863" parentId="Styles" symbolId="prompt_font_enhanced_readability__body_no_title" type="module"/>
+<dataEntry label="globals/Rez/Styles/prompt_loc__body_no_title" offset="3907" parentId="Styles" symbolId="prompt_loc__body_no_title" type="module"/>
+<dataEntry label="globals/Rez/Styles/system_icon_dark__about" offset="3951" parentId="Styles" symbolId="system_icon_dark__about" type="module"/>
+<dataEntry label="globals/Rez/Styles/system_icon_light__question" offset="4022" parentId="Styles" symbolId="system_icon_light__question" type="module"/>
+<dataEntry label="globals/Rez/Styles/system_loc__hint_button_left_top" offset="4093" parentId="Styles" symbolId="system_loc__hint_button_left_top" type="module"/>
+<dataEntry label="globals/Rez/Styles/prompt_font__title" offset="4128" parentId="Styles" symbolId="prompt_font__title" type="module"/>
+<dataEntry label="globals/Rez/Styles/system_icon_dark__discard" offset="4172" parentId="Styles" symbolId="system_icon_dark__discard" type="module"/>
+<dataEntry label="globals/Rez/Styles/system_size__menu_item" offset="4243" parentId="Styles" symbolId="system_size__menu_item" type="module"/>
+<dataEntry label="globals/Rez/Styles/system_color_dark__text" offset="4287" parentId="Styles" symbolId="system_color_dark__text" type="module"/>
+<dataEntry label="globals/Rez/Styles/system_icon_destructive__discard" offset="4331" parentId="Styles" symbolId="system_icon_destructive__discard" type="module"/>
+<dataEntry label="globals/Rez/Styles/system_icon_dark__hint_action_menu" offset="4384" parentId="Styles" symbolId="system_icon_dark__hint_action_menu" type="module"/>
+<dataEntry label="globals/Rez/Styles/prompt_size__title" offset="4437" parentId="Styles" symbolId="prompt_size__title" type="module"/>
+<dataEntry label="globals/Rez/Styles/confirmation_font__body" offset="4481" parentId="Styles" symbolId="confirmation_font__body" type="module"/>
+<dataEntry label="globals/Rez/Styles/system_color_dark__background" offset="4525" parentId="Styles" symbolId="system_color_dark__background" type="module"/>
+<dataEntry label="globals/Rez/Styles/system_icon_destructive__hint_button_left_top" offset="4569" parentId="Styles" symbolId="system_icon_destructive__hint_button_left_top" type="module"/>
+<dataEntry label="globals/Rez/Styles/system_size__launch_icon" offset="4622" parentId="Styles" symbolId="system_size__launch_icon" type="module"/>
+<dataEntry label="globals/Rez/Styles/confirmation_input__confirm" offset="4675" parentId="Styles" symbolId="confirmation_input__confirm" type="module"/>
+<dataEntry label="globals/Rez/Styles/prompt_font__body_with_title" offset="4710" parentId="Styles" symbolId="prompt_font__body_with_title" type="module"/>
+<dataEntry label="globals/Rez/Styles/confirmation_loc__body" offset="4754" parentId="Styles" symbolId="confirmation_loc__body" type="module"/>
+<dataEntry label="globals/Rez/Styles/system_icon_destructive__hint_button_left_bottom" offset="4798" parentId="Styles" symbolId="system_icon_destructive__hint_button_left_bottom" type="module"/>
+<dataEntry label="globals/Rez/Styles/prompt_color_dark__background" offset="4851" parentId="Styles" symbolId="prompt_color_dark__background" type="module"/>
+<dataEntry label="globals/Rez/Styles/system_icon_destructive__hint_action_menu" offset="4895" parentId="Styles" symbolId="system_icon_destructive__hint_action_menu" type="module"/>
+<dataEntry label="globals/Rez/Styles/system_loc__hint_action_menu" offset="4948" parentId="Styles" symbolId="system_loc__hint_action_menu" type="module"/>
+<dataEntry label="globals/Rez/Styles/confirmation_icon__hint_confirm" offset="4992" parentId="Styles" symbolId="confirmation_icon__hint_confirm" type="module"/>
+<dataEntry label="globals/Rez/Styles/system_loc__hint_button_left_middle" offset="5045" parentId="Styles" symbolId="system_loc__hint_button_left_middle" type="module"/>
+<dataEntry label="globals/Rez/Styles/prompt_size__body_no_title" offset="5089" parentId="Styles" symbolId="prompt_size__body_no_title" type="module"/>
+<dataEntry label="globals/Rez/Styles/system_icon_light__hint_button_left_top" offset="5133" parentId="Styles" symbolId="system_icon_light__hint_button_left_top" type="module"/>
+<dataEntry label="globals/Rez/Styles/prompt_color_light__background" offset="5186" parentId="Styles" symbolId="prompt_color_light__background" type="module"/>
+<dataEntry label="globals/Rez/Styles/confirmation_input__delete" offset="5230" parentId="Styles" symbolId="confirmation_input__delete" type="module"/>
+<dataEntry label="globals/Rez/Styles/system_icon_dark__hint_button_left_top" offset="5265" parentId="Styles" symbolId="system_icon_dark__hint_button_left_top" type="module"/>
+<dataEntry label="globals/Rez/Styles/system_input__action_menu" offset="5318" parentId="Styles" symbolId="system_input__action_menu" type="module"/>
+<dataEntry label="globals/Rez/Styles/system_icon_light__save" offset="5353" parentId="Styles" symbolId="system_icon_light__save" type="module"/>
+<dataEntry label="globals/Rez/Styles/prompt_color_light__body" offset="5424" parentId="Styles" symbolId="prompt_color_light__body" type="module"/>
+<dataEntry label="globals/Rez/Styles/system_loc__subwindow" offset="5468" parentId="Styles" symbolId="system_loc__subwindow" type="module"/>
+<dataEntry label="globals/Rez/Styles/system_icon_light__warning" offset="5503" parentId="Styles" symbolId="system_icon_light__warning" type="module"/>
+<dataEntry label="globals/Rez/Styles/confirmation_color_light__body" offset="5574" parentId="Styles" symbolId="confirmation_color_light__body" type="module"/>
+<dataEntry label="globals/Rez/Styles/confirmation_icon_light__hint_keep" offset="5618" parentId="Styles" symbolId="confirmation_icon_light__hint_keep" type="module"/>
+<dataEntry label="globals/Rez/Styles/activity_color_light__background" offset="5671" parentId="Styles" symbolId="activity_color_light__background" type="module"/>
+<dataEntry label="globals/Rez/Styles/system_icon_positive__hint_button_right_top" offset="5715" parentId="Styles" symbolId="system_icon_positive__hint_button_right_top" type="module"/>
+<dataEntry label="globals/Rez/Styles/system_size__screen" offset="5768" parentId="Styles" symbolId="system_size__screen" type="module"/>
+<dataEntry label="globals/Rez/Styles/system_icon_destructive__hint_button_right_bottom" offset="5812" parentId="Styles" symbolId="system_icon_destructive__hint_button_right_bottom" type="module"/>
+<dataEntry label="globals/Rez/Styles/system_color_light__background" offset="5865" parentId="Styles" symbolId="system_color_light__background" type="module"/>
+<dataEntry label="globals/Rez/Styles/system_icon_destructive__hint_button_right_top" offset="5909" parentId="Styles" symbolId="system_icon_destructive__hint_button_right_top" type="module"/>
+<dataEntry label="globals/Rez/Styles/confirmation_loc__hint_confirm" offset="5962" parentId="Styles" symbolId="confirmation_loc__hint_confirm" type="module"/>
+<dataEntry label="globals/Rez/Styles/activity_color_dark__text" offset="6006" parentId="Styles" symbolId="activity_color_dark__text" type="module"/>
+<dataEntry label="globals/Rez/Styles/confirmation_input__keep" offset="6050" parentId="Styles" symbolId="confirmation_input__keep" type="module"/>
+<dataEntry label="globals/Rez/Styles/prompt_loc__body_with_title" offset="6085" parentId="Styles" symbolId="prompt_loc__body_with_title" type="module"/>
+<dataEntry label="globals/Rez/Styles/system_icon_dark__search" offset="6129" parentId="Styles" symbolId="system_icon_dark__search" type="module"/>
+<dataEntry label="globals/Rez/Styles/activity_color_light__text" offset="6200" parentId="Styles" symbolId="activity_color_light__text" type="module"/>
+<dataEntry label="globals/Rez/Styles/confirmation_icon__hint_keep" offset="6244" parentId="Styles" symbolId="confirmation_icon__hint_keep" type="module"/>
+<dataEntry label="globals/Rez/Styles/system_icon_dark__save" offset="6297" parentId="Styles" symbolId="system_icon_dark__save" type="module"/>
+<dataEntry label="globals/Rez/Styles/system_icon_destructive__hint_button_left_middle" offset="6368" parentId="Styles" symbolId="system_icon_destructive__hint_button_left_middle" type="module"/>
+<dataEntry label="globals/Rez/Styles/system_icon_light__search" offset="6421" parentId="Styles" symbolId="system_icon_light__search" type="module"/>
+<dataEntry label="globals/Rez/Styles/system_icon_dark__hint_button_left_bottom" offset="6492" parentId="Styles" symbolId="system_icon_dark__hint_button_left_bottom" type="module"/>
+<dataEntry label="globals/Rez/Styles/system_icon_positive__hint_button_left_top" offset="6545" parentId="Styles" symbolId="system_icon_positive__hint_button_left_top" type="module"/>
+<dataEntry label="globals/Rez/Styles/system_loc__hint_button_right_bottom" offset="6598" parentId="Styles" symbolId="system_loc__hint_button_right_bottom" type="module"/>
+<dataEntry label="globals/Rez/Styles/confirmation_icon_dark__hint_reject" offset="6642" parentId="Styles" symbolId="confirmation_icon_dark__hint_reject" type="module"/>
+<dataEntry label="globals/Rez/Styles/confirmation_color_dark__body" offset="6695" parentId="Styles" symbolId="confirmation_color_dark__body" type="module"/>
+<dataEntry label="globals/Rez/Styles/confirmation_icon_light__hint_confirm" offset="6739" parentId="Styles" symbolId="confirmation_icon_light__hint_confirm" type="module"/>
+<dataEntry label="globals/Rez/Styles/prompt_color_dark__title" offset="6792" parentId="Styles" symbolId="prompt_color_dark__title" type="module"/>
+<dataEntry label="globals/Rez/Styles/system_icon_destructive__cancel" offset="6836" parentId="Styles" symbolId="system_icon_destructive__cancel" type="module"/>
+<dataEntry label="globals/Rez/Styles/system_icon_light__hint_button_right_bottom" offset="6889" parentId="Styles" symbolId="system_icon_light__hint_button_right_bottom" type="module"/>
+<dataEntry label="globals/Rez/Styles/prompt_loc__title" offset="6942" parentId="Styles" symbolId="prompt_loc__title" type="module"/>
+<dataEntry label="globals/Rez/Styles/confirmation_font_enhanced_readability__body" offset="6986" parentId="Styles" symbolId="confirmation_font_enhanced_readability__body" type="module"/>
+<dataEntry label="globals/Rez/Styles/prompt_color_light__title" offset="7030" parentId="Styles" symbolId="prompt_color_light__title" type="module"/>
+<dataEntry label="globals/Rez/Styles/system_icon_dark__hint_button_right_top" offset="7074" parentId="Styles" symbolId="system_icon_dark__hint_button_right_top" type="module"/>
+<dataEntry label="globals/Rez/Styles/system_icon_dark__hint_button_left_middle" offset="7127" parentId="Styles" symbolId="system_icon_dark__hint_button_left_middle" type="module"/>
+<dataEntry label="globals/Rez/Styles/confirmation_icon_dark__hint_keep" offset="7180" parentId="Styles" symbolId="confirmation_icon_dark__hint_keep" type="module"/>
+<dataEntry label="globals/Rez/Styles/system_icon_light__cancel" offset="7233" parentId="Styles" symbolId="system_icon_light__cancel" type="module"/>
+<dataEntry label="globals/Rez/Styles/confirmation_icon_light__hint_reject" offset="7304" parentId="Styles" symbolId="confirmation_icon_light__hint_reject" type="module"/>
+<dataEntry label="globals/Rez/Styles/system_icon_light__about" offset="7357" parentId="Styles" symbolId="system_icon_light__about" type="module"/>
+<dataEntry label="globals/Rez/Styles/system_size__toast_icon" offset="7428" parentId="Styles" symbolId="system_size__toast_icon" type="module"/>
+<dataEntry label="globals/Rez/Styles/system_icon_dark__hint_button_right_middle" offset="7481" parentId="Styles" symbolId="system_icon_dark__hint_button_right_middle" type="module"/>
+<dataEntry label="globals/Rez/Styles/confirmation_icon__hint_reject" offset="7516" parentId="Styles" symbolId="confirmation_icon__hint_reject" type="module"/>
+<dataEntry label="globals/Rez/Styles/system_icon_light__hint_action_menu" offset="7569" parentId="Styles" symbolId="system_icon_light__hint_action_menu" type="module"/>
+<dataEntry label="globals/Rez/Styles/system_icon_light__hint_button_right_middle" offset="7622" parentId="Styles" symbolId="system_icon_light__hint_button_right_middle" type="module"/>
+<dataEntry label="globals/Rez/Styles/system_icon_destructive__hint_button_right_middle" offset="7657" parentId="Styles" symbolId="system_icon_destructive__hint_button_right_middle" type="module"/>
+<dataEntry label="globals/Rez/Styles/confirmation_loc__hint_reject" offset="7692" parentId="Styles" symbolId="confirmation_loc__hint_reject" type="module"/>
+<dataEntry label="globals/Rez/Styles/confirmation_icon_dark__hint_delete" offset="7736" parentId="Styles" symbolId="confirmation_icon_dark__hint_delete" type="module"/>
+<dataEntry label="globals/Rez/Styles/activity_color_dark__background" offset="7789" parentId="Styles" symbolId="activity_color_dark__background" type="module"/>
+<dataEntry label="globals/Rez/Styles/system_icon_light__hint_button_left_bottom" offset="7833" parentId="Styles" symbolId="system_icon_light__hint_button_left_bottom" type="module"/>
+<dataEntry label="globals/Rez/Styles/system_icon_positive__hint_button_left_middle" offset="7886" parentId="Styles" symbolId="system_icon_positive__hint_button_left_middle" type="module"/>
+<dataEntry label="globals/Rez/Styles/system_size__menu_icon" offset="7939" parentId="Styles" symbolId="system_size__menu_icon" type="module"/>
+<dataEntry label="globals/Rez/Styles/system_icon_destructive__warning" offset="7992" parentId="Styles" symbolId="system_icon_destructive__warning" type="module"/>
+<dataEntry label="globals/Rez/Styles/system_loc__hint_button_right_middle" offset="8045" parentId="Styles" symbolId="system_loc__hint_button_right_middle" type="module"/>
+<dataEntry label="globals/Rez/Styles/system_icon_dark__cancel" offset="8080" parentId="Styles" symbolId="system_icon_dark__cancel" type="module"/>
+<dataEntry label="globals/Rez/Styles/prompt_size__body_with_title" offset="8151" parentId="Styles" symbolId="prompt_size__body_with_title" type="module"/>
+<dataEntry label="globals/Rez/Styles/system_loc__hint_button_right_top" offset="8195" parentId="Styles" symbolId="system_loc__hint_button_right_top" type="module"/>
+<dataEntry label="globals/Rez/Styles/system_color_light__text" offset="8239" parentId="Styles" symbolId="system_color_light__text" type="module"/>
+<dataEntry label="globals/Rez/Styles/system_icon_light__check" offset="8283" parentId="Styles" symbolId="system_icon_light__check" type="module"/>
+<dataEntry label="globals/Rez/Styles/confirmation_input__reject" offset="8354" parentId="Styles" symbolId="confirmation_input__reject" type="module"/>
+<dataEntry label="globals/Rez/Styles/system_icon_light__revert" offset="8389" parentId="Styles" symbolId="system_icon_light__revert" type="module"/>
+<dataEntry label="globals/Rez/Styles/system_size__subwindow" offset="8460" parentId="Styles" symbolId="system_size__subwindow" type="module"/>
+<dataEntry label="globals/Rez/Styles/system_icon_positive__hint_button_left_bottom" offset="8495" parentId="Styles" symbolId="system_icon_positive__hint_button_left_bottom" type="module"/>
+<dataEntry label="globals/Rez/Styles/system_icon_dark__check" offset="8548" parentId="Styles" symbolId="system_icon_dark__check" type="module"/>
+<dataEntry label="globals/Rez/Styles/confirmation_loc__hint_keep" offset="8619" parentId="Styles" symbolId="confirmation_loc__hint_keep" type="module"/>
+<dataEntry label="globals/Rez/Styles/confirmation_loc__hint_delete" offset="8663" parentId="Styles" symbolId="confirmation_loc__hint_delete" type="module"/>
+<dataEntry label="globals/Rez/Styles/system_icon_positive__hint_action_menu" offset="8707" parentId="Styles" symbolId="system_icon_positive__hint_action_menu" type="module"/>
+<dataEntry label="globals/Rez/Styles/system_icon_positive__hint_button_right_middle" offset="8760" parentId="Styles" symbolId="system_icon_positive__hint_button_right_middle" type="module"/>
+<dataEntry label="globals/Rez/Styles/system_icon_light__hint_button_left_middle" offset="8795" parentId="Styles" symbolId="system_icon_light__hint_button_left_middle" type="module"/>
+<dataEntry label="globals/Rez/Styles/system_icon_dark__hint_button_right_bottom" offset="8848" parentId="Styles" symbolId="system_icon_dark__hint_button_right_bottom" type="module"/>
+<dataEntry label="globals/Rez/Styles/system_icon_positive__hint_button_right_bottom" offset="8901" parentId="Styles" symbolId="system_icon_positive__hint_button_right_bottom" type="module"/>
+<dataEntry label="globals/Rez/Styles/system_icon_dark__revert" offset="8954" parentId="Styles" symbolId="system_icon_dark__revert" type="module"/>
+<dataEntry label="globals/Rez/Styles/confirmation_icon_light__hint_delete" offset="9025" parentId="Styles" symbolId="confirmation_icon_light__hint_delete" type="module"/>
+<dataEntry label="globals/Rez/Styles/system_icon_dark__question" offset="9078" parentId="Styles" symbolId="system_icon_dark__question" type="module"/>
+<dataEntry label="globals/Rez/Styles/system_icon_light__discard" offset="9149" parentId="Styles" symbolId="system_icon_light__discard" type="module"/>
+<dataEntry label="globals/Rez/Styles/device_info" offset="9220" parentId="Styles" symbolId="device_info" type="module"/>
+<dataEntry label="globals/Rez/Styles/confirmation_icon_dark__hint_confirm" offset="9309" parentId="Styles" symbolId="confirmation_icon_dark__hint_confirm" type="module"/>
+<dataEntry label="globals/Rez/Styles/prompt_font__body_no_title" offset="9362" parentId="Styles" symbolId="prompt_font__body_no_title" type="module"/>
+<dataEntry label="globals/Rez/Styles/prompt_size__title_icon" offset="9406" parentId="Styles" symbolId="prompt_size__title_icon" type="module"/>
+<dataEntry label="globals/Rez/Styles/system_icon_dark__warning" offset="9450" parentId="Styles" symbolId="system_icon_dark__warning" type="module"/>
+<dataEntry label="globals/Rez/Styles/prompt_loc__title_icon" offset="9521" parentId="Styles" symbolId="prompt_loc__title_icon" type="module"/>
+<dataEntry label="globals/Rez/Styles/prompt_font_enhanced_readability__title" offset="9583" parentId="Styles" symbolId="prompt_font_enhanced_readability__title" type="module"/>
+<dataEntry label="globals/Rez/Styles/prompt_color_dark__body" offset="9627" parentId="Styles" symbolId="prompt_color_dark__body" type="module"/>
+<dataEntry label="globals/Rez/Styles/confirmation_icon__hint_delete" offset="9671" parentId="Styles" symbolId="confirmation_icon__hint_delete" type="module"/>
+<dataEntry label="globals/Rez/Styles/system_icon_light__hint_button_right_top" offset="9724" parentId="Styles" symbolId="system_icon_light__hint_button_right_top" type="module"/>
+<dataEntry label="globals/Rez/Styles/confirmation_size__body" offset="9777" parentId="Styles" symbolId="confirmation_size__body" type="module"/>
+<dataEntry label="globals/Rez/Styles/system_icon_positive__check" offset="9821" parentId="Styles" symbolId="system_icon_positive__check" type="module"/>
+</dataEntryOffsetMappings>
+<functions>
+<functionEntry accessMode="public" endPc="268435493" name="&lt;init&gt;" parent="Rez" startPc="268435474">
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" endPc="268435505" name="&lt;init&gt;" parent="ProjectsWatchApp" startPc="268435494">
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" endPc="268435517" name="&lt;init&gt;" parent="SettingsAnalogView" startPc="268435506">
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" endPc="268435529" name="&lt;init&gt;" parent="MenuView" startPc="268435518">
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" endPc="268435551" name="getApp" startPc="268435530">
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" endPc="268435563" name="&lt;init&gt;" parent="ProjectsWatchView" startPc="268435552">
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" name="&lt;init&gt;" parent="LoadParams">
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" name="&lt;init&gt;" parent="Colors">
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" endPc="268435575" name="&lt;init&gt;" parent="MenusDelegate" startPc="268435564">
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" name="&lt;init&gt;" parent="Drawables">
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" name="&lt;init&gt;" parent="Fonts">
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" name="&lt;init&gt;" parent="Strings">
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" name="&lt;init&gt;" parent="Styles">
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" endPc="268435652" name="getSettingsView" parent="ProjectsWatchApp" startPc="268435576">
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" endPc="268435670" name="onSettingsChanged" parent="ProjectsWatchApp" startPc="268435653">
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" endPc="268435698" name="getInitialView" parent="ProjectsWatchApp" startPc="268435671">
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" endPc="268435713" name="initialize" parent="ProjectsWatchApp" startPc="268435699">
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" endPc="268435781" name="next" parent="SettingsAnalogView" startPc="268435714">
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" endPc="268435849" name="prev" parent="SettingsAnalogView" startPc="268435782">
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" endPc="268436027" name="dessineIndicateurAnalogique" parent="SettingsAnalogView" startPc="268435850">
+<param id="dc"/>
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" endPc="268436224" name="initialize" parent="SettingsAnalogView" startPc="268436028">
+<param id="_numParametre"/>
+<param id="_element_promptTab"/>
+<param id="_titre"/>
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" endPc="268436470" name="onUpdate" parent="SettingsAnalogView" startPc="268436225">
+<param id="dc"/>
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" endPc="268436495" name="next" parent="MenuView" startPc="268436471">
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" endPc="268436520" name="prev" parent="MenuView" startPc="268436496">
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" endPc="268436583" name="modifie" parent="MenuView" startPc="268436521">
+<param id="texte"/>
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" endPc="268436801" name="ajoutSautDeLigne" parent="MenuView" startPc="268436584">
+<param id="mySt"/>
+<param id="nbreCarSaut"/>
+<param id="diminueNbre"/>
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" endPc="268436930" name="testeRCAndDrawLabel" parent="MenuView" startPc="268436802">
+<param id="dc"/>
+<param id="x"/>
+<param id="y"/>
+<param id="font"/>
+<param id="texte"/>
+<param id="justif"/>
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" endPc="268437048" name="prepareHauteurs" parent="MenuView" startPc="268436931">
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" endPc="268437302" name="onLayout" parent="MenuView" startPc="268437049">
+<param id="dc"/>
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" endPc="268437732" name="calculeItem0" parent="MenuView" startPc="268437303">
+<param id="delta"/>
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" endPc="268437823" name="prepareTab" parent="MenuView" startPc="268437733">
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" endPc="268437840" name="isRC" parent="MenuView" startPc="268437824">
+<param id="st"/>
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" endPc="268437913" name="supprimeSautDeLigne" parent="MenuView" startPc="268437841">
+<param id="st"/>
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" endPc="268438101" name="initialize" parent="MenuView" startPc="268437914">
+<param id="_titre"/>
+<param id="_tabLignesMenu"/>
+<param id="_tailleFont"/>
+<param id="_item"/>
+<param id="_left"/>
+<param id="_sautDeLigne"/>
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" endPc="268438801" name="onUpdate" parent="MenuView" startPc="268438102">
+<param id="dc"/>
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" name="onExitSleep" parent="ProjectsWatchView">
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" endPc="268438848" name="getParam" parent="ProjectsWatchView" startPc="268438802">
+<param id="i"/>
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" endPc="268438889" name="onShow" parent="ProjectsWatchView" startPc="268438849">
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" endPc="268439189" name="dessinePresentPastFuture" parent="ProjectsWatchView" startPc="268438890">
+<param id="dc"/>
+<param id="larg"/>
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" endPc="268439819" name="dessineHour" parent="ProjectsWatchView" startPc="268439190">
+<param id="dc"/>
+<param id="clockTime"/>
+<param id="larg"/>
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" endPc="268440391" name="dessineMinutes" parent="ProjectsWatchView" startPc="268439820">
+<param id="dc"/>
+<param id="clockTime"/>
+<param id="larg"/>
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" endPc="268440673" name="dessineChamps" parent="ProjectsWatchView" startPc="268440392">
+<param id="dc"/>
+<param id="clockTime"/>
+<param id="larg"/>
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" endPc="268440786" name="dessineTout" parent="ProjectsWatchView" startPc="268440674">
+<param id="dc"/>
+<param id="fenetre_heures"/>
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" endPc="268441153" name="dessineFond" parent="ProjectsWatchView" startPc="268440787">
+<param id="dc"/>
+<param id="larg"/>
+<param id="fenetre_heure"/>
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" name="onEnterSleep" parent="ProjectsWatchView">
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" endPc="268441168" name="initialize" parent="ProjectsWatchView" startPc="268441154">
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" endPc="268441247" name="onUpdate" parent="ProjectsWatchView" startPc="268441169">
+<param id="dc"/>
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" endPc="268441284" name="load" parent="LoadParams" startPc="268441248">
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" name="initialize" parent="LoadParams">
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" endPc="268441292" name="colorValuesTab" parent="Colors" startPc="268441285">
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" endPc="268441322" name="colorName" parent="Colors" startPc="268441293">
+<param id="i"/>
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" endPc="268441413" name="getColor" parent="Colors" startPc="268441323">
+<param id="thisName"/>
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" name="initialize" parent="Colors">
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" endPc="268441421" name="colorsNames" parent="Colors" startPc="268441414">
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" endPc="268441447" name="onBack" parent="MenusDelegate" startPc="268441422">
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" endPc="268441462" name="onPreviousPage" parent="MenusDelegate" startPc="268441448">
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" endPc="268441551" name="onSwipe" parent="MenusDelegate" startPc="268441463">
+<param id="evt"/>
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" endPc="268441575" name="initialize" parent="MenusDelegate" startPc="268441552">
+<param id="_menuView"/>
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" endPc="268441584" name="onTap" parent="MenusDelegate" startPc="268441576">
+<param id="clickEvent"/>
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" endPc="268441652" name="menuPrincipalTab" parent="MenusDelegate" startPc="268441585">
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" endPc="268441781" name="onKey" parent="MenusDelegate" startPc="268441653">
+<param id="keyEvent"/>
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" endPc="268441796" name="onNextPage" parent="MenusDelegate" startPc="268441782">
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" endPc="268442305" name="onSelect" parent="MenusDelegate" startPc="268441797">
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" endPc="268442348" name="&lt;init&gt;" parent="prompt_font_enhanced_readability__body_with_title" startPc="268442306">
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" name="&lt;init&gt;" parent="system_size__menu_header">
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" name="&lt;init&gt;" parent="system_loc__hint_button_left_bottom">
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" endPc="268442391" name="&lt;init&gt;" parent="prompt_font_enhanced_readability__body_no_title" startPc="268442349">
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" name="&lt;init&gt;" parent="prompt_loc__body_no_title">
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" name="&lt;init&gt;" parent="system_icon_dark__about">
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" name="&lt;init&gt;" parent="system_icon_light__question">
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" name="&lt;init&gt;" parent="system_loc__hint_button_left_top">
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" endPc="268442434" name="&lt;init&gt;" parent="prompt_font__title" startPc="268442392">
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" name="&lt;init&gt;" parent="system_icon_dark__discard">
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" name="&lt;init&gt;" parent="system_size__menu_item">
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" endPc="268442451" name="&lt;init&gt;" parent="system_color_dark__text" startPc="268442435">
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" name="&lt;init&gt;" parent="system_icon_destructive__discard">
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" name="&lt;init&gt;" parent="system_icon_dark__hint_action_menu">
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" name="&lt;init&gt;" parent="prompt_size__title">
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" endPc="268442494" name="&lt;init&gt;" parent="confirmation_font__body" startPc="268442452">
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" name="&lt;init&gt;" parent="system_color_dark__background">
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" name="&lt;init&gt;" parent="system_icon_destructive__hint_button_left_top">
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" name="&lt;init&gt;" parent="system_size__launch_icon">
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" endPc="268442511" name="&lt;init&gt;" parent="confirmation_input__confirm" startPc="268442495">
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" endPc="268442544" name="&lt;init&gt;" parent="prompt_font__body_with_title" startPc="268442512">
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" name="&lt;init&gt;" parent="confirmation_loc__body">
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" name="&lt;init&gt;" parent="system_icon_destructive__hint_button_left_bottom">
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" name="&lt;init&gt;" parent="prompt_color_dark__background">
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" name="&lt;init&gt;" parent="system_icon_destructive__hint_action_menu">
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" name="&lt;init&gt;" parent="system_loc__hint_action_menu">
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" name="&lt;init&gt;" parent="confirmation_icon__hint_confirm">
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" name="&lt;init&gt;" parent="system_loc__hint_button_left_middle">
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" name="&lt;init&gt;" parent="prompt_size__body_no_title">
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" name="&lt;init&gt;" parent="system_icon_light__hint_button_left_top">
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" name="&lt;init&gt;" parent="prompt_color_light__background">
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" endPc="268442561" name="&lt;init&gt;" parent="confirmation_input__delete" startPc="268442545">
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" name="&lt;init&gt;" parent="system_icon_dark__hint_button_left_top">
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" endPc="268442578" name="&lt;init&gt;" parent="system_input__action_menu" startPc="268442562">
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" name="&lt;init&gt;" parent="system_icon_light__save">
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" endPc="268442595" name="&lt;init&gt;" parent="prompt_color_light__body" startPc="268442579">
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" name="&lt;init&gt;" parent="system_loc__subwindow">
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" name="&lt;init&gt;" parent="system_icon_light__warning">
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" endPc="268442612" name="&lt;init&gt;" parent="confirmation_color_light__body" startPc="268442596">
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" name="&lt;init&gt;" parent="confirmation_icon_light__hint_keep">
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" name="&lt;init&gt;" parent="activity_color_light__background">
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" name="&lt;init&gt;" parent="system_icon_positive__hint_button_right_top">
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" name="&lt;init&gt;" parent="system_size__screen">
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" name="&lt;init&gt;" parent="system_icon_destructive__hint_button_right_bottom">
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" name="&lt;init&gt;" parent="system_color_light__background">
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" name="&lt;init&gt;" parent="system_icon_destructive__hint_button_right_top">
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" name="&lt;init&gt;" parent="confirmation_loc__hint_confirm">
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" endPc="268442629" name="&lt;init&gt;" parent="activity_color_dark__text" startPc="268442613">
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" endPc="268442646" name="&lt;init&gt;" parent="confirmation_input__keep" startPc="268442630">
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" name="&lt;init&gt;" parent="prompt_loc__body_with_title">
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" name="&lt;init&gt;" parent="system_icon_dark__search">
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" endPc="268442663" name="&lt;init&gt;" parent="activity_color_light__text" startPc="268442647">
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" name="&lt;init&gt;" parent="confirmation_icon__hint_keep">
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" name="&lt;init&gt;" parent="system_icon_dark__save">
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" name="&lt;init&gt;" parent="system_icon_destructive__hint_button_left_middle">
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" name="&lt;init&gt;" parent="system_icon_light__search">
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" name="&lt;init&gt;" parent="system_icon_dark__hint_button_left_bottom">
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" name="&lt;init&gt;" parent="system_icon_positive__hint_button_left_top">
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" name="&lt;init&gt;" parent="system_loc__hint_button_right_bottom">
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" name="&lt;init&gt;" parent="confirmation_icon_dark__hint_reject">
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" endPc="268442680" name="&lt;init&gt;" parent="confirmation_color_dark__body" startPc="268442664">
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" name="&lt;init&gt;" parent="confirmation_icon_light__hint_confirm">
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" endPc="268442697" name="&lt;init&gt;" parent="prompt_color_dark__title" startPc="268442681">
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" name="&lt;init&gt;" parent="system_icon_destructive__cancel">
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" name="&lt;init&gt;" parent="system_icon_light__hint_button_right_bottom">
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" name="&lt;init&gt;" parent="prompt_loc__title">
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" endPc="268442740" name="&lt;init&gt;" parent="confirmation_font_enhanced_readability__body" startPc="268442698">
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" endPc="268442757" name="&lt;init&gt;" parent="prompt_color_light__title" startPc="268442741">
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" name="&lt;init&gt;" parent="system_icon_dark__hint_button_right_top">
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" name="&lt;init&gt;" parent="system_icon_dark__hint_button_left_middle">
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" name="&lt;init&gt;" parent="confirmation_icon_dark__hint_keep">
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" name="&lt;init&gt;" parent="system_icon_light__cancel">
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" name="&lt;init&gt;" parent="confirmation_icon_light__hint_reject">
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" name="&lt;init&gt;" parent="system_icon_light__about">
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" name="&lt;init&gt;" parent="system_size__toast_icon">
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" name="&lt;init&gt;" parent="system_icon_dark__hint_button_right_middle">
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" name="&lt;init&gt;" parent="confirmation_icon__hint_reject">
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" name="&lt;init&gt;" parent="system_icon_light__hint_action_menu">
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" name="&lt;init&gt;" parent="system_icon_light__hint_button_right_middle">
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" name="&lt;init&gt;" parent="system_icon_destructive__hint_button_right_middle">
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" name="&lt;init&gt;" parent="confirmation_loc__hint_reject">
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" name="&lt;init&gt;" parent="confirmation_icon_dark__hint_delete">
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" name="&lt;init&gt;" parent="activity_color_dark__background">
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" name="&lt;init&gt;" parent="system_icon_light__hint_button_left_bottom">
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" name="&lt;init&gt;" parent="system_icon_positive__hint_button_left_middle">
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" name="&lt;init&gt;" parent="system_size__menu_icon">
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" name="&lt;init&gt;" parent="system_icon_destructive__warning">
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" name="&lt;init&gt;" parent="system_loc__hint_button_right_middle">
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" name="&lt;init&gt;" parent="system_icon_dark__cancel">
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" name="&lt;init&gt;" parent="prompt_size__body_with_title">
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" name="&lt;init&gt;" parent="system_loc__hint_button_right_top">
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" endPc="268442774" name="&lt;init&gt;" parent="system_color_light__text" startPc="268442758">
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" name="&lt;init&gt;" parent="system_icon_light__check">
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" endPc="268442791" name="&lt;init&gt;" parent="confirmation_input__reject" startPc="268442775">
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" name="&lt;init&gt;" parent="system_icon_light__revert">
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" name="&lt;init&gt;" parent="system_size__subwindow">
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" name="&lt;init&gt;" parent="system_icon_positive__hint_button_left_bottom">
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" name="&lt;init&gt;" parent="system_icon_dark__check">
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" name="&lt;init&gt;" parent="confirmation_loc__hint_keep">
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" name="&lt;init&gt;" parent="confirmation_loc__hint_delete">
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" name="&lt;init&gt;" parent="system_icon_positive__hint_action_menu">
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" name="&lt;init&gt;" parent="system_icon_positive__hint_button_right_middle">
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" name="&lt;init&gt;" parent="system_icon_light__hint_button_left_middle">
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" name="&lt;init&gt;" parent="system_icon_dark__hint_button_right_bottom">
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" name="&lt;init&gt;" parent="system_icon_positive__hint_button_right_bottom">
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" name="&lt;init&gt;" parent="system_icon_dark__revert">
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" name="&lt;init&gt;" parent="confirmation_icon_light__hint_delete">
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" name="&lt;init&gt;" parent="system_icon_dark__question">
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" name="&lt;init&gt;" parent="system_icon_light__discard">
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" endPc="268442808" name="&lt;init&gt;" parent="device_info" startPc="268442792">
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" name="&lt;init&gt;" parent="confirmation_icon_dark__hint_confirm">
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" endPc="268442851" name="&lt;init&gt;" parent="prompt_font__body_no_title" startPc="268442809">
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" name="&lt;init&gt;" parent="prompt_size__title_icon">
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" name="&lt;init&gt;" parent="system_icon_dark__warning">
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" name="&lt;init&gt;" parent="prompt_loc__title_icon">
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" endPc="268442894" name="&lt;init&gt;" parent="prompt_font_enhanced_readability__title" startPc="268442852">
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" endPc="268442911" name="&lt;init&gt;" parent="prompt_color_dark__body" startPc="268442895">
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" name="&lt;init&gt;" parent="confirmation_icon__hint_delete">
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" name="&lt;init&gt;" parent="system_icon_light__hint_button_right_top">
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" name="&lt;init&gt;" parent="confirmation_size__body">
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" name="&lt;init&gt;" parent="system_icon_positive__check">
+<documentation/>
+</functionEntry>
+</functions>
+</debugInfo>

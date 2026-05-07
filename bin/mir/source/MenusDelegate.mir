@@ -1,0 +1,685 @@
+[ @file = "D:\gduriez\Perso\Dossiers\DossiersVS\ProjectsWatch\source\MenusDelegate.mc"; @line = 2; @symbol_usingdef<0> = [Toybox,2,6,12]; @symbol_usingdef<1> = [WatchUi,2,13,20]; @symbol_usingAlias = [Ui,2,24,26]; ]
+using Toybox.WatchUi as :Ui;
+[ @file = "D:\gduriez\Perso\Dossiers\DossiersVS\ProjectsWatch\source\MenusDelegate.mc"; @line = 3; @symbol_usingdef<0> = [Toybox,3,6,12]; @symbol_usingdef<1> = [System,3,13,19]; @symbol_usingAlias = [Sys,3,23,26]; ]
+using Toybox.System as :Sys;
+[ @file = "D:\gduriez\Perso\Dossiers\DossiersVS\ProjectsWatch\source\MenusDelegate.mc"; @line = 4; @symbol_usingdef<0> = [Toybox,4,6,12]; @symbol_usingdef<1> = [Graphics,4,13,21]; @symbol_usingAlias = [Gfx,4,25,28]; ]
+using Toybox.Graphics as :Gfx;
+[ @file = "D:\gduriez\Perso\Dossiers\DossiersVS\ProjectsWatch\source\MenusDelegate.mc"; @line = 5; @symbol_usingdef<0> = [Toybox,5,6,12]; @symbol_usingdef<1> = [Application,5,13,24]; @symbol_usingAlias = [App,5,28,31]; ]
+using Toybox.Application as :App;
+[ @file = "D:\gduriez\Perso\Dossiers\DossiersVS\ProjectsWatch\source\MenusDelegate.mc"; @line = 8; @symbol_classdef = [MenusDelegate,8,6,19]; @symbol_extends<0> = [Ui,8,28,30]; @symbol_extends<1> = [InputDelegate,8,31,44]; ]
+class MenusDelegate extends Ui.InputDelegate {
+    [ @file = "D:\gduriez\Perso\Dossiers\DossiersVS\ProjectsWatch\source\MenusDelegate.mc"; @line = 8; ]
+    <init> {
+    }
+    [ @file = "D:\gduriez\Perso\Dossiers\DossiersVS\ProjectsWatch\source\MenusDelegate.mc"; @line = 8; ]
+    static
+    <init> {
+    }
+    [ @file = "D:\gduriez\Perso\Dossiers\DossiersVS\ProjectsWatch\source\MenusDelegate.mc"; @line = 10; @symbol_functiondef = [menuPrincipalTab,10,13,29]; ]
+    function menuPrincipalTab() {
+D__gduriez_Perso_Dossiers_DossiersVS_ProjectsWatch_source_MenusDelegate_mc_10_32_24_4_start:
+[ "D:\gduriez\Perso\Dossiers\DossiersVS\ProjectsWatch\source\MenusDelegate.mc" 11 8 ]
+        [ "D__gduriez_Perso_Dossiers_DossiersVS_ProjectsWatch_source_MenusDelegate_mc_10_32_24_4_start" "D__gduriez_Perso_Dossiers_DossiersVS_ProjectsWatch_source_MenusDelegate_mc_10_32_24_4_stop" ]
+        %tab.1 = local;
+        symbol [ tab %tab.1 11 12 15 ];
+        %tmp.1 = newa 6;
+        %tmp.2 = "BackGround Color";
+        %tmp.3 = dup %tmp.1;
+        %tmp.4 = aputv %tmp.3 0 %tmp.2;
+        %tmp.5 = "Present Color";
+        %tmp.6 = dup %tmp.4;
+        %tmp.7 = aputv %tmp.6 1 %tmp.5;
+        %tmp.8 = "PastFuture Color";
+        %tmp.9 = dup %tmp.7;
+        %tmp.10 = aputv %tmp.9 2 %tmp.8;
+        %tmp.11 = "Hour Color";
+        %tmp.12 = dup %tmp.10;
+        %tmp.13 = aputv %tmp.12 3 %tmp.11;
+        %tmp.14 = "Minutes Color";
+        %tmp.15 = dup %tmp.13;
+        %tmp.16 = aputv %tmp.15 4 %tmp.14;
+        %tmp.17 = "Seconds Color";
+        %tmp.18 = dup %tmp.16;
+        %tmp.19 = aputv %tmp.18 5 %tmp.17;
+        lputv %tab.1 %tmp.19;
+        symbol [ tab %tab.1 11 12 15 ];
+[ "D:\gduriez\Perso\Dossiers\DossiersVS\ProjectsWatch\source\MenusDelegate.mc" 19 8 ]
+        [ "D__gduriez_Perso_Dossiers_DossiersVS_ProjectsWatch_source_MenusDelegate_mc_10_32_24_4_start" "D__gduriez_Perso_Dossiers_DossiersVS_ProjectsWatch_source_MenusDelegate_mc_10_32_24_4_stop" ]
+        %display12.2 = local;
+        symbol [ display12 %display12.2 19 12 21 ];
+        %tmp.20 = "Display 12h";
+        lputv %display12.2 %tmp.20;
+        symbol [ display12 %display12.2 19 12 21 ];
+[ "D:\gduriez\Perso\Dossiers\DossiersVS\ProjectsWatch\source\MenusDelegate.mc" 20 8 ]
+        [ "D__gduriez_Perso_Dossiers_DossiersVS_ProjectsWatch_source_MenusDelegate_mc_10_32_24_4_start" "D__gduriez_Perso_Dossiers_DossiersVS_ProjectsWatch_source_MenusDelegate_mc_10_32_24_4_stop" ]
+        %display24.3 = local;
+        symbol [ display24 %display24.3 20 12 21 ];
+        %tmp.21 = "Display 24h";
+        lputv %display24.3 %tmp.21;
+        symbol [ display24 %display24.3 20 12 21 ];
+[ "D:\gduriez\Perso\Dossiers\DossiersVS\ProjectsWatch\source\MenusDelegate.mc" 21 8 ]
+D__gduriez_Perso_Dossiers_DossiersVS_ProjectsWatch_source_MenusDelegate_mc_21_8_22_33_if_stmt:
+        symbol [ params %tmp.23 21 12 18 ];
+        %tmp.23 = getv ? :params;
+        symbol [ is24h %tmp.25 21 19 24 ];
+        %tmp.25 = getv ? :is24h;
+        %tmp.26 = agetv %tmp.23 %tmp.25;
+        bf %tmp.26 @D__gduriez_Perso_Dossiers_DossiersVS_ProjectsWatch_source_MenusDelegate_mc_21_8_22_33_if_else_false;
+D__gduriez_Perso_Dossiers_DossiersVS_ProjectsWatch_source_MenusDelegate_mc_21_8_22_33_if_true:
+D__gduriez_Perso_Dossiers_DossiersVS_ProjectsWatch_source_MenusDelegate_mc_21_27_21_47_start:
+[ "D:\gduriez\Perso\Dossiers\DossiersVS\ProjectsWatch\source\MenusDelegate.mc" 21 28 ]
+        %tmp.27 = lgetv %tab.1;
+        symbol [ tab %tmp.27 21 28 31 ];
+        symbol [ add %tmp.28 21 32 35 ];
+        %tmp.28 = getv function %tmp.27 :add;
+        %tmp.29 = lgetv %display12.2;
+        symbol [ display12 %tmp.29 21 36 45 ];
+        invoke %tmp.27 %tmp.28(%tmp.29);
+D__gduriez_Perso_Dossiers_DossiersVS_ProjectsWatch_source_MenusDelegate_mc_21_27_21_47_stop:
+        goto @D__gduriez_Perso_Dossiers_DossiersVS_ProjectsWatch_source_MenusDelegate_mc_21_8_22_33_if_end;
+D__gduriez_Perso_Dossiers_DossiersVS_ProjectsWatch_source_MenusDelegate_mc_21_8_22_33_if_else_false:
+D__gduriez_Perso_Dossiers_DossiersVS_ProjectsWatch_source_MenusDelegate_mc_22_13_22_33_start:
+[ "D:\gduriez\Perso\Dossiers\DossiersVS\ProjectsWatch\source\MenusDelegate.mc" 22 14 ]
+        %tmp.30 = lgetv %tab.1;
+        symbol [ tab %tmp.30 22 14 17 ];
+        symbol [ add %tmp.31 22 18 21 ];
+        %tmp.31 = getv function %tmp.30 :add;
+        %tmp.32 = lgetv %display24.3;
+        symbol [ display24 %tmp.32 22 22 31 ];
+        invoke %tmp.30 %tmp.31(%tmp.32);
+D__gduriez_Perso_Dossiers_DossiersVS_ProjectsWatch_source_MenusDelegate_mc_22_13_22_33_stop:
+D__gduriez_Perso_Dossiers_DossiersVS_ProjectsWatch_source_MenusDelegate_mc_21_8_22_33_if_end:
+[ "D:\gduriez\Perso\Dossiers\DossiersVS\ProjectsWatch\source\MenusDelegate.mc" 23 8 ]
+        %tmp.33 = lgetv %tab.1;
+        symbol [ tab %tmp.33 23 15 18 ];
+        ret %tmp.33;
+D__gduriez_Perso_Dossiers_DossiersVS_ProjectsWatch_source_MenusDelegate_mc_10_32_24_4_stop:
+    }
+    [ @file = "D:\gduriez\Perso\Dossiers\DossiersVS\ProjectsWatch\source\MenusDelegate.mc"; @line = 26; @position = 8; @symbol_vardef = [menuView,26,8,16]; ]
+    var menuView;
+    [ @file = "D:\gduriez\Perso\Dossiers\DossiersVS\ProjectsWatch\source\MenusDelegate.mc"; @line = 29; @symbol_functiondef = [initialize,29,13,23]; @symbol_param<0> = [_menuView,29,24,33]; ]
+    function initialize(_menuView) as Void {
+D__gduriez_Perso_Dossiers_DossiersVS_ProjectsWatch_source_MenusDelegate_mc_29_35_32_4_start:
+[ "D:\gduriez\Perso\Dossiers\DossiersVS\ProjectsWatch\source\MenusDelegate.mc" 30 5 ]
+        symbol [ InputDelegate %tmp.2 30 5 18 ];
+        %tmp.2 = getv ? :InputDelegate;
+        symbol [ initialize %tmp.3 30 19 29 ];
+        %tmp.3 = getv function %tmp.2 :initialize;
+        invoke %tmp.2 %tmp.3();
+[ "D:\gduriez\Perso\Dossiers\DossiersVS\ProjectsWatch\source\MenusDelegate.mc" 31 5 ]
+        %tmp.4 = lgetv %_menuView;
+        symbol [ _menuView %tmp.4 31 16 25 ];
+        symbol [ menuView ? 31 5 13 ];
+        putv self :menuView %tmp.4;
+D__gduriez_Perso_Dossiers_DossiersVS_ProjectsWatch_source_MenusDelegate_mc_29_35_32_4_stop:
+    }
+    [ @file = "D:\gduriez\Perso\Dossiers\DossiersVS\ProjectsWatch\source\MenusDelegate.mc"; @line = 34; @symbol_functiondef = [onTap,34,10,15]; @symbol_param<0> = [clickEvent,34,16,26]; ]
+    function onTap(clickEvent) {
+D__gduriez_Perso_Dossiers_DossiersVS_ProjectsWatch_source_MenusDelegate_mc_34_28_36_4_start:
+[ "D:\gduriez\Perso\Dossiers\DossiersVS\ProjectsWatch\source\MenusDelegate.mc" 35 8 ]
+        %tmp.1 = self;
+        symbol [ onSelect %tmp.2 35 15 23 ];
+        %tmp.2 = getv function %tmp.1 :onSelect;
+        %tmp.3 = invoke %tmp.1 %tmp.2();
+        ret %tmp.3;
+D__gduriez_Perso_Dossiers_DossiersVS_ProjectsWatch_source_MenusDelegate_mc_34_28_36_4_stop:
+    }
+    [ @file = "D:\gduriez\Perso\Dossiers\DossiersVS\ProjectsWatch\source\MenusDelegate.mc"; @line = 38; @symbol_functiondef = [onSwipe,38,13,20]; @symbol_param<0> = [evt,38,21,24]; ]
+    function onSwipe(evt) {
+D__gduriez_Perso_Dossiers_DossiersVS_ProjectsWatch_source_MenusDelegate_mc_38_26_50_4_start:
+[ "D:\gduriez\Perso\Dossiers\DossiersVS\ProjectsWatch\source\MenusDelegate.mc" 39 2 ]
+        [ "D__gduriez_Perso_Dossiers_DossiersVS_ProjectsWatch_source_MenusDelegate_mc_38_26_50_4_start" "D__gduriez_Perso_Dossiers_DossiersVS_ProjectsWatch_source_MenusDelegate_mc_38_26_50_4_stop" ]
+        %direction.1 = local;
+        symbol [ direction %direction.1 39 6 15 ];
+        %tmp.1 = lgetv %evt;
+        symbol [ evt %tmp.1 39 18 21 ];
+        symbol [ getDirection %tmp.2 39 22 34 ];
+        %tmp.2 = getv function %tmp.1 :getDirection;
+        %tmp.3 = invoke %tmp.1 %tmp.2();
+        lputv %direction.1 %tmp.3;
+        symbol [ direction %direction.1 39 6 15 ];
+[ "D:\gduriez\Perso\Dossiers\DossiersVS\ProjectsWatch\source\MenusDelegate.mc" 40 2 ]
+D__gduriez_Perso_Dossiers_DossiersVS_ProjectsWatch_source_MenusDelegate_mc_40_2_42_2_if_stmt:
+        %tmp.4 = lgetv %direction.1;
+        symbol [ direction %tmp.4 40 6 15 ];
+        symbol [ Ui %tmp.5 40 19 21 ];
+        %tmp.5 = getm $.Toybox.WatchUi;
+        symbol [ SWIPE_DOWN %tmp.6 40 22 32 ];
+        %tmp.6 = getv %tmp.5 :SWIPE_DOWN;
+        %tmp.7 = eq %tmp.4 %tmp.6;
+        bf %tmp.7 @D__gduriez_Perso_Dossiers_DossiersVS_ProjectsWatch_source_MenusDelegate_mc_40_2_42_2_if_end;
+D__gduriez_Perso_Dossiers_DossiersVS_ProjectsWatch_source_MenusDelegate_mc_40_2_42_2_if_true:
+D__gduriez_Perso_Dossiers_DossiersVS_ProjectsWatch_source_MenusDelegate_mc_40_34_42_2_start:
+[ "D:\gduriez\Perso\Dossiers\DossiersVS\ProjectsWatch\source\MenusDelegate.mc" 41 3 ]
+        %tmp.8 = self;
+        symbol [ onPreviousPage %tmp.9 41 10 24 ];
+        %tmp.9 = getv function %tmp.8 :onPreviousPage;
+        %tmp.10 = invoke %tmp.8 %tmp.9();
+        ret %tmp.10;
+D__gduriez_Perso_Dossiers_DossiersVS_ProjectsWatch_source_MenusDelegate_mc_40_34_42_2_stop:
+        goto @D__gduriez_Perso_Dossiers_DossiersVS_ProjectsWatch_source_MenusDelegate_mc_40_2_42_2_if_end;
+D__gduriez_Perso_Dossiers_DossiersVS_ProjectsWatch_source_MenusDelegate_mc_40_2_42_2_if_end:
+[ "D:\gduriez\Perso\Dossiers\DossiersVS\ProjectsWatch\source\MenusDelegate.mc" 43 2 ]
+D__gduriez_Perso_Dossiers_DossiersVS_ProjectsWatch_source_MenusDelegate_mc_43_2_45_2_if_stmt:
+        %tmp.11 = lgetv %direction.1;
+        symbol [ direction %tmp.11 43 6 15 ];
+        symbol [ Ui %tmp.12 43 19 21 ];
+        %tmp.12 = getm $.Toybox.WatchUi;
+        symbol [ SWIPE_UP %tmp.13 43 22 30 ];
+        %tmp.13 = getv %tmp.12 :SWIPE_UP;
+        %tmp.14 = eq %tmp.11 %tmp.13;
+        bf %tmp.14 @D__gduriez_Perso_Dossiers_DossiersVS_ProjectsWatch_source_MenusDelegate_mc_43_2_45_2_if_end;
+D__gduriez_Perso_Dossiers_DossiersVS_ProjectsWatch_source_MenusDelegate_mc_43_2_45_2_if_true:
+D__gduriez_Perso_Dossiers_DossiersVS_ProjectsWatch_source_MenusDelegate_mc_43_32_45_2_start:
+[ "D:\gduriez\Perso\Dossiers\DossiersVS\ProjectsWatch\source\MenusDelegate.mc" 44 3 ]
+        %tmp.15 = self;
+        symbol [ onNextPage %tmp.16 44 10 20 ];
+        %tmp.16 = getv function %tmp.15 :onNextPage;
+        %tmp.17 = invoke %tmp.15 %tmp.16();
+        ret %tmp.17;
+D__gduriez_Perso_Dossiers_DossiersVS_ProjectsWatch_source_MenusDelegate_mc_43_32_45_2_stop:
+        goto @D__gduriez_Perso_Dossiers_DossiersVS_ProjectsWatch_source_MenusDelegate_mc_43_2_45_2_if_end;
+D__gduriez_Perso_Dossiers_DossiersVS_ProjectsWatch_source_MenusDelegate_mc_43_2_45_2_if_end:
+[ "D:\gduriez\Perso\Dossiers\DossiersVS\ProjectsWatch\source\MenusDelegate.mc" 46 2 ]
+D__gduriez_Perso_Dossiers_DossiersVS_ProjectsWatch_source_MenusDelegate_mc_46_2_48_2_if_stmt:
+        %tmp.18 = lgetv %direction.1;
+        symbol [ direction %tmp.18 46 6 15 ];
+        symbol [ Ui %tmp.19 46 19 21 ];
+        %tmp.19 = getm $.Toybox.WatchUi;
+        symbol [ SWIPE_RIGHT %tmp.20 46 22 33 ];
+        %tmp.20 = getv %tmp.19 :SWIPE_RIGHT;
+        %tmp.21 = eq %tmp.18 %tmp.20;
+        bf %tmp.21 @D__gduriez_Perso_Dossiers_DossiersVS_ProjectsWatch_source_MenusDelegate_mc_46_2_48_2_if_end;
+D__gduriez_Perso_Dossiers_DossiersVS_ProjectsWatch_source_MenusDelegate_mc_46_2_48_2_if_true:
+D__gduriez_Perso_Dossiers_DossiersVS_ProjectsWatch_source_MenusDelegate_mc_46_35_48_2_start:
+[ "D:\gduriez\Perso\Dossiers\DossiersVS\ProjectsWatch\source\MenusDelegate.mc" 47 3 ]
+        %tmp.22 = self;
+        symbol [ onBack %tmp.23 47 10 16 ];
+        %tmp.23 = getv function %tmp.22 :onBack;
+        %tmp.24 = invoke %tmp.22 %tmp.23();
+        ret %tmp.24;
+D__gduriez_Perso_Dossiers_DossiersVS_ProjectsWatch_source_MenusDelegate_mc_46_35_48_2_stop:
+        goto @D__gduriez_Perso_Dossiers_DossiersVS_ProjectsWatch_source_MenusDelegate_mc_46_2_48_2_if_end;
+D__gduriez_Perso_Dossiers_DossiersVS_ProjectsWatch_source_MenusDelegate_mc_46_2_48_2_if_end:
+[ "D:\gduriez\Perso\Dossiers\DossiersVS\ProjectsWatch\source\MenusDelegate.mc" 49 8 ]
+        %tmp.25 = true;
+        ret %tmp.25;
+D__gduriez_Perso_Dossiers_DossiersVS_ProjectsWatch_source_MenusDelegate_mc_38_26_50_4_stop:
+    }
+    [ @file = "D:\gduriez\Perso\Dossiers\DossiersVS\ProjectsWatch\source\MenusDelegate.mc"; @line = 51; @symbol_functiondef = [onKey,51,10,15]; @symbol_param<0> = [keyEvent,51,16,24]; ]
+    function onKey(keyEvent) {
+D__gduriez_Perso_Dossiers_DossiersVS_ProjectsWatch_source_MenusDelegate_mc_51_26_65_4_start:
+[ "D:\gduriez\Perso\Dossiers\DossiersVS\ProjectsWatch\source\MenusDelegate.mc" 52 9 ]
+D__gduriez_Perso_Dossiers_DossiersVS_ProjectsWatch_source_MenusDelegate_mc_52_9_63_8_if_stmt:
+D__gduriez_Perso_Dossiers_DossiersVS_ProjectsWatch_source_MenusDelegate_mc_52_13_52_86_begin:
+        %tmp.1 = lgetv %keyEvent;
+        symbol [ keyEvent %tmp.1 52 13 21 ];
+        symbol [ getKey %tmp.2 52 22 28 ];
+        %tmp.2 = getv function %tmp.1 :getKey;
+        %tmp.3 = invoke %tmp.1 %tmp.2();
+        %tmp.4 = lgetv %keyEvent;
+        symbol [ keyEvent %tmp.4 52 34 42 ];
+        symbol [ KEY_ENTER %tmp.5 52 43 52 ];
+        %tmp.5 = getv %tmp.4 :KEY_ENTER;
+        %tmp.6 = eq %tmp.3 %tmp.5;
+        bt %tmp.6 @D__gduriez_Perso_Dossiers_DossiersVS_ProjectsWatch_source_MenusDelegate_mc_52_9_63_8_if_true;
+D__gduriez_Perso_Dossiers_DossiersVS_ProjectsWatch_source_MenusDelegate_mc_52_56_52_86_false:
+        %tmp.7 = lgetv %keyEvent;
+        symbol [ keyEvent %tmp.7 52 56 64 ];
+        symbol [ getKey %tmp.8 52 65 71 ];
+        %tmp.8 = getv function %tmp.7 :getKey;
+        %tmp.9 = invoke %tmp.7 %tmp.8();
+        %tmp.10 = lgetv %keyEvent;
+        symbol [ keyEvent %tmp.10 52 77 85 ];
+        symbol [ KEY_START %tmp.11 52 86 95 ];
+        %tmp.11 = getv %tmp.10 :KEY_START;
+        %tmp.12 = eq %tmp.9 %tmp.11;
+        push %tmp.12;
+D__gduriez_Perso_Dossiers_DossiersVS_ProjectsWatch_source_MenusDelegate_mc_52_56_52_86_end:
+        %tmp.13 = phi [%tmp.6 @D__gduriez_Perso_Dossiers_DossiersVS_ProjectsWatch_source_MenusDelegate_mc_52_13_52_86_begin] [%tmp.12 @D__gduriez_Perso_Dossiers_DossiersVS_ProjectsWatch_source_MenusDelegate_mc_52_56_52_86_false] [%tmp.13 @D__gduriez_Perso_Dossiers_DossiersVS_ProjectsWatch_source_MenusDelegate_mc_52_56_52_86_end];
+        bf %tmp.13 @D__gduriez_Perso_Dossiers_DossiersVS_ProjectsWatch_source_MenusDelegate_mc_52_9_63_8_if_false;
+D__gduriez_Perso_Dossiers_DossiersVS_ProjectsWatch_source_MenusDelegate_mc_52_9_63_8_if_true:
+D__gduriez_Perso_Dossiers_DossiersVS_ProjectsWatch_source_MenusDelegate_mc_52_97_54_8_start:
+[ "D:\gduriez\Perso\Dossiers\DossiersVS\ProjectsWatch\source\MenusDelegate.mc" 53 12 ]
+        %tmp.14 = self;
+        symbol [ onSelect %tmp.15 53 19 27 ];
+        %tmp.15 = getv function %tmp.14 :onSelect;
+        %tmp.16 = invoke %tmp.14 %tmp.15();
+        ret %tmp.16;
+D__gduriez_Perso_Dossiers_DossiersVS_ProjectsWatch_source_MenusDelegate_mc_52_97_54_8_stop:
+        goto @D__gduriez_Perso_Dossiers_DossiersVS_ProjectsWatch_source_MenusDelegate_mc_52_9_63_8_if_end;
+D__gduriez_Perso_Dossiers_DossiersVS_ProjectsWatch_source_MenusDelegate_mc_52_9_63_8_if_false:
+[ "D:\gduriez\Perso\Dossiers\DossiersVS\ProjectsWatch\source\MenusDelegate.mc" 55 13 ]
+D__gduriez_Perso_Dossiers_DossiersVS_ProjectsWatch_source_MenusDelegate_mc_55_13_63_8_if_stmt:
+        %tmp.17 = lgetv %keyEvent;
+        symbol [ keyEvent %tmp.17 55 17 25 ];
+        symbol [ getKey %tmp.18 55 26 32 ];
+        %tmp.18 = getv function %tmp.17 :getKey;
+        %tmp.19 = invoke %tmp.17 %tmp.18();
+        %tmp.20 = lgetv %keyEvent;
+        symbol [ keyEvent %tmp.20 55 38 46 ];
+        symbol [ KEY_UP %tmp.21 55 47 53 ];
+        %tmp.21 = getv %tmp.20 :KEY_UP;
+        %tmp.22 = eq %tmp.19 %tmp.21;
+        bf %tmp.22 @D__gduriez_Perso_Dossiers_DossiersVS_ProjectsWatch_source_MenusDelegate_mc_55_13_63_8_if_false;
+D__gduriez_Perso_Dossiers_DossiersVS_ProjectsWatch_source_MenusDelegate_mc_55_13_63_8_if_true:
+D__gduriez_Perso_Dossiers_DossiersVS_ProjectsWatch_source_MenusDelegate_mc_55_55_57_8_start:
+[ "D:\gduriez\Perso\Dossiers\DossiersVS\ProjectsWatch\source\MenusDelegate.mc" 56 12 ]
+        %tmp.23 = self;
+        symbol [ onPreviousPage %tmp.24 56 19 33 ];
+        %tmp.24 = getv function %tmp.23 :onPreviousPage;
+        %tmp.25 = invoke %tmp.23 %tmp.24();
+        ret %tmp.25;
+D__gduriez_Perso_Dossiers_DossiersVS_ProjectsWatch_source_MenusDelegate_mc_55_55_57_8_stop:
+        goto @D__gduriez_Perso_Dossiers_DossiersVS_ProjectsWatch_source_MenusDelegate_mc_55_13_63_8_if_end;
+D__gduriez_Perso_Dossiers_DossiersVS_ProjectsWatch_source_MenusDelegate_mc_55_13_63_8_if_false:
+[ "D:\gduriez\Perso\Dossiers\DossiersVS\ProjectsWatch\source\MenusDelegate.mc" 58 13 ]
+D__gduriez_Perso_Dossiers_DossiersVS_ProjectsWatch_source_MenusDelegate_mc_58_13_63_8_if_stmt:
+        %tmp.26 = lgetv %keyEvent;
+        symbol [ keyEvent %tmp.26 58 17 25 ];
+        symbol [ getKey %tmp.27 58 26 32 ];
+        %tmp.27 = getv function %tmp.26 :getKey;
+        %tmp.28 = invoke %tmp.26 %tmp.27();
+        %tmp.29 = lgetv %keyEvent;
+        symbol [ keyEvent %tmp.29 58 38 46 ];
+        symbol [ KEY_DOWN %tmp.30 58 47 55 ];
+        %tmp.30 = getv %tmp.29 :KEY_DOWN;
+        %tmp.31 = eq %tmp.28 %tmp.30;
+        bf %tmp.31 @D__gduriez_Perso_Dossiers_DossiersVS_ProjectsWatch_source_MenusDelegate_mc_58_13_63_8_if_false;
+D__gduriez_Perso_Dossiers_DossiersVS_ProjectsWatch_source_MenusDelegate_mc_58_13_63_8_if_true:
+D__gduriez_Perso_Dossiers_DossiersVS_ProjectsWatch_source_MenusDelegate_mc_58_57_60_8_start:
+[ "D:\gduriez\Perso\Dossiers\DossiersVS\ProjectsWatch\source\MenusDelegate.mc" 59 12 ]
+        %tmp.32 = self;
+        symbol [ onNextPage %tmp.33 59 19 29 ];
+        %tmp.33 = getv function %tmp.32 :onNextPage;
+        %tmp.34 = invoke %tmp.32 %tmp.33();
+        ret %tmp.34;
+D__gduriez_Perso_Dossiers_DossiersVS_ProjectsWatch_source_MenusDelegate_mc_58_57_60_8_stop:
+        goto @D__gduriez_Perso_Dossiers_DossiersVS_ProjectsWatch_source_MenusDelegate_mc_58_13_63_8_if_end;
+D__gduriez_Perso_Dossiers_DossiersVS_ProjectsWatch_source_MenusDelegate_mc_58_13_63_8_if_false:
+[ "D:\gduriez\Perso\Dossiers\DossiersVS\ProjectsWatch\source\MenusDelegate.mc" 61 13 ]
+D__gduriez_Perso_Dossiers_DossiersVS_ProjectsWatch_source_MenusDelegate_mc_61_13_63_8_if_stmt:
+        %tmp.35 = lgetv %keyEvent;
+        symbol [ keyEvent %tmp.35 61 17 25 ];
+        symbol [ getKey %tmp.36 61 26 32 ];
+        %tmp.36 = getv function %tmp.35 :getKey;
+        %tmp.37 = invoke %tmp.35 %tmp.36();
+        %tmp.38 = lgetv %keyEvent;
+        symbol [ keyEvent %tmp.38 61 38 46 ];
+        symbol [ KEY_ESC %tmp.39 61 47 54 ];
+        %tmp.39 = getv %tmp.38 :KEY_ESC;
+        %tmp.40 = eq %tmp.37 %tmp.39;
+        bf %tmp.40 @D__gduriez_Perso_Dossiers_DossiersVS_ProjectsWatch_source_MenusDelegate_mc_61_13_63_8_if_end;
+D__gduriez_Perso_Dossiers_DossiersVS_ProjectsWatch_source_MenusDelegate_mc_61_13_63_8_if_true:
+D__gduriez_Perso_Dossiers_DossiersVS_ProjectsWatch_source_MenusDelegate_mc_61_56_63_8_start:
+[ "D:\gduriez\Perso\Dossiers\DossiersVS\ProjectsWatch\source\MenusDelegate.mc" 62 12 ]
+        %tmp.41 = self;
+        symbol [ onBack %tmp.42 62 19 25 ];
+        %tmp.42 = getv function %tmp.41 :onBack;
+        %tmp.43 = invoke %tmp.41 %tmp.42();
+        ret %tmp.43;
+D__gduriez_Perso_Dossiers_DossiersVS_ProjectsWatch_source_MenusDelegate_mc_61_56_63_8_stop:
+        goto @D__gduriez_Perso_Dossiers_DossiersVS_ProjectsWatch_source_MenusDelegate_mc_61_13_63_8_if_end;
+D__gduriez_Perso_Dossiers_DossiersVS_ProjectsWatch_source_MenusDelegate_mc_61_13_63_8_if_end:
+D__gduriez_Perso_Dossiers_DossiersVS_ProjectsWatch_source_MenusDelegate_mc_58_13_63_8_if_end:
+D__gduriez_Perso_Dossiers_DossiersVS_ProjectsWatch_source_MenusDelegate_mc_55_13_63_8_if_end:
+D__gduriez_Perso_Dossiers_DossiersVS_ProjectsWatch_source_MenusDelegate_mc_52_9_63_8_if_end:
+[ "D:\gduriez\Perso\Dossiers\DossiersVS\ProjectsWatch\source\MenusDelegate.mc" 64 7 ]
+        %tmp.44 = true;
+        ret %tmp.44;
+D__gduriez_Perso_Dossiers_DossiersVS_ProjectsWatch_source_MenusDelegate_mc_51_26_65_4_stop:
+    }
+    [ @file = "D:\gduriez\Perso\Dossiers\DossiersVS\ProjectsWatch\source\MenusDelegate.mc"; @line = 67; @symbol_functiondef = [onNextPage,67,13,23]; ]
+    function onNextPage() {
+D__gduriez_Perso_Dossiers_DossiersVS_ProjectsWatch_source_MenusDelegate_mc_67_29_69_4_start:
+[ "D:\gduriez\Perso\Dossiers\DossiersVS\ProjectsWatch\source\MenusDelegate.mc" 68 5 ]
+        symbol [ menuView %tmp.2 68 5 13 ];
+        %tmp.2 = getv ? :menuView;
+        symbol [ next %tmp.3 68 14 18 ];
+        %tmp.3 = getv function %tmp.2 :next;
+        invoke %tmp.2 %tmp.3();
+D__gduriez_Perso_Dossiers_DossiersVS_ProjectsWatch_source_MenusDelegate_mc_67_29_69_4_stop:
+    }
+    [ @file = "D:\gduriez\Perso\Dossiers\DossiersVS\ProjectsWatch\source\MenusDelegate.mc"; @line = 71; @symbol_functiondef = [onPreviousPage,71,13,27]; ]
+    function onPreviousPage() {
+D__gduriez_Perso_Dossiers_DossiersVS_ProjectsWatch_source_MenusDelegate_mc_71_31_73_1_start:
+[ "D:\gduriez\Perso\Dossiers\DossiersVS\ProjectsWatch\source\MenusDelegate.mc" 72 5 ]
+        symbol [ menuView %tmp.2 72 5 13 ];
+        %tmp.2 = getv ? :menuView;
+        symbol [ prev %tmp.3 72 14 18 ];
+        %tmp.3 = getv function %tmp.2 :prev;
+        invoke %tmp.2 %tmp.3();
+D__gduriez_Perso_Dossiers_DossiersVS_ProjectsWatch_source_MenusDelegate_mc_71_31_73_1_stop:
+    }
+    [ @file = "D:\gduriez\Perso\Dossiers\DossiersVS\ProjectsWatch\source\MenusDelegate.mc"; @line = 76; @symbol_functiondef = [onSelect,76,13,21]; ]
+    function onSelect() {
+D__gduriez_Perso_Dossiers_DossiersVS_ProjectsWatch_source_MenusDelegate_mc_76_27_102_4_start:
+[ "D:\gduriez\Perso\Dossiers\DossiersVS\ProjectsWatch\source\MenusDelegate.mc" 77 8 ]
+        [ "D__gduriez_Perso_Dossiers_DossiersVS_ProjectsWatch_source_MenusDelegate_mc_76_27_102_4_start" "D__gduriez_Perso_Dossiers_DossiersVS_ProjectsWatch_source_MenusDelegate_mc_76_27_102_4_stop" ]
+        %item.1 = local;
+        symbol [ item %item.1 77 12 16 ];
+        symbol [ menuView %tmp.2 77 19 27 ];
+        %tmp.2 = getv ? :menuView;
+        symbol [ item %tmp.3 77 28 32 ];
+        %tmp.3 = getv %tmp.2 :item;
+        lputv %item.1 %tmp.3;
+        symbol [ item %item.1 77 12 16 ];
+[ "D:\gduriez\Perso\Dossiers\DossiersVS\ProjectsWatch\source\MenusDelegate.mc" 78 8 ]
+        symbol [ System %tmp.5 78 8 14 ];
+        %tmp.5 = getv ? :System;
+        symbol [ println %tmp.6 78 15 22 ];
+        %tmp.6 = getv function %tmp.5 :println;
+        %tmp.7 = "item ";
+        %tmp.8 = lgetv %item.1;
+        symbol [ item %tmp.8 78 31 35 ];
+        %tmp.9 = add %tmp.7 %tmp.8;
+        invoke %tmp.5 %tmp.6(%tmp.9);
+[ "D:\gduriez\Perso\Dossiers\DossiersVS\ProjectsWatch\source\MenusDelegate.mc" 79 8 ]
+        [ "D__gduriez_Perso_Dossiers_DossiersVS_ProjectsWatch_source_MenusDelegate_mc_76_27_102_4_start" "D__gduriez_Perso_Dossiers_DossiersVS_ProjectsWatch_source_MenusDelegate_mc_76_27_102_4_stop" ]
+        %display12.2 = local;
+        symbol [ display12 %display12.2 79 12 21 ];
+        %tmp.10 = "Display 12h";
+        lputv %display12.2 %tmp.10;
+        symbol [ display12 %display12.2 79 12 21 ];
+[ "D:\gduriez\Perso\Dossiers\DossiersVS\ProjectsWatch\source\MenusDelegate.mc" 80 8 ]
+        [ "D__gduriez_Perso_Dossiers_DossiersVS_ProjectsWatch_source_MenusDelegate_mc_76_27_102_4_start" "D__gduriez_Perso_Dossiers_DossiersVS_ProjectsWatch_source_MenusDelegate_mc_76_27_102_4_stop" ]
+        %display24.3 = local;
+        symbol [ display24 %display24.3 80 12 21 ];
+        %tmp.11 = "Display 24h";
+        lputv %display24.3 %tmp.11;
+        symbol [ display24 %display24.3 80 12 21 ];
+[ "D:\gduriez\Perso\Dossiers\DossiersVS\ProjectsWatch\source\MenusDelegate.mc" 81 8 ]
+D__gduriez_Perso_Dossiers_DossiersVS_ProjectsWatch_source_MenusDelegate_mc_81_8_100_8_if_stmt:
+D__gduriez_Perso_Dossiers_DossiersVS_ProjectsWatch_source_MenusDelegate_mc_81_12_81_47_begin:
+        %tmp.12 = lgetv %item.1;
+        symbol [ item %tmp.12 81 13 17 ];
+        %tmp.13 = 0;
+        %tmp.14 = gte %tmp.12 %tmp.13;
+        bf %tmp.14 @D__gduriez_Perso_Dossiers_DossiersVS_ProjectsWatch_source_MenusDelegate_mc_81_8_100_8_if_false;
+D__gduriez_Perso_Dossiers_DossiersVS_ProjectsWatch_source_MenusDelegate_mc_81_26_81_47_true:
+        %tmp.15 = lgetv %item.1;
+        symbol [ item %tmp.15 81 27 31 ];
+        symbol [ SecondsColor %tmp.17 81 35 47 ];
+        %tmp.17 = getv ? :SecondsColor;
+        %tmp.18 = lte %tmp.15 %tmp.17;
+        push %tmp.18;
+D__gduriez_Perso_Dossiers_DossiersVS_ProjectsWatch_source_MenusDelegate_mc_81_26_81_47_end:
+        %tmp.19 = phi [%tmp.14 @D__gduriez_Perso_Dossiers_DossiersVS_ProjectsWatch_source_MenusDelegate_mc_81_12_81_47_begin] [%tmp.18 @D__gduriez_Perso_Dossiers_DossiersVS_ProjectsWatch_source_MenusDelegate_mc_81_26_81_47_true] [%tmp.19 @D__gduriez_Perso_Dossiers_DossiersVS_ProjectsWatch_source_MenusDelegate_mc_81_26_81_47_end];
+        bf %tmp.19 @D__gduriez_Perso_Dossiers_DossiersVS_ProjectsWatch_source_MenusDelegate_mc_81_8_100_8_if_false;
+D__gduriez_Perso_Dossiers_DossiersVS_ProjectsWatch_source_MenusDelegate_mc_81_8_100_8_if_true:
+D__gduriez_Perso_Dossiers_DossiersVS_ProjectsWatch_source_MenusDelegate_mc_81_49_87_8_start:
+[ "D:\gduriez\Perso\Dossiers\DossiersVS\ProjectsWatch\source\MenusDelegate.mc" 82 12 ]
+        [ "D__gduriez_Perso_Dossiers_DossiersVS_ProjectsWatch_source_MenusDelegate_mc_81_49_87_8_start" "D__gduriez_Perso_Dossiers_DossiersVS_ProjectsWatch_source_MenusDelegate_mc_81_49_87_8_stop" ]
+        %colorsNames.4 = local;
+        symbol [ colorsNames %colorsNames.4 82 16 27 ];
+        symbol [ Colors %tmp.21 82 30 36 ];
+        %tmp.21 = getv ? :Colors;
+        symbol [ colorsNames %tmp.22 82 37 48 ];
+        %tmp.22 = getv function %tmp.21 :colorsNames;
+        %tmp.23 = invoke %tmp.21 %tmp.22();
+        lputv %colorsNames.4 %tmp.23;
+        symbol [ colorsNames %colorsNames.4 82 16 27 ];
+[ "D:\gduriez\Perso\Dossiers\DossiersVS\ProjectsWatch\source\MenusDelegate.mc" 83 12 ]
+D__gduriez_Perso_Dossiers_DossiersVS_ProjectsWatch_source_MenusDelegate_mc_83_12_83_76_if_stmt:
+        %tmp.24 = lgetv %item.1;
+        symbol [ item %tmp.24 83 16 20 ];
+        symbol [ BackGroundColor %tmp.26 83 24 39 ];
+        %tmp.26 = getv ? :BackGroundColor;
+        %tmp.27 = eq %tmp.24 %tmp.26;
+        bf %tmp.27 @D__gduriez_Perso_Dossiers_DossiersVS_ProjectsWatch_source_MenusDelegate_mc_83_12_83_76_if_end;
+D__gduriez_Perso_Dossiers_DossiersVS_ProjectsWatch_source_MenusDelegate_mc_83_12_83_76_if_true:
+D__gduriez_Perso_Dossiers_DossiersVS_ProjectsWatch_source_MenusDelegate_mc_83_41_83_76_start:
+[ "D:\gduriez\Perso\Dossiers\DossiersVS\ProjectsWatch\source\MenusDelegate.mc" 83 42 ]
+        %tmp.28 = lgetv %colorsNames.4;
+        symbol [ colorsNames %tmp.28 83 42 53 ];
+        symbol [ remove %tmp.29 83 54 60 ];
+        %tmp.29 = getv function %tmp.28 :remove;
+        %tmp.30 = "Transparent";
+        invoke %tmp.28 %tmp.29(%tmp.30);
+D__gduriez_Perso_Dossiers_DossiersVS_ProjectsWatch_source_MenusDelegate_mc_83_41_83_76_stop:
+        goto @D__gduriez_Perso_Dossiers_DossiersVS_ProjectsWatch_source_MenusDelegate_mc_83_12_83_76_if_end;
+D__gduriez_Perso_Dossiers_DossiersVS_ProjectsWatch_source_MenusDelegate_mc_83_12_83_76_if_end:
+[ "D:\gduriez\Perso\Dossiers\DossiersVS\ProjectsWatch\source\MenusDelegate.mc" 84 12 ]
+        symbol [ System %tmp.32 84 12 18 ];
+        %tmp.32 = getv ? :System;
+        symbol [ println %tmp.33 84 19 26 ];
+        %tmp.33 = getv function %tmp.32 :println;
+        %tmp.34 = "colorsNames ";
+        %tmp.35 = lgetv %colorsNames.4;
+        symbol [ colorsNames %tmp.35 84 42 53 ];
+        %tmp.36 = add %tmp.34 %tmp.35;
+        invoke %tmp.32 %tmp.33(%tmp.36);
+[ "D:\gduriez\Perso\Dossiers\DossiersVS\ProjectsWatch\source\MenusDelegate.mc" 85 12 ]
+        [ "D__gduriez_Perso_Dossiers_DossiersVS_ProjectsWatch_source_MenusDelegate_mc_81_49_87_8_start" "D__gduriez_Perso_Dossiers_DossiersVS_ProjectsWatch_source_MenusDelegate_mc_81_49_87_8_stop" ]
+        %setttingAnalogView.5 = local;
+        symbol [ setttingAnalogView %setttingAnalogView.5 85 16 34 ];
+        symbol [ SettingsAnalogView %tmp.40 85 41 59 ];
+        %tmp.40 = getv ? :SettingsAnalogView;
+        %tmp.41 = lgetv %item.1;
+        symbol [ item %tmp.41 85 60 64 ];
+        %tmp.42 = lgetv %colorsNames.4;
+        symbol [ colorsNames %tmp.42 85 65 76 ];
+        %tmp.43 = self;
+        symbol [ menuPrincipalTab %tmp.44 85 77 93 ];
+        %tmp.44 = getv function %tmp.43 :menuPrincipalTab;
+        %tmp.45 = invoke %tmp.43 %tmp.44();
+        %tmp.46 = lgetv %item.1;
+        symbol [ item %tmp.46 85 96 100 ];
+        %tmp.47 = agetv %tmp.45 %tmp.46;
+        %tmp.37 = newc %tmp.40 (%tmp.41, %tmp.42, %tmp.47);
+        lputv %setttingAnalogView.5 %tmp.37;
+        symbol [ setttingAnalogView %setttingAnalogView.5 85 16 34 ];
+[ "D:\gduriez\Perso\Dossiers\DossiersVS\ProjectsWatch\source\MenusDelegate.mc" 86 12 ]
+        symbol [ Ui %tmp.48 86 12 14 ];
+        %tmp.48 = getm $.Toybox.WatchUi;
+        symbol [ pushView %tmp.49 86 15 23 ];
+        %tmp.49 = getv function %tmp.48 :pushView;
+        %tmp.50 = lgetv %setttingAnalogView.5;
+        symbol [ setttingAnalogView %tmp.50 86 24 42 ];
+        symbol [ MenusDelegate %tmp.54 86 48 61 ];
+        %tmp.54 = getv ? :MenusDelegate;
+        %tmp.55 = lgetv %setttingAnalogView.5;
+        symbol [ setttingAnalogView %tmp.55 86 62 80 ];
+        %tmp.51 = newc %tmp.54 (%tmp.55);
+        symbol [ Ui %tmp.56 86 83 85 ];
+        %tmp.56 = getm $.Toybox.WatchUi;
+        symbol [ SLIDE_RIGHT %tmp.57 86 86 97 ];
+        %tmp.57 = getv %tmp.56 :SLIDE_RIGHT;
+        invoke %tmp.48 %tmp.49(%tmp.50, %tmp.51, %tmp.57);
+D__gduriez_Perso_Dossiers_DossiersVS_ProjectsWatch_source_MenusDelegate_mc_81_49_87_8_stop:
+        goto @D__gduriez_Perso_Dossiers_DossiersVS_ProjectsWatch_source_MenusDelegate_mc_81_8_100_8_if_end;
+D__gduriez_Perso_Dossiers_DossiersVS_ProjectsWatch_source_MenusDelegate_mc_81_8_100_8_if_false:
+[ "D:\gduriez\Perso\Dossiers\DossiersVS\ProjectsWatch\source\MenusDelegate.mc" 87 15 ]
+D__gduriez_Perso_Dossiers_DossiersVS_ProjectsWatch_source_MenusDelegate_mc_87_15_100_8_if_stmt:
+        symbol [ menuView %tmp.59 87 20 28 ];
+        %tmp.59 = getv ? :menuView;
+        symbol [ itemString %tmp.60 87 29 39 ];
+        %tmp.60 = getv %tmp.59 :itemString;
+        symbol [ equals %tmp.61 87 40 46 ];
+        %tmp.61 = getv function %tmp.60 :equals;
+        %tmp.62 = lgetv %display12.2;
+        symbol [ display12 %tmp.62 87 47 56 ];
+        %tmp.63 = invoke %tmp.60 %tmp.61(%tmp.62);
+        bf %tmp.63 @D__gduriez_Perso_Dossiers_DossiersVS_ProjectsWatch_source_MenusDelegate_mc_87_15_100_8_if_false;
+D__gduriez_Perso_Dossiers_DossiersVS_ProjectsWatch_source_MenusDelegate_mc_87_15_100_8_if_true:
+D__gduriez_Perso_Dossiers_DossiersVS_ProjectsWatch_source_MenusDelegate_mc_87_62_91_8_start:
+[ "D:\gduriez\Perso\Dossiers\DossiersVS\ProjectsWatch\source\MenusDelegate.mc" 88 12 ]
+        symbol [ System %tmp.65 88 12 18 ];
+        %tmp.65 = getv ? :System;
+        symbol [ println %tmp.66 88 19 26 ];
+        %tmp.66 = getv function %tmp.65 :println;
+        symbol [ menuView %tmp.68 88 27 35 ];
+        %tmp.68 = getv ? :menuView;
+        symbol [ itemString %tmp.69 88 36 46 ];
+        %tmp.69 = getv %tmp.68 :itemString;
+        invoke %tmp.65 %tmp.66(%tmp.69);
+[ "D:\gduriez\Perso\Dossiers\DossiersVS\ProjectsWatch\source\MenusDelegate.mc" 89 12 ]
+        symbol [ params %tmp.70 89 12 18 ];
+        %tmp.70 = getv self :params;
+        symbol [ params %tmp.72 89 30 36 ];
+        %tmp.72 = getv ? :params;
+        symbol [ is24h %tmp.74 89 37 42 ];
+        %tmp.74 = getv ? :is24h;
+        %tmp.75 = agetv %tmp.72 %tmp.74;
+        %tmp.76 = not %tmp.75;
+        symbol [ is24h %tmp.78 89 19 24 ];
+        %tmp.78 = getv ? :is24h;
+        aputv %tmp.70 %tmp.78 %tmp.76;
+[ "D:\gduriez\Perso\Dossiers\DossiersVS\ProjectsWatch\source\MenusDelegate.mc" 90 12 ]
+        symbol [ menuView %tmp.79 90 12 20 ];
+        %tmp.79 = getv self :menuView;
+        symbol [ tabLignesMenu %tmp.80 90 21 34 ];
+        %tmp.80 = getv %tmp.79 :tabLignesMenu;
+        %tmp.81 = lgetv %display24.3;
+        symbol [ display24 %tmp.81 90 52 61 ];
+        symbol [ menuView %tmp.83 90 35 43 ];
+        %tmp.83 = getv ? :menuView;
+        symbol [ item %tmp.84 90 44 48 ];
+        %tmp.84 = getv %tmp.83 :item;
+        aputv %tmp.80 %tmp.84 %tmp.81;
+D__gduriez_Perso_Dossiers_DossiersVS_ProjectsWatch_source_MenusDelegate_mc_87_62_91_8_stop:
+        goto @D__gduriez_Perso_Dossiers_DossiersVS_ProjectsWatch_source_MenusDelegate_mc_87_15_100_8_if_end;
+D__gduriez_Perso_Dossiers_DossiersVS_ProjectsWatch_source_MenusDelegate_mc_87_15_100_8_if_false:
+[ "D:\gduriez\Perso\Dossiers\DossiersVS\ProjectsWatch\source\MenusDelegate.mc" 91 15 ]
+D__gduriez_Perso_Dossiers_DossiersVS_ProjectsWatch_source_MenusDelegate_mc_91_15_100_8_if_stmt:
+        symbol [ menuView %tmp.86 91 20 28 ];
+        %tmp.86 = getv ? :menuView;
+        symbol [ itemString %tmp.87 91 29 39 ];
+        %tmp.87 = getv %tmp.86 :itemString;
+        symbol [ equals %tmp.88 91 40 46 ];
+        %tmp.88 = getv function %tmp.87 :equals;
+        %tmp.89 = lgetv %display24.3;
+        symbol [ display24 %tmp.89 91 47 56 ];
+        %tmp.90 = invoke %tmp.87 %tmp.88(%tmp.89);
+        bf %tmp.90 @D__gduriez_Perso_Dossiers_DossiersVS_ProjectsWatch_source_MenusDelegate_mc_91_15_100_8_if_false;
+D__gduriez_Perso_Dossiers_DossiersVS_ProjectsWatch_source_MenusDelegate_mc_91_15_100_8_if_true:
+D__gduriez_Perso_Dossiers_DossiersVS_ProjectsWatch_source_MenusDelegate_mc_91_62_95_3_start:
+[ "D:\gduriez\Perso\Dossiers\DossiersVS\ProjectsWatch\source\MenusDelegate.mc" 92 12 ]
+        symbol [ System %tmp.92 92 12 18 ];
+        %tmp.92 = getv ? :System;
+        symbol [ println %tmp.93 92 19 26 ];
+        %tmp.93 = getv function %tmp.92 :println;
+        symbol [ menuView %tmp.95 92 27 35 ];
+        %tmp.95 = getv ? :menuView;
+        symbol [ itemString %tmp.96 92 36 46 ];
+        %tmp.96 = getv %tmp.95 :itemString;
+        invoke %tmp.92 %tmp.93(%tmp.96);
+[ "D:\gduriez\Perso\Dossiers\DossiersVS\ProjectsWatch\source\MenusDelegate.mc" 93 12 ]
+        symbol [ params %tmp.97 93 12 18 ];
+        %tmp.97 = getv self :params;
+        symbol [ params %tmp.99 93 30 36 ];
+        %tmp.99 = getv ? :params;
+        symbol [ is24h %tmp.101 93 37 42 ];
+        %tmp.101 = getv ? :is24h;
+        %tmp.102 = agetv %tmp.99 %tmp.101;
+        %tmp.103 = not %tmp.102;
+        symbol [ is24h %tmp.105 93 19 24 ];
+        %tmp.105 = getv ? :is24h;
+        aputv %tmp.97 %tmp.105 %tmp.103;
+[ "D:\gduriez\Perso\Dossiers\DossiersVS\ProjectsWatch\source\MenusDelegate.mc" 94 12 ]
+        symbol [ menuView %tmp.106 94 12 20 ];
+        %tmp.106 = getv self :menuView;
+        symbol [ tabLignesMenu %tmp.107 94 21 34 ];
+        %tmp.107 = getv %tmp.106 :tabLignesMenu;
+        %tmp.108 = lgetv %display12.2;
+        symbol [ display12 %tmp.108 94 52 61 ];
+        symbol [ menuView %tmp.110 94 35 43 ];
+        %tmp.110 = getv ? :menuView;
+        symbol [ item %tmp.111 94 44 48 ];
+        %tmp.111 = getv %tmp.110 :item;
+        aputv %tmp.107 %tmp.111 %tmp.108;
+D__gduriez_Perso_Dossiers_DossiersVS_ProjectsWatch_source_MenusDelegate_mc_91_62_95_3_stop:
+        goto @D__gduriez_Perso_Dossiers_DossiersVS_ProjectsWatch_source_MenusDelegate_mc_91_15_100_8_if_end;
+D__gduriez_Perso_Dossiers_DossiersVS_ProjectsWatch_source_MenusDelegate_mc_91_15_100_8_if_false:
+[ "D:\gduriez\Perso\Dossiers\DossiersVS\ProjectsWatch\source\MenusDelegate.mc" 95 10 ]
+D__gduriez_Perso_Dossiers_DossiersVS_ProjectsWatch_source_MenusDelegate_mc_95_10_100_8_if_stmt:
+        %tmp.112 = lgetv %item.1;
+        symbol [ item %tmp.112 95 14 18 ];
+        %tmp.113 = 10;
+        %tmp.114 = gte %tmp.112 %tmp.113;
+        bf %tmp.114 @D__gduriez_Perso_Dossiers_DossiersVS_ProjectsWatch_source_MenusDelegate_mc_95_10_100_8_if_end;
+D__gduriez_Perso_Dossiers_DossiersVS_ProjectsWatch_source_MenusDelegate_mc_95_10_100_8_if_true:
+D__gduriez_Perso_Dossiers_DossiersVS_ProjectsWatch_source_MenusDelegate_mc_95_25_100_8_start:
+[ "D:\gduriez\Perso\Dossiers\DossiersVS\ProjectsWatch\source\MenusDelegate.mc" 96 12 ]
+        [ "D__gduriez_Perso_Dossiers_DossiersVS_ProjectsWatch_source_MenusDelegate_mc_95_25_100_8_start" "D__gduriez_Perso_Dossiers_DossiersVS_ProjectsWatch_source_MenusDelegate_mc_95_25_100_8_stop" ]
+        %colorNum.6 = local;
+        symbol [ colorNum %colorNum.6 96 16 24 ];
+        %tmp.115 = lgetv %item.1;
+        symbol [ item %tmp.115 96 27 31 ];
+        %tmp.116 = 10;
+        %tmp.117 = sub %tmp.115 %tmp.116;
+        lputv %colorNum.6 %tmp.117;
+        symbol [ colorNum %colorNum.6 96 16 24 ];
+[ "D:\gduriez\Perso\Dossiers\DossiersVS\ProjectsWatch\source\MenusDelegate.mc" 97 12 ]
+        symbol [ System %tmp.119 97 12 18 ];
+        %tmp.119 = getv ? :System;
+        symbol [ println %tmp.120 97 19 26 ];
+        %tmp.120 = getv function %tmp.119 :println;
+        %tmp.121 = "color ";
+        %tmp.122 = lgetv %colorNum.6;
+        symbol [ colorNum %tmp.122 97 36 44 ];
+        %tmp.123 = add %tmp.121 %tmp.122;
+        %tmp.124 = "  numParam ";
+        %tmp.125 = add %tmp.123 %tmp.124;
+        symbol [ menuView %tmp.127 97 59 67 ];
+        %tmp.127 = getv ? :menuView;
+        symbol [ numParametre %tmp.128 97 68 80 ];
+        %tmp.128 = getv %tmp.127 :numParametre;
+        %tmp.129 = add %tmp.125 %tmp.128;
+        invoke %tmp.119 %tmp.120(%tmp.129);
+[ "D:\gduriez\Perso\Dossiers\DossiersVS\ProjectsWatch\source\MenusDelegate.mc" 98 12 ]
+        symbol [ params %tmp.130 98 12 18 ];
+        %tmp.130 = getv self :params;
+        %tmp.131 = lgetv %colorNum.6;
+        symbol [ colorNum %tmp.131 98 44 52 ];
+        symbol [ menuView %tmp.133 98 19 27 ];
+        %tmp.133 = getv ? :menuView;
+        symbol [ numParametre %tmp.134 98 28 40 ];
+        %tmp.134 = getv %tmp.133 :numParametre;
+        aputv %tmp.130 %tmp.134 %tmp.131;
+[ "D:\gduriez\Perso\Dossiers\DossiersVS\ProjectsWatch\source\MenusDelegate.mc" 99 12 ]
+        symbol [ Ui %tmp.135 99 12 14 ];
+        %tmp.135 = getm $.Toybox.WatchUi;
+        symbol [ popView %tmp.136 99 15 22 ];
+        %tmp.136 = getv function %tmp.135 :popView;
+        symbol [ Ui %tmp.137 99 23 25 ];
+        %tmp.137 = getm $.Toybox.WatchUi;
+        symbol [ SLIDE_RIGHT %tmp.138 99 26 37 ];
+        %tmp.138 = getv %tmp.137 :SLIDE_RIGHT;
+        invoke %tmp.135 %tmp.136(%tmp.138);
+D__gduriez_Perso_Dossiers_DossiersVS_ProjectsWatch_source_MenusDelegate_mc_95_25_100_8_stop:
+        goto @D__gduriez_Perso_Dossiers_DossiersVS_ProjectsWatch_source_MenusDelegate_mc_95_10_100_8_if_end;
+D__gduriez_Perso_Dossiers_DossiersVS_ProjectsWatch_source_MenusDelegate_mc_95_10_100_8_if_end:
+D__gduriez_Perso_Dossiers_DossiersVS_ProjectsWatch_source_MenusDelegate_mc_91_15_100_8_if_end:
+D__gduriez_Perso_Dossiers_DossiersVS_ProjectsWatch_source_MenusDelegate_mc_87_15_100_8_if_end:
+D__gduriez_Perso_Dossiers_DossiersVS_ProjectsWatch_source_MenusDelegate_mc_81_8_100_8_if_end:
+[ "D:\gduriez\Perso\Dossiers\DossiersVS\ProjectsWatch\source\MenusDelegate.mc" 101 8 ]
+        symbol [ Ui %tmp.139 101 8 10 ];
+        %tmp.139 = getm $.Toybox.WatchUi;
+        symbol [ requestUpdate %tmp.140 101 11 24 ];
+        %tmp.140 = getv function %tmp.139 :requestUpdate;
+        invoke %tmp.139 %tmp.140();
+D__gduriez_Perso_Dossiers_DossiersVS_ProjectsWatch_source_MenusDelegate_mc_76_27_102_4_stop:
+    }
+    [ @file = "D:\gduriez\Perso\Dossiers\DossiersVS\ProjectsWatch\source\MenusDelegate.mc"; @line = 104; @symbol_functiondef = [onBack,104,13,19]; ]
+    function onBack() {
+D__gduriez_Perso_Dossiers_DossiersVS_ProjectsWatch_source_MenusDelegate_mc_104_25_108_4_start:
+[ "D:\gduriez\Perso\Dossiers\DossiersVS\ProjectsWatch\source\MenusDelegate.mc" 105 8 ]
+        symbol [ Ui %tmp.1 105 8 10 ];
+        %tmp.1 = getm $.Toybox.WatchUi;
+        symbol [ popView %tmp.2 105 11 18 ];
+        %tmp.2 = getv function %tmp.1 :popView;
+        symbol [ Ui %tmp.3 105 19 21 ];
+        %tmp.3 = getm $.Toybox.WatchUi;
+        symbol [ SLIDE_IMMEDIATE %tmp.4 105 22 37 ];
+        %tmp.4 = getv %tmp.3 :SLIDE_IMMEDIATE;
+        invoke %tmp.1 %tmp.2(%tmp.4);
+[ "D:\gduriez\Perso\Dossiers\DossiersVS\ProjectsWatch\source\MenusDelegate.mc" 106 8 ]
+        %tmp.5 = true;
+        ret %tmp.5;
+D__gduriez_Perso_Dossiers_DossiersVS_ProjectsWatch_source_MenusDelegate_mc_104_25_108_4_stop:
+    }
+}
+[ @file = "D:\gduriez\Perso\Dossiers\DossiersVS\ProjectsWatch\source\MenusDelegate.mc"; @line = 2; ]
+<init> {
+}

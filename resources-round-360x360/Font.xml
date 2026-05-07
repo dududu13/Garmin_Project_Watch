@@ -1,0 +1,6 @@
+
+<fonts>
+    <font id="past"  filename="past.fnt"/>
+    <font id="present"  filename="present.fnt"/>
+    <font id="future"  filename="future.fnt"/>
+   </fonts>
