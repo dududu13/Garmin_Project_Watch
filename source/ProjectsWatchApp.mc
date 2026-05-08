@@ -13,6 +13,7 @@ using Toybox.Sensor;
 
 var ParametresChanges = true;
 var params ;
+var oldParams;
 
 enum {
     BackGroundColor, //0

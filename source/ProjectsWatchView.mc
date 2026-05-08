@@ -38,27 +38,27 @@ class ProjectsWatchView extends WatchUi.WatchFace {
 
     function onUpdate(dc as Dc) as Void {
         View.onUpdate(dc);
-        dessineTout(dc,fenetre_heures,params);
+        dessineTout(dc,fenetre_heures);
     }
 
     function loadParams() {
-        params = [42,33,14,1,1,33,0,0,0,0,0,0,0,0,0,0,0,0,false];
+        params = [4, 33, 14, 3, 1, 19, 15, 15, 15, 15, 15, 15, 0, 0, 0, 0, 0, 0, true];
         for (var i = 0 ; i < params.size() ; i++) {
             var value = Application.Storage.getValue("Params"+i);
             if (value != null) {params[i] = value;}
         }
         couleurFond = Colors.colorValuesTab()[params[0]];
-
+        ParametresChanges = false;
     }
 
-    function dessineTout(dc,fenetre_heures,oldParams) {
+    function dessineTout(dc,fenetre_heures) {
         var larg = dc.getHeight();
         var clockTime = System.getClockTime();
         dc.setColor(couleurFond,couleurFond);
         dc.clear();
-        ProjectsWatchView.dessineHour(dc,clockTime,larg,oldParams);
-        ProjectsWatchView.dessineMinutes(dc,clockTime,larg,oldParams);
-        ProjectsWatchView.dessineFond(dc,larg,fenetre_heures,oldParams);
+        ProjectsWatchView.dessineHour(dc,clockTime,larg);
+        ProjectsWatchView.dessineMinutes(dc,clockTime,larg);
+        ProjectsWatchView.dessineFond(dc,larg,fenetre_heures);
     }
 
 
@@ -66,41 +66,41 @@ class ProjectsWatchView extends WatchUi.WatchFace {
     }
     function onEnterSleep() as Void {
     }
-    function getParam(oldParams,i) {
+    function getParam(i) {
         if (i<Field1) {
-            return Colors.colorValuesTab()[oldParams[i]];
+            return Colors.colorValuesTab()[params[i]];
         } else {
-            return oldParams[i];
+            return params[i];
         }
     }
 
 
-    function dessineFond(dc,larg,fenetre_heure,oldParams) {
-        dc.setColor(ProjectsWatchView.getParam(oldParams,MinutesColor),Graphics.COLOR_TRANSPARENT);  
+    function dessineFond(dc,larg,fenetre_heure) {
+        dc.setColor(ProjectsWatchView.getParam(MinutesColor),Graphics.COLOR_TRANSPARENT);  
         if (fenetre_heures != null) {dc.drawBitmap(0, 0, fenetre_heures);}
         dc.setColor(couleurFond,couleurFond);
-        dc.fillPolygon([[.767*larg,.141*larg],[.934*larg,.26*larg],[.703*larg,.447*larg],[.639*larg,.271*larg]]);
-        dc.fillPolygon([[.233*larg,.141*larg],[.066*larg,.26*larg],[.297*larg,.447*larg],[.361*larg,.271*larg]]);
+        dc.fillPolygon([[.767*larg,.134*larg],[.639*larg,.267*larg],[.705*larg,.449*larg],[.98*larg,.37*larg]]);
+        dc.fillPolygon([[.233*larg,.134*larg],[.361*larg,.267*larg],[.295*larg,.449*larg],[.02*larg,.37*larg]]);
 
-        dc.setColor(ProjectsWatchView.getParam(oldParams,PresentColor),Graphics.COLOR_TRANSPARENT);
+        dc.setColor(ProjectsWatchView.getParam(PresentColor),Graphics.COLOR_TRANSPARENT);
         dc.setPenWidth(3);
         dc.drawLine(larg*.5-1,larg*.05,larg*.5-1,larg*.55);
 
         var font = WatchUi.loadResource(Rez.Fonts.PresentPastFuture);
         if (font != null) {
             dc.drawText(0.48*larg,0.57*larg,font,"0",Graphics.TEXT_JUSTIFY_LEFT);//present
-            dc.setColor(ProjectsWatchView.getParam(oldParams,Field1Color),Graphics.COLOR_TRANSPARENT);
+            dc.setColor(ProjectsWatchView.getParam(PastFutureColor),Graphics.COLOR_TRANSPARENT);
             dc.drawText(0.21*larg,0.218*larg,font,"1",Graphics.TEXT_JUSTIFY_LEFT);//past
             dc.drawText(0.63*larg,0.15*larg,font,"2",Graphics.TEXT_JUSTIFY_LEFT);//future
         }
 
     }
-    function dessineHour(dc,clockTime,larg,oldParams) {
+    function dessineHour(dc,clockTime,larg) {
         var rayon = larg*.27 ;
         var vectorFont = Graphics.getVectorFont({:face=>["BionicBold","RobotoCondensedBold","KosugiRegular"], :size=>70});  
         var h =  clockTime.hour;
         var hMax = 24;
-        if (! ProjectsWatchView.getParam(oldParams,is24h)) {
+        if (! ProjectsWatchView.getParam(is24h)) {
             if (h>12) {
                 h=h-12;
                 }
@@ -136,13 +136,13 @@ class ProjectsWatchView extends WatchUi.WatchFace {
         var arcDeCercleTotalPixels = hm1L + espL + hL/2 + arcDeCerclePixels;
         
         var angleDeg = 90 + arcDeCercleTotalPixels / (2 * Math.PI * rayon) * 360;
-        dc.setColor(ProjectsWatchView.getParam(oldParams,HourColor),Graphics.COLOR_TRANSPARENT);
+        dc.setColor(ProjectsWatchView.getParam(HourColor),Graphics.COLOR_TRANSPARENT);
         dc.drawRadialText(larg/2, larg*.41, vectorFont, text, Graphics.TEXT_JUSTIFY_LEFT, angleDeg, rayon, Graphics.RADIAL_TEXT_DIRECTION_CLOCKWISE);  
 
     }
 
  
-    function dessineMinutes(dc,clockTime,larg,oldParams) {
+    function dessineMinutes(dc,clockTime,larg) {
         var rayon = larg*.212 ;
         var vectorFont = Graphics.getVectorFont({:face=>["BionicBold","RobotoCondensedBold","KosugiRegular"], :size=>35});      
         var minutes =  clockTime.min;
@@ -177,17 +177,17 @@ class ProjectsWatchView extends WatchUi.WatchFace {
         var arcDeCercleTotalPixels = mm1L + espL + mL/2 + arcDeCerclePixels;
 
         var angleDeg = 90 + arcDeCercleTotalPixels / (2 * Math.PI * rayon) * 360;
-        dc.setColor(ProjectsWatchView.getParam(oldParams,MinutesColor),Graphics.COLOR_TRANSPARENT);
+        dc.setColor(ProjectsWatchView.getParam(MinutesColor),Graphics.COLOR_TRANSPARENT);
         dc.drawRadialText(larg/2, larg*.41, vectorFont, text, Graphics.TEXT_JUSTIFY_LEFT, angleDeg, rayon, Graphics.RADIAL_TEXT_DIRECTION_CLOCKWISE);  
         //dc.drawText(larg/2, larg*.6, Graphics.FONT_NUMBER_MILD, clockTime.hour+":"+clockTime.min+":"+clockTime.sec, Graphics.TEXT_JUSTIFY_CENTER);  
 
     }
 
-    function dessineChamps(dc,clockTime,larg,oldParams) {
+    function dessineChamps(dc,clockTime,larg) {
         var timeString = Lang.format("$1$:$2$", [clockTime.hour, clockTime.min.format("%02d")]);
         var x = .2;
         var y = .4;
-        dc.setColor(ProjectsWatchView.getParam(oldParams,Field1Color),Graphics.COLOR_TRANSPARENT);
+        dc.setColor(ProjectsWatchView.getParam(Field1Color),Graphics.COLOR_TRANSPARENT);
         for (var i=0;i<2;i++) {
             var xx = x * larg;
             for (var j=0;j<3;j++) {
