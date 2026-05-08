@@ -49,13 +49,7 @@ D__gduriez_Perso_Dossiers_DossiersVS_ProjectsWatch_source_Colors_mc_17_22_20_0_s
         %tmp.6 = lgetv %i;
         symbol [ i %tmp.6 19 16 17 ];
         %tmp.7 = agetv %tmp.5 %tmp.6;
-        %tmp.8 = lgetv %list.1;
-        symbol [ list %tmp.8 19 21 25 ];
-        symbol [ size %tmp.9 19 26 30 ];
-        %tmp.9 = getv function %tmp.8 :size;
-        %tmp.10 = invoke %tmp.8 %tmp.9();
-        %tmp.11 = mod %tmp.7 %tmp.10;
-        ret %tmp.11;
+        ret %tmp.7;
 D__gduriez_Perso_Dossiers_DossiersVS_ProjectsWatch_source_Colors_mc_17_22_20_0_stop:
     }
     [ @file = "D:\gduriez\Perso\Dossiers\DossiersVS\ProjectsWatch\source\Colors.mc"; @line = 21; @symbol_functiondef = [colorsNames,21,9,20]; ]
@@ -350,10 +344,13 @@ D__gduriez_Perso_Dossiers_DossiersVS_ProjectsWatch_source_Colors_mc_75_26_125_0_
         %tmp.137 = 0xFFFF99;
         %tmp.138 = dup %tmp.136;
         %tmp.139 = aputv %tmp.138 45 %tmp.137;
-        %tmp.140 = 0xFFFFFF;
-        %tmp.141 = dup %tmp.139;
-        %tmp.142 = aputv %tmp.141 46 %tmp.140;
-        ret %tmp.142;
+        symbol [ Graphics %tmp.141 123 0 8 ];
+        %tmp.141 = getv ? :Graphics;
+        symbol [ COLOR_TRANSPARENT %tmp.142 123 9 26 ];
+        %tmp.142 = getv %tmp.141 :COLOR_TRANSPARENT;
+        %tmp.143 = dup %tmp.139;
+        %tmp.144 = aputv %tmp.143 46 %tmp.142;
+        ret %tmp.144;
 D__gduriez_Perso_Dossiers_DossiersVS_ProjectsWatch_source_Colors_mc_75_26_125_0_stop:
     }
     [ @file = "D:\gduriez\Perso\Dossiers\DossiersVS\ProjectsWatch\source\Colors.mc"; @line = 127; @symbol_functiondef = [getColor,127,9,17]; @symbol_param<0> = [thisName,127,18,26]; ]

@@ -6,21 +6,21 @@ using Toybox.Application as App;
 
 
 class MenusDelegate extends Ui.InputDelegate {
-
+var oldParams;
     function menuPrincipalTab() {
         var tab = [
             "BackGround Color", //0
             "Present Color",//1
             "PastFuture Color",//2
             "Hour Color",//4
-            "Minutes Color",//5
-            "Seconds Color"
+            "Minutes Color"//5
         ];
         var display12 = "Display 12h";
         var display24 = "Display 24h";
         if (params[is24h]) {tab.add(display12);}
         else {tab.add(display24);}
         return tab;
+        
     }
 
     var menuView;
@@ -29,6 +29,7 @@ class MenusDelegate extends Ui.InputDelegate {
     function initialize(_menuView) {
     	InputDelegate.initialize();
     	menuView = _menuView;
+        oldParams = params;
     }
 
 	function onTap(clickEvent) {
@@ -74,37 +75,48 @@ class MenusDelegate extends Ui.InputDelegate {
 
 
     function onSelect()    {
+        
         var item = menuView.item;
         System.println("item "+item);
         var display12 = "Display 12h";
         var display24 = "Display 24h";
-        if ((item >=0) && (item <= SecondsColor)){
+        if ((item >=0) && (item <= MinutesColor)){
+            
             var colorsNames = Colors.colorsNames();
             if (item == BackGroundColor) {colorsNames.remove("Transparent");} //pas de transparence pour le background
-            System.println("colorsNames "+colorsNames);
-            var setttingAnalogView = new SettingsAnalogView(item,colorsNames,menuPrincipalTab()[item]);
+            var setttingAnalogView = new SettingsAnalogView(item,colorsNames,menuPrincipalTab()[item],params);
             Ui.pushView(setttingAnalogView, new MenusDelegate(setttingAnalogView), Ui.SLIDE_RIGHT);
         } else if ((menuView.itemString.equals(display12)))   {
             System.println(menuView.itemString);
             params[is24h] = ! params[is24h];
+            App.Storage.setValue("Params"+is24h, params[is24h]);
+            menuView.itemString = display24;
             menuView.tabLignesMenu[menuView.item] = display24;
         } else if ((menuView.itemString.equals(display24)))   {
             System.println(menuView.itemString);
             params[is24h] = ! params[is24h];
+            App.Storage.setValue("Params"+is24h, params[is24h]);
+            menuView.itemString = display12;
             menuView.tabLignesMenu[menuView.item] = display12;
  		} else if (item >=10) { // dans ce cas la couleur est confirmée
             var colorNum = item-10;
-            System.println("color "+colorNum+"  numParam "+menuView.numParametre);
+            System.println("save  numParam "+menuView.numParametre+"  color "+params[menuView.numParametre]+"--->"+colorNum);
             params[menuView.numParametre] = colorNum;
+            App.Storage.setValue("Params"+menuView.numParametre, colorNum);
+            couleurFond = Colors.colorValuesTab()[params[0]];
             Ui.popView(Ui.SLIDE_RIGHT);
         }
+        
         Ui.requestUpdate();
     }
 
-    function onBack()    {
-        Ui.popView(Ui.SLIDE_IMMEDIATE);
-        return true;
 
+    function onBack()    {
+        System.println("onback menudelegate");
+        params = oldParams;
+        Ui.popView(Ui.SLIDE_IMMEDIATE);
+        Ui.requestUpdate();
+        return true;
     }
 
  

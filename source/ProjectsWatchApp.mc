@@ -12,7 +12,7 @@ using Toybox.SensorHistory;
 using Toybox.Sensor;
 
 var ParametresChanges = true;
-var params = new [lastParametre];
+var params ;
 
 enum {
     BackGroundColor, //0
@@ -48,10 +48,12 @@ class ProjectsWatchApp extends App.AppBase {
 
     // Return the initial view of your application here
     function getInitialView() as [Views] or [Views, InputDelegates] {
-        return [ new ProjectsWatchView() ];
+        var view = new ProjectsWatchView();
+        //return [ new ProjectsWatchView() ];
+        return [view, new AnalogDelegate()];
     }
     public function getSettingsView()  {
-		var menuView = new MenuView("Settings",MenusDelegate.menuPrincipalTab(),3, 0,false,true);
+		var menuView = new MenuView("Settings",MenusDelegate.menuPrincipalTab(),2, 0,false,true);
 		return [menuView, new MenusDelegate(menuView)];
     }
 
@@ -65,6 +67,22 @@ class ProjectsWatchApp extends App.AppBase {
 
 }
 
-function getApp() as ProjectsWatchApp {
-    return Application.getApp() as ProjectsWatchApp;
+//function getApp() as ProjectsWatchApp {
+//    return Application.getApp() as ProjectsWatchApp;
+//}
+
+
+class AnalogDelegate extends WatchUi.WatchFaceDelegate {
+
+    function initialize() {
+        WatchFaceDelegate.initialize();
+   }
+
+    function onPowerBudgetExceeded(powerInfo) {
+        System.println( "Moy temps: " + powerInfo.executionTimeAverage );
+        System.println( "Temps Max: " + powerInfo.executionTimeLimit );
+		ParametresChanges = true;
+		WatchUi.requestUpdate();
+    }
+
 }

@@ -91,90 +91,144 @@ D__gduriez_Perso_Dossiers_DossiersVS_ProjectsWatch_source_ProjectsWatchApp_mc_45
     }
     [ @file = "D:\gduriez\Perso\Dossiers\DossiersVS\ProjectsWatch\source\ProjectsWatchApp.mc"; @line = 50; @symbol_functiondef = [getInitialView,50,13,27]; @symbol_return<0> = [Views,50,34,39]; @symbol_return<1> = [Views,50,45,50]; @symbol_return<2> = [InputDelegates,50,52,66]; ]
     function getInitialView() as [Views] or [Views, InputDelegates] {
-D__gduriez_Perso_Dossiers_DossiersVS_ProjectsWatch_source_ProjectsWatchApp_mc_50_68_52_4_start:
+D__gduriez_Perso_Dossiers_DossiersVS_ProjectsWatch_source_ProjectsWatchApp_mc_50_68_54_4_start:
 [ "D:\gduriez\Perso\Dossiers\DossiersVS\ProjectsWatch\source\ProjectsWatchApp.mc" 51 8 ]
-        %tmp.1 = newa 1;
-        symbol [ ProjectsWatchView %tmp.5 51 21 38 ];
-        %tmp.5 = getv ? :ProjectsWatchView;
-        %tmp.2 = newc %tmp.5 ();
-        %tmp.6 = dup %tmp.1;
-        %tmp.7 = aputv %tmp.6 0 %tmp.2;
-        ret %tmp.7;
-D__gduriez_Perso_Dossiers_DossiersVS_ProjectsWatch_source_ProjectsWatchApp_mc_50_68_52_4_stop:
+        [ "D__gduriez_Perso_Dossiers_DossiersVS_ProjectsWatch_source_ProjectsWatchApp_mc_50_68_54_4_start" "D__gduriez_Perso_Dossiers_DossiersVS_ProjectsWatch_source_ProjectsWatchApp_mc_50_68_54_4_stop" ]
+        %view.1 = local;
+        symbol [ view %view.1 51 12 16 ];
+        symbol [ ProjectsWatchView %tmp.4 51 23 40 ];
+        %tmp.4 = getv ? :ProjectsWatchView;
+        %tmp.1 = newc %tmp.4 ();
+        lputv %view.1 %tmp.1;
+        symbol [ view %view.1 51 12 16 ];
+[ "D:\gduriez\Perso\Dossiers\DossiersVS\ProjectsWatch\source\ProjectsWatchApp.mc" 53 8 ]
+        %tmp.5 = newa 2;
+        %tmp.6 = lgetv %view.1;
+        symbol [ view %tmp.6 53 16 20 ];
+        %tmp.7 = dup %tmp.5;
+        %tmp.8 = aputv %tmp.7 0 %tmp.6;
+        symbol [ AnalogDelegate %tmp.12 53 26 40 ];
+        %tmp.12 = getv ? :AnalogDelegate;
+        %tmp.9 = newc %tmp.12 ();
+        %tmp.13 = dup %tmp.8;
+        %tmp.14 = aputv %tmp.13 1 %tmp.9;
+        ret %tmp.14;
+D__gduriez_Perso_Dossiers_DossiersVS_ProjectsWatch_source_ProjectsWatchApp_mc_50_68_54_4_stop:
     }
-    [ @file = "D:\gduriez\Perso\Dossiers\DossiersVS\ProjectsWatch\source\ProjectsWatchApp.mc"; @line = 53; @symbol_functiondef = [getSettingsView,53,20,35]; ]
+    [ @file = "D:\gduriez\Perso\Dossiers\DossiersVS\ProjectsWatch\source\ProjectsWatchApp.mc"; @line = 55; @symbol_functiondef = [getSettingsView,55,20,35]; ]
     public
     function getSettingsView() {
-D__gduriez_Perso_Dossiers_DossiersVS_ProjectsWatch_source_ProjectsWatchApp_mc_53_39_56_4_start:
-[ "D:\gduriez\Perso\Dossiers\DossiersVS\ProjectsWatch\source\ProjectsWatchApp.mc" 54 2 ]
-        [ "D__gduriez_Perso_Dossiers_DossiersVS_ProjectsWatch_source_ProjectsWatchApp_mc_53_39_56_4_start" "D__gduriez_Perso_Dossiers_DossiersVS_ProjectsWatch_source_ProjectsWatchApp_mc_53_39_56_4_stop" ]
+D__gduriez_Perso_Dossiers_DossiersVS_ProjectsWatch_source_ProjectsWatchApp_mc_55_39_58_4_start:
+[ "D:\gduriez\Perso\Dossiers\DossiersVS\ProjectsWatch\source\ProjectsWatchApp.mc" 56 2 ]
+        [ "D__gduriez_Perso_Dossiers_DossiersVS_ProjectsWatch_source_ProjectsWatchApp_mc_55_39_58_4_start" "D__gduriez_Perso_Dossiers_DossiersVS_ProjectsWatch_source_ProjectsWatchApp_mc_55_39_58_4_stop" ]
         %menuView.1 = local;
-        symbol [ menuView %menuView.1 54 6 14 ];
-        symbol [ MenuView %tmp.4 54 21 29 ];
+        symbol [ menuView %menuView.1 56 6 14 ];
+        symbol [ MenuView %tmp.4 56 21 29 ];
         %tmp.4 = getv ? :MenuView;
         %tmp.5 = "Settings";
-        symbol [ MenusDelegate %tmp.7 54 41 54 ];
+        symbol [ MenusDelegate %tmp.7 56 41 54 ];
         %tmp.7 = getv ? :MenusDelegate;
-        symbol [ menuPrincipalTab %tmp.8 54 55 71 ];
+        symbol [ menuPrincipalTab %tmp.8 56 55 71 ];
         %tmp.8 = getv function %tmp.7 :menuPrincipalTab;
         %tmp.9 = invoke %tmp.7 %tmp.8();
-        %tmp.10 = 3;
+        %tmp.10 = 2;
         %tmp.11 = 0;
         %tmp.12 = false;
         %tmp.13 = true;
         %tmp.1 = newc %tmp.4 (%tmp.5, %tmp.9, %tmp.10, %tmp.11, %tmp.12, %tmp.13);
         lputv %menuView.1 %tmp.1;
-        symbol [ menuView %menuView.1 54 6 14 ];
-[ "D:\gduriez\Perso\Dossiers\DossiersVS\ProjectsWatch\source\ProjectsWatchApp.mc" 55 2 ]
+        symbol [ menuView %menuView.1 56 6 14 ];
+[ "D:\gduriez\Perso\Dossiers\DossiersVS\ProjectsWatch\source\ProjectsWatchApp.mc" 57 2 ]
         %tmp.14 = newa 2;
         %tmp.15 = lgetv %menuView.1;
-        symbol [ menuView %tmp.15 55 10 18 ];
+        symbol [ menuView %tmp.15 57 10 18 ];
         %tmp.16 = dup %tmp.14;
         %tmp.17 = aputv %tmp.16 0 %tmp.15;
-        symbol [ MenusDelegate %tmp.21 55 24 37 ];
+        symbol [ MenusDelegate %tmp.21 57 24 37 ];
         %tmp.21 = getv ? :MenusDelegate;
         %tmp.22 = lgetv %menuView.1;
-        symbol [ menuView %tmp.22 55 38 46 ];
+        symbol [ menuView %tmp.22 57 38 46 ];
         %tmp.18 = newc %tmp.21 (%tmp.22);
         %tmp.23 = dup %tmp.17;
         %tmp.24 = aputv %tmp.23 1 %tmp.18;
         ret %tmp.24;
-D__gduriez_Perso_Dossiers_DossiersVS_ProjectsWatch_source_ProjectsWatchApp_mc_53_39_56_4_stop:
+D__gduriez_Perso_Dossiers_DossiersVS_ProjectsWatch_source_ProjectsWatchApp_mc_55_39_58_4_stop:
     }
-    [ @file = "D:\gduriez\Perso\Dossiers\DossiersVS\ProjectsWatch\source\ProjectsWatchApp.mc"; @line = 58; @symbol_functiondef = [onSettingsChanged,58,13,30]; ]
+    [ @file = "D:\gduriez\Perso\Dossiers\DossiersVS\ProjectsWatch\source\ProjectsWatchApp.mc"; @line = 60; @symbol_functiondef = [onSettingsChanged,60,13,30]; ]
     function onSettingsChanged() {
-D__gduriez_Perso_Dossiers_DossiersVS_ProjectsWatch_source_ProjectsWatchApp_mc_58_33_61_1_start:
-[ "D:\gduriez\Perso\Dossiers\DossiersVS\ProjectsWatch\source\ProjectsWatchApp.mc" 59 2 ]
+D__gduriez_Perso_Dossiers_DossiersVS_ProjectsWatch_source_ProjectsWatchApp_mc_60_33_63_1_start:
+[ "D:\gduriez\Perso\Dossiers\DossiersVS\ProjectsWatch\source\ProjectsWatchApp.mc" 61 2 ]
         %tmp.1 = true;
-        symbol [ ParametresChanges ? 59 2 19 ];
+        symbol [ ParametresChanges ? 61 2 19 ];
         putv self :ParametresChanges %tmp.1;
-[ "D:\gduriez\Perso\Dossiers\DossiersVS\ProjectsWatch\source\ProjectsWatchApp.mc" 60 2 ]
+[ "D:\gduriez\Perso\Dossiers\DossiersVS\ProjectsWatch\source\ProjectsWatchApp.mc" 62 2 ]
         %tmp.2 = self;
-        symbol [ requestUpdate %tmp.3 60 2 15 ];
+        symbol [ requestUpdate %tmp.3 62 2 15 ];
         %tmp.3 = getv function %tmp.2 :requestUpdate;
         invoke %tmp.2 %tmp.3();
-D__gduriez_Perso_Dossiers_DossiersVS_ProjectsWatch_source_ProjectsWatchApp_mc_58_33_61_1_stop:
+D__gduriez_Perso_Dossiers_DossiersVS_ProjectsWatch_source_ProjectsWatchApp_mc_60_33_63_1_stop:
     }
 }
-[ @file = "D:\gduriez\Perso\Dossiers\DossiersVS\ProjectsWatch\source\ProjectsWatchApp.mc"; @line = 68; @symbol_functiondef = [getApp,68,9,15]; @symbol_return<0> = [ProjectsWatchApp,68,21,37]; ]
-function getApp() as ProjectsWatchApp {
-D__gduriez_Perso_Dossiers_DossiersVS_ProjectsWatch_source_ProjectsWatchApp_mc_68_38_70_0_start:
-[ "D:\gduriez\Perso\Dossiers\DossiersVS\ProjectsWatch\source\ProjectsWatchApp.mc" 69 4 ]
-    symbol [ Application %tmp.2 69 11 22 ];
-    %tmp.2 = getv ? :Application;
-    symbol [ getApp %tmp.3 69 23 29 ];
-    %tmp.3 = getv function %tmp.2 :getApp;
-    %tmp.4 = invoke %tmp.2 %tmp.3();
-    %tmp.5 = as %tmp.4 ProjectsWatchApp;
-    symbol [ ProjectsWatchApp %tmp.5 69 35 51 ];
-    ret %tmp.5;
-D__gduriez_Perso_Dossiers_DossiersVS_ProjectsWatch_source_ProjectsWatchApp_mc_68_38_70_0_stop:
+[ @file = "D:\gduriez\Perso\Dossiers\DossiersVS\ProjectsWatch\source\ProjectsWatchApp.mc"; @line = 75; @symbol_classdef = [AnalogDelegate,75,6,20]; @symbol_extends<0> = [WatchUi,75,29,36]; @symbol_extends<1> = [WatchFaceDelegate,75,37,54]; ]
+class AnalogDelegate extends WatchUi.WatchFaceDelegate {
+    [ @file = "D:\gduriez\Perso\Dossiers\DossiersVS\ProjectsWatch\source\ProjectsWatchApp.mc"; @line = 75; ]
+    <init> {
+    }
+    [ @file = "D:\gduriez\Perso\Dossiers\DossiersVS\ProjectsWatch\source\ProjectsWatchApp.mc"; @line = 75; ]
+    static
+    <init> {
+    }
+    [ @file = "D:\gduriez\Perso\Dossiers\DossiersVS\ProjectsWatch\source\ProjectsWatchApp.mc"; @line = 77; @symbol_functiondef = [initialize,77,13,23]; ]
+    function initialize() as Void {
+D__gduriez_Perso_Dossiers_DossiersVS_ProjectsWatch_source_ProjectsWatchApp_mc_77_26_79_3_start:
+[ "D:\gduriez\Perso\Dossiers\DossiersVS\ProjectsWatch\source\ProjectsWatchApp.mc" 78 8 ]
+        symbol [ WatchFaceDelegate %tmp.2 78 8 25 ];
+        %tmp.2 = getv ? :WatchFaceDelegate;
+        symbol [ initialize %tmp.3 78 26 36 ];
+        %tmp.3 = getv function %tmp.2 :initialize;
+        invoke %tmp.2 %tmp.3();
+D__gduriez_Perso_Dossiers_DossiersVS_ProjectsWatch_source_ProjectsWatchApp_mc_77_26_79_3_stop:
+    }
+    [ @file = "D:\gduriez\Perso\Dossiers\DossiersVS\ProjectsWatch\source\ProjectsWatchApp.mc"; @line = 81; @symbol_functiondef = [onPowerBudgetExceeded,81,13,34]; @symbol_param<0> = [powerInfo,81,35,44]; ]
+    function onPowerBudgetExceeded(powerInfo) {
+D__gduriez_Perso_Dossiers_DossiersVS_ProjectsWatch_source_ProjectsWatchApp_mc_81_46_86_4_start:
+[ "D:\gduriez\Perso\Dossiers\DossiersVS\ProjectsWatch\source\ProjectsWatchApp.mc" 82 8 ]
+        symbol [ System %tmp.2 82 8 14 ];
+        %tmp.2 = getv ? :System;
+        symbol [ println %tmp.3 82 15 22 ];
+        %tmp.3 = getv function %tmp.2 :println;
+        %tmp.4 = "Moy temps: ";
+        %tmp.5 = lgetv %powerInfo;
+        symbol [ powerInfo %tmp.5 82 40 49 ];
+        symbol [ executionTimeAverage %tmp.6 82 50 70 ];
+        %tmp.6 = getv %tmp.5 :executionTimeAverage;
+        %tmp.7 = add %tmp.4 %tmp.6;
+        invoke %tmp.2 %tmp.3(%tmp.7);
+[ "D:\gduriez\Perso\Dossiers\DossiersVS\ProjectsWatch\source\ProjectsWatchApp.mc" 83 8 ]
+        symbol [ System %tmp.9 83 8 14 ];
+        %tmp.9 = getv ? :System;
+        symbol [ println %tmp.10 83 15 22 ];
+        %tmp.10 = getv function %tmp.9 :println;
+        %tmp.11 = "Temps Max: ";
+        %tmp.12 = lgetv %powerInfo;
+        symbol [ powerInfo %tmp.12 83 40 49 ];
+        symbol [ executionTimeLimit %tmp.13 83 50 68 ];
+        %tmp.13 = getv %tmp.12 :executionTimeLimit;
+        %tmp.14 = add %tmp.11 %tmp.13;
+        invoke %tmp.9 %tmp.10(%tmp.14);
+[ "D:\gduriez\Perso\Dossiers\DossiersVS\ProjectsWatch\source\ProjectsWatchApp.mc" 84 2 ]
+        %tmp.15 = true;
+        symbol [ ParametresChanges ? 84 2 19 ];
+        putv self :ParametresChanges %tmp.15;
+[ "D:\gduriez\Perso\Dossiers\DossiersVS\ProjectsWatch\source\ProjectsWatchApp.mc" 85 2 ]
+        symbol [ WatchUi %tmp.16 85 2 9 ];
+        %tmp.16 = getm $.Toybox.WatchUi;
+        symbol [ requestUpdate %tmp.17 85 10 23 ];
+        %tmp.17 = getv function %tmp.16 :requestUpdate;
+        invoke %tmp.16 %tmp.17();
+D__gduriez_Perso_Dossiers_DossiersVS_ProjectsWatch_source_ProjectsWatchApp_mc_81_46_86_4_stop:
+    }
 }
 [ @file = "D:\gduriez\Perso\Dossiers\DossiersVS\ProjectsWatch\source\ProjectsWatchApp.mc"; @line = 2; ]
 <init> {
-[ "D:\gduriez\Perso\Dossiers\DossiersVS\ProjectsWatch\source\ProjectsWatchApp.mc" 15 4 ]
-    symbol [ lastParametre %tmp.8 15 18 31 ];
-    %tmp.8 = getv ? :lastParametre;
-    %tmp.6 = newa %tmp.8;
-    putv self :params %tmp.6;
 }

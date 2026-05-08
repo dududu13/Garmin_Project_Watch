@@ -16,7 +16,7 @@ class Colors {
 
 function colorName(i) {
     var list = Colors.colorsNames();
-    return list[i] % list.size();
+    return list[i] ;
 }
 function colorsNames() {
 return [
@@ -120,7 +120,7 @@ function colorValuesTab() {
 0xFFFF00,
 0x808000,
 0xFFFF99,
-0xFFFFFF
+Graphics.COLOR_TRANSPARENT
     ];
 }
 

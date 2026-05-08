@@ -9,80 +9,115 @@ class LoadParams {
     }
     [ @file = "D:\gduriez\Perso\Dossiers\DossiersVS\ProjectsWatch\source\LoadParams.mc"; @line = 4; @symbol_functiondef = [load,4,13,17]; ]
     function load() {
-D__gduriez_Perso_Dossiers_DossiersVS_ProjectsWatch_source_LoadParams_mc_4_20_30_4_start:
-[ "D:\gduriez\Perso\Dossiers\DossiersVS\ProjectsWatch\source\LoadParams.mc" 5 4 ]
-        %tmp.1 = newa 19;
-        %tmp.2 = 6;
-        %tmp.3 = dup %tmp.1;
-        %tmp.4 = aputv %tmp.3 0 %tmp.2;
-        %tmp.5 = 33;
-        %tmp.6 = dup %tmp.4;
-        %tmp.7 = aputv %tmp.6 1 %tmp.5;
-        %tmp.8 = 14;
-        %tmp.9 = dup %tmp.7;
-        %tmp.10 = aputv %tmp.9 2 %tmp.8;
-        %tmp.11 = 28;
-        %tmp.12 = dup %tmp.10;
-        %tmp.13 = aputv %tmp.12 3 %tmp.11;
-        %tmp.14 = 15;
-        %tmp.15 = dup %tmp.13;
-        %tmp.16 = aputv %tmp.15 4 %tmp.14;
-        %tmp.17 = 19;
-        %tmp.18 = dup %tmp.16;
-        %tmp.19 = aputv %tmp.18 5 %tmp.17;
-        %tmp.20 = 15;
-        %tmp.21 = dup %tmp.19;
-        %tmp.22 = aputv %tmp.21 6 %tmp.20;
-        %tmp.23 = 15;
-        %tmp.24 = dup %tmp.22;
-        %tmp.25 = aputv %tmp.24 7 %tmp.23;
-        %tmp.26 = 15;
-        %tmp.27 = dup %tmp.25;
-        %tmp.28 = aputv %tmp.27 8 %tmp.26;
-        %tmp.29 = 15;
-        %tmp.30 = dup %tmp.28;
-        %tmp.31 = aputv %tmp.30 9 %tmp.29;
-        %tmp.32 = 15;
-        %tmp.33 = dup %tmp.31;
-        %tmp.34 = aputv %tmp.33 10 %tmp.32;
-        %tmp.35 = 15;
-        %tmp.36 = dup %tmp.34;
-        %tmp.37 = aputv %tmp.36 11 %tmp.35;
-        %tmp.38 = 0;
-        %tmp.39 = dup %tmp.37;
-        %tmp.40 = aputv %tmp.39 12 %tmp.38;
-        %tmp.41 = 0;
-        %tmp.42 = dup %tmp.40;
-        %tmp.43 = aputv %tmp.42 13 %tmp.41;
-        %tmp.44 = 0;
-        %tmp.45 = dup %tmp.43;
-        %tmp.46 = aputv %tmp.45 14 %tmp.44;
-        %tmp.47 = 0;
-        %tmp.48 = dup %tmp.46;
-        %tmp.49 = aputv %tmp.48 15 %tmp.47;
-        %tmp.50 = 0;
-        %tmp.51 = dup %tmp.49;
-        %tmp.52 = aputv %tmp.51 16 %tmp.50;
-        %tmp.53 = 0;
-        %tmp.54 = dup %tmp.52;
-        %tmp.55 = aputv %tmp.54 17 %tmp.53;
-        %tmp.56 = true;
-        %tmp.57 = dup %tmp.55;
-        %tmp.58 = aputv %tmp.57 18 %tmp.56;
-        symbol [ params ? 5 4 10 ];
-        putv self :params %tmp.58;
-[ "D:\gduriez\Perso\Dossiers\DossiersVS\ProjectsWatch\source\LoadParams.mc" 28 0 ]
-        %tmp.59 = false;
-        symbol [ ParametresChanges ? 28 0 17 ];
-        putv self :ParametresChanges %tmp.59;
-[ "D:\gduriez\Perso\Dossiers\DossiersVS\ProjectsWatch\source\LoadParams.mc" 29 0 ]
-        symbol [ params %tmp.61 29 14 20 ];
-        %tmp.61 = getv ? :params;
-        %tmp.62 = 0;
-        %tmp.63 = agetv %tmp.61 %tmp.62;
-        symbol [ couleurFond ? 29 0 11 ];
-        putv self :couleurFond %tmp.63;
-D__gduriez_Perso_Dossiers_DossiersVS_ProjectsWatch_source_LoadParams_mc_4_20_30_4_stop:
+D__gduriez_Perso_Dossiers_DossiersVS_ProjectsWatch_source_LoadParams_mc_4_20_34_4_start:
+[ "D:\gduriez\Perso\Dossiers\DossiersVS\ProjectsWatch\source\LoadParams.mc" 5 8 ]
+D__gduriez_Perso_Dossiers_DossiersVS_ProjectsWatch_source_LoadParams_mc_5_8_30_8_if_stmt:
+        symbol [ params %tmp.2 5 12 18 ];
+        %tmp.2 = getv ? :params;
+        %tmp.3 = null;
+        %tmp.4 = eq %tmp.2 %tmp.3;
+        bf %tmp.4 @D__gduriez_Perso_Dossiers_DossiersVS_ProjectsWatch_source_LoadParams_mc_5_8_30_8_if_end;
+D__gduriez_Perso_Dossiers_DossiersVS_ProjectsWatch_source_LoadParams_mc_5_8_30_8_if_true:
+D__gduriez_Perso_Dossiers_DossiersVS_ProjectsWatch_source_LoadParams_mc_5_28_30_8_start:
+[ "D:\gduriez\Perso\Dossiers\DossiersVS\ProjectsWatch\source\LoadParams.mc" 6 12 ]
+        symbol [ System %tmp.6 6 12 18 ];
+        %tmp.6 = getv ? :System;
+        symbol [ println %tmp.7 6 19 26 ];
+        %tmp.7 = getv function %tmp.6 :println;
+        %tmp.8 = "Init param";
+        invoke %tmp.6 %tmp.7(%tmp.8);
+[ "D:\gduriez\Perso\Dossiers\DossiersVS\ProjectsWatch\source\LoadParams.mc" 7 12 ]
+        %tmp.9 = newa 19;
+        %tmp.10 = 42;
+        %tmp.11 = dup %tmp.9;
+        %tmp.12 = aputv %tmp.11 0 %tmp.10;
+        %tmp.13 = 33;
+        %tmp.14 = dup %tmp.12;
+        %tmp.15 = aputv %tmp.14 1 %tmp.13;
+        %tmp.16 = 14;
+        %tmp.17 = dup %tmp.15;
+        %tmp.18 = aputv %tmp.17 2 %tmp.16;
+        %tmp.19 = 28;
+        %tmp.20 = dup %tmp.18;
+        %tmp.21 = aputv %tmp.20 3 %tmp.19;
+        %tmp.22 = 15;
+        %tmp.23 = dup %tmp.21;
+        %tmp.24 = aputv %tmp.23 4 %tmp.22;
+        %tmp.25 = 19;
+        %tmp.26 = dup %tmp.24;
+        %tmp.27 = aputv %tmp.26 5 %tmp.25;
+        %tmp.28 = 15;
+        %tmp.29 = dup %tmp.27;
+        %tmp.30 = aputv %tmp.29 6 %tmp.28;
+        %tmp.31 = 15;
+        %tmp.32 = dup %tmp.30;
+        %tmp.33 = aputv %tmp.32 7 %tmp.31;
+        %tmp.34 = 15;
+        %tmp.35 = dup %tmp.33;
+        %tmp.36 = aputv %tmp.35 8 %tmp.34;
+        %tmp.37 = 15;
+        %tmp.38 = dup %tmp.36;
+        %tmp.39 = aputv %tmp.38 9 %tmp.37;
+        %tmp.40 = 15;
+        %tmp.41 = dup %tmp.39;
+        %tmp.42 = aputv %tmp.41 10 %tmp.40;
+        %tmp.43 = 15;
+        %tmp.44 = dup %tmp.42;
+        %tmp.45 = aputv %tmp.44 11 %tmp.43;
+        %tmp.46 = 0;
+        %tmp.47 = dup %tmp.45;
+        %tmp.48 = aputv %tmp.47 12 %tmp.46;
+        %tmp.49 = 0;
+        %tmp.50 = dup %tmp.48;
+        %tmp.51 = aputv %tmp.50 13 %tmp.49;
+        %tmp.52 = 0;
+        %tmp.53 = dup %tmp.51;
+        %tmp.54 = aputv %tmp.53 14 %tmp.52;
+        %tmp.55 = 0;
+        %tmp.56 = dup %tmp.54;
+        %tmp.57 = aputv %tmp.56 15 %tmp.55;
+        %tmp.58 = 0;
+        %tmp.59 = dup %tmp.57;
+        %tmp.60 = aputv %tmp.59 16 %tmp.58;
+        %tmp.61 = 0;
+        %tmp.62 = dup %tmp.60;
+        %tmp.63 = aputv %tmp.62 17 %tmp.61;
+        %tmp.64 = true;
+        %tmp.65 = dup %tmp.63;
+        %tmp.66 = aputv %tmp.65 18 %tmp.64;
+        symbol [ params ? 7 12 18 ];
+        putv self :params %tmp.66;
+D__gduriez_Perso_Dossiers_DossiersVS_ProjectsWatch_source_LoadParams_mc_5_28_30_8_stop:
+        goto @D__gduriez_Perso_Dossiers_DossiersVS_ProjectsWatch_source_LoadParams_mc_5_8_30_8_if_end;
+D__gduriez_Perso_Dossiers_DossiersVS_ProjectsWatch_source_LoadParams_mc_5_8_30_8_if_end:
+[ "D:\gduriez\Perso\Dossiers\DossiersVS\ProjectsWatch\source\LoadParams.mc" 31 8 ]
+        %tmp.67 = false;
+        symbol [ ParametresChanges ? 31 8 25 ];
+        putv self :ParametresChanges %tmp.67;
+[ "D:\gduriez\Perso\Dossiers\DossiersVS\ProjectsWatch\source\LoadParams.mc" 32 8 ]
+        symbol [ Colors %tmp.69 32 22 28 ];
+        %tmp.69 = getv ? :Colors;
+        symbol [ colorValuesTab %tmp.70 32 29 43 ];
+        %tmp.70 = getv function %tmp.69 :colorValuesTab;
+        %tmp.71 = invoke %tmp.69 %tmp.70();
+        symbol [ params %tmp.73 32 46 52 ];
+        %tmp.73 = getv ? :params;
+        %tmp.74 = 0;
+        %tmp.75 = agetv %tmp.73 %tmp.74;
+        %tmp.76 = agetv %tmp.71 %tmp.75;
+        symbol [ couleurFond ? 32 8 19 ];
+        putv self :couleurFond %tmp.76;
+[ "D:\gduriez\Perso\Dossiers\DossiersVS\ProjectsWatch\source\LoadParams.mc" 33 8 ]
+        symbol [ System %tmp.78 33 8 14 ];
+        %tmp.78 = getv ? :System;
+        symbol [ println %tmp.79 33 15 22 ];
+        %tmp.79 = getv function %tmp.78 :println;
+        %tmp.80 = "params=";
+        symbol [ params %tmp.82 33 33 39 ];
+        %tmp.82 = getv ? :params;
+        %tmp.83 = add %tmp.80 %tmp.82;
+        invoke %tmp.78 %tmp.79(%tmp.83);
+D__gduriez_Perso_Dossiers_DossiersVS_ProjectsWatch_source_LoadParams_mc_4_20_34_4_stop:
     }
 }
 [ @file = "D:\gduriez\Perso\Dossiers\DossiersVS\ProjectsWatch\source\LoadParams.mc"; @line = 3; ]
