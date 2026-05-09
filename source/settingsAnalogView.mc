@@ -9,7 +9,6 @@ class SettingsAnalogView extends Ui.View {
 	var element_promptTab;
 	var titre;
 	var numEnCours;
-	var item;
 	//var clock;
     var largEcran;
 	var largIndicateur;
@@ -29,7 +28,6 @@ class SettingsAnalogView extends Ui.View {
 		element_promptTab = _element_promptTab; //liste des choix possibles en texte
 		titre = _titre;
 		couleurFond = Colors.colorValuesTab()[params[0]];
-		item = 10 + numEnCours;
 		fenetre_heures = WatchUi.loadResource(Rez.Drawables.fenetre_heures);
 		var divis = 180;
 		if (element_promptTab.size()>15) {divis = 360;}
@@ -55,14 +53,12 @@ class SettingsAnalogView extends Ui.View {
 
 	function prev() {
 		numEnCours = (numEnCours+element_promptTab.size()-1) % (element_promptTab.size());
-		item = 10 + numEnCours;
 		params[numParametre] = numEnCours;
 		Ui.requestUpdate();
 	}
 
     function next() {
 		numEnCours = (numEnCours+element_promptTab.size()+1) % (element_promptTab.size());
-		item = 10 + numEnCours;
 		params[numParametre] = numEnCours;
 		Ui.requestUpdate();
 	}

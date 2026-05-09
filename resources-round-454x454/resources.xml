@@ -5,8 +5,4 @@
     <font id="PresentPastFuture"  filename="PresentPastFuture.fnt"/>
    </fonts>
 
-   <drawables>
-
-    <bitmap id="fenetre_heures" filename="fenetre_heures.png"  packingFormat="jpg"/>
-</drawables>
 </resources>

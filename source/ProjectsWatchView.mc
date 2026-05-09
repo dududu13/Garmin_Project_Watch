@@ -5,24 +5,9 @@ import Toybox.WatchUi;
 
 class ProjectsWatchView extends WatchUi.WatchFace {
     
+	var decalageY_OLED = 0;  // pour changement de place en mode low power sur les AMOLED
+	var decalageX_OLED = 0;  // pour changement de place en mode low power sur les AMOLED
     var fenetre_heures;
-    var numFont=0;
-    var fontList = [
-"BionicBold",
-"glanceFont",
-"glanceNumberFont",
-"KosugiRegular",
-"NanumGothicRegular",
-"NotoSansSCMedium",
-"PridiRegularGarmin",
-"RobotoCondensedBold",
-"RobotoCondensedRegular",
-"SakkalMajallaBold",
-"SakkalMajallaRoman",
-"Swiss721Bold",
-"Swiss721Regular"
-
-    ];
 
     function initialize() {
         WatchFace.initialize();
@@ -47,7 +32,9 @@ class ProjectsWatchView extends WatchUi.WatchFace {
             var value = Application.Storage.getValue("Params"+i);
             if (value != null) {params[i] = value;}
         }
-        couleurFond = Colors.colorValuesTab()[params[0]];
+        couleurFond = Colors.colorValuesTab()[params[BackGroundColor]];
+        couleurChiffresH = Colors.colorValuesTab()[params[HourColor]];
+        couleurChiffresM = Colors.colorValuesTab()[params[MinutesColor]];
         ParametresChanges = false;
     }
 
@@ -59,13 +46,43 @@ class ProjectsWatchView extends WatchUi.WatchFace {
         ProjectsWatchView.dessineHour(dc,clockTime,larg);
         ProjectsWatchView.dessineMinutes(dc,clockTime,larg);
         ProjectsWatchView.dessineFond(dc,larg,fenetre_heures);
+		if ((! isAwake) && (larg>280)){
+            ProjectsWatchView.quadrille(dc,larg);
+        }
+    }
+
+	function quadrille(dc,larg) {
+		var epaisseurNoir = 1;
+		decalageY_OLED = (decalageY_OLED + 1) % (epaisseurNoir+1);
+		decalageX_OLED = (decalageX_OLED + 1) % (epaisseurNoir+1);
+		dc.setColor(Graphics.COLOR_BLACK, Graphics.COLOR_BLACK);
+		dc.setPenWidth(epaisseurNoir);
+		for (var i = - decalageY_OLED - epaisseurNoir ; i <= larg + epaisseurNoir ; i=i+epaisseurNoir+1)	{
+			dc.drawLine(0, i, larg, i);//horizontal
+			//dc.drawLine(i, 0, i, larg);//vertical	
+		}
+
+	}
+
+
+    function onEnterSleep() {
+        isAwake = false;
+        couleurFond = Graphics.COLOR_BLACK;
+        couleurChiffresH = Graphics.COLOR_WHITE;
+        couleurChiffresM = Graphics.COLOR_WHITE;
+        System.println("ENTER sleep, couleur fond = "+couleurFond+"   param = "+params[BackGroundColor]);
+    }
+
+    function onExitSleep() {
+        isAwake = true;
+		couleurFond = Colors.colorValuesTab()[params[BackGroundColor]]; //sortie de veille pour OLED, il faut remettre la couleur
+        couleurChiffresH = Colors.colorValuesTab()[params[HourColor]];
+        couleurChiffresM = Colors.colorValuesTab()[params[MinutesColor]];
+        System.println("EXIT sleep, couleur fond = "+couleurFond+"   param = "+params[BackGroundColor]);
+        //WatchUi.requestUpdate();
     }
 
 
-    function onExitSleep() as Void {
-    }
-    function onEnterSleep() as Void {
-    }
     function getParam(i) {
         if (i<Field1) {
             return Colors.colorValuesTab()[params[i]];
@@ -76,11 +93,11 @@ class ProjectsWatchView extends WatchUi.WatchFace {
 
 
     function dessineFond(dc,larg,fenetre_heure) {
-        dc.setColor(ProjectsWatchView.getParam(MinutesColor),Graphics.COLOR_TRANSPARENT);  
-        if (fenetre_heures != null) {dc.drawBitmap(0, 0, fenetre_heures);}
+        var height = (130.0*larg/454).toNumber();
+        if (fenetre_heures != null) {dc.drawScaledBitmap(0,0, larg, height , fenetre_heures);}
         dc.setColor(couleurFond,couleurFond);
-        dc.fillPolygon([[.767*larg,.134*larg],[.639*larg,.267*larg],[.705*larg,.449*larg],[.98*larg,.37*larg]]);
-        dc.fillPolygon([[.233*larg,.134*larg],[.361*larg,.267*larg],[.295*larg,.449*larg],[.02*larg,.37*larg]]);
+        dc.fillPolygon([[.767*larg,.134*larg],[.639*larg,.267*larg],[.705*larg,.551*larg],[larg,.57*larg]]);
+        dc.fillPolygon([[.233*larg,.134*larg],[.361*larg,.267*larg],[.295*larg,.449*larg],[0,.57*larg]]);
 
         dc.setColor(ProjectsWatchView.getParam(PresentColor),Graphics.COLOR_TRANSPARENT);
         dc.setPenWidth(3);
@@ -91,19 +108,26 @@ class ProjectsWatchView extends WatchUi.WatchFace {
             dc.drawText(0.48*larg,0.57*larg,font,"0",Graphics.TEXT_JUSTIFY_LEFT);//present
             dc.setColor(ProjectsWatchView.getParam(PastFutureColor),Graphics.COLOR_TRANSPARENT);
             dc.drawText(0.21*larg,0.218*larg,font,"1",Graphics.TEXT_JUSTIFY_LEFT);//past
-            dc.drawText(0.63*larg,0.15*larg,font,"2",Graphics.TEXT_JUSTIFY_LEFT);//future
+            dc.drawText(0.6*larg,0.176*larg,font,"2",Graphics.TEXT_JUSTIFY_LEFT);//future
         }
 
     }
     function dessineHour(dc,clockTime,larg) {
+        var fontList = [
+            "RobotoRegular",
+            "RobotoCondensedBold",
+            "RobotoCondensedBold",
+            "RobotoCondensedBold"
+        ];
         var rayon = larg*.27 ;
-        var vectorFont = Graphics.getVectorFont({:face=>["BionicBold","RobotoCondensedBold","KosugiRegular"], :size=>70});  
+        var siz = (70.0/454*larg).toNumber();
+        //System.println("size h="+siz);
+        var vectorFont = Graphics.getVectorFont({:face=>fontList, :size=>siz}); 
+        //vectorFont = Graphics.getVectorFont({:face=>fontList, :size=>siz,:font=>Graphics.FONT_SMALL, :scale=>0.5});  
         var h =  clockTime.hour;
         var hMax = 24;
         if (! ProjectsWatchView.getParam(is24h)) {
-            if (h>12) {
-                h=h-12;
-                }
+            h = h % 12;
             hMax = 12;       
         }
         var hm1 = h-1;
@@ -113,38 +137,43 @@ class ProjectsWatchView extends WatchUi.WatchFace {
         var hp2 = hp1+1;
         if (hp2 >hMax) {hp2 = 1;}
         var hS = h.toString();
-        if (h<10) {hS = " "+h+" ";}
+        //if (h<10) {hS = " "+h+" ";}
         var hm1S = hm1.toString();
-        if (hm1<10) {hm1S = " "+hm1+" ";}
+        //if (hm1<10) {hm1S = " "+hm1+" ";}
         var hp1S = hp1.toString();
-        if (hp1<10) {hp1S = " "+hp1+" ";}
+        //if (hp1<10) {hp1S = " "+hp1+" ";}
         var hp2S = hp2.toString();
-        if (hp2<10) {hp2S = " "+hp2+" ";}
-        var text = hm1S+" "+hS+" "+hp1S+" "+hp2S;
-        var fontHaut = dc.getFontHeight(vectorFont);
-        var fontAscent = dc.getFontAscent(vectorFont);
-        var fontDescent = dc.getFontDescent(vectorFont);
-        //System.println("fontDescent = "+fontDescent+"  fontHaut = "+fontHaut+ "  fontAscent = "+fontAscent);
+        //if (hp2<10) {hp2S = " "+hp2+" ";}
+        var esp = "  ";
+        var text = hm1S+esp+hS+esp+hp1S+esp+hp2S;
         var hm1L = dc.getTextWidthInPixels(hm1S,vectorFont);
         var hL = dc.getTextWidthInPixels(hS,vectorFont);
         var hp1L = dc.getTextWidthInPixels(hp1S,vectorFont);
         var hp2L = dc.getTextWidthInPixels(hp2S,vectorFont);
-        var espL = dc.getTextWidthInPixels(" ",vectorFont);
+        var espL = dc.getTextWidthInPixels(esp,vectorFont);
         var minutePourcent = clockTime.min/60.0;
 
-        var arcDeCerclePixels = (hL/2 + espL + hp1L/2 ) *minutePourcent;
+        var arcDeCerclePixels = (hL/2 + espL + hp1L/2 ) * minutePourcent;
         var arcDeCercleTotalPixels = hm1L + espL + hL/2 + arcDeCerclePixels;
         
         var angleDeg = 90 + arcDeCercleTotalPixels / (2 * Math.PI * rayon) * 360;
-        dc.setColor(ProjectsWatchView.getParam(HourColor),Graphics.COLOR_TRANSPARENT);
+        dc.setColor(couleurChiffresH,Graphics.COLOR_TRANSPARENT);
         dc.drawRadialText(larg/2, larg*.41, vectorFont, text, Graphics.TEXT_JUSTIFY_LEFT, angleDeg, rayon, Graphics.RADIAL_TEXT_DIRECTION_CLOCKWISE);  
 
     }
 
  
     function dessineMinutes(dc,clockTime,larg) {
+        var fontList = [
+            "RobotoRegular",
+            "RobotoCondensedBold",
+            "RobotoCondensedBold",
+            "RobotoCondensedBold"
+        ];
         var rayon = larg*.212 ;
-        var vectorFont = Graphics.getVectorFont({:face=>["BionicBold","RobotoCondensedBold","KosugiRegular"], :size=>35});      
+        var siz = (30.0/454*larg).toNumber();
+        //System.println("size m="+siz);
+        var vectorFont = Graphics.getVectorFont({:face=>fontList, :size=>siz});  
         var minutes =  clockTime.min;
         var minuteMod = minutes % 5;
         var m = minutes - minuteMod;    
@@ -155,29 +184,26 @@ class ProjectsWatchView extends WatchUi.WatchFace {
         var mp2 = mp1+5;
         if (mp2 >55) {mp2 = 0;}
         var mS = m.toString();
-        if (m<10) {mS = " "+m+" ";}
+        //if (m<10) {mS = " "+m+" ";}
         var mm1S = mm1.toString();
-        if (mm1<10) {mm1S = " "+mm1+" ";}
+        //if (mm1<10) {mm1S = " "+mm1+" ";}
         var mp1S = mp1.toString();
-        if (mp1<10) {mp1S = " "+mp1+" ";}
+        //if (mp1<10) {mp1S = " "+mp1+" ";}
         var mp2S = mp2.toString();
-        if (mp2<10) {mp2S = " "+mp2+" ";}
-        var text = mm1S+" "+mS+" "+mp1S+" "+mp2S;
-        var fontHaut = dc.getFontHeight(vectorFont);
-        var fontAscent = dc.getFontAscent(vectorFont);
-        var fontDescent = dc.getFontDescent(vectorFont);
-        //System.println("fontDescent = "+fontDescent+"  fontHaut = "+fontHaut+ "  fontAscent = "+fontAscent);
+        //if (mp2<10) {mp2S = " "+mp2+" ";}
+        var esp = "  ";
+        var text = mm1S+esp+mS+esp+mp1S+esp+mp2S;
         var mm1L = dc.getTextWidthInPixels(mm1S,vectorFont);
         var mL = dc.getTextWidthInPixels(mS,vectorFont);
         var mp1L = dc.getTextWidthInPixels(mp1S,vectorFont);        
-        var espL = dc.getTextWidthInPixels(" ",vectorFont);
+        var espL = dc.getTextWidthInPixels(esp,vectorFont);
         var secondesPourcent = minuteMod/5.0;
 
         var arcDeCerclePixels = (mL/2 + espL + mp1L/2 ) *secondesPourcent;
         var arcDeCercleTotalPixels = mm1L + espL + mL/2 + arcDeCerclePixels;
 
         var angleDeg = 90 + arcDeCercleTotalPixels / (2 * Math.PI * rayon) * 360;
-        dc.setColor(ProjectsWatchView.getParam(MinutesColor),Graphics.COLOR_TRANSPARENT);
+        dc.setColor(couleurChiffresM,Graphics.COLOR_TRANSPARENT);
         dc.drawRadialText(larg/2, larg*.41, vectorFont, text, Graphics.TEXT_JUSTIFY_LEFT, angleDeg, rayon, Graphics.RADIAL_TEXT_DIRECTION_CLOCKWISE);  
         //dc.drawText(larg/2, larg*.6, Graphics.FONT_NUMBER_MILD, clockTime.hour+":"+clockTime.min+":"+clockTime.sec, Graphics.TEXT_JUSTIFY_CENTER);  
 

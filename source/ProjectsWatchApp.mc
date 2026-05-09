@@ -38,7 +38,8 @@ enum {
     lastParametre
 }
 
-var couleurFond;
+var couleurFond,couleurChiffresH,couleurChiffresM;
+var isAwake = true;
 
 
 class ProjectsWatchApp extends App.AppBase {
@@ -47,10 +48,8 @@ class ProjectsWatchApp extends App.AppBase {
         AppBase.initialize();
     }
 
-    // Return the initial view of your application here
     function getInitialView() as [Views] or [Views, InputDelegates] {
         var view = new ProjectsWatchView();
-        //return [ new ProjectsWatchView() ];
         return [view, new AnalogDelegate()];
     }
     public function getSettingsView()  {
@@ -67,10 +66,6 @@ class ProjectsWatchApp extends App.AppBase {
 
 
 }
-
-//function getApp() as ProjectsWatchApp {
-//    return Application.getApp() as ProjectsWatchApp;
-//}
 
 
 class AnalogDelegate extends WatchUi.WatchFaceDelegate {

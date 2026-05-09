@@ -1,0 +1,18 @@
+info face="dududu13" size=-350 bold=1 italic=0 charset="ANSI" unicode=0 stretchH=0 smooth=1 aa=1 padding=0,0,0,0 spacing=1,1 outline=0
+common lineHeight=227 base=1 scaleW=1 scaleH=1 pages=1 packed=0 alphaChnl=0 redChnl=4 greenChnl=4 blueChnl=4
+page id=0 file="present_past_future.png"
+chars count=3
+
+char id=48    x=0       y=0     width=12    height=95   xoffset=0    yoffset=0    xadvance=227 page=0  chnl=15
+char id=49    x=13       y=0     width=47    height=39   xoffset=0    yoffset=0    xadvance=227 page=0  chnl=15
+char id=50    x=12       y=41     width=59    height=52   xoffset=0    yoffset=0    xadvance=227 page=0  chnl=15
+
+
+
+
+
+
+
+
+
+
