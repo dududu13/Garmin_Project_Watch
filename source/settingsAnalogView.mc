@@ -40,9 +40,12 @@ class SettingsAnalogView extends Ui.View {
 		couleurFond = Colors.colorValuesTab()[params[0]];
         largEcran = dc.getHeight();
 		ProjectsWatchView.dessineTout(dc,fenetre_heures,iconFont);
+		dessineIndicateur(dc);
+	}
+
+	function dessineIndicateur(dc) {
 		var couleur = (couleurFond == Graphics.COLOR_GREEN) ? Graphics.COLOR_RED : Graphics.COLOR_GREEN; // couleur de l'arc ---> verte, sauf si le fond est en vert ---> rouge
 		dc.setColor(couleur, Gfx.COLOR_TRANSPARENT);
-		//System.println("element_promptTab "+element_promptTab+"  numEnCours "+numEnCours);
 		dc.drawText(largEcran/2,largEcran *.35,Gfx.FONT_SMALL,titre,Gfx.TEXT_JUSTIFY_CENTER);
 		dc.drawText(largEcran/2,largEcran *.45,Gfx.FONT_SMALL,element_promptTab[numEnCours],Gfx.TEXT_JUSTIFY_CENTER);
 		var degreeStart = numEnCours*largIndicateur+90;
