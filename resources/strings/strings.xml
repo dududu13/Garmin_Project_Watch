@@ -1,3 +1,52 @@
 <strings xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://developer.garmin.com/downloads/connect-iq/resources.xsd">
     <string id="AppName">ProjectsWatch</string>
+
+    <string id="M1">Jan</string>
+    <string id="M2">Feb</string>
+    <string id="M3">Mar</string>
+    <string id="M4">Apr</string>
+    <string id="M5">May</string>
+    <string id="M6">Jun</string>
+    <string id="M7">Jul</string>
+    <string id="M8">Aug</string>
+    <string id="M9">Sep</string>
+    <string id="M10">Oct</string>
+    <string id="M11">Nov</string>
+    <string id="M12">Dec</string>
+
+    <string id="Day1">Sun</string>
+    <string id="Day2">Mon</string>
+    <string id="Day3">Tue</string>
+    <string id="Day4">Wed</string>
+    <string id="Day5">Thu</string>
+    <string id="Day6">Fri</string>
+    <string id="Day7">Sat</string>
+
+    <string id="Nothing">Nothing</string>
+    <string id="Battery">Battery</string>
+    <string id="Steps">Steps count</string>
+    <string id="Distance">Distance</string>
+    <string id="Notifs">Notifications</string>
+    <string id="Altitude">Altitude</string>
+    <string id="Pressure">Pressure</string>
+    <string id="Floor">Floor</string>
+    <string id="Temper">Sensor temperature</string>
+    <string id="TempExt">Internet temperature</string>
+    <string id="Calories">Calories</string>
+    <string id="CurrentHeartRate">Current Heart Rate</string>
+    <string id="TimeToRecovery">Time to recovery</string>
+    <string id="BodyBattery">Body battery</string>
+    <string id="ActiveMinutesDay">Active minutes day</string>
+    <string id="ActiveMinutesWeek">Active minutes week</string>
+    <string id="Seconds">Seconds</string>
+    <string id="Digital_Time">Digital Time</string>
+    <string id="MoisJour">Month, day</string>
+    <string id="JourMois">Day, month</string>
+    <string id="JourSem">Week, day</string>
+    <string id="JourSemJour">Weekday, day</string>
+    <string id="JourSemMoisJour">Weekday, month, day</string>
+    <string id="Mois">Month</string>
+    <string id="Week_number">Week number</string>
+
+
 </strings>

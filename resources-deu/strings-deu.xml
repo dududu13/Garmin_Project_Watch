@@ -1,0 +1,29 @@
+<resources>
+
+<strings>
+
+    <string id="M1">Jan</string>
+    <string id="M2">Feb</string>
+    <string id="M3">Mar</string>
+    <string id="M4">Apr</string>
+    <string id="M5">Mai</string>
+    <string id="M6">Jun</string>
+    <string id="M7">Jul</string>
+    <string id="M8">Aug</string>
+    <string id="M9">Sep</string>
+    <string id="M10">Okt</string>
+    <string id="M11">Nov</string>
+    <string id="M12">Dez</string>
+
+    <string id="Day1">Son</string>
+    <string id="Day2">Mon</string>
+    <string id="Day3">Die</string>
+    <string id="Day4">Mit</string>
+    <string id="Day5">Don</string>
+    <string id="Day6">Fre</string>
+    <string id="Day7">Sam</string>
+
+</strings>
+
+
+</resources>

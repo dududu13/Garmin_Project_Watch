@@ -1,19 +1,22 @@
+//using Toybox.Time.Gregorian as Calendar;
 import Toybox.Graphics;
 import Toybox.Lang;
 import Toybox.System;
 import Toybox.WatchUi;
+import Toybox.ActivityMonitor;
+
 
 class ProjectsWatchView extends WatchUi.WatchFace {
     
 	var decalageY_OLED = 0;  // pour changement de place en mode low power sur les AMOLED
 	var decalageX_OLED = 0;  // pour changement de place en mode low power sur les AMOLED
     var fenetre_heures;
+   // var fieldsIcon;
+    var iconFont;
 
     function initialize() {
         WatchFace.initialize();
-        if (ParametresChanges) {
-            loadParams();
-        }
+        iconFont = WatchUi.loadResource(Rez.Fonts.AllIcons);
     
     }
     function onShow() {
@@ -22,12 +25,17 @@ class ProjectsWatchView extends WatchUi.WatchFace {
 
 
     function onUpdate(dc as Dc) as Void {
+        if (ParametresChanges) {
+            loadParams();
+            //fieldsIcon = ProjectsWatchView.rempliListIcon();
+            
+        }
         View.onUpdate(dc);
-        dessineTout(dc,fenetre_heures);
+        dessineTout(dc,fenetre_heures,iconFont);
     }
 
     function loadParams() {
-        params = [4, 33, 14, 3, 1, 19, 15, 15, 15, 15, 15, 15, 0, 0, 0, 0, 0, 0, true];
+        params = [4, 33, 14, 3, 1, true, 0, 1, 0, 1, 0, 1, 0, 1 ];
         for (var i = 0 ; i < params.size() ; i++) {
             var value = Application.Storage.getValue("Params"+i);
             if (value != null) {params[i] = value;}
@@ -36,9 +44,51 @@ class ProjectsWatchView extends WatchUi.WatchFace {
         couleurChiffresH = Colors.colorValuesTab()[params[HourColor]];
         couleurChiffresM = Colors.colorValuesTab()[params[MinutesColor]];
         ParametresChanges = false;
+        System.println("loadparams = "+params);
+    }
+/*
+    function rempliListIcon() {
+        var list = [];
+        for (var numParam = Field1 ; numParam <= Field4 ; numParam = numParam+2) {
+            list.add(ProjectsWatchView.getIcon(numParam));
+        }
+        return list;
     }
 
-    function dessineTout(dc,fenetre_heures) {
+    function getIcon(numParam) {
+        var fieldType = params[numParam];
+        if (fieldType == Nothing) {return null;}
+        if (fieldType == Battery) {
+            var bat = System.getSystemStats().battery;
+            if (bat > .2) {return WatchUi.loadResource(Rez.Drawables.BatteryOK);}
+            else {return WatchUi.loadResource(Rez.Drawables.BatteryPasOK);}
+
+        }
+        var iconNum = fieldType - 2; // -2 car Nothing en position 0 et battery en position 1
+        var iconList = [
+:Steps,
+:Distance,
+:Notifs,
+:Altitude,
+:Pressure,
+:Floor,
+:Temp,
+:Temp,
+:Calories,
+:CurrentHeartRate,
+:TimeToRecovery,
+:BodyBattery,
+:ActiveMinutesDay,
+:ActiveMinutesDay
+
+        ];
+        if (iconNum>iconList.size()) {return null;}
+        var icone = WatchUi.loadResource(Rez.Drawables[iconList[iconNum]]); //le -2 car Nothing en position 0 et battery en position 1
+        return icone;
+    }
+    */
+
+    function dessineTout(dc,fenetre_heures,thisIconFont) {
         var larg = dc.getHeight();
         var clockTime = System.getClockTime();
         dc.setColor(couleurFond,couleurFond);
@@ -46,9 +96,11 @@ class ProjectsWatchView extends WatchUi.WatchFace {
         ProjectsWatchView.dessineHour(dc,clockTime,larg);
         ProjectsWatchView.dessineMinutes(dc,clockTime,larg);
         ProjectsWatchView.dessineFond(dc,larg,fenetre_heures);
+        ProjectsWatchView.dessineChamps(dc,clockTime,larg,thisIconFont);
 		if ((! isAwake) && (larg>280)){
             ProjectsWatchView.quadrille(dc,larg);
         }
+        //dc.drawText(8,210,Graphics.FONT_SMALL,MenusDelegate.menuField(0),Graphics.TEXT_JUSTIFY_LEFT);
     }
 
 	function quadrille(dc,larg) {
@@ -84,11 +136,15 @@ class ProjectsWatchView extends WatchUi.WatchFace {
 
 
     function getParam(i) {
-        if (i<Field1) {
-            return Colors.colorValuesTab()[params[i]];
+        var result;
+        //System.println("lecture param num "+i);
+        if ((i<=MinutesColor) || (i == Field1Color) || (i == Field2Color)|| (i == Field3Color)|| (i == Field4Color)){
+            result = Colors.colorValuesTab()[params[i]];
         } else {
-            return params[i];
+            result = params[i];
         }
+        //System.println("param num "+i+" = "+result);
+        return result;
     }
 
 
@@ -110,8 +166,8 @@ class ProjectsWatchView extends WatchUi.WatchFace {
             dc.drawText(0.21*larg,0.218*larg,font,"1",Graphics.TEXT_JUSTIFY_LEFT);//past
             dc.drawText(0.6*larg,0.176*larg,font,"2",Graphics.TEXT_JUSTIFY_LEFT);//future
         }
-
     }
+
     function dessineHour(dc,clockTime,larg) {
         var fontList = [
             "RobotoRegular",
@@ -159,7 +215,6 @@ class ProjectsWatchView extends WatchUi.WatchFace {
         var angleDeg = 90 + arcDeCercleTotalPixels / (2 * Math.PI * rayon) * 360;
         dc.setColor(couleurChiffresH,Graphics.COLOR_TRANSPARENT);
         dc.drawRadialText(larg/2, larg*.41, vectorFont, text, Graphics.TEXT_JUSTIFY_LEFT, angleDeg, rayon, Graphics.RADIAL_TEXT_DIRECTION_CLOCKWISE);  
-
     }
 
  
@@ -206,29 +261,249 @@ class ProjectsWatchView extends WatchUi.WatchFace {
         dc.setColor(couleurChiffresM,Graphics.COLOR_TRANSPARENT);
         dc.drawRadialText(larg/2, larg*.41, vectorFont, text, Graphics.TEXT_JUSTIFY_LEFT, angleDeg, rayon, Graphics.RADIAL_TEXT_DIRECTION_CLOCKWISE);  
         //dc.drawText(larg/2, larg*.6, Graphics.FONT_NUMBER_MILD, clockTime.hour+":"+clockTime.min+":"+clockTime.sec, Graphics.TEXT_JUSTIFY_CENTER);  
-
     }
 
-    function dessineChamps(dc,clockTime,larg) {
-        var timeString = Lang.format("$1$:$2$", [clockTime.hour, clockTime.min.format("%02d")]);
-        var x = .2;
-        var y = .4;
-        dc.setColor(ProjectsWatchView.getParam(Field1Color),Graphics.COLOR_TRANSPARENT);
-        for (var i=0;i<2;i++) {
-            var xx = x * larg;
-            for (var j=0;j<3;j++) {
-                var yy = y * larg;
-                var text = "ij="+i+" "+j;
-                dc.drawText(xx,yy,Graphics.FONT_SMALL,text,Graphics.TEXT_JUSTIFY_CENTER);
-                y = y+0.2;
-                if (x ==.2) {xx = xx+.05*larg;}
-                else {xx = xx-.05*larg;}
+    function dessineChamps(dc,clockTime,larg,thisIconFont) {
+        var positions = [[.154,.35],[.28,.65],[.72,.65],[.757,.35]];
+        var largeurHauteurIcon = 50*larg/454;
+        for (var numParam = Field1 ; numParam<=Field4 ; numParam = numParam +2) {
+            if (params[numParam] == 0) {break;}
+            var pos = (numParam-Field1) /2;
+            var x = positions[pos][0]*larg;
+            var y = positions[pos][1]*larg;
+            dc.setColor(ProjectsWatchView.getParam(numParam+1),Graphics.COLOR_TRANSPARENT);
+            if (params[numParam] < Seconds) { // dans ce cas il y a un icone a dessiner
+                var symbol = (params[numParam]+48).toChar().toString();
+                dc.drawText(positions[pos][0]*larg,positions[pos][1]*larg  ,thisIconFont,symbol,Graphics.TEXT_JUSTIFY_CENTER);    
             }
-            x = .8;
-            y = .4;
-            //System.println("xx="+xx);
+            var text = ProjectsWatchView.getFieldText(params[numParam],clockTime).toString();
+            var f  = Graphics.FONT_SMALL;
+            var longText = dc.getTextWidthInPixels(text, f);
+            if (longText > larg * .25) {
+                f = Graphics.FONT_XTINY;
+            }
+            System.println("dessine champs "+pos+"   xy = "+x+ " "+y+"   --> "+text);
+            dc.drawText(positions[pos][0]*larg,positions[pos][1]*larg + largeurHauteurIcon ,f,text,Graphics.TEXT_JUSTIFY_CENTER);    
         }
+    }   
+
+	function getFieldText(fieldType,clockTime) {
+        var result = "N/A";
+        if (fieldType == Nothing) {
+            return "";
+        }
+		if (fieldType == Notifs)  {
+            result = System.getDeviceSettings().notificationCount.format("%01d");
+		}
+		else if (fieldType==Battery) {
+			result = System.getSystemStats().battery.format("%01d")+"%";
+		}
+		else if (fieldType==Steps)  {
+			result =  ActivityMonitor.getInfo().steps.format("%01d");
+		}
+		else if (fieldType==Distance) {
+			result =  (ActivityMonitor.getInfo().distance/100).format("%01d");
+		}
+		else if (fieldType==CurrentHeartRate) {
+			var r = Activity.getActivityInfo().currentHeartRate;
+			if ((r == null) && (Toybox has :SensorHistory) && (Toybox.SensorHistory has :getHeartRateHistory)) {
+				r = Toybox.SensorHistory.getHeartRateHistory({:period=>1});
+				if (r != null) { r = r.next().data;}
+			}
+			if (r != null) {
+				result = r.toString();
+			}
+		}
+		else if (fieldType==Altitude) {
+			var r = Activity.getActivityInfo().altitude;
+		//			if (r!=null){System.println("not history alt");}
+			if ((r == null) && (Toybox has :SensorHistory) && (Toybox.SensorHistory has :getElevationHistory)) {
+				r = Toybox.SensorHistory.getElevationHistory({:period=>1});
+				if (r != null) { r = r.next().data;}
+			}
+			if (r != null) {
+				var unit = 1;
+				var unitstr = "m";
+				if (System.getDeviceSettings().heightUnits != 0) {
+					unit = 3.28084;
+					unitstr = "ft";
+				}
+				result = (r*unit).format("%01d") +unitstr;
+			}
+		}
+		else if (fieldType==Pressure) {
+			var r;
+			if (Activity.Info has :rawAmbientPressure) {
+				r = Activity.getActivityInfo().rawAmbientPressure;
+			}
+			if ((r == null) && (Toybox has :SensorHistory) && (Toybox.SensorHistory has :getPressureHistory)) {
+				r = Toybox.SensorHistory.getPressureHistory({:period=>1});
+				if (r != null) { r = r.next().data;}
+				}
+			if (r != null) {
+				result = (r/100).format("%1.2f") ;
+			}
+		}
+		else if (fieldType==Floor) {
+			if  (ActivityMonitor.Info has :floorsClimbed) {
+				result =  ActivityMonitor.getInfo().floorsClimbed;}
+		}
+		else if (fieldType==Calories) {
+			if  (ActivityMonitor.Info has :calories) {
+				result =  ActivityMonitor.getInfo().calories;}
+		}
+		else if (fieldType==Temper) {
+			if ((Toybox has :SensorHistory) && (Toybox.SensorHistory has :getTemperatureHistory)) {
+				var temp = Toybox.SensorHistory.getTemperatureHistory({:period=>1}).next().data;
+				if (temp != null) {
+					if (System.getDeviceSettings().temperatureUnits == System.UNIT_METRIC) {
+						result = temp.format("%01d")+" C";
+					} else {
+						result = (temp*1.8+32).format("%01d")+" F";
+					}
+				}
+			}
+		}
+		else if (fieldType==TimeToRecovery) {
+			if  (ActivityMonitor.getInfo() has :timeToRecovery) {
+				result =  ActivityMonitor.getInfo().timeToRecovery+" h";
+			}
+		}
+		else if (fieldType==BodyBattery) {
+			var r;
+			if  (Toybox.SensorHistory has :getBodyBatteryHistory) {
+				r =  Toybox.SensorHistory.getBodyBatteryHistory({:period=>1}).next();
+				if (r != null) {result = r.data.toNumber();}
+			}
+		}
+		else if (fieldType==ActiveMinutesDay) {
+			if  (ActivityMonitor.getInfo() has :activeMinutesDay) {
+				result =  ActivityMonitor.getInfo().activeMinutesDay.total + " min" ;
+			}
+		}
+		else if (fieldType==ActiveMinutesWeek) {
+			if  (ActivityMonitor.getInfo() has :activeMinutesWeek) {
+				result =  ActivityMonitor.getInfo().activeMinutesWeek.total + " min";
+			}
+		}
+		else if (fieldType==TempExt) {
+			if  (Toybox has :Weather) {
+				var CC = Weather.getCurrentConditions();
+				if (CC != null) {
+					var temper = CC.temperature;
+					if ((temper != null) && (System.getDeviceSettings().temperatureUnits == System.UNIT_METRIC)) {
+						result = temper.format("%01d")+" C";
+					} else if  (temper != null) {
+						result = (temper*1.8+32.0).format("%01d")+" F";
+					}
+				}
+			}
+		}
+
+		else if (fieldType==Seconds)  {
+			result =  clockTime.sec;
+		}			
+		else if (fieldType == Digital_Time) {
+            var form = "%02d";
+            var h = clockTime.hour;
+            if (! params[is24h]) {
+                h = h % 12;
+                form = "%01d";
+            }
+            result = h.format(form)+":"+clockTime.min.format("%02d");
+		}
+		else if (fieldType==MoisJour)  {
+            var today = Toybox.Time.Gregorian.info(Time.now(), Time.FORMAT_SHORT);
+			result = MOIS[today.month] + " "+today.day;
+		}			
+		else if (fieldType==JourMois)  {
+            var today = Toybox.Time.Gregorian.info(Time.now(), Time.FORMAT_SHORT);
+			result = today.day + " "+MOIS[today.month];
+		}			
+		else if (fieldType==JourSem)  {
+            var today = Toybox.Time.Gregorian.info(Time.now(), Time.FORMAT_SHORT);
+			result = DAYOFWEEK[today.day_of_week];
+		}			
+		else if (fieldType==JourSemJour)  {
+            var today = Toybox.Time.Gregorian.info(Time.now(), Time.FORMAT_SHORT);
+			result = DAYOFWEEK[today.day_of_week]+ " "+today.day;
+		}			
+		else if (fieldType==JourSemMoisJour)  {
+            var today = Toybox.Time.Gregorian.info(Time.now(), Time.FORMAT_SHORT);
+			result = DAYOFWEEK[today.day_of_week];
+			if (result.equals("Dim")) { // si langue française on inverse mois et jour
+				    result = result+"\n" + today.day.format("%02d") + "/"+ today.month.format("%02d");
+				}		
+                else {
+                    result = result+"\n" + today.month.format("%02d")+"/"+today.day; 
+                }				
+		}			
+		else if (fieldType==Week_number)  {
+            var today = Toybox.Time.Gregorian.info(Time.now(), Time.FORMAT_SHORT);
+			result = ProjectsWatchView.iso_week_number(today.year, today.month, today.day);
+		}			
+        //System.println("get field text FieldType = "+fieldType+"   valeur = "+result);
+		return result;
+	}	
+
+
+
+    function iso_week_number(year, month, day)	{
+	    var first_day_of_year = ProjectsWatchView.julian_day(year, 1, 1);
+	    var given_day_of_year = ProjectsWatchView.julian_day(year, month, day);
+
+	    var day_of_week = (first_day_of_year + 3) % 7; // days past thursday
+	    var week_of_year = (given_day_of_year - first_day_of_year + day_of_week + 4) / 7;
+    	// week is at end of this year or the beginning of next year
+        System.println("first_day_of_year "+first_day_of_year);
+        System.println("given_day_of_year "+given_day_of_year);
+        System.println("day_of_week "+day_of_week);
+        System.println("week_of_year "+week_of_year);
+	    if (week_of_year == 53) {
+	        if (day_of_week == 6) {
+	            return week_of_year;
+	        }
+	        else if (day_of_week == 5 && ProjectsWatchView.is_leap_year(year)) {
+	            return week_of_year;
+ 	       }
+ 	       else {
+ 	           return 1;
+	        }
+	    }
+    	// week is in previous year, try again under that year
+	    else if (week_of_year == 0) {
+	        first_day_of_year = ProjectsWatchView.julian_day(year - 1, 1, 1);
+	        day_of_week = (first_day_of_year + 3) % 7;
+	        return (given_day_of_year - first_day_of_year + day_of_week + 4) / 7;
+	    }
+
+    	// any old week of the year
+	    else {
+	        return week_of_year;
+ 	   }
     }
+
+    function is_leap_year(year) {
+	    if (year % 4 != 0)  {
+	        return false;
+	    }
+	    else if (year % 100 != 0) {
+	        return true;
+	    }
+	    else if (year % 400 == 0) {
+	        return true;
+	    }
+	    return false;
+	}
+
+    function julian_day(year, month, day) {
+    	var a = (14 - month) / 12;
+	    var y = (year + 4800 - a);
+	    var m = (month + 12 * a - 3);
+	    return day + ((153 * m + 2) / 5) + (365 * y) + (y / 4) - (y / 100) + (y / 400) - 32045;
+	}
+
+
 
 
 }

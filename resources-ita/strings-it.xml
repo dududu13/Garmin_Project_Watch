@@ -1,0 +1,97 @@
+<resources>
+
+<strings>
+	<string id="Titre">Modello ?</string>
+	<string id="num_handType">Modello di lancette ?</string>
+
+    <string id="weekSymbol">s.</string>
+
+    <string id="PersonnalStringLib">Testo libero (campo)</string>
+
+   	<string id="Nothing">Niente</string>
+   	<string id="BatteryOnly">Batteria</string>
+   	<string id="StepsOnly">Numero di passo</string>
+   	<string id="NotifsOnly">Notificazione se ce ne è</string>
+   	<string id="Batt_Notifs">Batteria, o Notificazione se ce ne è</string>
+   	<string id="Steps_Notifs">Numero di passo, o Notificazione se ce ne è</string>
+   	<string id="MoisJour">Mese + Giorno</string>
+   	<string id="Mois">Mese</string>
+   	<string id="JourSem">Giorno di settimana</string>
+   	<string id="JourSemJour">Giorno di settimana + Giorno</string>
+   	<string id="Week_number">Numero di settimana</string>
+   	<string id="Digital_Time">Ora digitale</string>
+   	<string id="Custom_String">Testo libero</string>
+   	<string id="Bluetooth">Connection bluetooth</string>
+   	<string id="CurrentHeartRate">Pulsazioni cardiache (bpm)</string>
+   	<string id="Altitude">Altitudine (local unit)</string>
+   	<string id="SunriseSunset">Sunset and Sunrise hour</string>
+   	<string id="Sunrise">Sunrise hour</string>
+   	<string id="Sunset">Sunset hour</string>
+    <string id="FloorClimbed">Pavimenti montati</string>
+    <string id="Calories">Calorie (KCal)</string>
+
+    <string id="BackGroundColor">Colore 0 : background</string>
+    <string id="MarksColor">Colore 1 : marche orarie</string>
+    <string id="ContourMarksColor">Colore 2 : intorno alle marche o altri</string>
+    <string id="LogoColor">Color 3 : Logo, o altri</string>
+    <string id="chiffresColor">Colore 4 : Cifre, o altri</string>
+    <string id="DateTextColor">Colore 5 : Data</string>
+    <string id="TextsColor">Colore 6 : Campi testi N, NE, ...</string>
+
+    <string id="colorIntHour">Lancetta delle ore:  Colore interiore</string>
+    <string id="colorContourHour">Lancetta delle ore:  Colore del contorno</string>
+    <string id="colorIntMinu">Lancetta dei minuti:  Colore interiore</string>
+    <string id="colorContourMinu">Lancetta dei minuti:  Colore del contorno</string>
+    <string id="colorSecondes">Colore dell'ago dei secondi</string>
+
+    <string id="White">Bianco</string>
+    <string id="Black">Nero</string>
+    <string id="LtGray">Grigio chiaro</string>
+    <string id="DkGray">Grigi scurisco</string>
+    <string id="LtBlue">Blu chiaro</string>
+    <string id="DarkBlue">Blu scurisco</string>
+    <string id="Red">Rosso</string>
+    <string id="Orange">Arancioni</string>
+    <string id="Green">Verde</string>
+    <string id="Yellow">Giallo</string>
+    <string id="Transparent">Trasparente</string>
+
+
+    <string id="fieldN">Campo Nord</string>
+    <string id="fieldNE">Campo Nord-est</string>
+    <string id="fieldE">Campo Est</string>
+    <string id="fieldSE">Campo Sud-est</string>
+    <string id="fieldS">Campo Sud</string>
+    <string id="fieldSO">Campo Sud-ovest</string>
+    <string id="fieldO">Campo Ovest</string>
+    <string id="fieldNO">Campo Nord-ovest</string>
+
+<string id="AnalogFuseau">Fuso orario per gli aghi</string>
+<string id="Fuseau30">Add 30mn for this time zone ?</string>
+<string id="DigitalFuseau">Fuso orario per l'ora digitale nei campi</string>
+<string id="Format12h">12h digital orario formato ?</string>
+<string id="HeureAuto">Fuso orario locale</string>
+
+    <string id="M1">Gen</string>
+    <string id="M2">Feb</string>
+    <string id="M3">Mar</string>
+    <string id="M4">Apr</string>
+    <string id="M5">Mag</string>
+    <string id="M6">Giu</string>
+    <string id="M7">Lug</string>
+    <string id="M8">Ago</string>
+    <string id="M9">Sep</string>
+    <string id="M10">Oct</string>
+    <string id="M11">Nov</string>
+    <string id="M12">Dic</string>
+
+    <string id="Day1">Dom</string>
+    <string id="Day2">Lun</string>
+    <string id="Day3">Mar</string>
+    <string id="Day4">Mer</string>
+    <string id="Day5">Gio</string>
+    <string id="Day6">Ven</string>
+    <string id="Day7">Sab</string>
+
+</strings>
+</resources>

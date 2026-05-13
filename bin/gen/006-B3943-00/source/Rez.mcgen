@@ -7,6 +7,13 @@ using Toybox.Graphics as Gfx;
 module Rez {
     module Drawables {
         (:initialized) var fenetre_heures as ResourceId;
+        (:initialized) var BatteryOK as ResourceId;
+        (:initialized) var BatteryPasOK as ResourceId;
+        (:initialized) var Steps as ResourceId;
+        (:initialized) var Distance as ResourceId;
+        (:initialized) var Notifs as ResourceId;
+        (:initialized) var Altitude as ResourceId;
+        (:initialized) var Pressure as ResourceId;
         (:initialized) var LauncherIcon as ResourceId;
     } // Drawables
 
@@ -15,7 +22,51 @@ module Rez {
     } // Fonts
 
     module Strings {
+        (:initialized) var Steps as ResourceId;
+        (:initialized) var M1 as ResourceId;
+        (:initialized) var M2 as ResourceId;
+        (:initialized) var M3 as ResourceId;
+        (:initialized) var M4 as ResourceId;
+        (:initialized) var M5 as ResourceId;
+        (:initialized) var Mois as ResourceId;
+        (:initialized) var M6 as ResourceId;
+        (:initialized) var M7 as ResourceId;
+        (:initialized) var M8 as ResourceId;
+        (:initialized) var M9 as ResourceId;
+        (:initialized) var Week_number as ResourceId;
+        (:initialized) var Nothing as ResourceId;
         (:initialized) var AppName as ResourceId;
+        (:initialized) var Notifs as ResourceId;
+        (:initialized) var JourMois as ResourceId;
+        (:initialized) var Day1 as ResourceId;
+        (:initialized) var TempExt as ResourceId;
+        (:initialized) var ActiveMinutesDay as ResourceId;
+        (:initialized) var Day2 as ResourceId;
+        (:initialized) var Day3 as ResourceId;
+        (:initialized) var Battery as ResourceId;
+        (:initialized) var Day4 as ResourceId;
+        (:initialized) var Day5 as ResourceId;
+        (:initialized) var Digital_Time as ResourceId;
+        (:initialized) var JourSemJour as ResourceId;
+        (:initialized) var Day6 as ResourceId;
+        (:initialized) var BodyBattery as ResourceId;
+        (:initialized) var Day7 as ResourceId;
+        (:initialized) var MoisJour as ResourceId;
+        (:initialized) var Distance as ResourceId;
+        (:initialized) var ActiveMinutesWeek as ResourceId;
+        (:initialized) var Floor as ResourceId;
+        (:initialized) var TimeToRecovery as ResourceId;
+        (:initialized) var JourSem as ResourceId;
+        (:initialized) var M11 as ResourceId;
+        (:initialized) var M10 as ResourceId;
+        (:initialized) var Pressure as ResourceId;
+        (:initialized) var JourSemMoisJour as ResourceId;
+        (:initialized) var Calories as ResourceId;
+        (:initialized) var M12 as ResourceId;
+        (:initialized) var Temper as ResourceId;
+        (:initialized) var CurrentHeartRate as ResourceId;
+        (:initialized) var Seconds as ResourceId;
+        (:initialized) var Altitude as ResourceId;
     } // Strings
 
     module Styles {

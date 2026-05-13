@@ -13,7 +13,7 @@ class SettingsAnalogView extends Ui.View {
     var largEcran;
 	var largIndicateur;
 	var fenetre_heures;
-	//var oldParams;
+	var iconFont;
 
 
 
@@ -32,13 +32,14 @@ class SettingsAnalogView extends Ui.View {
 		var divis = 180;
 		if (element_promptTab.size()>15) {divis = 360;}
 		largIndicateur = divis.toFloat()/(element_promptTab.size());
+		iconFont = WatchUi.loadResource(Rez.Fonts.AllIcons);
 		View.initialize();
 	}
 
     function onUpdate(dc) {
 		couleurFond = Colors.colorValuesTab()[params[0]];
         largEcran = dc.getHeight();
-		ProjectsWatchView.dessineTout(dc,fenetre_heures);
+		ProjectsWatchView.dessineTout(dc,fenetre_heures,iconFont);
 		var couleur = (couleurFond == Graphics.COLOR_GREEN) ? Graphics.COLOR_RED : Graphics.COLOR_GREEN; // couleur de l'arc ---> verte, sauf si le fond est en vert ---> rouge
 		dc.setColor(couleur, Gfx.COLOR_TRANSPARENT);
 		//System.println("element_promptTab "+element_promptTab+"  numEnCours "+numEnCours);
