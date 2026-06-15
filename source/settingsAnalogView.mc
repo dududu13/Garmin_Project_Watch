@@ -28,6 +28,8 @@ class SettingsAnalogView extends Ui.View {
 		element_promptTab = _element_promptTab; //liste des choix possibles en texte
 		titre = _titre;
 		couleurFond = Colors.colorValuesTab()[params[0]];
+        couleurChiffresH = Colors.colorValuesTab()[params[HourColor]];
+        couleurChiffresM = Colors.colorValuesTab()[params[MinutesColor]];
 		fenetre_heures = WatchUi.loadResource(Rez.Drawables.fenetre_heures);
 		var divis = 180;
 		if (element_promptTab.size()>15) {divis = 360;}
@@ -38,14 +40,16 @@ class SettingsAnalogView extends Ui.View {
 
     function onUpdate(dc) {
 		couleurFond = Colors.colorValuesTab()[params[0]];
+        couleurChiffresH = Colors.colorValuesTab()[params[HourColor]];
+        couleurChiffresM = Colors.colorValuesTab()[params[MinutesColor]];
         largEcran = dc.getHeight();
-		ProjectsWatchView.dessineTout(dc,fenetre_heures,iconFont);
+		ProjectsWatchView.dessineTout(dc,fenetre_heures,iconFont,true);
 		dessineIndicateur(dc);
 	}
 
 	function dessineIndicateur(dc) {
-		var couleur = (couleurFond == Graphics.COLOR_GREEN) ? Graphics.COLOR_RED : Graphics.COLOR_GREEN; // couleur de l'arc ---> verte, sauf si le fond est en vert ---> rouge
-		dc.setColor(couleur, Gfx.COLOR_TRANSPARENT);
+		var couleurIndicateur = (couleurFond == Graphics.COLOR_GREEN) ? Graphics.COLOR_RED : Graphics.COLOR_GREEN; // couleur de l'arc ---> verte, sauf si le fond est en vert ---> rouge
+		dc.setColor(couleurIndicateur, Gfx.COLOR_TRANSPARENT);
 		dc.drawText(largEcran/2,largEcran *.35,Gfx.FONT_SMALL,titre,Gfx.TEXT_JUSTIFY_CENTER);
 		dc.drawText(largEcran/2,largEcran *.45,Gfx.FONT_SMALL,element_promptTab[numEnCours],Gfx.TEXT_JUSTIFY_CENTER);
 		var degreeStart = numEnCours*largIndicateur+90;

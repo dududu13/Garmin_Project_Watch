@@ -20,6 +20,7 @@ class MenusDelegate extends Ui.InputDelegate {
         if (params[is24h]) {tab.add(display12);}
         else {tab.add(display24);}
         tab.add("Fields");
+        tab.add("Unlock code");
         return tab;
     }
 
@@ -29,10 +30,10 @@ class MenusDelegate extends Ui.InputDelegate {
             "Left up field color", //0
             "Left down field data",//1
             "Left down field color", //0
-            "Right up field data",//1
-            "Right up field color", //0
             "Right down field data",//1
             "Right down field color", //0
+            "Right up field data",//1
+            "Right up field color", //0
         ];
         return tab;
 
@@ -64,10 +65,14 @@ class MenusDelegate extends Ui.InputDelegate {
             var display24 = "Display -> 24h";
             menuView.itemString = params[is24h] ? display12 : display24;
             menuView.tabLignesMenu[item] = params[is24h] ? display12 : display24;
-        } else  if (item >= Field1) { //fields
+        } else  if (item == Field1) { //fields
             var menuView = new MenuView("Fields",MenusDelegate.menuFieldsTab(),2, 0,true,true);
             Ui.pushView(menuView, new MenusFieldsDelegate(menuView,item), Ui.SLIDE_RIGHT);
-        }
+        } else  if (item == Field1+1) { //Code
+            var code_a_modifier = Application.Properties.getValue("code");
+            var view = new KeyboardView(code_a_modifier,null);
+            Ui.pushView(view, new KeyboardDelegate(view,code_a_modifier), Ui.SLIDE_RIGHT);
+       }
         
         Ui.requestUpdate();
     }

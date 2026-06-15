@@ -85,6 +85,7 @@ const DAYOFWEEK = ["",//les jours de semaine vont de 1 a 7, donc pas de zero
 	];
 
 var couleurFond,couleurChiffresH,couleurChiffresM;
+
 var isAwake = true;
 var watchView;
 
@@ -106,7 +107,7 @@ class ProjectsWatchApp extends App.AppBase {
 
     function onSettingsChanged() {
 		ParametresChanges = true;
-		requestUpdate();
+		WatchUi.requestUpdate();
 	}
 
 

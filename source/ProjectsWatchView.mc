@@ -7,16 +7,21 @@ import Toybox.ActivityMonitor;
 
 
 class ProjectsWatchView extends WatchUi.WatchFace {
+    const TIME_BEFORE_LOCKING = 4; //un peu plus d'une heure
     
 	var decalageY_OLED = 0;  // pour changement de place en mode low power sur les AMOLED
 	var decalageX_OLED = 0;  // pour changement de place en mode low power sur les AMOLED
     var fenetre_heures;
    // var fieldsIcon;
-    var iconFont;
+    var iconsFieldsFont;
+    var myLogo;
+    var locked = false;
+    var codeOK = false;
+    var timeInstallation = 0;
 
     function initialize() {
         WatchFace.initialize();
-        iconFont = WatchUi.loadResource(Rez.Fonts.AllIcons);
+        iconsFieldsFont = WatchUi.loadResource(Rez.Fonts.AllIcons);
     
     }
     function onShow() {
@@ -27,15 +32,17 @@ class ProjectsWatchView extends WatchUi.WatchFace {
     function onUpdate(dc as Dc) as Void {
         if (ParametresChanges) {
             loadParams();
-            //fieldsIcon = ProjectsWatchView.rempliListIcon();
-            
         }
         View.onUpdate(dc);
-        dessineTout(dc,fenetre_heures,iconFont);
+        if (! codeOK) {testTimeInstallation();}
+        else {locked = false;}
+        dessineTout(dc,fenetre_heures,iconsFieldsFont,false);
     }
 
     function loadParams() {
-        params = [4, 33, 14, 3, 1, true, 0, 1, 0, 1, 0, 1, 0, 1 ];
+        //params = [4, 33, 14, 3, 1, true, 0, 1, 0, 1, 0, 1, 0, 1 ];
+        
+        params = [42, 33, 14, 1, 1, true, 0, 1, 0, 1, 0, 1, 0, 1];
         for (var i = 0 ; i < params.size() ; i++) {
             var value = Application.Storage.getValue("Params"+i);
             if (value != null) {params[i] = value;}
@@ -43,52 +50,60 @@ class ProjectsWatchView extends WatchUi.WatchFace {
         couleurFond = Colors.colorValuesTab()[params[BackGroundColor]];
         couleurChiffresH = Colors.colorValuesTab()[params[HourColor]];
         couleurChiffresM = Colors.colorValuesTab()[params[MinutesColor]];
+        testeCode();
         ParametresChanges = false;
-        System.println("loadparams = "+params);
+        //System.println("loadparams = "+params);
     }
-/*
-    function rempliListIcon() {
-        var list = [];
-        for (var numParam = Field1 ; numParam <= Field4 ; numParam = numParam+2) {
-            list.add(ProjectsWatchView.getIcon(numParam));
+
+    
+	static function testeCode() {
+        myLogo = WatchUi.loadResource(Rez.Drawables.myLogo);
+        var code_a_tester = Application.Properties.getValue("code");
+		if (code_a_tester == null) {
+            Application.Properties.setValue("code","");
+            code_a_tester = "";
         }
-        return list;
-    }
-
-    function getIcon(numParam) {
-        var fieldType = params[numParam];
-        if (fieldType == Nothing) {return null;}
-        if (fieldType == Battery) {
-            var bat = System.getSystemStats().battery;
-            if (bat > .2) {return WatchUi.loadResource(Rez.Drawables.BatteryOK);}
-            else {return WatchUi.loadResource(Rez.Drawables.BatteryPasOK);}
-
+        if (code_a_tester.length() >= 1) {
+            if (code_a_tester.substring(code_a_tester.length()-1,code_a_tester.length()).equals(" ")) {
+                code_a_tester = code_a_tester.substring(0,code_a_tester.length()-1);
+            }
         }
-        var iconNum = fieldType - 2; // -2 car Nothing en position 0 et battery en position 1
-        var iconList = [
-:Steps,
-:Distance,
-:Notifs,
-:Altitude,
-:Pressure,
-:Floor,
-:Temp,
-:Temp,
-:Calories,
-:CurrentHeartRate,
-:TimeToRecovery,
-:BodyBattery,
-:ActiveMinutesDay,
-:ActiveMinutesDay
 
-        ];
-        if (iconNum>iconList.size()) {return null;}
-        var icone = WatchUi.loadResource(Rez.Drawables[iconList[iconNum]]); //le -2 car Nothing en position 0 et battery en position 1
-        return icone;
+		code_a_tester = code_a_tester.toUpper();
+        var goodCode = WatchUi.loadResource(Rez.Strings.codeApp);
+
+        if (code_a_tester.equals(goodCode)) {
+            System.println("  code entré OK = "+code_a_tester);
+            codeOK = true;
+            locked = false;
+        } else {
+            System.println("  code entré pas OK = "+code_a_tester);
+            codeOK = false;
+            locked = true;
+        }
     }
-    */
 
-    function dessineTout(dc,fenetre_heures,thisIconFont) {
+    function testTimeInstallation() {
+        var installationTime = Application.Storage.getValue("installationTime");
+        if (installationTime == null) {
+            installationTime = Time.now().value();
+            Application.Storage.setValue("installationTime",installationTime);
+        }
+        var timeNow = Time.now().value();
+        var elapsedTime = timeNow - installationTime;
+        
+        if (elapsedTime<TIME_BEFORE_LOCKING) {
+            //System.println("timeNow="+timeNow+"  installationTime="+installationTime+"  elapsedTime="+elapsedTime+"   not elapsed, pas de logo");
+            locked = false;
+        } 
+        else {
+            //System.println("timeNow="+timeNow+"  installationTime="+installationTime+"  elapsedTime="+elapsedTime+"  elapsed, --> logo");
+            locked = true;
+        }       
+	}
+
+
+    function dessineTout(dc,fenetre_heures,thisIconFont,isInSetting) {
         var larg = dc.getHeight();
         var clockTime = System.getClockTime();
         dc.setColor(couleurFond,couleurFond);
@@ -97,10 +112,16 @@ class ProjectsWatchView extends WatchUi.WatchFace {
         ProjectsWatchView.dessineMinutes(dc,clockTime,larg);
         ProjectsWatchView.dessineFond(dc,larg,fenetre_heures);
         ProjectsWatchView.dessineChamps(dc,clockTime,larg,thisIconFont);
-		if ((! isAwake) && (larg>280)){
-            ProjectsWatchView.quadrille(dc,larg);
+        if (! isInSetting) { dessineLockSiBesoin(dc,larg);}
+		if ((! isAwake) && (larg>280)){ProjectsWatchView.quadrille(dc,larg);}
+    }
+
+    function dessineLockSiBesoin(dc,larg) {
+        //System.println("dessineLockSiBesoin   locked = "+locked);
+        if (locked) {
+            dc.drawBitmap(0, .75*larg, myLogo);
+            dc.drawText(0.5*larg,.4*larg,Graphics.FONT_TINY,"Read watchFace\ndescription please\nto remove Dudu logo",Graphics.TEXT_JUSTIFY_CENTER);
         }
-        //dc.drawText(8,210,Graphics.FONT_SMALL,MenusDelegate.menuField(0),Graphics.TEXT_JUSTIFY_LEFT);
     }
 
 	function quadrille(dc,larg) {
@@ -150,7 +171,8 @@ class ProjectsWatchView extends WatchUi.WatchFace {
 
     function dessineFond(dc,larg,fenetre_heure) {
         var height = (130.0*larg/454).toNumber();
-        if (fenetre_heures != null) {dc.drawScaledBitmap(0,0, larg, height , fenetre_heures);}
+        //if (fenetre_heures != null) {dc.drawScaledBitmap(0,0, larg, height , fenetre_heures);}
+        if (fenetre_heures != null) {dc.drawBitmap(0,0, fenetre_heures);}
         dc.setColor(couleurFond,couleurFond);
         dc.fillPolygon([[.767*larg,.134*larg],[.639*larg,.267*larg],[.705*larg,.551*larg],[larg,.57*larg]]);
         dc.fillPolygon([[.233*larg,.134*larg],[.361*larg,.267*larg],[.295*larg,.449*larg],[0,.57*larg]]);
@@ -179,6 +201,7 @@ class ProjectsWatchView extends WatchUi.WatchFace {
         var siz = (70.0/454*larg).toNumber();
         //System.println("size h="+siz);
         var vectorFont = Graphics.getVectorFont({:face=>fontList, :size=>siz}); 
+        //var vectorFont = Graphics.getVectorFont({:face=>fontList, :size=>siz ,:font=>Graphics.FONT_SMALL}); 
         //vectorFont = Graphics.getVectorFont({:face=>fontList, :size=>siz,:font=>Graphics.FONT_SMALL, :scale=>0.5});  
         var h =  clockTime.hour;
         var hMax = 24;

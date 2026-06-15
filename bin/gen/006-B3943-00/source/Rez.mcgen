@@ -14,16 +14,19 @@ module Rez {
         (:initialized) var Notifs as ResourceId;
         (:initialized) var Altitude as ResourceId;
         (:initialized) var Pressure as ResourceId;
+        (:initialized) var myLogo as ResourceId;
         (:initialized) var LauncherIcon as ResourceId;
     } // Drawables
 
     module Fonts {
         (:initialized) var PresentPastFuture as ResourceId;
+        (:initialized) var AllIcons as ResourceId;
     } // Fonts
 
     module Strings {
         (:initialized) var Steps as ResourceId;
         (:initialized) var M1 as ResourceId;
+        (:initialized) var code_setting as ResourceId;
         (:initialized) var M2 as ResourceId;
         (:initialized) var M3 as ResourceId;
         (:initialized) var M4 as ResourceId;
@@ -41,6 +44,7 @@ module Rez {
         (:initialized) var Day1 as ResourceId;
         (:initialized) var TempExt as ResourceId;
         (:initialized) var ActiveMinutesDay as ResourceId;
+        (:initialized) var codeApp as ResourceId;
         (:initialized) var Day2 as ResourceId;
         (:initialized) var Day3 as ResourceId;
         (:initialized) var Battery as ResourceId;
