@@ -290,25 +290,26 @@ class ProjectsWatchView extends WatchUi.WatchFace {
         var positions = [[.154,.4],[.28,.65],[.72,.65],[.757,.4]];
         var largeurHauteurIcon = 50*larg/454;
         for (var numParam = Field1 ; numParam<=Field4 ; numParam = numParam +2) {
-            if (params[numParam] == 0) {break;}
-            var pos = (numParam-Field1) /2;
-            var x = positions[pos][0]*larg;
-            var y = positions[pos][1]*larg;
-            dc.setColor(ProjectsWatchView.getParam(numParam+1),Graphics.COLOR_TRANSPARENT);
-            if (params[numParam] < Seconds) { // dans ce cas il y a un icone a dessiner
-                var symbol = (params[numParam]+48).toChar().toString();
-                dc.drawText(x,y  ,thisIconFont,symbol,Graphics.TEXT_JUSTIFY_CENTER);    
-            } else {
-                y = y - .05*larg;
-            }
-            var text = ProjectsWatchView.getFieldText(params[numParam],clockTime).toString();
-            var f  = Graphics.FONT_SMALL;
-            var longText = dc.getTextWidthInPixels(text, f);
-            if (longText > larg * .25) {
-                f = Graphics.FONT_XTINY;
-            }
-            System.println("dessine champs "+pos+"   xy = "+x+ " "+y+"   --> "+text);
-            dc.drawText(x,y + largeurHauteurIcon ,f,text,Graphics.TEXT_JUSTIFY_CENTER);    
+            if (params[numParam] != 0) {
+                var pos = (numParam-Field1) /2;
+                var x = positions[pos][0]*larg;
+                var y = positions[pos][1]*larg;
+                dc.setColor(ProjectsWatchView.getParam(numParam+1),Graphics.COLOR_TRANSPARENT);
+                if (params[numParam] < Seconds) { // dans ce cas il y a un icone a dessiner
+                    var symbol = (params[numParam]+48).toChar().toString();
+                    dc.drawText(x,y  ,thisIconFont,symbol,Graphics.TEXT_JUSTIFY_CENTER);    
+                } else {
+                    y = y - .05*larg;
+                }
+                var text = ProjectsWatchView.getFieldText(params[numParam],clockTime).toString();
+                var f  = Graphics.FONT_SMALL;
+                var longText = dc.getTextWidthInPixels(text, f);
+                if (longText > larg * .25) {
+                    f = Graphics.FONT_XTINY;
+                }
+                System.println("dessine champs "+pos+"   xy = "+x+ " "+y+"   --> "+text);
+                dc.drawText(x,y + largeurHauteurIcon ,f,text,Graphics.TEXT_JUSTIFY_CENTER);   
+            } 
         }
     }   
 

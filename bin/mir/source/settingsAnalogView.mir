@@ -1,0 +1,539 @@
+[ @file = "D:\gduriez\Perso\Dossiers\DossiersVS\ProjectsWatch\source\settingsAnalogView.mc"; @line = 1; @symbol_usingdef<0> = [Toybox,1,6,12]; @symbol_usingdef<1> = [WatchUi,1,13,20]; @symbol_usingAlias = [Ui,1,24,26]; ]
+using Toybox.WatchUi as :Ui;
+[ @file = "D:\gduriez\Perso\Dossiers\DossiersVS\ProjectsWatch\source\settingsAnalogView.mc"; @line = 2; @symbol_usingdef<0> = [Toybox,2,6,12]; @symbol_usingdef<1> = [System,2,13,19]; @symbol_usingAlias = [Sys,2,23,26]; ]
+using Toybox.System as :Sys;
+[ @file = "D:\gduriez\Perso\Dossiers\DossiersVS\ProjectsWatch\source\settingsAnalogView.mc"; @line = 3; @symbol_usingdef<0> = [Toybox,3,6,12]; @symbol_usingdef<1> = [Graphics,3,13,21]; @symbol_usingAlias = [Gfx,3,25,28]; ]
+using Toybox.Graphics as :Gfx;
+[ @file = "D:\gduriez\Perso\Dossiers\DossiersVS\ProjectsWatch\source\settingsAnalogView.mc"; @line = 6; @symbol_classdef = [SettingsAnalogView,6,6,24]; @symbol_extends<0> = [Ui,6,33,35]; @symbol_extends<1> = [View,6,36,40]; ]
+class SettingsAnalogView extends Ui.View {
+    [ @file = "D:\gduriez\Perso\Dossiers\DossiersVS\ProjectsWatch\source\settingsAnalogView.mc"; @line = 6; ]
+    <init> {
+    }
+    [ @file = "D:\gduriez\Perso\Dossiers\DossiersVS\ProjectsWatch\source\settingsAnalogView.mc"; @line = 6; ]
+    static
+    <init> {
+    }
+    [ @file = "D:\gduriez\Perso\Dossiers\DossiersVS\ProjectsWatch\source\settingsAnalogView.mc"; @line = 8; @position = 5; @symbol_vardef = [numParametre,8,5,17]; ]
+    var numParametre;
+    [ @file = "D:\gduriez\Perso\Dossiers\DossiersVS\ProjectsWatch\source\settingsAnalogView.mc"; @line = 9; @position = 5; @symbol_vardef = [element_promptTab,9,5,22]; ]
+    var element_promptTab;
+    [ @file = "D:\gduriez\Perso\Dossiers\DossiersVS\ProjectsWatch\source\settingsAnalogView.mc"; @line = 10; @position = 5; @symbol_vardef = [titre,10,5,10]; ]
+    var titre;
+    [ @file = "D:\gduriez\Perso\Dossiers\DossiersVS\ProjectsWatch\source\settingsAnalogView.mc"; @line = 11; @position = 5; @symbol_vardef = [numEnCours,11,5,15]; ]
+    var numEnCours;
+    [ @file = "D:\gduriez\Perso\Dossiers\DossiersVS\ProjectsWatch\source\settingsAnalogView.mc"; @line = 13; @position = 8; @symbol_vardef = [largEcran,13,8,17]; ]
+    var largEcran;
+    [ @file = "D:\gduriez\Perso\Dossiers\DossiersVS\ProjectsWatch\source\settingsAnalogView.mc"; @line = 14; @position = 5; @symbol_vardef = [largIndicateur,14,5,19]; ]
+    var largIndicateur;
+    [ @file = "D:\gduriez\Perso\Dossiers\DossiersVS\ProjectsWatch\source\settingsAnalogView.mc"; @line = 15; @position = 5; @symbol_vardef = [fenetre_heures,15,5,19]; ]
+    var fenetre_heures;
+    [ @file = "D:\gduriez\Perso\Dossiers\DossiersVS\ProjectsWatch\source\settingsAnalogView.mc"; @line = 16; @position = 5; @symbol_vardef = [iconFont,16,5,13]; ]
+    var iconFont;
+    [ @file = "D:\gduriez\Perso\Dossiers\DossiersVS\ProjectsWatch\source\settingsAnalogView.mc"; @line = 21; @symbol_functiondef = [initialize,21,13,23]; @symbol_param<0> = [_numParametre,21,24,37]; @symbol_param<1> = [_element_promptTab,21,38,56]; @symbol_param<2> = [_titre,21,57,63]; ]
+    function initialize(_numParametre, _element_promptTab, _titre) as Void {
+D__gduriez_Perso_Dossiers_DossiersVS_ProjectsWatch_source_settingsAnalogView_mc_21_65_39_1_start:
+[ "D:\gduriez\Perso\Dossiers\DossiersVS\ProjectsWatch\source\settingsAnalogView.mc" 22 2 ]
+        %tmp.1 = newa 0;
+        symbol [ oldParams ? 22 2 11 ];
+        putv self :oldParams %tmp.1;
+[ "D:\gduriez\Perso\Dossiers\DossiersVS\ProjectsWatch\source\settingsAnalogView.mc" 23 2 ]
+        for @D__gduriez_Perso_Dossiers_DossiersVS_ProjectsWatch_source_settingsAnalogView_mc_23_2_25_2_for_test @D__gduriez_Perso_Dossiers_DossiersVS_ProjectsWatch_source_settingsAnalogView_mc_23_2_25_2_for_incr @D__gduriez_Perso_Dossiers_DossiersVS_ProjectsWatch_source_settingsAnalogView_mc_23_2_25_2_for_end;
+D__gduriez_Perso_Dossiers_DossiersVS_ProjectsWatch_source_settingsAnalogView_mc_23_2_25_2_for_init:
+        [ "D__gduriez_Perso_Dossiers_DossiersVS_ProjectsWatch_source_settingsAnalogView_mc_23_2_25_2_for_begin" "D__gduriez_Perso_Dossiers_DossiersVS_ProjectsWatch_source_settingsAnalogView_mc_23_2_25_2_for_end" ]
+        %i.1 = local;
+        symbol [ i %i.1 23 11 12 ];
+        %tmp.2 = 0;
+        lputv %i.1 %tmp.2;
+        symbol [ i %i.1 23 11 12 ];
+D__gduriez_Perso_Dossiers_DossiersVS_ProjectsWatch_source_settingsAnalogView_mc_23_2_25_2_for_test:
+        %tmp.3 = lgetv %i.1;
+        symbol [ i %tmp.3 23 15 16 ];
+        symbol [ params %tmp.5 23 17 23 ];
+        %tmp.5 = getv ? :params;
+        symbol [ size %tmp.6 23 24 28 ];
+        %tmp.6 = getv function %tmp.5 :size;
+        %tmp.7 = invoke %tmp.5 %tmp.6();
+        %tmp.8 = lt %tmp.3 %tmp.7;
+        bf %tmp.8 @D__gduriez_Perso_Dossiers_DossiersVS_ProjectsWatch_source_settingsAnalogView_mc_23_2_25_2_for_end;
+D__gduriez_Perso_Dossiers_DossiersVS_ProjectsWatch_source_settingsAnalogView_mc_23_2_25_2_for_begin:
+D__gduriez_Perso_Dossiers_DossiersVS_ProjectsWatch_source_settingsAnalogView_mc_23_36_25_2_start:
+[ "D:\gduriez\Perso\Dossiers\DossiersVS\ProjectsWatch\source\settingsAnalogView.mc" 24 3 ]
+        symbol [ oldParams %tmp.10 24 3 12 ];
+        %tmp.10 = getv ? :oldParams;
+        symbol [ add %tmp.11 24 13 16 ];
+        %tmp.11 = getv function %tmp.10 :add;
+        symbol [ params %tmp.13 24 17 23 ];
+        %tmp.13 = getv ? :params;
+        %tmp.14 = lgetv %i.1;
+        symbol [ i %tmp.14 24 24 25 ];
+        %tmp.15 = agetv %tmp.13 %tmp.14;
+        invoke %tmp.10 %tmp.11(%tmp.15);
+D__gduriez_Perso_Dossiers_DossiersVS_ProjectsWatch_source_settingsAnalogView_mc_23_36_25_2_stop:
+D__gduriez_Perso_Dossiers_DossiersVS_ProjectsWatch_source_settingsAnalogView_mc_23_2_25_2_for_incr:
+[ "D:\gduriez\Perso\Dossiers\DossiersVS\ProjectsWatch\source\settingsAnalogView.mc" 23 ]
+        %tmp.18 = lgetv %i.1;
+        symbol [ i %tmp.18 23 31 32 ];
+        %tmp.19 = add %tmp.18 1;
+        lputv %i.1 %tmp.19;
+        symbol [ i %i.1 23 31 32 ];
+        goto @D__gduriez_Perso_Dossiers_DossiersVS_ProjectsWatch_source_settingsAnalogView_mc_23_2_25_2_for_test;
+D__gduriez_Perso_Dossiers_DossiersVS_ProjectsWatch_source_settingsAnalogView_mc_23_2_25_2_for_end:
+[ "D:\gduriez\Perso\Dossiers\DossiersVS\ProjectsWatch\source\settingsAnalogView.mc" 26 5 ]
+        symbol [ params %tmp.21 26 18 24 ];
+        %tmp.21 = getv ? :params;
+        %tmp.22 = lgetv %_numParametre;
+        symbol [ _numParametre %tmp.22 26 25 38 ];
+        %tmp.23 = agetv %tmp.21 %tmp.22;
+        symbol [ numEnCours ? 26 5 15 ];
+        putv self :numEnCours %tmp.23;
+[ "D:\gduriez\Perso\Dossiers\DossiersVS\ProjectsWatch\source\settingsAnalogView.mc" 27 2 ]
+        %tmp.24 = lgetv %_numParametre;
+        symbol [ _numParametre %tmp.24 27 17 30 ];
+        symbol [ numParametre ? 27 2 14 ];
+        putv self :numParametre %tmp.24;
+[ "D:\gduriez\Perso\Dossiers\DossiersVS\ProjectsWatch\source\settingsAnalogView.mc" 28 2 ]
+        %tmp.25 = lgetv %_element_promptTab;
+        symbol [ _element_promptTab %tmp.25 28 22 40 ];
+        symbol [ element_promptTab ? 28 2 19 ];
+        putv self :element_promptTab %tmp.25;
+[ "D:\gduriez\Perso\Dossiers\DossiersVS\ProjectsWatch\source\settingsAnalogView.mc" 29 2 ]
+        %tmp.26 = lgetv %_titre;
+        symbol [ _titre %tmp.26 29 10 16 ];
+        symbol [ titre ? 29 2 7 ];
+        putv self :titre %tmp.26;
+[ "D:\gduriez\Perso\Dossiers\DossiersVS\ProjectsWatch\source\settingsAnalogView.mc" 30 2 ]
+        symbol [ Colors %tmp.28 30 16 22 ];
+        %tmp.28 = getv ? :Colors;
+        symbol [ colorValuesTab %tmp.29 30 23 37 ];
+        %tmp.29 = getv function %tmp.28 :colorValuesTab;
+        %tmp.30 = invoke %tmp.28 %tmp.29();
+        symbol [ params %tmp.32 30 40 46 ];
+        %tmp.32 = getv ? :params;
+        %tmp.33 = 0;
+        %tmp.34 = agetv %tmp.32 %tmp.33;
+        %tmp.35 = agetv %tmp.30 %tmp.34;
+        symbol [ couleurFond ? 30 2 13 ];
+        putv self :couleurFond %tmp.35;
+[ "D:\gduriez\Perso\Dossiers\DossiersVS\ProjectsWatch\source\settingsAnalogView.mc" 31 8 ]
+        symbol [ Colors %tmp.37 31 27 33 ];
+        %tmp.37 = getv ? :Colors;
+        symbol [ colorValuesTab %tmp.38 31 34 48 ];
+        %tmp.38 = getv function %tmp.37 :colorValuesTab;
+        %tmp.39 = invoke %tmp.37 %tmp.38();
+        symbol [ params %tmp.41 31 51 57 ];
+        %tmp.41 = getv ? :params;
+        symbol [ HourColor %tmp.43 31 58 67 ];
+        %tmp.43 = getv ? :HourColor;
+        %tmp.44 = agetv %tmp.41 %tmp.43;
+        %tmp.45 = agetv %tmp.39 %tmp.44;
+        symbol [ couleurChiffresH ? 31 8 24 ];
+        putv self :couleurChiffresH %tmp.45;
+[ "D:\gduriez\Perso\Dossiers\DossiersVS\ProjectsWatch\source\settingsAnalogView.mc" 32 8 ]
+        symbol [ Colors %tmp.47 32 27 33 ];
+        %tmp.47 = getv ? :Colors;
+        symbol [ colorValuesTab %tmp.48 32 34 48 ];
+        %tmp.48 = getv function %tmp.47 :colorValuesTab;
+        %tmp.49 = invoke %tmp.47 %tmp.48();
+        symbol [ params %tmp.51 32 51 57 ];
+        %tmp.51 = getv ? :params;
+        symbol [ MinutesColor %tmp.53 32 58 70 ];
+        %tmp.53 = getv ? :MinutesColor;
+        %tmp.54 = agetv %tmp.51 %tmp.53;
+        %tmp.55 = agetv %tmp.49 %tmp.54;
+        symbol [ couleurChiffresM ? 32 8 24 ];
+        putv self :couleurChiffresM %tmp.55;
+[ "D:\gduriez\Perso\Dossiers\DossiersVS\ProjectsWatch\source\settingsAnalogView.mc" 33 2 ]
+        symbol [ WatchUi %tmp.57 33 19 26 ];
+        %tmp.57 = getv ? :WatchUi;
+        symbol [ loadResource %tmp.58 33 27 39 ];
+        %tmp.58 = getv function %tmp.57 :loadResource;
+        symbol [ Rez %tmp.60 33 40 43 ];
+        %tmp.60 = getv ? :Rez;
+        symbol [ Drawables %tmp.61 33 44 53 ];
+        %tmp.61 = getv %tmp.60 :Drawables;
+        symbol [ fenetre_heures %tmp.62 33 54 68 ];
+        %tmp.62 = getv %tmp.61 :fenetre_heures;
+        %tmp.63 = invoke %tmp.57 %tmp.58(%tmp.62);
+        symbol [ fenetre_heures ? 33 2 16 ];
+        putv self :fenetre_heures %tmp.63;
+[ "D:\gduriez\Perso\Dossiers\DossiersVS\ProjectsWatch\source\settingsAnalogView.mc" 34 2 ]
+        [ "D__gduriez_Perso_Dossiers_DossiersVS_ProjectsWatch_source_settingsAnalogView_mc_21_65_39_1_start" "D__gduriez_Perso_Dossiers_DossiersVS_ProjectsWatch_source_settingsAnalogView_mc_21_65_39_1_stop" ]
+        %divis.2 = local;
+        symbol [ divis %divis.2 34 6 11 ];
+        %tmp.64 = 180;
+        lputv %divis.2 %tmp.64;
+        symbol [ divis %divis.2 34 6 11 ];
+[ "D:\gduriez\Perso\Dossiers\DossiersVS\ProjectsWatch\source\settingsAnalogView.mc" 35 2 ]
+D__gduriez_Perso_Dossiers_DossiersVS_ProjectsWatch_source_settingsAnalogView_mc_35_2_35_48_if_stmt:
+        symbol [ element_promptTab %tmp.66 35 6 23 ];
+        %tmp.66 = getv ? :element_promptTab;
+        symbol [ size %tmp.67 35 24 28 ];
+        %tmp.67 = getv function %tmp.66 :size;
+        %tmp.68 = invoke %tmp.66 %tmp.67();
+        %tmp.69 = 15;
+        %tmp.70 = gt %tmp.68 %tmp.69;
+        bf %tmp.70 @D__gduriez_Perso_Dossiers_DossiersVS_ProjectsWatch_source_settingsAnalogView_mc_35_2_35_48_if_end;
+D__gduriez_Perso_Dossiers_DossiersVS_ProjectsWatch_source_settingsAnalogView_mc_35_2_35_48_if_true:
+D__gduriez_Perso_Dossiers_DossiersVS_ProjectsWatch_source_settingsAnalogView_mc_35_35_35_48_start:
+[ "D:\gduriez\Perso\Dossiers\DossiersVS\ProjectsWatch\source\settingsAnalogView.mc" 35 36 ]
+        %tmp.71 = 360;
+        lputv %divis.2 %tmp.71;
+        symbol [ divis %divis.2 35 36 41 ];
+D__gduriez_Perso_Dossiers_DossiersVS_ProjectsWatch_source_settingsAnalogView_mc_35_35_35_48_stop:
+        goto @D__gduriez_Perso_Dossiers_DossiersVS_ProjectsWatch_source_settingsAnalogView_mc_35_2_35_48_if_end;
+D__gduriez_Perso_Dossiers_DossiersVS_ProjectsWatch_source_settingsAnalogView_mc_35_2_35_48_if_end:
+[ "D:\gduriez\Perso\Dossiers\DossiersVS\ProjectsWatch\source\settingsAnalogView.mc" 36 2 ]
+        %tmp.72 = lgetv %divis.2;
+        symbol [ divis %tmp.72 36 19 24 ];
+        symbol [ toFloat %tmp.73 36 25 32 ];
+        %tmp.73 = getv function %tmp.72 :toFloat;
+        %tmp.74 = invoke %tmp.72 %tmp.73();
+        symbol [ element_promptTab %tmp.76 36 36 53 ];
+        %tmp.76 = getv ? :element_promptTab;
+        symbol [ size %tmp.77 36 54 58 ];
+        %tmp.77 = getv function %tmp.76 :size;
+        %tmp.78 = invoke %tmp.76 %tmp.77();
+        %tmp.79 = div %tmp.74 %tmp.78;
+        symbol [ largIndicateur ? 36 2 16 ];
+        putv self :largIndicateur %tmp.79;
+[ "D:\gduriez\Perso\Dossiers\DossiersVS\ProjectsWatch\source\settingsAnalogView.mc" 37 2 ]
+        symbol [ WatchUi %tmp.81 37 13 20 ];
+        %tmp.81 = getv ? :WatchUi;
+        symbol [ loadResource %tmp.82 37 21 33 ];
+        %tmp.82 = getv function %tmp.81 :loadResource;
+        symbol [ Rez %tmp.84 37 34 37 ];
+        %tmp.84 = getv ? :Rez;
+        symbol [ Fonts %tmp.85 37 38 43 ];
+        %tmp.85 = getv %tmp.84 :Fonts;
+        symbol [ AllIcons %tmp.86 37 44 52 ];
+        %tmp.86 = getv %tmp.85 :AllIcons;
+        %tmp.87 = invoke %tmp.81 %tmp.82(%tmp.86);
+        symbol [ iconFont ? 37 2 10 ];
+        putv self :iconFont %tmp.87;
+[ "D:\gduriez\Perso\Dossiers\DossiersVS\ProjectsWatch\source\settingsAnalogView.mc" 38 2 ]
+        symbol [ View %tmp.89 38 2 6 ];
+        %tmp.89 = getv ? :View;
+        symbol [ initialize %tmp.90 38 7 17 ];
+        %tmp.90 = getv function %tmp.89 :initialize;
+        invoke %tmp.89 %tmp.90();
+D__gduriez_Perso_Dossiers_DossiersVS_ProjectsWatch_source_settingsAnalogView_mc_21_65_39_1_stop:
+    }
+    [ @file = "D:\gduriez\Perso\Dossiers\DossiersVS\ProjectsWatch\source\settingsAnalogView.mc"; @line = 41; @symbol_functiondef = [onUpdate,41,13,21]; @symbol_param<0> = [dc,41,22,24]; ]
+    function onUpdate(dc) {
+D__gduriez_Perso_Dossiers_DossiersVS_ProjectsWatch_source_settingsAnalogView_mc_41_26_48_1_start:
+[ "D:\gduriez\Perso\Dossiers\DossiersVS\ProjectsWatch\source\settingsAnalogView.mc" 42 2 ]
+        symbol [ Colors %tmp.2 42 16 22 ];
+        %tmp.2 = getv ? :Colors;
+        symbol [ colorValuesTab %tmp.3 42 23 37 ];
+        %tmp.3 = getv function %tmp.2 :colorValuesTab;
+        %tmp.4 = invoke %tmp.2 %tmp.3();
+        symbol [ params %tmp.6 42 40 46 ];
+        %tmp.6 = getv ? :params;
+        %tmp.7 = 0;
+        %tmp.8 = agetv %tmp.6 %tmp.7;
+        %tmp.9 = agetv %tmp.4 %tmp.8;
+        symbol [ couleurFond ? 42 2 13 ];
+        putv self :couleurFond %tmp.9;
+[ "D:\gduriez\Perso\Dossiers\DossiersVS\ProjectsWatch\source\settingsAnalogView.mc" 43 8 ]
+        symbol [ Colors %tmp.11 43 27 33 ];
+        %tmp.11 = getv ? :Colors;
+        symbol [ colorValuesTab %tmp.12 43 34 48 ];
+        %tmp.12 = getv function %tmp.11 :colorValuesTab;
+        %tmp.13 = invoke %tmp.11 %tmp.12();
+        symbol [ params %tmp.15 43 51 57 ];
+        %tmp.15 = getv ? :params;
+        symbol [ HourColor %tmp.17 43 58 67 ];
+        %tmp.17 = getv ? :HourColor;
+        %tmp.18 = agetv %tmp.15 %tmp.17;
+        %tmp.19 = agetv %tmp.13 %tmp.18;
+        symbol [ couleurChiffresH ? 43 8 24 ];
+        putv self :couleurChiffresH %tmp.19;
+[ "D:\gduriez\Perso\Dossiers\DossiersVS\ProjectsWatch\source\settingsAnalogView.mc" 44 8 ]
+        symbol [ Colors %tmp.21 44 27 33 ];
+        %tmp.21 = getv ? :Colors;
+        symbol [ colorValuesTab %tmp.22 44 34 48 ];
+        %tmp.22 = getv function %tmp.21 :colorValuesTab;
+        %tmp.23 = invoke %tmp.21 %tmp.22();
+        symbol [ params %tmp.25 44 51 57 ];
+        %tmp.25 = getv ? :params;
+        symbol [ MinutesColor %tmp.27 44 58 70 ];
+        %tmp.27 = getv ? :MinutesColor;
+        %tmp.28 = agetv %tmp.25 %tmp.27;
+        %tmp.29 = agetv %tmp.23 %tmp.28;
+        symbol [ couleurChiffresM ? 44 8 24 ];
+        putv self :couleurChiffresM %tmp.29;
+[ "D:\gduriez\Perso\Dossiers\DossiersVS\ProjectsWatch\source\settingsAnalogView.mc" 45 8 ]
+        %tmp.30 = lgetv %dc;
+        symbol [ dc %tmp.30 45 20 22 ];
+        symbol [ getHeight %tmp.31 45 23 32 ];
+        %tmp.31 = getv function %tmp.30 :getHeight;
+        %tmp.32 = invoke %tmp.30 %tmp.31();
+        symbol [ largEcran ? 45 8 17 ];
+        putv self :largEcran %tmp.32;
+[ "D:\gduriez\Perso\Dossiers\DossiersVS\ProjectsWatch\source\settingsAnalogView.mc" 46 2 ]
+        symbol [ ProjectsWatchView %tmp.34 46 2 19 ];
+        %tmp.34 = getv ? :ProjectsWatchView;
+        symbol [ dessineTout %tmp.35 46 20 31 ];
+        %tmp.35 = getv function %tmp.34 :dessineTout;
+        %tmp.36 = lgetv %dc;
+        symbol [ dc %tmp.36 46 32 34 ];
+        symbol [ fenetre_heures %tmp.38 46 35 49 ];
+        %tmp.38 = getv ? :fenetre_heures;
+        symbol [ iconFont %tmp.40 46 50 58 ];
+        %tmp.40 = getv ? :iconFont;
+        %tmp.41 = true;
+        invoke %tmp.34 %tmp.35(%tmp.36, %tmp.38, %tmp.40, %tmp.41);
+[ "D:\gduriez\Perso\Dossiers\DossiersVS\ProjectsWatch\source\settingsAnalogView.mc" 47 2 ]
+        %tmp.42 = self;
+        symbol [ dessineIndicateur %tmp.43 47 2 19 ];
+        %tmp.43 = getv function %tmp.42 :dessineIndicateur;
+        %tmp.44 = lgetv %dc;
+        symbol [ dc %tmp.44 47 20 22 ];
+        invoke %tmp.42 %tmp.43(%tmp.44);
+D__gduriez_Perso_Dossiers_DossiersVS_ProjectsWatch_source_settingsAnalogView_mc_41_26_48_1_stop:
+    }
+    [ @file = "D:\gduriez\Perso\Dossiers\DossiersVS\ProjectsWatch\source\settingsAnalogView.mc"; @line = 50; @symbol_functiondef = [dessineIndicateur,50,10,27]; @symbol_param<0> = [dc,50,28,30]; ]
+    function dessineIndicateur(dc) {
+D__gduriez_Perso_Dossiers_DossiersVS_ProjectsWatch_source_settingsAnalogView_mc_50_32_60_1_start:
+[ "D:\gduriez\Perso\Dossiers\DossiersVS\ProjectsWatch\source\settingsAnalogView.mc" 51 2 ]
+        [ "D__gduriez_Perso_Dossiers_DossiersVS_ProjectsWatch_source_settingsAnalogView_mc_50_32_60_1_start" "D__gduriez_Perso_Dossiers_DossiersVS_ProjectsWatch_source_settingsAnalogView_mc_50_32_60_1_stop" ]
+        %couleurIndicateur.1 = local;
+        symbol [ couleurIndicateur %couleurIndicateur.1 51 6 23 ];
+D__gduriez_Perso_Dossiers_DossiersVS_ProjectsWatch_source_settingsAnalogView_mc_51_26_51_96_begin:
+        symbol [ couleurFond %tmp.2 51 27 38 ];
+        %tmp.2 = getv ? :couleurFond;
+        symbol [ Graphics %tmp.4 51 42 50 ];
+        %tmp.4 = getv ? :Graphics;
+        symbol [ COLOR_GREEN %tmp.5 51 51 62 ];
+        %tmp.5 = getv %tmp.4 :COLOR_GREEN;
+        %tmp.6 = eq %tmp.2 %tmp.5;
+        bf %tmp.6 @D__gduriez_Perso_Dossiers_DossiersVS_ProjectsWatch_source_settingsAnalogView_mc_51_26_51_96_else_false;
+D__gduriez_Perso_Dossiers_DossiersVS_ProjectsWatch_source_settingsAnalogView_mc_51_26_51_96_true:
+        symbol [ Graphics %tmp.8 51 66 74 ];
+        %tmp.8 = getv ? :Graphics;
+        symbol [ COLOR_RED %tmp.9 51 75 84 ];
+        %tmp.9 = getv %tmp.8 :COLOR_RED;
+        push %tmp.9;
+        goto @D__gduriez_Perso_Dossiers_DossiersVS_ProjectsWatch_source_settingsAnalogView_mc_51_26_51_96_end;
+D__gduriez_Perso_Dossiers_DossiersVS_ProjectsWatch_source_settingsAnalogView_mc_51_26_51_96_else_false:
+        symbol [ Graphics %tmp.11 51 87 95 ];
+        %tmp.11 = getv ? :Graphics;
+        symbol [ COLOR_GREEN %tmp.12 51 96 107 ];
+        %tmp.12 = getv %tmp.11 :COLOR_GREEN;
+        push %tmp.12;
+D__gduriez_Perso_Dossiers_DossiersVS_ProjectsWatch_source_settingsAnalogView_mc_51_26_51_96_end:
+        %tmp.13 = phi [%tmp.6 @D__gduriez_Perso_Dossiers_DossiersVS_ProjectsWatch_source_settingsAnalogView_mc_51_26_51_96_begin] [%tmp.9 @D__gduriez_Perso_Dossiers_DossiersVS_ProjectsWatch_source_settingsAnalogView_mc_51_26_51_96_true] [%tmp.12 @D__gduriez_Perso_Dossiers_DossiersVS_ProjectsWatch_source_settingsAnalogView_mc_51_26_51_96_else_false] [%tmp.13 @D__gduriez_Perso_Dossiers_DossiersVS_ProjectsWatch_source_settingsAnalogView_mc_51_26_51_96_end];
+        lputv %couleurIndicateur.1 %tmp.13;
+        symbol [ couleurIndicateur %couleurIndicateur.1 51 6 23 ];
+[ "D:\gduriez\Perso\Dossiers\DossiersVS\ProjectsWatch\source\settingsAnalogView.mc" 52 2 ]
+        %tmp.14 = lgetv %dc;
+        symbol [ dc %tmp.14 52 2 4 ];
+        symbol [ setColor %tmp.15 52 5 13 ];
+        %tmp.15 = getv function %tmp.14 :setColor;
+        %tmp.16 = lgetv %couleurIndicateur.1;
+        symbol [ couleurIndicateur %tmp.16 52 14 31 ];
+        symbol [ Gfx %tmp.17 52 33 36 ];
+        %tmp.17 = getm $.Toybox.Graphics;
+        symbol [ COLOR_TRANSPARENT %tmp.18 52 37 54 ];
+        %tmp.18 = getv %tmp.17 :COLOR_TRANSPARENT;
+        invoke %tmp.14 %tmp.15(%tmp.16, %tmp.18);
+[ "D:\gduriez\Perso\Dossiers\DossiersVS\ProjectsWatch\source\settingsAnalogView.mc" 53 2 ]
+        %tmp.19 = lgetv %dc;
+        symbol [ dc %tmp.19 53 2 4 ];
+        symbol [ drawText %tmp.20 53 5 13 ];
+        %tmp.20 = getv function %tmp.19 :drawText;
+        symbol [ largEcran %tmp.22 53 14 23 ];
+        %tmp.22 = getv ? :largEcran;
+        %tmp.23 = 2;
+        %tmp.24 = div %tmp.22 %tmp.23;
+        symbol [ largEcran %tmp.26 53 26 35 ];
+        %tmp.26 = getv ? :largEcran;
+        %tmp.27 = .35;
+        %tmp.28 = mul %tmp.26 %tmp.27;
+        symbol [ Gfx %tmp.29 53 41 44 ];
+        %tmp.29 = getm $.Toybox.Graphics;
+        symbol [ FONT_SMALL %tmp.30 53 45 55 ];
+        %tmp.30 = getv %tmp.29 :FONT_SMALL;
+        symbol [ titre %tmp.32 53 56 61 ];
+        %tmp.32 = getv ? :titre;
+        symbol [ Gfx %tmp.33 53 62 65 ];
+        %tmp.33 = getm $.Toybox.Graphics;
+        symbol [ TEXT_JUSTIFY_CENTER %tmp.34 53 66 85 ];
+        %tmp.34 = getv %tmp.33 :TEXT_JUSTIFY_CENTER;
+        invoke %tmp.19 %tmp.20(%tmp.24, %tmp.28, %tmp.30, %tmp.32, %tmp.34);
+[ "D:\gduriez\Perso\Dossiers\DossiersVS\ProjectsWatch\source\settingsAnalogView.mc" 54 2 ]
+        %tmp.35 = lgetv %dc;
+        symbol [ dc %tmp.35 54 2 4 ];
+        symbol [ drawText %tmp.36 54 5 13 ];
+        %tmp.36 = getv function %tmp.35 :drawText;
+        symbol [ largEcran %tmp.38 54 14 23 ];
+        %tmp.38 = getv ? :largEcran;
+        %tmp.39 = 2;
+        %tmp.40 = div %tmp.38 %tmp.39;
+        symbol [ largEcran %tmp.42 54 26 35 ];
+        %tmp.42 = getv ? :largEcran;
+        %tmp.43 = .45;
+        %tmp.44 = mul %tmp.42 %tmp.43;
+        symbol [ Gfx %tmp.45 54 41 44 ];
+        %tmp.45 = getm $.Toybox.Graphics;
+        symbol [ FONT_SMALL %tmp.46 54 45 55 ];
+        %tmp.46 = getv %tmp.45 :FONT_SMALL;
+        symbol [ element_promptTab %tmp.48 54 56 73 ];
+        %tmp.48 = getv ? :element_promptTab;
+        symbol [ numEnCours %tmp.50 54 74 84 ];
+        %tmp.50 = getv ? :numEnCours;
+        %tmp.51 = agetv %tmp.48 %tmp.50;
+        symbol [ Gfx %tmp.52 54 86 89 ];
+        %tmp.52 = getm $.Toybox.Graphics;
+        symbol [ TEXT_JUSTIFY_CENTER %tmp.53 54 90 109 ];
+        %tmp.53 = getv %tmp.52 :TEXT_JUSTIFY_CENTER;
+        invoke %tmp.35 %tmp.36(%tmp.40, %tmp.44, %tmp.46, %tmp.51, %tmp.53);
+[ "D:\gduriez\Perso\Dossiers\DossiersVS\ProjectsWatch\source\settingsAnalogView.mc" 55 2 ]
+        [ "D__gduriez_Perso_Dossiers_DossiersVS_ProjectsWatch_source_settingsAnalogView_mc_50_32_60_1_start" "D__gduriez_Perso_Dossiers_DossiersVS_ProjectsWatch_source_settingsAnalogView_mc_50_32_60_1_stop" ]
+        %degreeStart.2 = local;
+        symbol [ degreeStart %degreeStart.2 55 6 17 ];
+        symbol [ numEnCours %tmp.55 55 20 30 ];
+        %tmp.55 = getv ? :numEnCours;
+        symbol [ largIndicateur %tmp.57 55 31 45 ];
+        %tmp.57 = getv ? :largIndicateur;
+        %tmp.58 = mul %tmp.55 %tmp.57;
+        %tmp.59 = 90;
+        %tmp.60 = add %tmp.58 %tmp.59;
+        lputv %degreeStart.2 %tmp.60;
+        symbol [ degreeStart %degreeStart.2 55 6 17 ];
+[ "D:\gduriez\Perso\Dossiers\DossiersVS\ProjectsWatch\source\settingsAnalogView.mc" 56 2 ]
+        [ "D__gduriez_Perso_Dossiers_DossiersVS_ProjectsWatch_source_settingsAnalogView_mc_50_32_60_1_start" "D__gduriez_Perso_Dossiers_DossiersVS_ProjectsWatch_source_settingsAnalogView_mc_50_32_60_1_stop" ]
+        %degreeEnd.3 = local;
+        symbol [ degreeEnd %degreeEnd.3 56 6 15 ];
+        symbol [ numEnCours %tmp.62 56 19 29 ];
+        %tmp.62 = getv ? :numEnCours;
+        %tmp.63 = 1;
+        %tmp.64 = add %tmp.62 %tmp.63;
+        symbol [ largIndicateur %tmp.66 56 33 47 ];
+        %tmp.66 = getv ? :largIndicateur;
+        %tmp.67 = mul %tmp.64 %tmp.66;
+        %tmp.68 = 90;
+        %tmp.69 = add %tmp.67 %tmp.68;
+        lputv %degreeEnd.3 %tmp.69;
+        symbol [ degreeEnd %degreeEnd.3 56 6 15 ];
+[ "D:\gduriez\Perso\Dossiers\DossiersVS\ProjectsWatch\source\settingsAnalogView.mc" 57 2 ]
+        %tmp.70 = lgetv %dc;
+        symbol [ dc %tmp.70 57 2 4 ];
+        symbol [ setPenWidth %tmp.71 57 5 16 ];
+        %tmp.71 = getv function %tmp.70 :setPenWidth;
+        %tmp.72 = 10;
+        invoke %tmp.70 %tmp.71(%tmp.72);
+[ "D:\gduriez\Perso\Dossiers\DossiersVS\ProjectsWatch\source\settingsAnalogView.mc" 58 2 ]
+        %tmp.73 = lgetv %dc;
+        symbol [ dc %tmp.73 58 2 4 ];
+        symbol [ drawArc %tmp.74 58 5 12 ];
+        %tmp.74 = getv function %tmp.73 :drawArc;
+        symbol [ largEcran %tmp.76 58 13 22 ];
+        %tmp.76 = getv ? :largEcran;
+        %tmp.77 = 2;
+        %tmp.78 = div %tmp.76 %tmp.77;
+        symbol [ largEcran %tmp.80 58 26 35 ];
+        %tmp.80 = getv ? :largEcran;
+        %tmp.81 = 2;
+        %tmp.82 = div %tmp.80 %tmp.81;
+        symbol [ largEcran %tmp.84 58 39 48 ];
+        %tmp.84 = getv ? :largEcran;
+        %tmp.85 = 2;
+        %tmp.86 = div %tmp.84 %tmp.85;
+        %tmp.87 = 5;
+        %tmp.88 = sub %tmp.86 %tmp.87;
+        %tmp.89 = 0;
+        %tmp.90 = lgetv %degreeStart.2;
+        symbol [ degreeStart %tmp.90 58 57 68 ];
+        %tmp.91 = lgetv %degreeEnd.3;
+        symbol [ degreeEnd %tmp.91 58 71 80 ];
+        invoke %tmp.73 %tmp.74(%tmp.78, %tmp.82, %tmp.88, %tmp.89, %tmp.90, %tmp.91);
+[ "D:\gduriez\Perso\Dossiers\DossiersVS\ProjectsWatch\source\settingsAnalogView.mc" 59 2 ]
+        %tmp.92 = lgetv %dc;
+        symbol [ dc %tmp.92 59 2 4 ];
+        symbol [ setPenWidth %tmp.93 59 5 16 ];
+        %tmp.93 = getv function %tmp.92 :setPenWidth;
+        %tmp.94 = 1;
+        invoke %tmp.92 %tmp.93(%tmp.94);
+D__gduriez_Perso_Dossiers_DossiersVS_ProjectsWatch_source_settingsAnalogView_mc_50_32_60_1_stop:
+    }
+    [ @file = "D:\gduriez\Perso\Dossiers\DossiersVS\ProjectsWatch\source\settingsAnalogView.mc"; @line = 62; @symbol_functiondef = [prev,62,10,14]; ]
+    function prev() {
+D__gduriez_Perso_Dossiers_DossiersVS_ProjectsWatch_source_settingsAnalogView_mc_62_17_66_1_start:
+[ "D:\gduriez\Perso\Dossiers\DossiersVS\ProjectsWatch\source\settingsAnalogView.mc" 63 2 ]
+        symbol [ numEnCours %tmp.2 63 16 26 ];
+        %tmp.2 = getv ? :numEnCours;
+        symbol [ element_promptTab %tmp.4 63 27 44 ];
+        %tmp.4 = getv ? :element_promptTab;
+        symbol [ size %tmp.5 63 45 49 ];
+        %tmp.5 = getv function %tmp.4 :size;
+        %tmp.6 = invoke %tmp.4 %tmp.5();
+        %tmp.7 = add %tmp.2 %tmp.6;
+        %tmp.8 = 1;
+        %tmp.9 = sub %tmp.7 %tmp.8;
+        symbol [ element_promptTab %tmp.11 63 58 75 ];
+        %tmp.11 = getv ? :element_promptTab;
+        symbol [ size %tmp.12 63 76 80 ];
+        %tmp.12 = getv function %tmp.11 :size;
+        %tmp.13 = invoke %tmp.11 %tmp.12();
+        %tmp.14 = mod %tmp.9 %tmp.13;
+        symbol [ numEnCours ? 63 2 12 ];
+        putv self :numEnCours %tmp.14;
+[ "D:\gduriez\Perso\Dossiers\DossiersVS\ProjectsWatch\source\settingsAnalogView.mc" 64 2 ]
+        symbol [ params %tmp.15 64 2 8 ];
+        %tmp.15 = getv self :params;
+        symbol [ numEnCours %tmp.17 64 25 35 ];
+        %tmp.17 = getv ? :numEnCours;
+        symbol [ numParametre %tmp.19 64 9 21 ];
+        %tmp.19 = getv ? :numParametre;
+        aputv %tmp.15 %tmp.19 %tmp.17;
+[ "D:\gduriez\Perso\Dossiers\DossiersVS\ProjectsWatch\source\settingsAnalogView.mc" 65 2 ]
+        symbol [ Ui %tmp.20 65 2 4 ];
+        %tmp.20 = getm $.Toybox.WatchUi;
+        symbol [ requestUpdate %tmp.21 65 5 18 ];
+        %tmp.21 = getv function %tmp.20 :requestUpdate;
+        invoke %tmp.20 %tmp.21();
+D__gduriez_Perso_Dossiers_DossiersVS_ProjectsWatch_source_settingsAnalogView_mc_62_17_66_1_stop:
+    }
+    [ @file = "D:\gduriez\Perso\Dossiers\DossiersVS\ProjectsWatch\source\settingsAnalogView.mc"; @line = 68; @symbol_functiondef = [next,68,13,17]; ]
+    function next() {
+D__gduriez_Perso_Dossiers_DossiersVS_ProjectsWatch_source_settingsAnalogView_mc_68_20_72_1_start:
+[ "D:\gduriez\Perso\Dossiers\DossiersVS\ProjectsWatch\source\settingsAnalogView.mc" 69 2 ]
+        symbol [ numEnCours %tmp.2 69 16 26 ];
+        %tmp.2 = getv ? :numEnCours;
+        symbol [ element_promptTab %tmp.4 69 27 44 ];
+        %tmp.4 = getv ? :element_promptTab;
+        symbol [ size %tmp.5 69 45 49 ];
+        %tmp.5 = getv function %tmp.4 :size;
+        %tmp.6 = invoke %tmp.4 %tmp.5();
+        %tmp.7 = add %tmp.2 %tmp.6;
+        %tmp.8 = 1;
+        %tmp.9 = add %tmp.7 %tmp.8;
+        symbol [ element_promptTab %tmp.11 69 58 75 ];
+        %tmp.11 = getv ? :element_promptTab;
+        symbol [ size %tmp.12 69 76 80 ];
+        %tmp.12 = getv function %tmp.11 :size;
+        %tmp.13 = invoke %tmp.11 %tmp.12();
+        %tmp.14 = mod %tmp.9 %tmp.13;
+        symbol [ numEnCours ? 69 2 12 ];
+        putv self :numEnCours %tmp.14;
+[ "D:\gduriez\Perso\Dossiers\DossiersVS\ProjectsWatch\source\settingsAnalogView.mc" 70 2 ]
+        symbol [ params %tmp.15 70 2 8 ];
+        %tmp.15 = getv self :params;
+        symbol [ numEnCours %tmp.17 70 25 35 ];
+        %tmp.17 = getv ? :numEnCours;
+        symbol [ numParametre %tmp.19 70 9 21 ];
+        %tmp.19 = getv ? :numParametre;
+        aputv %tmp.15 %tmp.19 %tmp.17;
+[ "D:\gduriez\Perso\Dossiers\DossiersVS\ProjectsWatch\source\settingsAnalogView.mc" 71 2 ]
+        symbol [ Ui %tmp.20 71 2 4 ];
+        %tmp.20 = getm $.Toybox.WatchUi;
+        symbol [ requestUpdate %tmp.21 71 5 18 ];
+        %tmp.21 = getv function %tmp.20 :requestUpdate;
+        invoke %tmp.20 %tmp.21();
+D__gduriez_Perso_Dossiers_DossiersVS_ProjectsWatch_source_settingsAnalogView_mc_68_20_72_1_stop:
+    }
+}
+[ @file = "D:\gduriez\Perso\Dossiers\DossiersVS\ProjectsWatch\source\settingsAnalogView.mc"; @line = 1; ]
+<init> {
+}
