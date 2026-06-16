@@ -19,10 +19,8 @@ function colorName(i) {
     return list[i] ;
 }
 function colorsNames() {
-return [
-"Aqua",
-"Black",
-"Blue",
+
+return [ "Aqua","Black","Blue",
 "Blue_Dark",//3
 "Blue_Ice",
 "Blue_Light",
