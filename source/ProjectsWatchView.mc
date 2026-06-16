@@ -287,7 +287,7 @@ class ProjectsWatchView extends WatchUi.WatchFace {
     }
 
     function dessineChamps(dc,clockTime,larg,thisIconFont) {
-        var positions = [[.154,.35],[.28,.65],[.72,.65],[.757,.35]];
+        var positions = [[.154,.4],[.28,.65],[.72,.65],[.757,.4]];
         var largeurHauteurIcon = 50*larg/454;
         for (var numParam = Field1 ; numParam<=Field4 ; numParam = numParam +2) {
             if (params[numParam] == 0) {break;}
@@ -297,7 +297,9 @@ class ProjectsWatchView extends WatchUi.WatchFace {
             dc.setColor(ProjectsWatchView.getParam(numParam+1),Graphics.COLOR_TRANSPARENT);
             if (params[numParam] < Seconds) { // dans ce cas il y a un icone a dessiner
                 var symbol = (params[numParam]+48).toChar().toString();
-                dc.drawText(positions[pos][0]*larg,positions[pos][1]*larg  ,thisIconFont,symbol,Graphics.TEXT_JUSTIFY_CENTER);    
+                dc.drawText(x,y  ,thisIconFont,symbol,Graphics.TEXT_JUSTIFY_CENTER);    
+            } else {
+                y = y - .05*larg;
             }
             var text = ProjectsWatchView.getFieldText(params[numParam],clockTime).toString();
             var f  = Graphics.FONT_SMALL;
@@ -306,7 +308,7 @@ class ProjectsWatchView extends WatchUi.WatchFace {
                 f = Graphics.FONT_XTINY;
             }
             System.println("dessine champs "+pos+"   xy = "+x+ " "+y+"   --> "+text);
-            dc.drawText(positions[pos][0]*larg,positions[pos][1]*larg + largeurHauteurIcon ,f,text,Graphics.TEXT_JUSTIFY_CENTER);    
+            dc.drawText(x,y + largeurHauteurIcon ,f,text,Graphics.TEXT_JUSTIFY_CENTER);    
         }
     }   
 
