@@ -20,6 +20,7 @@ class MenusDelegate extends Ui.InputDelegate {
         if (params[is24h]) {tab.add(display12);}
         else {tab.add(display24);}
         tab.add("Fields");
+        tab.add("BG source");
         tab.add("Unlock code");
         return tab;
     }
@@ -34,6 +35,15 @@ class MenusDelegate extends Ui.InputDelegate {
             "Right down field color", //0
             "Right up field data",//1
             "Right up field color", //0
+        ];
+        return tab;
+
+    }
+    function menuBGTab() {
+        var tab = [
+            "Nigthscout", 
+            "AAPS",
+            "Xdrip" 
         ];
         return tab;
 
@@ -68,7 +78,10 @@ class MenusDelegate extends Ui.InputDelegate {
         } else  if (item == Field1) { //fields
             var menuView = new MenuView("Fields",MenusDelegate.menuFieldsTab(),2, 0,true,true);
             Ui.pushView(menuView, new MenusFieldsDelegate(menuView,item), Ui.SLIDE_RIGHT);
-        } else  if (item == Field1+1) { //Code
+        } else  if (item == Field1+1) { //source BG
+            var menuView = new MenuView("BG source",MenusDelegate.menuBGTab(),3, params[sourceBG],true,true);
+            Ui.pushView(menuView, new MenusBGDelegate(menuView,item), Ui.SLIDE_RIGHT);
+        } else  if (item == Field1+2+1) { //Code
             var code_a_modifier = Application.Properties.getValue("code");
             var view = new KeyboardView(code_a_modifier,null);
             Ui.pushView(view, new KeyboardDelegate(view,code_a_modifier), Ui.SLIDE_RIGHT);
@@ -150,6 +163,7 @@ class MenusFieldsDelegate extends Ui.InputDelegate {
             tab.add(WatchUi.loadResource(Rez.Strings.BodyBattery));
             tab.add(WatchUi.loadResource(Rez.Strings.ActiveMinutesDay));
             tab.add(WatchUi.loadResource(Rez.Strings.ActiveMinutesWeek));
+            tab.add(WatchUi.loadResource(Rez.Strings.BloodGlucose));
             tab.add(WatchUi.loadResource(Rez.Strings.Seconds));
             tab.add(WatchUi.loadResource(Rez.Strings.Digital_Time));
             tab.add(WatchUi.loadResource(Rez.Strings.MoisJour));
@@ -245,6 +259,84 @@ class MenusFieldsDelegate extends Ui.InputDelegate {
 
 
 }
+
+
+
+class MenusBGDelegate extends Ui.InputDelegate {
+
+    var setttingAnalogView;
+    var menuView;
+    var numParam;
+
+
+    function initialize(_menuView,_numParam) {
+    	InputDelegate.initialize();
+    	menuView = _menuView;
+        numParam = _numParam;
+        
+    }
+
+    function onSelect()    {
+        var item = menuView.item;
+        params[sourceBG] = item;
+        Application.Storage.setValue("Params"+sourceBG,item);
+        Ui.popView(Ui.SLIDE_IMMEDIATE);
+    }
+
+
+    function onBack()    {
+        //menuView.item_menu_fields = 
+        Ui.popView(Ui.SLIDE_IMMEDIATE);
+        Ui.requestUpdate();
+        return true;
+    }
+
+ 
+
+	function onTap(clickEvent) {
+        return onSelect();
+    }
+
+    function onSwipe(evt) {
+		var direction = evt.getDirection();
+		if (direction == Ui.SWIPE_DOWN) {
+			return onPreviousPage();
+		}
+		if (direction == Ui.SWIPE_UP) {
+			return onNextPage();
+		}
+		if (direction == Ui.SWIPE_RIGHT) {
+			return onBack();
+		}
+        return true;
+    }
+	function onKey(keyEvent) {
+         if (keyEvent.getKey() == keyEvent.KEY_ENTER || keyEvent.getKey() == keyEvent.KEY_START) {
+            return onSelect();
+        }
+        else if (keyEvent.getKey() == keyEvent.KEY_UP) {
+            return onPreviousPage();
+        }
+        else if (keyEvent.getKey() == keyEvent.KEY_DOWN) {
+            return onNextPage();
+        }
+        else if (keyEvent.getKey() == keyEvent.KEY_ESC) {
+            return onBack();
+        }
+       return true;
+    }
+    
+    function onNextPage()    {
+    	menuView.next();
+    }
+    
+    function onPreviousPage() 	{
+    	menuView.prev();
+	}    
+
+
+}
+
 
 class AnalogSettingsDelegate extends Ui.InputDelegate {
     var setttingAnalogView;

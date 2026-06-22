@@ -7,11 +7,19 @@
 
 <settings>
 	<setting propertyKey="@Properties.code" title="@Strings.code_setting"><settingConfig type="alphaNumeric" /> </setting>
+	<setting propertyKey="@Properties.NSurl" title="@Strings.NSurl"><settingConfig type="alphaNumeric" /> </setting>
+    <setting propertyKey="@Properties.NStoken" title="@Strings.NStoken"><settingConfig type="alphaNumeric" /> </setting>
 </settings>
-
+<properties>
+    <property id="code" type="string"></property>
+    <property id="NSurl" type="string"></property>
+    <property id="NStoken" type="string"></property>
+ </properties>
 <strings>
     <string id="code_setting">Code to remove Dudu logo</string>
     <string id="codeApp">PROJWF654</string>
+    <string id="NSurl">NightScout Url</string>
+    <string id="NStoken">NightScout Token</string>
 </strings>
 
 

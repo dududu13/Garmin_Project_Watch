@@ -4,6 +4,7 @@ import Toybox.Lang;
 import Toybox.System;
 import Toybox.WatchUi;
 import Toybox.ActivityMonitor;
+using Toybox.Time.Gregorian as Calendar;
 
 
 class ProjectsWatchView extends WatchUi.WatchFace {
@@ -19,6 +20,7 @@ class ProjectsWatchView extends WatchUi.WatchFace {
     var codeOK = false;
     var timeInstallation = 0;
 
+
     function initialize() {
         WatchFace.initialize();
         iconsFieldsFont = WatchUi.loadResource(Rez.Fonts.AllIcons);
@@ -31,7 +33,7 @@ class ProjectsWatchView extends WatchUi.WatchFace {
 
     function onUpdate(dc as Dc) as Void {
         if (ParametresChanges) {
-            loadParams();
+            loadParams(false);
         }
         View.onUpdate(dc);
         if (! codeOK) {testTimeInstallation();}
@@ -39,23 +41,127 @@ class ProjectsWatchView extends WatchUi.WatchFace {
         dessineTout(dc,fenetre_heures,iconsFieldsFont,false);
     }
 
-    function loadParams() {
-        //params = [4, 33, 14, 3, 1, true, 0, 1, 0, 1, 0, 1, 0, 1 ];
-        
-        params = [42, 33, 14, 1, 1, true, 0, 1, 0, 1, 0, 1, 0, 1];
+    function loadParams(reset) {
+        params = [42, 33, 14, 1, 1, true, 0, 1, 0, 1, 0, 1, 0, 1,0,0];
         for (var i = 0 ; i < params.size() ; i++) {
-            var value = Application.Storage.getValue("Params"+i);
-            if (value != null) {params[i] = value;}
+            if (reset) {
+                Application.Storage.setValue("Params"+i,params[i]);
+            }
+            params[i] = getStoredParam(i,params[i]);
         }
+        System.println(params);
         couleurFond = Colors.colorValuesTab()[params[BackGroundColor]];
         couleurChiffresH = Colors.colorValuesTab()[params[HourColor]];
         couleurChiffresM = Colors.colorValuesTab()[params[MinutesColor]];
         testeCode();
         ParametresChanges = false;
-        //System.println("loadparams = "+params);
+
+
+ 
+    }
+    function getStoredParam(i,defaultValue) {
+        var value = Application.Storage.getValue("Params"+i);
+        if (value == null) {
+            Application.Storage.setValue("Params"+i, defaultValue);
+            value = defaultValue;
+        } 
+        var result = value;
+        return result;
     }
 
-    
+
+    function modifParam(i) {
+        var result;
+        //System.println("lecture param num "+i);
+        if ((i<=MinutesColor) || (i == Field1Color) || (i == Field2Color)|| (i == Field3Color)|| (i == Field4Color)){
+            result = Colors.colorValuesTab()[params[i]];
+        } else {
+            result = params[i];
+        }
+        //System.println("param num "+i+" = "+result);
+        return result;
+    }
+
+    function getProp(key,defaultValue) {
+        var property = Application.getApp().getProperty(key);
+        if (property == null) {
+            property = defaultValue;
+            Application.getApp().setProperty(key,defaultValue);
+        }
+        return property;
+    }
+
+    function readAllData() {
+        var data = ProjectsWatchApp.readAlldData();
+        ProjectsWatchView.getLastData(data);
+        return data;
+    }
+
+    function getLastData(data) {
+        bgBg = 0;
+        bgDelta = 0;
+        bgSecondes = 0;                                
+        var size = data.size();
+        for (var i=size-1;i>=0;i=i-1) {
+            System.println("getlastdata "+data[i]);
+            if (data[i][0] > 0) {
+                bgBg = data[i][0];
+                bgDelta = data[i][1];
+                bgSecondes = data[i][2]; 
+                return;
+            }
+        }
+
+    }
+    function prochainBackground() { //avec moment
+        var prochainBackground = Background.getTemporalEventRegisteredTime();// Time.Moment or Time.Duration or Null
+        var delaiRestant = 0;
+        var prochainTime = "";
+        if (prochainBackground == null) {
+            System.println("prochainBackground null, registerasap");
+            delaiRestant = "...";
+            //WatchApp.resync(0);
+        } else { 
+            if (prochainBackground.compare(Time.now())<0) {
+                System.println("prochainBackground < now, registerasap");
+                delaiRestant = "ERR";
+                //WatchApp.resync(0);
+            } else {
+                delaiRestant = prochainBackground.value()-Time.now().value();
+                var info = Calendar.info(prochainBackground, Time.FORMAT_LONG);
+                prochainTime = Lang.format("$1$:$2$:$3$", [info.hour.format("%02d"),info.min.format("%02d"),info.sec.format("%02d")]);
+
+            }
+        }
+        return [delaiRestant,prochainTime];
+    }
+    function isCapteurChanged() {
+        var temp = Application.Storage.getValue("CapteurChanged");
+        if (temp == null) {return true;}
+        else {return temp;}
+    }
+
+    function updatedBG() {
+        if (ProjectsWatchView.isCapteurChanged()) {
+            tabData = ProjectsWatchView.readAllData();
+            Application.Storage.setValue("CapteurChanged",false);
+        }
+        
+        var coeff = 1.0;
+        var format = "%01d";
+        if (unitBG == 1) {
+            coeff = 18.0;
+        }
+        else if (unitBG == 2) {
+            coeff = 1/18.0;
+            format = "%2.1f";
+        }
+        //System.println("updatedBG : bgBg = "+bgBg+"  coeff = "+coeff+"  format = "+format+"  bgbg*coeff = "+(bgBg*coeff));
+        return (bgBg*coeff).format(format);
+	}
+
+
+
 	static function testeCode() {
         myLogo = WatchUi.loadResource(Rez.Drawables.myLogo);
         var code_a_tester = Application.Properties.getValue("code");
@@ -156,17 +262,6 @@ class ProjectsWatchView extends WatchUi.WatchFace {
     }
 
 
-    function getParam(i) {
-        var result;
-        //System.println("lecture param num "+i);
-        if ((i<=MinutesColor) || (i == Field1Color) || (i == Field2Color)|| (i == Field3Color)|| (i == Field4Color)){
-            result = Colors.colorValuesTab()[params[i]];
-        } else {
-            result = params[i];
-        }
-        //System.println("param num "+i+" = "+result);
-        return result;
-    }
 
 
     function dessineFond(dc,larg,fenetre_heure) {
@@ -177,14 +272,14 @@ class ProjectsWatchView extends WatchUi.WatchFace {
         dc.fillPolygon([[.767*larg,.134*larg],[.639*larg,.267*larg],[.705*larg,.551*larg],[larg,.57*larg]]);
         dc.fillPolygon([[.233*larg,.134*larg],[.361*larg,.267*larg],[.295*larg,.449*larg],[0,.57*larg]]);
 
-        dc.setColor(ProjectsWatchView.getParam(PresentColor),Graphics.COLOR_TRANSPARENT);
+        dc.setColor(ProjectsWatchView.modifParam(PresentColor),Graphics.COLOR_TRANSPARENT);
         dc.setPenWidth(3);
         dc.drawLine(larg*.5-1,larg*.05,larg*.5-1,larg*.55);
 
         var font = WatchUi.loadResource(Rez.Fonts.PresentPastFuture);
         if (font != null) {
             dc.drawText(0.48*larg,0.57*larg,font,"0",Graphics.TEXT_JUSTIFY_LEFT);//present
-            dc.setColor(ProjectsWatchView.getParam(PastFutureColor),Graphics.COLOR_TRANSPARENT);
+            dc.setColor(ProjectsWatchView.modifParam(PastFutureColor),Graphics.COLOR_TRANSPARENT);
             dc.drawText(0.21*larg,0.218*larg,font,"1",Graphics.TEXT_JUSTIFY_LEFT);//past
             dc.drawText(0.6*larg,0.176*larg,font,"2",Graphics.TEXT_JUSTIFY_LEFT);//future
         }
@@ -205,7 +300,7 @@ class ProjectsWatchView extends WatchUi.WatchFace {
         //vectorFont = Graphics.getVectorFont({:face=>fontList, :size=>siz,:font=>Graphics.FONT_SMALL, :scale=>0.5});  
         var h =  clockTime.hour;
         var hMax = 24;
-        if (! ProjectsWatchView.getParam(is24h)) {
+        if (! ProjectsWatchView.modifParam(is24h)) {
             h = h % 12;
             hMax = 12;       
         }
@@ -294,21 +389,30 @@ class ProjectsWatchView extends WatchUi.WatchFace {
                 var pos = (numParam-Field1) /2;
                 var x = positions[pos][0]*larg;
                 var y = positions[pos][1]*larg;
-                dc.setColor(ProjectsWatchView.getParam(numParam+1),Graphics.COLOR_TRANSPARENT);
+                dc.setColor(ProjectsWatchView.modifParam(numParam+1),Graphics.COLOR_TRANSPARENT);
                 if (params[numParam] < Seconds) { // dans ce cas il y a un icone a dessiner
-                    var symbol = (params[numParam]+48).toChar().toString();
-                    dc.drawText(x,y  ,thisIconFont,symbol,Graphics.TEXT_JUSTIFY_CENTER);    
+                    var symbol = (params[numParam]+65).toChar().toString();
+                    dc.drawText(x,y  ,thisIconFont,symbol,Graphics.TEXT_JUSTIFY_CENTER);   
+                    System.println("dessine icone "+params[numParam]+"  symbole "+symbol);
                 } else {
                     y = y - .05*larg;
                 }
                 var text = ProjectsWatchView.getFieldText(params[numParam],clockTime).toString();
                 var f  = Graphics.FONT_SMALL;
-                var longText = dc.getTextWidthInPixels(text, f);
-                if (longText > larg * .25) {
+                if (dc.getTextWidthInPixels(text, f) > larg * .3) {
                     f = Graphics.FONT_XTINY;
                 }
-                System.println("dessine champs "+pos+"   xy = "+x+ " "+y+"   --> "+text);
+                //System.println("dessine champs "+pos+" (valeur = "+params[numParam]+")   xy = "+x+ " "+y+"   --> "+text);
                 dc.drawText(x,y + largeurHauteurIcon ,f,text,Graphics.TEXT_JUSTIFY_CENTER);   
+                if (params[numParam] == BG)  {
+                    var timeSec = Time.now().value()/1000;
+                    if (timeSec - bgSecondes > 11*60) { // si plus de 11 minutes je barre
+                        var l = dc.getTextWidthInPixels(text, f);
+                        var h = dc.getFontHeight(f);
+                        dc.drawLine(x,y,x+l,y+h);
+                        dc.drawLine(x,y+h,x+l,y);
+                    } 
+                }
             } 
         }
     }   
@@ -426,6 +530,9 @@ class ProjectsWatchView extends WatchUi.WatchFace {
 			}
 		}
 
+		else if (fieldType==BG)  {
+			result =  ProjectsWatchView.updatedBG();
+		}			
 		else if (fieldType==Seconds)  {
 			result =  clockTime.sec;
 		}			
@@ -439,29 +546,29 @@ class ProjectsWatchView extends WatchUi.WatchFace {
             result = h.format(form)+":"+clockTime.min.format("%02d");
 		}
 		else if (fieldType==MoisJour)  {
-            var today = Toybox.Time.Gregorian.info(Time.now(), Time.FORMAT_SHORT);
-			result = MOIS[today.month] + " "+today.day;
+            var today = Toybox.Time.Gregorian.info(Time.now(), Time.FORMAT_MEDIUM);
+			result = today.month + " "+today.day;
 		}			
 		else if (fieldType==JourMois)  {
-            var today = Toybox.Time.Gregorian.info(Time.now(), Time.FORMAT_SHORT);
-			result = today.day + " "+MOIS[today.month];
+            var today = Toybox.Time.Gregorian.info(Time.now(), Time.FORMAT_MEDIUM);
+			result = today.day + " "+today.month;
 		}			
 		else if (fieldType==JourSem)  {
-            var today = Toybox.Time.Gregorian.info(Time.now(), Time.FORMAT_SHORT);
-			result = DAYOFWEEK[today.day_of_week];
+            var today = Toybox.Time.Gregorian.info(Time.now(), Time.FORMAT_MEDIUM);
+			result = today.day_of_week;
 		}			
 		else if (fieldType==JourSemJour)  {
-            var today = Toybox.Time.Gregorian.info(Time.now(), Time.FORMAT_SHORT);
-			result = DAYOFWEEK[today.day_of_week]+ " "+today.day;
+            var today = Toybox.Time.Gregorian.info(Time.now(), Time.FORMAT_MEDIUM);
+			result = today.day_of_week+ " "+today.day;
 		}			
 		else if (fieldType==JourSemMoisJour)  {
-            var today = Toybox.Time.Gregorian.info(Time.now(), Time.FORMAT_SHORT);
-			result = DAYOFWEEK[today.day_of_week];
+            var today = Toybox.Time.Gregorian.info(Time.now(), Time.FORMAT_MEDIUM);
+			result = today.day_of_week;
 			if (result.equals("Dim")) { // si langue française on inverse mois et jour
-				    result = result+"\n" + today.day.format("%02d") + "/"+ today.month.format("%02d");
+				    result = result+"\n" + today.day.format("%02d") + " "+ today.month;
 				}		
                 else {
-                    result = result+"\n" + today.month.format("%02d")+"/"+today.day; 
+                    result = result+"\n" + today.month+" "+today.day; 
                 }				
 		}			
 		else if (fieldType==Week_number)  {
@@ -481,10 +588,6 @@ class ProjectsWatchView extends WatchUi.WatchFace {
 	    var day_of_week = (first_day_of_year + 3) % 7; // days past thursday
 	    var week_of_year = (given_day_of_year - first_day_of_year + day_of_week + 4) / 7;
     	// week is at end of this year or the beginning of next year
-        System.println("first_day_of_year "+first_day_of_year);
-        System.println("given_day_of_year "+given_day_of_year);
-        System.println("day_of_week "+day_of_week);
-        System.println("week_of_year "+week_of_year);
 	    if (week_of_year == 53) {
 	        if (day_of_week == 6) {
 	            return week_of_year;
