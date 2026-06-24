@@ -8,7 +8,7 @@ using Toybox.Time.Gregorian as Calendar;
 
 
 class ProjectsWatchView extends WatchUi.WatchFace {
-    const TIME_BEFORE_LOCKING = 4; //un peu plus d'une heure
+    const TIME_BEFORE_LOCKING = 4000; //un peu plus d'une heure
     
 	var decalageY_OLED = 0;  // pour changement de place en mode low power sur les AMOLED
 	var decalageX_OLED = 0;  // pour changement de place en mode low power sur les AMOLED
@@ -19,6 +19,7 @@ class ProjectsWatchView extends WatchUi.WatchFace {
     var locked = false;
     var codeOK = false;
     var timeInstallation = 0;
+    
 
 
     function initialize() {
@@ -30,10 +31,9 @@ class ProjectsWatchView extends WatchUi.WatchFace {
         fenetre_heures = WatchUi.loadResource(Rez.Drawables.fenetre_heures);
     }
 
-
     function onUpdate(dc as Dc) as Void {
         if (ParametresChanges) {
-            loadParams(false);
+            loadParams(true);
         }
         View.onUpdate(dc);
         if (! codeOK) {testTimeInstallation();}
@@ -41,32 +41,22 @@ class ProjectsWatchView extends WatchUi.WatchFace {
         dessineTout(dc,fenetre_heures,iconsFieldsFont,false);
     }
 
-    function loadParams(reset) {
-        params = [42, 33, 14, 1, 1, true, 0, 1, 0, 1, 0, 1, 0, 1,0,0];
-        for (var i = 0 ; i < params.size() ; i++) {
-            if (reset) {
-                Application.Storage.setValue("Params"+i,params[i]);
-            }
-            params[i] = getStoredParam(i,params[i]);
+    function loadParams(testTheCode) {
+        //params = [42, 33, 14, 1, 1, true, 0, 1, 0, 1, 0, 1, 0, 1,0,0];
+        params = [];
+        var thisListParamNames = ProjectsWatchApp.listParamNames();
+        for (var j = 0; j < thisListParamNames.size(); j++) {
+            System.println("Loading parameter: " + thisListParamNames[j]);
+            params.add(Application.Properties.getValue("param"+j));
         }
         System.println(params);
         couleurFond = Colors.colorValuesTab()[params[BackGroundColor]];
         couleurChiffresH = Colors.colorValuesTab()[params[HourColor]];
         couleurChiffresM = Colors.colorValuesTab()[params[MinutesColor]];
-        testeCode();
+        if (testTheCode) {
+            testeCode();
+        }
         ParametresChanges = false;
-
-
- 
-    }
-    function getStoredParam(i,defaultValue) {
-        var value = Application.Storage.getValue("Params"+i);
-        if (value == null) {
-            Application.Storage.setValue("Params"+i, defaultValue);
-            value = defaultValue;
-        } 
-        var result = value;
-        return result;
     }
 
 
@@ -82,17 +72,9 @@ class ProjectsWatchView extends WatchUi.WatchFace {
         return result;
     }
 
-    function getProp(key,defaultValue) {
-        var property = Application.getApp().getProperty(key);
-        if (property == null) {
-            property = defaultValue;
-            Application.getApp().setProperty(key,defaultValue);
-        }
-        return property;
-    }
 
     function readAllData() {
-        var data = ProjectsWatchApp.readAlldData();
+        var data = ProjectsWatchApp.readAllData();
         ProjectsWatchView.getLastData(data);
         return data;
     }
@@ -108,7 +90,6 @@ class ProjectsWatchView extends WatchUi.WatchFace {
                 bgBg = data[i][0];
                 bgDelta = data[i][1];
                 bgSecondes = data[i][2]; 
-                return;
             }
         }
 
@@ -135,18 +116,8 @@ class ProjectsWatchView extends WatchUi.WatchFace {
         }
         return [delaiRestant,prochainTime];
     }
-    function isCapteurChanged() {
-        var temp = Application.Storage.getValue("CapteurChanged");
-        if (temp == null) {return true;}
-        else {return temp;}
-    }
 
     function updatedBG() {
-        if (ProjectsWatchView.isCapteurChanged()) {
-            tabData = ProjectsWatchView.readAllData();
-            Application.Storage.setValue("CapteurChanged",false);
-        }
-        
         var coeff = 1.0;
         var format = "%01d";
         if (unitBG == 1) {
@@ -164,9 +135,9 @@ class ProjectsWatchView extends WatchUi.WatchFace {
 
 	static function testeCode() {
         myLogo = WatchUi.loadResource(Rez.Drawables.myLogo);
-        var code_a_tester = Application.Properties.getValue("code");
+        var code_a_tester = params[code];
 		if (code_a_tester == null) {
-            Application.Properties.setValue("code","");
+            Application.Properties.setValue("param"+code,"");
             code_a_tester = "";
         }
         if (code_a_tester.length() >= 1) {
@@ -179,11 +150,11 @@ class ProjectsWatchView extends WatchUi.WatchFace {
         var goodCode = WatchUi.loadResource(Rez.Strings.codeApp);
 
         if (code_a_tester.equals(goodCode)) {
-            System.println("  code entré OK = "+code_a_tester);
+            System.println("  code OK = "+code_a_tester);
             codeOK = true;
             locked = false;
         } else {
-            System.println("  code entré pas OK = "+code_a_tester);
+            System.println("  code pas OK = "+code_a_tester);
             codeOK = false;
             locked = true;
         }
@@ -383,7 +354,7 @@ class ProjectsWatchView extends WatchUi.WatchFace {
 
     function dessineChamps(dc,clockTime,larg,thisIconFont) {
         var positions = [[.154,.4],[.28,.65],[.72,.65],[.757,.4]];
-        var largeurHauteurIcon = 50*larg/454;
+        var hauteurIcon = 50*larg/454;
         for (var numParam = Field1 ; numParam<=Field4 ; numParam = numParam +2) {
             if (params[numParam] != 0) {
                 var pos = (numParam-Field1) /2;
@@ -393,7 +364,7 @@ class ProjectsWatchView extends WatchUi.WatchFace {
                 if (params[numParam] < Seconds) { // dans ce cas il y a un icone a dessiner
                     var symbol = (params[numParam]+65).toChar().toString();
                     dc.drawText(x,y  ,thisIconFont,symbol,Graphics.TEXT_JUSTIFY_CENTER);   
-                    System.println("dessine icone "+params[numParam]+"  symbole "+symbol);
+                    //System.println("dessine icone "+params[numParam]+"  symbole "+symbol);
                 } else {
                     y = y - .05*larg;
                 }
@@ -402,15 +373,18 @@ class ProjectsWatchView extends WatchUi.WatchFace {
                 if (dc.getTextWidthInPixels(text, f) > larg * .3) {
                     f = Graphics.FONT_XTINY;
                 }
+                y = y + hauteurIcon;
                 //System.println("dessine champs "+pos+" (valeur = "+params[numParam]+")   xy = "+x+ " "+y+"   --> "+text);
-                dc.drawText(x,y + largeurHauteurIcon ,f,text,Graphics.TEXT_JUSTIFY_CENTER);   
+                dc.drawText(x,y ,f,text,Graphics.TEXT_JUSTIFY_CENTER);   
                 if (params[numParam] == BG)  {
                     var timeSec = Time.now().value()/1000;
                     if (timeSec - bgSecondes > 11*60) { // si plus de 11 minutes je barre
-                        var l = dc.getTextWidthInPixels(text, f);
+                    
+                        var h2 = hauteurIcon/4;
+                        var l = dc.getTextWidthInPixels(text, f)/2;
                         var h = dc.getFontHeight(f);
-                        dc.drawLine(x,y,x+l,y+h);
-                        dc.drawLine(x,y+h,x+l,y);
+                        dc.drawLine(x-l,y+2*h2,x+l,y+2*h2);
+                        dc.drawLine(x-l,y+2.5*h2,x+l,y+2.5*h2);
                     } 
                 }
             } 

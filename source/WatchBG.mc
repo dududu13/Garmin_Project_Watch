@@ -21,18 +21,23 @@ class WatchBG extends Toybox.System.ServiceDelegate {
         Sys.println("in onTemporalEvent");
         receiveCtr = 0;
         reqNum = 0;
-        myWebRequest(true, 1, false);
-        Sys.println("onTemporalEvent receiveCtr="+receiveCtr);
+        var isThereBg = Application.Properties.getValue("param"+Field1) == BG || Application.Properties.getValue("param"+Field2) == BG || Application.Properties.getValue("param"+Field3) == BG || Application.Properties.getValue("param"+Field4) == BG;
+        if (isThereBg) {
+            System.println("onTemporalEvent call myWebRequest");
+            myWebRequest(true, 0, false);
+        }
+        else {
+            System.println("onTemporalEvent no BG field, Background exit");
+            Background.exit([0,0,0]);
+        }
 
     }
 
 	function removeWhitespace(url) {
-		while(!url.equals("") &&
-		      url.substring(0,1).equals(" ")) {
+		while(!url.equals("") && url.substring(0,1).equals(" ")) {
 		    url = url.substring(1,url.length());
         }
-		while(!url.equals("") &&
-		      url.substring(url.length()-1,url.length()).equals(" ")) {
+		while(!url.equals("") && url.substring(url.length()-1,url.length()).equals(" ")) {
 		    url = url.substring(0,url.length()-1);
         }
         while(url.substring(url.length()-1,url.length()).equals("/")) {
@@ -46,9 +51,9 @@ class WatchBG extends Toybox.System.ServiceDelegate {
 
 
     function makeNSURL(fetchMode, loop) {
-        var thisApp = Application.getApp();
-        var url = thisApp.getProperty("NSurl");
-        var utilisateurNS = thisApp.getProperty("NStoken");
+        
+        var url =  Application.Properties.getValue("param"+NSurl);
+        var utilisateurNS =  Application.Properties.getValue("param"+NStoken);
 		var token = "";
 		if ((utilisateurNS != null) && (! utilisateurNS.equals(""))) {token = "&token="+utilisateurNS;}
 		
@@ -77,12 +82,12 @@ class WatchBG extends Toybox.System.ServiceDelegate {
 
     function myWebRequest(ns, fetchMode, loop) {
 		var url;
-		var sourceBG = Application.getApp().getProperty("sourceBG");
-		if (sourceBG==0) {
+        var source = Application.Properties.getValue("param"+sourceBG);
+		if (source == 0) {
 			url = makeNSURL(fetchMode, loop);//Nightscout
-		} else if (sourceBG == 1) {
+		} else if (source == 1) {
 			url = "http://127.0.0.1:28891/sgv.json?count=3&brief_mode=true"; //AAPS
-		} else if (sourceBG == 2) {
+		} else if (source == 2) {
 			url = "http://127.0.0.1:17580/sgv.json?count=3" ; //xdrip
 		}
 		//traiteDebugSent(sourceBG);

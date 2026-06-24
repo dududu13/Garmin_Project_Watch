@@ -1,6 +1,1806 @@
 {
   "settings" : [ {
-    "key" : "code",
+    "key" : "param0",
+    "valueType" : "number",
+    "defaultValue" : 42,
+    "configTitle" : "BackGroundColor",
+    "configPrompt" : null,
+    "configType" : "list",
+    "configError" : null,
+    "configHelpUrl" : null,
+    "configReadonly" : false,
+    "configRequired" : false,
+    "configOptions" : [ {
+      "display" : "Aqua",
+      "value" : 0
+    }, {
+      "display" : "Black",
+      "value" : 1
+    }, {
+      "display" : "Blue",
+      "value" : 2
+    }, {
+      "display" : "Blue_Dark",
+      "value" : 3
+    }, {
+      "display" : "Blue_Ice",
+      "value" : 4
+    }, {
+      "display" : "Blue_Light",
+      "value" : 5
+    }, {
+      "display" : "Blue_Ocean",
+      "value" : 6
+    }, {
+      "display" : "Blue_Pale",
+      "value" : 7
+    }, {
+      "display" : "Blue_Sky",
+      "value" : 8
+    }, {
+      "display" : "Brown",
+      "value" : 9
+    }, {
+      "display" : "Coral",
+      "value" : 10
+    }, {
+      "display" : "Gold",
+      "value" : 11
+    }, {
+      "display" : "Gray_25",
+      "value" : 12
+    }, {
+      "display" : "Gray_40",
+      "value" : 13
+    }, {
+      "display" : "Gray_50",
+      "value" : 14
+    }, {
+      "display" : "Gray_80",
+      "value" : 15
+    }, {
+      "display" : "Gray_Blue",
+      "value" : 16
+    }, {
+      "display" : "Green",
+      "value" : 17
+    }, {
+      "display" : "Green_Bright",
+      "value" : 18
+    }, {
+      "display" : "Green_Dark",
+      "value" : 19
+    }, {
+      "display" : "Green_Light",
+      "value" : 20
+    }, {
+      "display" : "Green_Olive",
+      "value" : 21
+    }, {
+      "display" : "Green_Sea",
+      "value" : 22
+    }, {
+      "display" : "Indigo",
+      "value" : 23
+    }, {
+      "display" : "Ivory",
+      "value" : 24
+    }, {
+      "display" : "Lavender",
+      "value" : 25
+    }, {
+      "display" : "Lime",
+      "value" : 26
+    }, {
+      "display" : "Orange",
+      "value" : 27
+    }, {
+      "display" : "Orange_Light",
+      "value" : 28
+    }, {
+      "display" : "Periwinkle",
+      "value" : 29
+    }, {
+      "display" : "Pink",
+      "value" : 30
+    }, {
+      "display" : "Plum",
+      "value" : 31
+    }, {
+      "display" : "Purple_Dark",
+      "value" : 32
+    }, {
+      "display" : "Red",
+      "value" : 33
+    }, {
+      "display" : "Red_Dark",
+      "value" : 34
+    }, {
+      "display" : "Rose",
+      "value" : 35
+    }, {
+      "display" : "Tan",
+      "value" : 36
+    }, {
+      "display" : "Teal",
+      "value" : 37
+    }, {
+      "display" : "Teal_Dark",
+      "value" : 38
+    }, {
+      "display" : "Turquoise",
+      "value" : 39
+    }, {
+      "display" : "Turquoise_Light",
+      "value" : 40
+    }, {
+      "display" : "Violet",
+      "value" : 41
+    }, {
+      "display" : "White",
+      "value" : 42
+    }, {
+      "display" : "Yellow",
+      "value" : 43
+    }, {
+      "display" : "Yellow_Dark",
+      "value" : 44
+    }, {
+      "display" : "Yellow_Light",
+      "value" : 45
+    } ],
+    "configMin" : null,
+    "configMax" : null,
+    "configMaxLength" : null
+  }, {
+    "key" : "param1",
+    "valueType" : "number",
+    "defaultValue" : 33,
+    "configTitle" : "PresentColor",
+    "configPrompt" : null,
+    "configType" : "list",
+    "configError" : null,
+    "configHelpUrl" : null,
+    "configReadonly" : false,
+    "configRequired" : false,
+    "configOptions" : [ {
+      "display" : "Aqua",
+      "value" : 0
+    }, {
+      "display" : "Black",
+      "value" : 1
+    }, {
+      "display" : "Blue",
+      "value" : 2
+    }, {
+      "display" : "Blue_Dark",
+      "value" : 3
+    }, {
+      "display" : "Blue_Ice",
+      "value" : 4
+    }, {
+      "display" : "Blue_Light",
+      "value" : 5
+    }, {
+      "display" : "Blue_Ocean",
+      "value" : 6
+    }, {
+      "display" : "Blue_Pale",
+      "value" : 7
+    }, {
+      "display" : "Blue_Sky",
+      "value" : 8
+    }, {
+      "display" : "Brown",
+      "value" : 9
+    }, {
+      "display" : "Coral",
+      "value" : 10
+    }, {
+      "display" : "Gold",
+      "value" : 11
+    }, {
+      "display" : "Gray_25",
+      "value" : 12
+    }, {
+      "display" : "Gray_40",
+      "value" : 13
+    }, {
+      "display" : "Gray_50",
+      "value" : 14
+    }, {
+      "display" : "Gray_80",
+      "value" : 15
+    }, {
+      "display" : "Gray_Blue",
+      "value" : 16
+    }, {
+      "display" : "Green",
+      "value" : 17
+    }, {
+      "display" : "Green_Bright",
+      "value" : 18
+    }, {
+      "display" : "Green_Dark",
+      "value" : 19
+    }, {
+      "display" : "Green_Light",
+      "value" : 20
+    }, {
+      "display" : "Green_Olive",
+      "value" : 21
+    }, {
+      "display" : "Green_Sea",
+      "value" : 22
+    }, {
+      "display" : "Indigo",
+      "value" : 23
+    }, {
+      "display" : "Ivory",
+      "value" : 24
+    }, {
+      "display" : "Lavender",
+      "value" : 25
+    }, {
+      "display" : "Lime",
+      "value" : 26
+    }, {
+      "display" : "Orange",
+      "value" : 27
+    }, {
+      "display" : "Orange_Light",
+      "value" : 28
+    }, {
+      "display" : "Periwinkle",
+      "value" : 29
+    }, {
+      "display" : "Pink",
+      "value" : 30
+    }, {
+      "display" : "Plum",
+      "value" : 31
+    }, {
+      "display" : "Purple_Dark",
+      "value" : 32
+    }, {
+      "display" : "Red",
+      "value" : 33
+    }, {
+      "display" : "Red_Dark",
+      "value" : 34
+    }, {
+      "display" : "Rose",
+      "value" : 35
+    }, {
+      "display" : "Tan",
+      "value" : 36
+    }, {
+      "display" : "Teal",
+      "value" : 37
+    }, {
+      "display" : "Teal_Dark",
+      "value" : 38
+    }, {
+      "display" : "Turquoise",
+      "value" : 39
+    }, {
+      "display" : "Turquoise_Light",
+      "value" : 40
+    }, {
+      "display" : "Violet",
+      "value" : 41
+    }, {
+      "display" : "White",
+      "value" : 42
+    }, {
+      "display" : "Yellow",
+      "value" : 43
+    }, {
+      "display" : "Yellow_Dark",
+      "value" : 44
+    }, {
+      "display" : "Yellow_Light",
+      "value" : 45
+    }, {
+      "display" : "Transparent",
+      "value" : 46
+    } ],
+    "configMin" : null,
+    "configMax" : null,
+    "configMaxLength" : null
+  }, {
+    "key" : "param2",
+    "valueType" : "number",
+    "defaultValue" : 14,
+    "configTitle" : "PastFutureColor",
+    "configPrompt" : null,
+    "configType" : "list",
+    "configError" : null,
+    "configHelpUrl" : null,
+    "configReadonly" : false,
+    "configRequired" : false,
+    "configOptions" : [ {
+      "display" : "Aqua",
+      "value" : 0
+    }, {
+      "display" : "Black",
+      "value" : 1
+    }, {
+      "display" : "Blue",
+      "value" : 2
+    }, {
+      "display" : "Blue_Dark",
+      "value" : 3
+    }, {
+      "display" : "Blue_Ice",
+      "value" : 4
+    }, {
+      "display" : "Blue_Light",
+      "value" : 5
+    }, {
+      "display" : "Blue_Ocean",
+      "value" : 6
+    }, {
+      "display" : "Blue_Pale",
+      "value" : 7
+    }, {
+      "display" : "Blue_Sky",
+      "value" : 8
+    }, {
+      "display" : "Brown",
+      "value" : 9
+    }, {
+      "display" : "Coral",
+      "value" : 10
+    }, {
+      "display" : "Gold",
+      "value" : 11
+    }, {
+      "display" : "Gray_25",
+      "value" : 12
+    }, {
+      "display" : "Gray_40",
+      "value" : 13
+    }, {
+      "display" : "Gray_50",
+      "value" : 14
+    }, {
+      "display" : "Gray_80",
+      "value" : 15
+    }, {
+      "display" : "Gray_Blue",
+      "value" : 16
+    }, {
+      "display" : "Green",
+      "value" : 17
+    }, {
+      "display" : "Green_Bright",
+      "value" : 18
+    }, {
+      "display" : "Green_Dark",
+      "value" : 19
+    }, {
+      "display" : "Green_Light",
+      "value" : 20
+    }, {
+      "display" : "Green_Olive",
+      "value" : 21
+    }, {
+      "display" : "Green_Sea",
+      "value" : 22
+    }, {
+      "display" : "Indigo",
+      "value" : 23
+    }, {
+      "display" : "Ivory",
+      "value" : 24
+    }, {
+      "display" : "Lavender",
+      "value" : 25
+    }, {
+      "display" : "Lime",
+      "value" : 26
+    }, {
+      "display" : "Orange",
+      "value" : 27
+    }, {
+      "display" : "Orange_Light",
+      "value" : 28
+    }, {
+      "display" : "Periwinkle",
+      "value" : 29
+    }, {
+      "display" : "Pink",
+      "value" : 30
+    }, {
+      "display" : "Plum",
+      "value" : 31
+    }, {
+      "display" : "Purple_Dark",
+      "value" : 32
+    }, {
+      "display" : "Red",
+      "value" : 33
+    }, {
+      "display" : "Red_Dark",
+      "value" : 34
+    }, {
+      "display" : "Rose",
+      "value" : 35
+    }, {
+      "display" : "Tan",
+      "value" : 36
+    }, {
+      "display" : "Teal",
+      "value" : 37
+    }, {
+      "display" : "Teal_Dark",
+      "value" : 38
+    }, {
+      "display" : "Turquoise",
+      "value" : 39
+    }, {
+      "display" : "Turquoise_Light",
+      "value" : 40
+    }, {
+      "display" : "Violet",
+      "value" : 41
+    }, {
+      "display" : "White",
+      "value" : 42
+    }, {
+      "display" : "Yellow",
+      "value" : 43
+    }, {
+      "display" : "Yellow_Dark",
+      "value" : 44
+    }, {
+      "display" : "Yellow_Light",
+      "value" : 45
+    }, {
+      "display" : "Transparent",
+      "value" : 46
+    } ],
+    "configMin" : null,
+    "configMax" : null,
+    "configMaxLength" : null
+  }, {
+    "key" : "param3",
+    "valueType" : "number",
+    "defaultValue" : 1,
+    "configTitle" : "HourColor",
+    "configPrompt" : null,
+    "configType" : "list",
+    "configError" : null,
+    "configHelpUrl" : null,
+    "configReadonly" : false,
+    "configRequired" : false,
+    "configOptions" : [ {
+      "display" : "Aqua",
+      "value" : 0
+    }, {
+      "display" : "Black",
+      "value" : 1
+    }, {
+      "display" : "Blue",
+      "value" : 2
+    }, {
+      "display" : "Blue_Dark",
+      "value" : 3
+    }, {
+      "display" : "Blue_Ice",
+      "value" : 4
+    }, {
+      "display" : "Blue_Light",
+      "value" : 5
+    }, {
+      "display" : "Blue_Ocean",
+      "value" : 6
+    }, {
+      "display" : "Blue_Pale",
+      "value" : 7
+    }, {
+      "display" : "Blue_Sky",
+      "value" : 8
+    }, {
+      "display" : "Brown",
+      "value" : 9
+    }, {
+      "display" : "Coral",
+      "value" : 10
+    }, {
+      "display" : "Gold",
+      "value" : 11
+    }, {
+      "display" : "Gray_25",
+      "value" : 12
+    }, {
+      "display" : "Gray_40",
+      "value" : 13
+    }, {
+      "display" : "Gray_50",
+      "value" : 14
+    }, {
+      "display" : "Gray_80",
+      "value" : 15
+    }, {
+      "display" : "Gray_Blue",
+      "value" : 16
+    }, {
+      "display" : "Green",
+      "value" : 17
+    }, {
+      "display" : "Green_Bright",
+      "value" : 18
+    }, {
+      "display" : "Green_Dark",
+      "value" : 19
+    }, {
+      "display" : "Green_Light",
+      "value" : 20
+    }, {
+      "display" : "Green_Olive",
+      "value" : 21
+    }, {
+      "display" : "Green_Sea",
+      "value" : 22
+    }, {
+      "display" : "Indigo",
+      "value" : 23
+    }, {
+      "display" : "Ivory",
+      "value" : 24
+    }, {
+      "display" : "Lavender",
+      "value" : 25
+    }, {
+      "display" : "Lime",
+      "value" : 26
+    }, {
+      "display" : "Orange",
+      "value" : 27
+    }, {
+      "display" : "Orange_Light",
+      "value" : 28
+    }, {
+      "display" : "Periwinkle",
+      "value" : 29
+    }, {
+      "display" : "Pink",
+      "value" : 30
+    }, {
+      "display" : "Plum",
+      "value" : 31
+    }, {
+      "display" : "Purple_Dark",
+      "value" : 32
+    }, {
+      "display" : "Red",
+      "value" : 33
+    }, {
+      "display" : "Red_Dark",
+      "value" : 34
+    }, {
+      "display" : "Rose",
+      "value" : 35
+    }, {
+      "display" : "Tan",
+      "value" : 36
+    }, {
+      "display" : "Teal",
+      "value" : 37
+    }, {
+      "display" : "Teal_Dark",
+      "value" : 38
+    }, {
+      "display" : "Turquoise",
+      "value" : 39
+    }, {
+      "display" : "Turquoise_Light",
+      "value" : 40
+    }, {
+      "display" : "Violet",
+      "value" : 41
+    }, {
+      "display" : "White",
+      "value" : 42
+    }, {
+      "display" : "Yellow",
+      "value" : 43
+    }, {
+      "display" : "Yellow_Dark",
+      "value" : 44
+    }, {
+      "display" : "Yellow_Light",
+      "value" : 45
+    }, {
+      "display" : "Transparent",
+      "value" : 46
+    } ],
+    "configMin" : null,
+    "configMax" : null,
+    "configMaxLength" : null
+  }, {
+    "key" : "param4",
+    "valueType" : "number",
+    "defaultValue" : 1,
+    "configTitle" : "MinutesColor",
+    "configPrompt" : null,
+    "configType" : "list",
+    "configError" : null,
+    "configHelpUrl" : null,
+    "configReadonly" : false,
+    "configRequired" : false,
+    "configOptions" : [ {
+      "display" : "Aqua",
+      "value" : 0
+    }, {
+      "display" : "Black",
+      "value" : 1
+    }, {
+      "display" : "Blue",
+      "value" : 2
+    }, {
+      "display" : "Blue_Dark",
+      "value" : 3
+    }, {
+      "display" : "Blue_Ice",
+      "value" : 4
+    }, {
+      "display" : "Blue_Light",
+      "value" : 5
+    }, {
+      "display" : "Blue_Ocean",
+      "value" : 6
+    }, {
+      "display" : "Blue_Pale",
+      "value" : 7
+    }, {
+      "display" : "Blue_Sky",
+      "value" : 8
+    }, {
+      "display" : "Brown",
+      "value" : 9
+    }, {
+      "display" : "Coral",
+      "value" : 10
+    }, {
+      "display" : "Gold",
+      "value" : 11
+    }, {
+      "display" : "Gray_25",
+      "value" : 12
+    }, {
+      "display" : "Gray_40",
+      "value" : 13
+    }, {
+      "display" : "Gray_50",
+      "value" : 14
+    }, {
+      "display" : "Gray_80",
+      "value" : 15
+    }, {
+      "display" : "Gray_Blue",
+      "value" : 16
+    }, {
+      "display" : "Green",
+      "value" : 17
+    }, {
+      "display" : "Green_Bright",
+      "value" : 18
+    }, {
+      "display" : "Green_Dark",
+      "value" : 19
+    }, {
+      "display" : "Green_Light",
+      "value" : 20
+    }, {
+      "display" : "Green_Olive",
+      "value" : 21
+    }, {
+      "display" : "Green_Sea",
+      "value" : 22
+    }, {
+      "display" : "Indigo",
+      "value" : 23
+    }, {
+      "display" : "Ivory",
+      "value" : 24
+    }, {
+      "display" : "Lavender",
+      "value" : 25
+    }, {
+      "display" : "Lime",
+      "value" : 26
+    }, {
+      "display" : "Orange",
+      "value" : 27
+    }, {
+      "display" : "Orange_Light",
+      "value" : 28
+    }, {
+      "display" : "Periwinkle",
+      "value" : 29
+    }, {
+      "display" : "Pink",
+      "value" : 30
+    }, {
+      "display" : "Plum",
+      "value" : 31
+    }, {
+      "display" : "Purple_Dark",
+      "value" : 32
+    }, {
+      "display" : "Red",
+      "value" : 33
+    }, {
+      "display" : "Red_Dark",
+      "value" : 34
+    }, {
+      "display" : "Rose",
+      "value" : 35
+    }, {
+      "display" : "Tan",
+      "value" : 36
+    }, {
+      "display" : "Teal",
+      "value" : 37
+    }, {
+      "display" : "Teal_Dark",
+      "value" : 38
+    }, {
+      "display" : "Turquoise",
+      "value" : 39
+    }, {
+      "display" : "Turquoise_Light",
+      "value" : 40
+    }, {
+      "display" : "Violet",
+      "value" : 41
+    }, {
+      "display" : "White",
+      "value" : 42
+    }, {
+      "display" : "Yellow",
+      "value" : 43
+    }, {
+      "display" : "Yellow_Dark",
+      "value" : 44
+    }, {
+      "display" : "Yellow_Light",
+      "value" : 45
+    }, {
+      "display" : "Transparent",
+      "value" : 46
+    } ],
+    "configMin" : null,
+    "configMax" : null,
+    "configMaxLength" : null
+  }, {
+    "key" : "param5",
+    "valueType" : "boolean",
+    "defaultValue" : true,
+    "configTitle" : "is24h",
+    "configPrompt" : null,
+    "configType" : "boolean",
+    "configError" : null,
+    "configHelpUrl" : null,
+    "configReadonly" : false,
+    "configRequired" : false,
+    "configOptions" : null,
+    "configMin" : null,
+    "configMax" : null,
+    "configMaxLength" : null
+  }, {
+    "key" : "param6",
+    "valueType" : "number",
+    "defaultValue" : 0,
+    "configTitle" : "Field1",
+    "configPrompt" : null,
+    "configType" : "list",
+    "configError" : null,
+    "configHelpUrl" : null,
+    "configReadonly" : false,
+    "configRequired" : false,
+    "configOptions" : [ {
+      "display" : "Nothing",
+      "value" : 0
+    }, {
+      "display" : "Battery",
+      "value" : 1
+    }, {
+      "display" : "Steps",
+      "value" : 2
+    }, {
+      "display" : "Distance",
+      "value" : 3
+    }, {
+      "display" : "Notifs",
+      "value" : 4
+    }, {
+      "display" : "Altitude",
+      "value" : 5
+    }, {
+      "display" : "Pressure",
+      "value" : 6
+    }, {
+      "display" : "Floor",
+      "value" : 7
+    }, {
+      "display" : "Temper",
+      "value" : 8
+    }, {
+      "display" : "TempExt",
+      "value" : 9
+    }, {
+      "display" : "Calories",
+      "value" : 10
+    }, {
+      "display" : "CurrentHeartRate",
+      "value" : 11
+    }, {
+      "display" : "TimeToRecovery",
+      "value" : 12
+    }, {
+      "display" : "BodyBattery",
+      "value" : 13
+    }, {
+      "display" : "ActiveMinutesDay",
+      "value" : 14
+    }, {
+      "display" : "ActiveMinutesWeek",
+      "value" : 15
+    }, {
+      "display" : "BloodGlucose",
+      "value" : 16
+    }, {
+      "display" : "Seconds",
+      "value" : 17
+    }, {
+      "display" : "Digital_Time",
+      "value" : 18
+    }, {
+      "display" : "MoisJour",
+      "value" : 19
+    }, {
+      "display" : "JourMois",
+      "value" : 20
+    }, {
+      "display" : "JourSem",
+      "value" : 21
+    }, {
+      "display" : "JourSemJour",
+      "value" : 22
+    }, {
+      "display" : "JourSemMoisJour",
+      "value" : 23
+    }, {
+      "display" : "Week_number",
+      "value" : 24
+    } ],
+    "configMin" : null,
+    "configMax" : null,
+    "configMaxLength" : null
+  }, {
+    "key" : "param7",
+    "valueType" : "number",
+    "defaultValue" : 1,
+    "configTitle" : "Field1Color",
+    "configPrompt" : null,
+    "configType" : "list",
+    "configError" : null,
+    "configHelpUrl" : null,
+    "configReadonly" : false,
+    "configRequired" : false,
+    "configOptions" : [ {
+      "display" : "Aqua",
+      "value" : 0
+    }, {
+      "display" : "Black",
+      "value" : 1
+    }, {
+      "display" : "Blue",
+      "value" : 2
+    }, {
+      "display" : "Blue_Dark",
+      "value" : 3
+    }, {
+      "display" : "Blue_Ice",
+      "value" : 4
+    }, {
+      "display" : "Blue_Light",
+      "value" : 5
+    }, {
+      "display" : "Blue_Ocean",
+      "value" : 6
+    }, {
+      "display" : "Blue_Pale",
+      "value" : 7
+    }, {
+      "display" : "Blue_Sky",
+      "value" : 8
+    }, {
+      "display" : "Brown",
+      "value" : 9
+    }, {
+      "display" : "Coral",
+      "value" : 10
+    }, {
+      "display" : "Gold",
+      "value" : 11
+    }, {
+      "display" : "Gray_25",
+      "value" : 12
+    }, {
+      "display" : "Gray_40",
+      "value" : 13
+    }, {
+      "display" : "Gray_50",
+      "value" : 14
+    }, {
+      "display" : "Gray_80",
+      "value" : 15
+    }, {
+      "display" : "Gray_Blue",
+      "value" : 16
+    }, {
+      "display" : "Green",
+      "value" : 17
+    }, {
+      "display" : "Green_Bright",
+      "value" : 18
+    }, {
+      "display" : "Green_Dark",
+      "value" : 19
+    }, {
+      "display" : "Green_Light",
+      "value" : 20
+    }, {
+      "display" : "Green_Olive",
+      "value" : 21
+    }, {
+      "display" : "Green_Sea",
+      "value" : 22
+    }, {
+      "display" : "Indigo",
+      "value" : 23
+    }, {
+      "display" : "Ivory",
+      "value" : 24
+    }, {
+      "display" : "Lavender",
+      "value" : 25
+    }, {
+      "display" : "Lime",
+      "value" : 26
+    }, {
+      "display" : "Orange",
+      "value" : 27
+    }, {
+      "display" : "Orange_Light",
+      "value" : 28
+    }, {
+      "display" : "Periwinkle",
+      "value" : 29
+    }, {
+      "display" : "Pink",
+      "value" : 30
+    }, {
+      "display" : "Plum",
+      "value" : 31
+    }, {
+      "display" : "Purple_Dark",
+      "value" : 32
+    }, {
+      "display" : "Red",
+      "value" : 33
+    }, {
+      "display" : "Red_Dark",
+      "value" : 34
+    }, {
+      "display" : "Rose",
+      "value" : 35
+    }, {
+      "display" : "Tan",
+      "value" : 36
+    }, {
+      "display" : "Teal",
+      "value" : 37
+    }, {
+      "display" : "Teal_Dark",
+      "value" : 38
+    }, {
+      "display" : "Turquoise",
+      "value" : 39
+    }, {
+      "display" : "Turquoise_Light",
+      "value" : 40
+    }, {
+      "display" : "Violet",
+      "value" : 41
+    }, {
+      "display" : "White",
+      "value" : 42
+    }, {
+      "display" : "Yellow",
+      "value" : 43
+    }, {
+      "display" : "Yellow_Dark",
+      "value" : 44
+    }, {
+      "display" : "Yellow_Light",
+      "value" : 45
+    }, {
+      "display" : "Transparent",
+      "value" : 46
+    } ],
+    "configMin" : null,
+    "configMax" : null,
+    "configMaxLength" : null
+  }, {
+    "key" : "param8",
+    "valueType" : "number",
+    "defaultValue" : 0,
+    "configTitle" : "Field2",
+    "configPrompt" : null,
+    "configType" : "list",
+    "configError" : null,
+    "configHelpUrl" : null,
+    "configReadonly" : false,
+    "configRequired" : false,
+    "configOptions" : [ {
+      "display" : "Nothing",
+      "value" : 0
+    }, {
+      "display" : "Battery",
+      "value" : 1
+    }, {
+      "display" : "Steps",
+      "value" : 2
+    }, {
+      "display" : "Distance",
+      "value" : 3
+    }, {
+      "display" : "Notifs",
+      "value" : 4
+    }, {
+      "display" : "Altitude",
+      "value" : 5
+    }, {
+      "display" : "Pressure",
+      "value" : 6
+    }, {
+      "display" : "Floor",
+      "value" : 7
+    }, {
+      "display" : "Temper",
+      "value" : 8
+    }, {
+      "display" : "TempExt",
+      "value" : 9
+    }, {
+      "display" : "Calories",
+      "value" : 10
+    }, {
+      "display" : "CurrentHeartRate",
+      "value" : 11
+    }, {
+      "display" : "TimeToRecovery",
+      "value" : 12
+    }, {
+      "display" : "BodyBattery",
+      "value" : 13
+    }, {
+      "display" : "ActiveMinutesDay",
+      "value" : 14
+    }, {
+      "display" : "ActiveMinutesWeek",
+      "value" : 15
+    }, {
+      "display" : "BloodGlucose",
+      "value" : 16
+    }, {
+      "display" : "Seconds",
+      "value" : 17
+    }, {
+      "display" : "Digital_Time",
+      "value" : 18
+    }, {
+      "display" : "MoisJour",
+      "value" : 19
+    }, {
+      "display" : "JourMois",
+      "value" : 20
+    }, {
+      "display" : "JourSem",
+      "value" : 21
+    }, {
+      "display" : "JourSemJour",
+      "value" : 22
+    }, {
+      "display" : "JourSemMoisJour",
+      "value" : 23
+    }, {
+      "display" : "Week_number",
+      "value" : 24
+    } ],
+    "configMin" : null,
+    "configMax" : null,
+    "configMaxLength" : null
+  }, {
+    "key" : "param9",
+    "valueType" : "number",
+    "defaultValue" : 1,
+    "configTitle" : "Field2Color",
+    "configPrompt" : null,
+    "configType" : "list",
+    "configError" : null,
+    "configHelpUrl" : null,
+    "configReadonly" : false,
+    "configRequired" : false,
+    "configOptions" : [ {
+      "display" : "Aqua",
+      "value" : 0
+    }, {
+      "display" : "Black",
+      "value" : 1
+    }, {
+      "display" : "Blue",
+      "value" : 2
+    }, {
+      "display" : "Blue_Dark",
+      "value" : 3
+    }, {
+      "display" : "Blue_Ice",
+      "value" : 4
+    }, {
+      "display" : "Blue_Light",
+      "value" : 5
+    }, {
+      "display" : "Blue_Ocean",
+      "value" : 6
+    }, {
+      "display" : "Blue_Pale",
+      "value" : 7
+    }, {
+      "display" : "Blue_Sky",
+      "value" : 8
+    }, {
+      "display" : "Brown",
+      "value" : 9
+    }, {
+      "display" : "Coral",
+      "value" : 10
+    }, {
+      "display" : "Gold",
+      "value" : 11
+    }, {
+      "display" : "Gray_25",
+      "value" : 12
+    }, {
+      "display" : "Gray_40",
+      "value" : 13
+    }, {
+      "display" : "Gray_50",
+      "value" : 14
+    }, {
+      "display" : "Gray_80",
+      "value" : 15
+    }, {
+      "display" : "Gray_Blue",
+      "value" : 16
+    }, {
+      "display" : "Green",
+      "value" : 17
+    }, {
+      "display" : "Green_Bright",
+      "value" : 18
+    }, {
+      "display" : "Green_Dark",
+      "value" : 19
+    }, {
+      "display" : "Green_Light",
+      "value" : 20
+    }, {
+      "display" : "Green_Olive",
+      "value" : 21
+    }, {
+      "display" : "Green_Sea",
+      "value" : 22
+    }, {
+      "display" : "Indigo",
+      "value" : 23
+    }, {
+      "display" : "Ivory",
+      "value" : 24
+    }, {
+      "display" : "Lavender",
+      "value" : 25
+    }, {
+      "display" : "Lime",
+      "value" : 26
+    }, {
+      "display" : "Orange",
+      "value" : 27
+    }, {
+      "display" : "Orange_Light",
+      "value" : 28
+    }, {
+      "display" : "Periwinkle",
+      "value" : 29
+    }, {
+      "display" : "Pink",
+      "value" : 30
+    }, {
+      "display" : "Plum",
+      "value" : 31
+    }, {
+      "display" : "Purple_Dark",
+      "value" : 32
+    }, {
+      "display" : "Red",
+      "value" : 33
+    }, {
+      "display" : "Red_Dark",
+      "value" : 34
+    }, {
+      "display" : "Rose",
+      "value" : 35
+    }, {
+      "display" : "Tan",
+      "value" : 36
+    }, {
+      "display" : "Teal",
+      "value" : 37
+    }, {
+      "display" : "Teal_Dark",
+      "value" : 38
+    }, {
+      "display" : "Turquoise",
+      "value" : 39
+    }, {
+      "display" : "Turquoise_Light",
+      "value" : 40
+    }, {
+      "display" : "Violet",
+      "value" : 41
+    }, {
+      "display" : "White",
+      "value" : 42
+    }, {
+      "display" : "Yellow",
+      "value" : 43
+    }, {
+      "display" : "Yellow_Dark",
+      "value" : 44
+    }, {
+      "display" : "Yellow_Light",
+      "value" : 45
+    }, {
+      "display" : "Transparent",
+      "value" : 46
+    } ],
+    "configMin" : null,
+    "configMax" : null,
+    "configMaxLength" : null
+  }, {
+    "key" : "param10",
+    "valueType" : "number",
+    "defaultValue" : 0,
+    "configTitle" : "Field3",
+    "configPrompt" : null,
+    "configType" : "list",
+    "configError" : null,
+    "configHelpUrl" : null,
+    "configReadonly" : false,
+    "configRequired" : false,
+    "configOptions" : [ {
+      "display" : "Nothing",
+      "value" : 0
+    }, {
+      "display" : "Battery",
+      "value" : 1
+    }, {
+      "display" : "Steps",
+      "value" : 2
+    }, {
+      "display" : "Distance",
+      "value" : 3
+    }, {
+      "display" : "Notifs",
+      "value" : 4
+    }, {
+      "display" : "Altitude",
+      "value" : 5
+    }, {
+      "display" : "Pressure",
+      "value" : 6
+    }, {
+      "display" : "Floor",
+      "value" : 7
+    }, {
+      "display" : "Temper",
+      "value" : 8
+    }, {
+      "display" : "TempExt",
+      "value" : 9
+    }, {
+      "display" : "Calories",
+      "value" : 10
+    }, {
+      "display" : "CurrentHeartRate",
+      "value" : 11
+    }, {
+      "display" : "TimeToRecovery",
+      "value" : 12
+    }, {
+      "display" : "BodyBattery",
+      "value" : 13
+    }, {
+      "display" : "ActiveMinutesDay",
+      "value" : 14
+    }, {
+      "display" : "ActiveMinutesWeek",
+      "value" : 15
+    }, {
+      "display" : "BloodGlucose",
+      "value" : 16
+    }, {
+      "display" : "Seconds",
+      "value" : 17
+    }, {
+      "display" : "Digital_Time",
+      "value" : 18
+    }, {
+      "display" : "MoisJour",
+      "value" : 19
+    }, {
+      "display" : "JourMois",
+      "value" : 20
+    }, {
+      "display" : "JourSem",
+      "value" : 21
+    }, {
+      "display" : "JourSemJour",
+      "value" : 22
+    }, {
+      "display" : "JourSemMoisJour",
+      "value" : 23
+    }, {
+      "display" : "Week_number",
+      "value" : 24
+    } ],
+    "configMin" : null,
+    "configMax" : null,
+    "configMaxLength" : null
+  }, {
+    "key" : "param11",
+    "valueType" : "number",
+    "defaultValue" : 1,
+    "configTitle" : "Field3Color",
+    "configPrompt" : null,
+    "configType" : "list",
+    "configError" : null,
+    "configHelpUrl" : null,
+    "configReadonly" : false,
+    "configRequired" : false,
+    "configOptions" : [ {
+      "display" : "Aqua",
+      "value" : 0
+    }, {
+      "display" : "Black",
+      "value" : 1
+    }, {
+      "display" : "Blue",
+      "value" : 2
+    }, {
+      "display" : "Blue_Dark",
+      "value" : 3
+    }, {
+      "display" : "Blue_Ice",
+      "value" : 4
+    }, {
+      "display" : "Blue_Light",
+      "value" : 5
+    }, {
+      "display" : "Blue_Ocean",
+      "value" : 6
+    }, {
+      "display" : "Blue_Pale",
+      "value" : 7
+    }, {
+      "display" : "Blue_Sky",
+      "value" : 8
+    }, {
+      "display" : "Brown",
+      "value" : 9
+    }, {
+      "display" : "Coral",
+      "value" : 10
+    }, {
+      "display" : "Gold",
+      "value" : 11
+    }, {
+      "display" : "Gray_25",
+      "value" : 12
+    }, {
+      "display" : "Gray_40",
+      "value" : 13
+    }, {
+      "display" : "Gray_50",
+      "value" : 14
+    }, {
+      "display" : "Gray_80",
+      "value" : 15
+    }, {
+      "display" : "Gray_Blue",
+      "value" : 16
+    }, {
+      "display" : "Green",
+      "value" : 17
+    }, {
+      "display" : "Green_Bright",
+      "value" : 18
+    }, {
+      "display" : "Green_Dark",
+      "value" : 19
+    }, {
+      "display" : "Green_Light",
+      "value" : 20
+    }, {
+      "display" : "Green_Olive",
+      "value" : 21
+    }, {
+      "display" : "Green_Sea",
+      "value" : 22
+    }, {
+      "display" : "Indigo",
+      "value" : 23
+    }, {
+      "display" : "Ivory",
+      "value" : 24
+    }, {
+      "display" : "Lavender",
+      "value" : 25
+    }, {
+      "display" : "Lime",
+      "value" : 26
+    }, {
+      "display" : "Orange",
+      "value" : 27
+    }, {
+      "display" : "Orange_Light",
+      "value" : 28
+    }, {
+      "display" : "Periwinkle",
+      "value" : 29
+    }, {
+      "display" : "Pink",
+      "value" : 30
+    }, {
+      "display" : "Plum",
+      "value" : 31
+    }, {
+      "display" : "Purple_Dark",
+      "value" : 32
+    }, {
+      "display" : "Red",
+      "value" : 33
+    }, {
+      "display" : "Red_Dark",
+      "value" : 34
+    }, {
+      "display" : "Rose",
+      "value" : 35
+    }, {
+      "display" : "Tan",
+      "value" : 36
+    }, {
+      "display" : "Teal",
+      "value" : 37
+    }, {
+      "display" : "Teal_Dark",
+      "value" : 38
+    }, {
+      "display" : "Turquoise",
+      "value" : 39
+    }, {
+      "display" : "Turquoise_Light",
+      "value" : 40
+    }, {
+      "display" : "Violet",
+      "value" : 41
+    }, {
+      "display" : "White",
+      "value" : 42
+    }, {
+      "display" : "Yellow",
+      "value" : 43
+    }, {
+      "display" : "Yellow_Dark",
+      "value" : 44
+    }, {
+      "display" : "Yellow_Light",
+      "value" : 45
+    }, {
+      "display" : "Transparent",
+      "value" : 46
+    } ],
+    "configMin" : null,
+    "configMax" : null,
+    "configMaxLength" : null
+  }, {
+    "key" : "param12",
+    "valueType" : "number",
+    "defaultValue" : 0,
+    "configTitle" : "Field4",
+    "configPrompt" : null,
+    "configType" : "list",
+    "configError" : null,
+    "configHelpUrl" : null,
+    "configReadonly" : false,
+    "configRequired" : false,
+    "configOptions" : [ {
+      "display" : "Nothing",
+      "value" : 0
+    }, {
+      "display" : "Battery",
+      "value" : 1
+    }, {
+      "display" : "Steps",
+      "value" : 2
+    }, {
+      "display" : "Distance",
+      "value" : 3
+    }, {
+      "display" : "Notifs",
+      "value" : 4
+    }, {
+      "display" : "Altitude",
+      "value" : 5
+    }, {
+      "display" : "Pressure",
+      "value" : 6
+    }, {
+      "display" : "Floor",
+      "value" : 7
+    }, {
+      "display" : "Temper",
+      "value" : 8
+    }, {
+      "display" : "TempExt",
+      "value" : 9
+    }, {
+      "display" : "Calories",
+      "value" : 10
+    }, {
+      "display" : "CurrentHeartRate",
+      "value" : 11
+    }, {
+      "display" : "TimeToRecovery",
+      "value" : 12
+    }, {
+      "display" : "BodyBattery",
+      "value" : 13
+    }, {
+      "display" : "ActiveMinutesDay",
+      "value" : 14
+    }, {
+      "display" : "ActiveMinutesWeek",
+      "value" : 15
+    }, {
+      "display" : "BloodGlucose",
+      "value" : 16
+    }, {
+      "display" : "Seconds",
+      "value" : 17
+    }, {
+      "display" : "Digital_Time",
+      "value" : 18
+    }, {
+      "display" : "MoisJour",
+      "value" : 19
+    }, {
+      "display" : "JourMois",
+      "value" : 20
+    }, {
+      "display" : "JourSem",
+      "value" : 21
+    }, {
+      "display" : "JourSemJour",
+      "value" : 22
+    }, {
+      "display" : "JourSemMoisJour",
+      "value" : 23
+    }, {
+      "display" : "Week_number",
+      "value" : 24
+    } ],
+    "configMin" : null,
+    "configMax" : null,
+    "configMaxLength" : null
+  }, {
+    "key" : "param13",
+    "valueType" : "number",
+    "defaultValue" : 1,
+    "configTitle" : "Field4Color",
+    "configPrompt" : null,
+    "configType" : "list",
+    "configError" : null,
+    "configHelpUrl" : null,
+    "configReadonly" : false,
+    "configRequired" : false,
+    "configOptions" : [ {
+      "display" : "Aqua",
+      "value" : 0
+    }, {
+      "display" : "Black",
+      "value" : 1
+    }, {
+      "display" : "Blue",
+      "value" : 2
+    }, {
+      "display" : "Blue_Dark",
+      "value" : 3
+    }, {
+      "display" : "Blue_Ice",
+      "value" : 4
+    }, {
+      "display" : "Blue_Light",
+      "value" : 5
+    }, {
+      "display" : "Blue_Ocean",
+      "value" : 6
+    }, {
+      "display" : "Blue_Pale",
+      "value" : 7
+    }, {
+      "display" : "Blue_Sky",
+      "value" : 8
+    }, {
+      "display" : "Brown",
+      "value" : 9
+    }, {
+      "display" : "Coral",
+      "value" : 10
+    }, {
+      "display" : "Gold",
+      "value" : 11
+    }, {
+      "display" : "Gray_25",
+      "value" : 12
+    }, {
+      "display" : "Gray_40",
+      "value" : 13
+    }, {
+      "display" : "Gray_50",
+      "value" : 14
+    }, {
+      "display" : "Gray_80",
+      "value" : 15
+    }, {
+      "display" : "Gray_Blue",
+      "value" : 16
+    }, {
+      "display" : "Green",
+      "value" : 17
+    }, {
+      "display" : "Green_Bright",
+      "value" : 18
+    }, {
+      "display" : "Green_Dark",
+      "value" : 19
+    }, {
+      "display" : "Green_Light",
+      "value" : 20
+    }, {
+      "display" : "Green_Olive",
+      "value" : 21
+    }, {
+      "display" : "Green_Sea",
+      "value" : 22
+    }, {
+      "display" : "Indigo",
+      "value" : 23
+    }, {
+      "display" : "Ivory",
+      "value" : 24
+    }, {
+      "display" : "Lavender",
+      "value" : 25
+    }, {
+      "display" : "Lime",
+      "value" : 26
+    }, {
+      "display" : "Orange",
+      "value" : 27
+    }, {
+      "display" : "Orange_Light",
+      "value" : 28
+    }, {
+      "display" : "Periwinkle",
+      "value" : 29
+    }, {
+      "display" : "Pink",
+      "value" : 30
+    }, {
+      "display" : "Plum",
+      "value" : 31
+    }, {
+      "display" : "Purple_Dark",
+      "value" : 32
+    }, {
+      "display" : "Red",
+      "value" : 33
+    }, {
+      "display" : "Red_Dark",
+      "value" : 34
+    }, {
+      "display" : "Rose",
+      "value" : 35
+    }, {
+      "display" : "Tan",
+      "value" : 36
+    }, {
+      "display" : "Teal",
+      "value" : 37
+    }, {
+      "display" : "Teal_Dark",
+      "value" : 38
+    }, {
+      "display" : "Turquoise",
+      "value" : 39
+    }, {
+      "display" : "Turquoise_Light",
+      "value" : 40
+    }, {
+      "display" : "Violet",
+      "value" : 41
+    }, {
+      "display" : "White",
+      "value" : 42
+    }, {
+      "display" : "Yellow",
+      "value" : 43
+    }, {
+      "display" : "Yellow_Dark",
+      "value" : 44
+    }, {
+      "display" : "Yellow_Light",
+      "value" : 45
+    }, {
+      "display" : "Transparent",
+      "value" : 46
+    } ],
+    "configMin" : null,
+    "configMax" : null,
+    "configMaxLength" : null
+  }, {
+    "key" : "param14",
+    "valueType" : "number",
+    "defaultValue" : 0,
+    "configTitle" : "sourceBG",
+    "configPrompt" : null,
+    "configType" : "list",
+    "configError" : null,
+    "configHelpUrl" : null,
+    "configReadonly" : false,
+    "configRequired" : false,
+    "configOptions" : [ {
+      "display" : "$literal0$",
+      "value" : 0
+    }, {
+      "display" : "$literal1$",
+      "value" : 1
+    }, {
+      "display" : "$literal2$",
+      "value" : 2
+    } ],
+    "configMin" : null,
+    "configMax" : null,
+    "configMaxLength" : null
+  }, {
+    "key" : "param15",
     "valueType" : "string",
     "defaultValue" : "",
     "configTitle" : "code_setting",
@@ -15,7 +1815,7 @@
     "configMax" : null,
     "configMaxLength" : null
   }, {
-    "key" : "NSurl",
+    "key" : "param16",
     "valueType" : "string",
     "defaultValue" : "",
     "configTitle" : "NSurl",
@@ -30,7 +1830,7 @@
     "configMax" : null,
     "configMaxLength" : null
   }, {
-    "key" : "NStoken",
+    "key" : "param17",
     "valueType" : "string",
     "defaultValue" : "",
     "configTitle" : "NStoken",
@@ -48,36 +1848,105 @@
   "supportsLiveValidation" : false,
   "languages" : {
     "valyrian" : {
-      "Steps" : "Steps count",
-      "code_setting" : "Code to remove Dudu logo",
-      "Mois" : "Month",
+      "is24h" : "Display 24h ?",
       "NStoken" : "NightScout Token",
-      "Week_number" : "Week number",
-      "Nothing" : "Nothing",
-      "AppName" : "ProjectsWatch",
+      "Black" : "Black",
+      "Orange" : "Orange",
       "Notifs" : "Notifications",
-      "JourMois" : "Day, month",
-      "TempExt" : "Internet temperature",
       "ActiveMinutesDay" : "Active minutes day",
-      "codeApp" : "PROJWF654",
-      "Battery" : "Battery",
-      "Digital_Time" : "Digital Time",
-      "JourSemJour" : "Weekday, day",
-      "BodyBattery" : "Body battery",
+      "Orange_Light" : "Orange Light",
+      "Field1Color" : "Up-L field Color",
       "MoisJour" : "Month, day",
       "Distance" : "Distance",
+      "BackGroundColor" : "BackGround Color",
+      "Violet" : "Violet",
+      "Gray_50" : "Gray 50",
+      "PresentColor" : "Present Color",
+      "is24h_2" : "Display 12h ?",
+      "Blue_Sky" : "Blue Sky",
+      "BloodGlucose" : "Blood glucose",
+      "Yellow" : "Yellow",
+      "HourColor" : "Hour Color",
+      "Indigo" : "Indigo",
+      "Turquoise_Light" : "Turquoise Light",
+      "Mois" : "Month",
+      "Rose" : "Rose",
+      "Gray_40" : "Gray 40",
+      "Week_number" : "Week number",
+      "Red_Dark" : "Red Dark",
+      "Teal_Dark" : "Teal Dark",
+      "Digital_Time" : "Digital Time",
+      "Teal" : "Teal",
+      "Turquoise" : "Turquoise",
+      "Blue" : "Blue",
+      "Periwinkle" : "Periwinkle",
+      "Field2Color" : "Down-L field Color",
+      "JourSemMoisJour" : "Weekday, month, day",
+      "Red" : "Red",
+      "PastFutureColor" : "Past-Future Color",
+      "Yellow_Light" : "Yellow Light",
+      "Blue_Pale" : "Blue Pale",
+      "Green_Sea" : "Green Sea",
+      "CurrentHeartRate" : "Current Heart Rate",
+      "Tan" : "Tan",
+      "code_setting" : "Code to remove Dudu logo",
+      "Gray_25" : "Gray 25",
+      "Nothing" : "Nothing",
+      "$literal0$" : "NightScout",
+      "Plum" : "Plum",
+      "TempExt" : "Internet temperature",
+      "Battery" : "Battery",
+      "BodyBattery" : "Body battery",
       "ActiveMinutesWeek" : "Active minutes week",
-      "Floor" : "Floor",
+      "Gold" : "Gold",
       "TimeToRecovery" : "Time to recovery",
       "JourSem" : "Weekday",
+      "Green_Bright" : "Green_Bright",
+      "Blue_Dark" : "Blue Dark",
       "Pressure" : "Pressure",
-      "JourSemMoisJour" : "Weekday, month, day",
-      "Calories" : "Calories",
-      "BloodGlucose" : "Blood glucose",
-      "NSurl" : "NightScout Url",
+      "Pink" : "Pink",
+      "Transparent" : "Transparent",
+      "Ivory" : "Ivory",
+      "sourceBG" : "BG source",
+      "Blue_Ice" : "Blue Ice",
       "Temper" : "Sensor temperature",
-      "CurrentHeartRate" : "Current Heart Rate",
+      "Steps" : "Steps count",
+      "Brown" : "Brown",
+      "Purple_Dark" : "Purple Dark",
+      "Aqua" : "Aqua",
+      "code" : "code to remove dudu logo",
+      "Gray_80" : "Gray 80",
+      "Field3Color" : "Down-R field Color",
+      "Nstoken" : "Nightscout token",
+      "AppName" : "ProjectsWatch",
+      "Green_Olive" : "Green Olive",
+      "Lime" : "Lime",
+      "JourMois" : "Day, month",
+      "Lavender" : "Lavender",
+      "$literal2$" : "Xdrip+",
+      "codeApp" : "PROJWF654",
+      "JourSemJour" : "Weekday, day",
+      "Field4Color" : "Up-R field color",
+      "Floor" : "Floor",
+      "Green_Dark" : "Green Dark",
+      "Gray_Blue" : "Gray Blue",
+      "Blue_Ocean" : "Blue Ocean",
+      "Nsurl" : "Nightscout url",
+      "Calories" : "Calories",
+      "Field4" : "Up-R field",
+      "$literal1$" : "AAPS",
+      "Field2" : "Down-L field",
+      "White" : "White",
+      "Field3" : "Down-Right field",
+      "MinutesColor" : "MinutesColor",
+      "Coral" : "Coral",
+      "NSurl" : "NightScout Url",
+      "Blue_Light" : "Blue Light",
+      "Green_Light" : "Green Light",
+      "Yellow_Dark" : "Yellow Dark",
       "Seconds" : "Seconds",
+      "Field1" : "Up-Left field",
+      "Green" : "Green",
       "Altitude" : "Altitude"
     }
   }

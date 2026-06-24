@@ -4,11 +4,11 @@ using Toybox.Graphics as Gfx;
 using Toybox.Application as App;
 
 class KeyboardView extends Ui.View {
-var prompt,code,codeIsOK;
+var prompt,codeString,codeIsOK;
 
 
-    function initialize(oldCode,codeOK) {
-        code = oldCode;
+    function initialize(codeOK) {
+        codeString = params[code];
         codeIsOK = codeOK;
         View.initialize();
     }
@@ -18,10 +18,10 @@ var prompt,code,codeIsOK;
             if (codeIsOK) {
                 prompt = "Your code is OK";
             } else {
-                prompt = "Your code is WRONG";
+                prompt = "Your code is\ninvalid !";
             }
         } else {
-            prompt = "Your actual code is\n"+code+"\nPress Enter to change it";
+            prompt = "Your actual code is\n"+codeString+"\nPress Enter to change it";
         }
         dc.setColor(Graphics.COLOR_BLACK, Graphics.COLOR_BLACK);
         dc.clear();
@@ -29,7 +29,7 @@ var prompt,code,codeIsOK;
         dc.drawText(dc.getWidth() / 2, dc.getHeight() / 2, Graphics.FONT_SMALL, prompt, Graphics.TEXT_JUSTIFY_CENTER | Graphics.TEXT_JUSTIFY_VCENTER);    
     }
     public function setText(text) as Void {
-        code = text;
+        codeString = text;
     }
 
 }
@@ -40,10 +40,10 @@ class KeyboardDelegate extends Ui.InputDelegate {
     private var _lastText = "";
     private var _view as KeyboardView;
 
-    public function initialize(view as KeyboardView,code) {
+    public function initialize(view as KeyboardView) {
         WatchUi.InputDelegate.initialize();
         _view = view;
-        _lastText = code;
+        _lastText = params[code];
     }
     public function onKey(key) {
         if (key.getKey() == WatchUi.KEY_ENTER) { 
@@ -75,7 +75,7 @@ class KeyboardListener extends Ui.TextPickerDelegate {
         _view = view;
     }
     public function onTextEntered(text, changed ) {
-        Application.Properties.setValue("code",text);
+        Application.Properties.setValue("param"+code,text);
         var myTimer = new Timer.Timer();
         _view.codeIsOK = codeIsOK(text);
         myTimer.start(method(:timerCallback), 3000, false);
@@ -89,42 +89,20 @@ class KeyboardListener extends Ui.TextPickerDelegate {
     function timerCallback() {
         Ui.popView(Ui.SLIDE_IMMEDIATE);
     }
-    function codeIsOK(code) {
-		if ((code == null) || code.length() == 0){
+    function codeIsOK(codeString) {
+		if ((codeString == null) || codeString.length() == 0){
             return false;
         }
-        if (code.substring(code.length()-1,code.length()).equals(" ")) {
-            code = code.substring(0,code.length()-1);
+        if (codeString.substring(codeString.length()-1,codeString.length()).equals(" ")) {
+            codeString = codeString.substring(0,codeString.length()-1);
         }
-		code = code.toUpper();
+		codeString = codeString.toUpper();
         var goodCode = WatchUi.loadResource(Rez.Strings.codeApp);
-        if (code.equals(goodCode)) {
+        if (codeString.equals(goodCode)) {
             return true;
         } else {
             return false;
         }
     }
-
-
-
-}
-
-class Msg extends Ui.View {
-var mess;
-   function initialize(code) {
-        if (codeIsOK(code)) {
-            mess = "Your code is OK";
-        } else {
-            mess = " Your code is wrong";
-        }
-         View.initialize();
-    }
-    function onUpdate(dc) {
-        dc.setColor(Graphics.COLOR_BLACK, Graphics.COLOR_BLACK);
-        dc.clear();
-        dc.setColor(Graphics.COLOR_WHITE, Graphics.COLOR_TRANSPARENT);
-        dc.drawText(dc.getWidth() / 2, dc.getHeight() / 2, Graphics.FONT_SMALL, mess, Graphics.TEXT_JUSTIFY_CENTER | Graphics.TEXT_JUSTIFY_VCENTER);    
-    }
-
 }
 

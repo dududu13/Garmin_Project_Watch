@@ -11,9 +11,6 @@ using Toybox.ActivityMonitor as Act;
 using Toybox.SensorHistory;
 using Toybox.Sensor;
 
-var ParametresChanges = true;
-var params ;
-var oldParams;
 
 enum {
     BackGroundColor, //0
@@ -31,6 +28,9 @@ enum {
     Field4,
     Field4Color,//13
     sourceBG,
+    code,
+    NSurl,
+    NStoken,
     lastParametre
 }
 enum { //liste parametres fields
@@ -59,10 +59,12 @@ JourSem,
 JourSemJour,
 JourSemMoisJour,
 Week_number,
-
-UnitBG
 	}
 
+var ParametresChanges = true;
+var params ;
+var oldParams;
+//var paramNamesTab;
     var couleurFond,couleurChiffresH,couleurChiffresM;
 
     var isAwake = true;
@@ -75,13 +77,40 @@ UnitBG
     var unitBG = 0; //0 mg/dl, 1 mmol/l
 
 
+
 class ProjectsWatchApp extends App.AppBase {
 
     function initialize() {
         AppBase.initialize();
+        
+    }
+    function listParamNames() {
+        var tab = [];
+tab.add(WatchUi.loadResource(Rez.Strings.BackGroundColor));
+tab.add(WatchUi.loadResource(Rez.Strings.PresentColor));
+tab.add(WatchUi.loadResource(Rez.Strings.PastFutureColor));
+tab.add(WatchUi.loadResource(Rez.Strings.HourColor));
+tab.add(WatchUi.loadResource(Rez.Strings.MinutesColor));
+tab.add(WatchUi.loadResource(Rez.Strings.is24h));
+tab.add(WatchUi.loadResource(Rez.Strings.Field1));
+tab.add(WatchUi.loadResource(Rez.Strings.Field1Color));
+tab.add(WatchUi.loadResource(Rez.Strings.Field2));
+tab.add(WatchUi.loadResource(Rez.Strings.Field2Color));
+tab.add(WatchUi.loadResource(Rez.Strings.Field3));
+tab.add(WatchUi.loadResource(Rez.Strings.Field3Color));
+tab.add(WatchUi.loadResource(Rez.Strings.Field4));
+tab.add(WatchUi.loadResource(Rez.Strings.Field4Color));
+tab.add(WatchUi.loadResource(Rez.Strings.sourceBG));
+tab.add(WatchUi.loadResource(Rez.Strings.code));
+tab.add(WatchUi.loadResource(Rez.Strings.Nsurl));
+tab.add(WatchUi.loadResource(Rez.Strings.Nstoken));
+        return tab;
     }
 
+
     function getInitialView() as [Views] or [Views, InputDelegates] {
+        //paramNamesTab = listParamNames();
+        ProjectsWatchView.loadParams(false);
         watchView = new ProjectsWatchView();
 
         Background.deleteTemporalEvent();
@@ -91,13 +120,27 @@ class ProjectsWatchApp extends App.AppBase {
         var next = ProjectsWatchView.prochainBackground(); //return [delaiRestant,prochainTime];
         System.println("Delai restant="+next[0]);
         resync(lastBGmillis);
+        readLastData();
         return [watchView, new AnalogDelegate()];
     }
 
 
     public function getSettingsView()  {
-		var menuView = new MenuView("Settings",MenusDelegate.menuPrincipalTab(),2, 0,false,true);
+		var menuView = new MenuView("Settings",menuPrincipalTab(),2, 0,false,true);
 		return [menuView, new MenusDelegate(menuView)];
+    }
+    function menuPrincipalTab() {
+        var tab = [];
+        tab.add(WatchUi.loadResource(Rez.Strings.BackGroundColor));
+        tab.add(WatchUi.loadResource(Rez.Strings.PresentColor));
+        tab.add(WatchUi.loadResource(Rez.Strings.PastFutureColor));
+        tab.add(WatchUi.loadResource(Rez.Strings.HourColor));
+        tab.add(WatchUi.loadResource(Rez.Strings.MinutesColor));
+        tab.add(WatchUi.loadResource(params[is24h] ? Rez.Strings.is24h_2 : Rez.Strings.is24h));
+        tab.add("Fields");
+        tab.add("BG source");
+        tab.add("Unlock code");
+        return tab;
     }
 
     function onSettingsChanged() {
@@ -108,7 +151,6 @@ class ProjectsWatchApp extends App.AppBase {
     function DelaiTemporalEventSecondRestant() {
         
         var delaiMin = 1;
-
         var lastBackgroundMoment = Background.getLastTemporalEventTime();// as Time.Moment or Time.Duration or Null
         var delaiRestantSecondes=0;
         if (lastBackgroundMoment != null) {
@@ -153,60 +195,62 @@ class ProjectsWatchApp extends App.AppBase {
             timeTempo = delaicapteurCorrige; //correction en rallongeant
         }
 
-        Sys.println("RESYNC 0 timeNowValue            = " +timeNowValue);
-        Sys.println("RESYNC 1 capteurElapsed          = " +capteurElapsed);
-        Sys.println("RESYNC 2 delaiCapteurRestantMini = " +delaiCapteurRestantMini);
-        Sys.println("RESYNC 3 delaicapteurCorrige     = " +delaicapteurCorrige);
-        Sys.println("RESYNC 4 temporalMinRestant      = " +temporalMinRestant);
-        Sys.println("RESYNC 5 tempofinal              = " +timeTempo);
         Background.registerForTemporalEvent(Time.now().add(new Time.Duration(timeTempo))); 
         Sys.println("RESYNC fin OK---Tempo final posee = " + timeTempo);
     }
 
-
     function onBackgroundData(data) { //data=[sgv,delta,timeSecondes]
 	    Sys.println("onBackground "+data);
-        
-        enregistreDernierCapteur(data);
-        var capteurSecondes = data[2];
-	    Sys.println("onBackground "+capteurSecondes);
-        if (capteurSecondes > 0) {
-            Sys.println("onBackgroundData call resync(capteurSecondes) "+capteurSecondes);
-            resync(capteurSecondes);            
-        } else {
-            Sys.println("onBackgroundData invalid data: "+capteurSecondes + "pose 300 sec");
-            Background.registerForTemporalEvent(new Time.Duration(300));
-            resync(0);
+        if (data[0]>0) {
+            enregistreDernierCapteur(data);
+            var capteurSecondes = data[2];
+            Sys.println("onBackground secondes = "+capteurSecondes);
+            if (capteurSecondes > 0) {
+                Sys.println("onBackgroundData call resync(capteurSecondes) "+capteurSecondes);
+                resync(capteurSecondes); 
+                return;           
+            } 
         }
-    
-
-        //App.getApp().setProperty("offsetSeconds", offsetSeconds);
-
+        Sys.println("onBackgroundData invalid data pose 300 sec");
+        Background.registerForTemporalEvent(new Time.Duration(300));
+        resync(0);
     }
 
-const NBRE_MAXI_DATA = 5;//6h
-
+const NBRE_MAXI_DATA = 5;
     function enregistreDernierCapteur(capteur) {//capteur=[sgv,delta,timeSecondes]
         //if (capteur[0] ==0) { return;}
         System.println("enregistreDernierCapteur "+capteur);
-        var allData = readAlldData();
-        allData.add(capteur);// ajoute a la fin
-        if (allData.size()>NBRE_MAXI_DATA) {
-            allData.remove(allData[0]); // enleve le 1er
+        
+        tabData.add(capteur);// ajoute a la fin
+        if (tabData.size()>NBRE_MAXI_DATA) {
+            tabData.remove(tabData[0]); // enleve le 1er
         }
-        storeAllData(allData);
-        Application.Storage.setValue("CapteurChanged",true);
+        storeAllData(tabData);
+        bgBg = capteur[0];
+        bgDelta = capteur[1];
+        bgSecondes = capteur[2];
+        //Application.Storage.setValue("CapteurChanged",true);
         System.println("enregistreDernierCapteur FIN, secondes = "+capteur[2]);
+    }
 
+    function readLastData() {
+        readAllData();
+        if (tabData.size() > 0) {
+            var lastCapteur = tabData[tabData.size() - 1];
+            bgBg = lastCapteur[0];
+            bgDelta = lastCapteur[1];
+            bgSecondes = lastCapteur[2];
+            System.println("readLastData bgBg="+bgBg+" bgDelta="+bgDelta+" bgSecondes="+bgSecondes);
+        }
     }
     
-    function readAlldData() {
-        //System.println("start readAlldData ");
+    function readAllData() {
+        //System.println("start readAllData ");
         var st = Application.Storage.getValue("data");
        
-        var tab=new[0];
+        tabData=new[0];
         if ((st == null) || (st.length() < 3)) {
-            return tab;
+            return tabData;
         }
         var	n1 = st.find(";");
         while (n1 != null) {
@@ -225,19 +269,12 @@ const NBRE_MAXI_DATA = 5;//6h
 
             tab2.add(st2.toNumber()); //BG,delta,secondes
 
-            tab.add(tab2); //[BG,delta,secondes]
+            tabData.add(tab2); //[BG,delta,secondes]
         }
-        //System.println("fin readAlldData  ="+tab);
-        return tab;
+        //System.println("fin readAllData  ="+tab);
+        //return tab;
     }
 
-    function readAlldData2() {
-        var st="[[153, -5, 1772098150], [[148, -5, 1772098451], [146, -2, 1772098750], [217, -1, 1772438800]]]";
-        st = st.substring(1,st.length()-1); //enlève les doubles crochets de départ
-        var array = ProjectsWatchApp.stringToArray(st,new[0]);
-        System.println("Result final="+array.toString());
-        //[0, 0, 0], [160, 0, 1772097550], [153, -5, 1772098150], [148, -5, 1772098451], [146, -2, 1772098750], [217, -1, 1772438800]
-    }
     function stringToArray(st,Tab) {
         var result = new[0];
         var num1,num2;
@@ -287,17 +324,6 @@ const NBRE_MAXI_DATA = 5;//6h
       System.println("fin storeAllData st = "+st);
      }
 
-    function storeAllData2(myTab) {
-      //System.println("debut storeAllData2 "+myTab);
-      var st = myTab.toString();
-      //for (var i = 0;i<myTab.size();i++) {
-      //  if ((myTab[i] !=null) && (myTab[i][0] !=null) && (myTab[i][1] !=null) && (myTab[i][2] !=null)) {
-      //  st=st+myTab[i][0].toString()+","+myTab[i][1].toString()+","+myTab[i][2].toString()+";";
-      //  }
-      //}
-      //Application.Storage.setValue("data",st);
-      System.println("fin storeAllData2 "+st);
-     }
 
 
     function getServiceDelegate(){

@@ -18,6 +18,7 @@
     <string id="BodyBattery">Body battery</string>
     <string id="ActiveMinutesDay">Active minutes day</string>
     <string id="ActiveMinutesWeek">Active minutes week</string>
+    <string id="BloodGlucose">Blood glucose</string>
     <string id="Seconds">Seconds</string>
     <string id="Digital_Time">Digital Time</string>
     <string id="MoisJour">Month, day</string>
@@ -27,6 +28,75 @@
     <string id="JourSemMoisJour">Weekday, month, day</string>
     <string id="Mois">Month</string>
     <string id="Week_number">Week number</string>
-    <string id="BloodGlucose">Blood glucose</string>
-    
+
+<string id="Aqua">Aqua</string>
+<string id="Black">Black</string>
+<string id="Blue">Blue</string>
+<string id="Blue_Dark">Blue Dark</string>
+<string id="Blue_Ice">Blue Ice</string>
+<string id="Blue_Light">Blue Light</string>
+<string id="Blue_Ocean">Blue Ocean</string>
+<string id="Blue_Pale">Blue Pale</string>
+<string id="Blue_Sky">Blue Sky</string>
+<string id="Brown">Brown</string>
+<string id="Coral">Coral</string>
+<string id="Gold">Gold</string>
+<string id="Gray_25">Gray 25</string>
+<string id="Gray_40">Gray 40</string>
+<string id="Gray_50">Gray 50</string>
+<string id="Gray_80">Gray 80</string>
+<string id="Gray_Blue">Gray Blue</string>
+<string id="Green">Green</string>
+<string id="Green_Bright">Green_Bright</string>
+<string id="Green_Dark">Green Dark</string>
+<string id="Green_Light">Green Light</string>
+<string id="Green_Olive">Green Olive</string>
+<string id="Green_Sea">Green Sea</string>
+<string id="Indigo">Indigo</string>
+<string id="Ivory">Ivory</string>
+<string id="Lavender">Lavender</string>
+<string id="Lime">Lime</string>
+<string id="Orange">Orange</string>
+<string id="Orange_Light">Orange Light</string>
+<string id="Periwinkle">Periwinkle</string>
+<string id="Pink">Pink</string>
+<string id="Plum">Plum</string>
+<string id="Purple_Dark">Purple Dark</string>
+<string id="Red">Red</string>
+<string id="Red_Dark">Red Dark</string>
+<string id="Rose">Rose</string>
+<string id="Tan">Tan</string>
+<string id="Teal">Teal</string>
+<string id="Teal_Dark">Teal Dark</string>
+<string id="Turquoise">Turquoise</string>
+<string id="Turquoise_Light">Turquoise Light</string>
+<string id="Violet">Violet</string>
+<string id="White">White</string>
+<string id="Yellow">Yellow</string>
+<string id="Yellow_Dark">Yellow Dark</string>
+<string id="Yellow_Light">Yellow Light</string>
+<string id="Transparent">Transparent</string>
+
+
+<string id="BackGroundColor">BackGround Color</string>
+<string id="PresentColor">Present Color</string>
+<string id="PastFutureColor">Past-Future Color</string>
+<string id="HourColor">Hour Color</string>
+<string id="MinutesColor">MinutesColor</string>
+<string id="is24h">Display 24h ?</string>
+<string id="is24h_2">Display 12h ?</string>
+<string id="Field1">Up-Left field</string>
+<string id="Field1Color">Up-L field Color</string>
+<string id="Field2">Down-L field</string>
+<string id="Field2Color">Down-L field Color</string>
+<string id="Field3">Down-Right field</string>
+<string id="Field3Color">Down-R field Color</string>
+<string id="Field4">Up-R field</string>
+<string id="Field4Color">Up-R field color</string>
+<string id="sourceBG">BG source</string>
+<string id="code">code to remove dudu logo</string>
+<string id="Nsurl">Nightscout url</string>
+<string id="Nstoken">Nightscout token</string>
+
+
 </strings>
