@@ -76,6 +76,15 @@ var oldParams;
     var bgDelta = 0;
     var unitBG = 0; //0 mg/dl, 1 mmol/l
 
+	var decalageY_OLED = 0;  // pour changement de place en mode low power sur les AMOLED
+	var decalageX_OLED = 0;  // pour changement de place en mode low power sur les AMOLED
+    var fenetre_heures;
+   // var fieldsIcon;
+    var iconsFieldsFont;
+    var myLogo;
+    var locked = false;
+    var codeOK = false;
+    var timeInstallation = 0;
 
 
 class ProjectsWatchApp extends App.AppBase {
@@ -110,7 +119,7 @@ tab.add(WatchUi.loadResource(Rez.Strings.Nstoken));
 
     function getInitialView() as [Views] or [Views, InputDelegates] {
         //paramNamesTab = listParamNames();
-        ProjectsWatchView.loadParams(false);
+        ProjectsWatchView.loadParams(true);
         watchView = new ProjectsWatchView();
 
         Background.deleteTemporalEvent();

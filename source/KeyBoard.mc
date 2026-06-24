@@ -78,11 +78,11 @@ class KeyboardListener extends Ui.TextPickerDelegate {
         Application.Properties.setValue("param"+code,text);
         var myTimer = new Timer.Timer();
         _view.codeIsOK = codeIsOK(text);
-        myTimer.start(method(:timerCallback), 3000, false);
+        myTimer.start(method(:timerCallback), 700, false);
         Ui.requestUpdate();
     }
     public function onCancel() {
-        Ui.popView(Ui.SLIDE_IMMEDIATE);
+        //Ui.popView(Ui.SLIDE_IMMEDIATE);
         return true;
     }
 

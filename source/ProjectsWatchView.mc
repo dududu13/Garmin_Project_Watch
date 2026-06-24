@@ -10,15 +10,6 @@ using Toybox.Time.Gregorian as Calendar;
 class ProjectsWatchView extends WatchUi.WatchFace {
     const TIME_BEFORE_LOCKING = 4000; //un peu plus d'une heure
     
-	var decalageY_OLED = 0;  // pour changement de place en mode low power sur les AMOLED
-	var decalageX_OLED = 0;  // pour changement de place en mode low power sur les AMOLED
-    var fenetre_heures;
-   // var fieldsIcon;
-    var iconsFieldsFont;
-    var myLogo;
-    var locked = false;
-    var codeOK = false;
-    var timeInstallation = 0;
     
 
 
@@ -54,7 +45,7 @@ class ProjectsWatchView extends WatchUi.WatchFace {
         couleurChiffresH = Colors.colorValuesTab()[params[HourColor]];
         couleurChiffresM = Colors.colorValuesTab()[params[MinutesColor]];
         if (testTheCode) {
-            testeCode();
+            ProjectsWatchView.testeCode();
         }
         ParametresChanges = false;
     }
@@ -135,6 +126,7 @@ class ProjectsWatchView extends WatchUi.WatchFace {
 
 	static function testeCode() {
         myLogo = WatchUi.loadResource(Rez.Drawables.myLogo);
+        System.println("My logo chargé");
         var code_a_tester = params[code];
 		if (code_a_tester == null) {
             Application.Properties.setValue("param"+code,"");
@@ -377,8 +369,10 @@ class ProjectsWatchView extends WatchUi.WatchFace {
                 //System.println("dessine champs "+pos+" (valeur = "+params[numParam]+")   xy = "+x+ " "+y+"   --> "+text);
                 dc.drawText(x,y ,f,text,Graphics.TEXT_JUSTIFY_CENTER);   
                 if (params[numParam] == BG)  {
-                    var timeSec = Time.now().value()/1000;
-                    if (timeSec - bgSecondes > 11*60) { // si plus de 11 minutes je barre
+                    var tempsMin = ((Time.now().value()-bgSecondes)/60).toNumber();
+                    dc.drawText(x+hauteurIcon/3,y - hauteurIcon ,Graphics.FONT_SYSTEM_XTINY,tempsMin+"'",Graphics.TEXT_JUSTIFY_LEFT);  
+                    //System.println("dessine champs BG   passed minutes = "+((timeSec-bgSecondes)/60).toNumber());
+                    if (tempsMin > 11) { // si plus de 11 minutes je barre
                     
                         var h2 = hauteurIcon/4;
                         var l = dc.getTextWidthInPixels(text, f)/2;
