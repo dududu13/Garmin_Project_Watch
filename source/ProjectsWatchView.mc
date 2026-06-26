@@ -85,6 +85,7 @@ class ProjectsWatchView extends WatchUi.WatchFace {
         }
 
     }
+    /*
     function prochainBackground() { //avec moment
         var prochainBackground = Background.getTemporalEventRegisteredTime();// Time.Moment or Time.Duration or Null
         var delaiRestant = 0;
@@ -92,12 +93,11 @@ class ProjectsWatchView extends WatchUi.WatchFace {
         if (prochainBackground == null) {
             System.println("prochainBackground null, registerasap");
             delaiRestant = "...";
-            //WatchApp.resync(0);
+
         } else { 
             if (prochainBackground.compare(Time.now())<0) {
                 System.println("prochainBackground < now, registerasap");
                 delaiRestant = "ERR";
-                //WatchApp.resync(0);
             } else {
                 delaiRestant = prochainBackground.value()-Time.now().value();
                 var info = Calendar.info(prochainBackground, Time.FORMAT_LONG);
@@ -107,6 +107,7 @@ class ProjectsWatchView extends WatchUi.WatchFace {
         }
         return [delaiRestant,prochainTime];
     }
+    */
 
     function updatedBG() {
         var coeff = 1.0;
@@ -369,11 +370,17 @@ class ProjectsWatchView extends WatchUi.WatchFace {
                 //System.println("dessine champs "+pos+" (valeur = "+params[numParam]+")   xy = "+x+ " "+y+"   --> "+text);
                 dc.drawText(x,y ,f,text,Graphics.TEXT_JUSTIFY_CENTER);   
                 if (params[numParam] == BG)  {
-                    var tempsMin = ((Time.now().value()-bgSecondes)/60).toNumber();
-                    dc.drawText(x+hauteurIcon/3,y - hauteurIcon ,Graphics.FONT_SYSTEM_XTINY,tempsMin+"'",Graphics.TEXT_JUSTIFY_LEFT);  
-                    //System.println("dessine champs BG   passed minutes = "+((timeSec-bgSecondes)/60).toNumber());
-                    if (tempsMin > 11) { // si plus de 11 minutes je barre
-                    
+                    var timeNowValue = Time.now().value();
+                    var nextTemporalEventTimeValue = timeNowValue;
+                    var getNextTemporalEventTime = Background.getTemporalEventRegisteredTime();
+                    if (getNextTemporalEventTime != null) { 
+                        nextTemporalEventTimeValue = getNextTemporalEventTime.value();
+                    }
+                    var nextTempoSec = nextTemporalEventTimeValue-timeNowValue;
+                    var timeCapteur = ((timeNowValue-bgSecondes)/60).toNumber();
+                    dc.drawText(x+hauteurIcon/3,y - hauteurIcon*1.1 ,Graphics.FONT_SYSTEM_XTINY,nextTempoSec,Graphics.TEXT_JUSTIFY_LEFT);  
+                    dc.drawText(x+hauteurIcon/3,y - hauteurIcon*0.5 ,Graphics.FONT_SYSTEM_XTINY," "+timeCapteur+"'",Graphics.TEXT_JUSTIFY_LEFT);  
+                    if (timeCapteur > 11) { // si plus de 11 minutes je barre le champ BG pour signaler que c'est trop vieux
                         var h2 = hauteurIcon/4;
                         var l = dc.getTextWidthInPixels(text, f)/2;
                         var h = dc.getFontHeight(f);

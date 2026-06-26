@@ -19,6 +19,7 @@ class WatchBG extends Toybox.System.ServiceDelegate {
 
     function onTemporalEvent() {
         Sys.println("in onTemporalEvent");
+        //Application.Storage.setValue("lastTemporalEventTime", Time.now().value);
         receiveCtr = 0;
         reqNum = 0;
         var isThereBg = Application.Properties.getValue("param"+Field1) == BG || Application.Properties.getValue("param"+Field2) == BG || Application.Properties.getValue("param"+Field3) == BG || Application.Properties.getValue("param"+Field4) == BG;
@@ -27,8 +28,8 @@ class WatchBG extends Toybox.System.ServiceDelegate {
             myWebRequest(true, 0, false);
         }
         else {
-            System.println("onTemporalEvent no BG field, Background exit");
-            Background.exit([0,0,0]);
+            System.println("onTemporalEvent no BG field, return ");
+            //Background.exit([0,0,0]);
         }
 
     }

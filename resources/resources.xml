@@ -4,7 +4,7 @@
 
 <settings>
 
-
+<setting propertyKey="@Properties.param15" title="@Strings.code_setting"><settingConfig type="alphaNumeric" /> </setting>
 
 <setting propertyKey="@Properties.param0" title="@Strings.BackGroundColor"><settingConfig type="list">
 <listEntry value="0">@Strings.Aqua</listEntry>
@@ -575,7 +575,6 @@
 <listEntry value="1">AAPS</listEntry>
 <listEntry value="2">Xdrip+</listEntry>
 </settingConfig></setting>
-<setting propertyKey="@Properties.param15" title="@Strings.code_setting"><settingConfig type="alphaNumeric" /> </setting>
 <setting propertyKey="@Properties.param16" title="@Strings.NSurl"><settingConfig type="alphaNumeric" /> </setting>
 <setting propertyKey="@Properties.param17" title="@Strings.NStoken"><settingConfig type="alphaNumeric" /> </setting>
 </settings>

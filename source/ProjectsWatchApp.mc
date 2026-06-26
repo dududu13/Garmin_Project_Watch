@@ -87,6 +87,7 @@ var oldParams;
     var timeInstallation = 0;
 
 
+
 class ProjectsWatchApp extends App.AppBase {
 
     function initialize() {
@@ -123,12 +124,9 @@ tab.add(WatchUi.loadResource(Rez.Strings.Nstoken));
         watchView = new ProjectsWatchView();
 
         Background.deleteTemporalEvent();
-        //var thisApp = Application.getApp();
-        var lastBGmillis = watchView.bgSecondes;
-        Sys.println("Initialize sync with offsetMillis="+lastBGmillis);
-        var next = ProjectsWatchView.prochainBackground(); //return [delaiRestant,prochainTime];
-        System.println("Delai restant="+next[0]);
-        resync(lastBGmillis);
+        readLastData();
+        Sys.println("Initialize sync with offsetMillis="+bgSecondes);
+        resync();
         readLastData();
         return [watchView, new AnalogDelegate()];
     }
@@ -153,79 +151,75 @@ tab.add(WatchUi.loadResource(Rez.Strings.Nstoken));
     }
 
     function onSettingsChanged() {
+        System.println("onSettingsChanged");
 		ParametresChanges = true;
+        resync();
 		WatchUi.requestUpdate();
 	}
 
-    function DelaiTemporalEventSecondRestant() {
-        
-        var delaiMin = 1;
-        var lastBackgroundMoment = Background.getLastTemporalEventTime();// as Time.Moment or Time.Duration or Null
-        var delaiRestantSecondes=0;
-        if (lastBackgroundMoment != null) {
-          Sys.println("DelaiTemporalEventSecondRestant temporal depuis = "+(Time.now().value() - lastBackgroundMoment.value()) +" sec");
-          delaiRestantSecondes = 300 -Time.now().value() + lastBackgroundMoment.value();
-        } else {
-          Sys.println("DelaiTemporalEventSecondRestant temporal null, delai = 0");
-
+    function resync() { // réglage prochain temporal event, 5 min au moins après le précédent, et juste après la prochaine lecture du capteur + tempo
+        var isThereBG = (params[Field1] == BG) || (params[Field2] == BG) || (params[Field3] == BG) || (params[Field4] == BG);
+        if (! isThereBG) {
+            Sys.println("resync no BG field, return");
+            return;
         }
-        var delaiCalcule = delaiRestantSecondes;
-        if (delaiCalcule<delaiMin) {delaiRestantSecondes = delaiMin;}
-        //s.println("DelaiTemporalEventSecondRestant = "+delaiRestantSecondes);
-        return delaiRestantSecondes;
-    }
-
-    function resync(last_capteur_seconds) { // réglage prochain temporal event, 5 min au moins après le précédent, et juste après la prochaine lecture du capteur + tempo
-        Sys.println("start RESYNC : last_capteur_seconds = "+last_capteur_seconds);
-        var TEMPO_WEB = [15,10,15];  //tempo pour que la nouvelle glycemie soit dispo sur Nightscout, Xdrip ou AAPS 
+        Sys.println("start RESYNC ---");
+        var TEMPO_WEB = [15,10,15][params[sourceBG]];  //tempo pour que la nouvelle glycemie soit dispo sur Nightscout, Xdrip ou AAPS 
         var timeNowValue = Time.now().value();
-        var tempoWeb = Application.Storage.getValue("tempoWeb");
-        if (tempoWeb == null) {
-            tempoWeb = timeNowValue - 600;
-            Application.Storage.setValue("tempoWeb", tempoWeb);
+        var last_capteur_seconds_time = bgSecondes;
+        if ((last_capteur_seconds_time == null) || (last_capteur_seconds_time == 0)){
+            last_capteur_seconds_time = timeNowValue - 600; //pour synchro des que possible
         }
-        
-        var delaiCapteurRestantMini = 0;
-        //var last_capteur_seconde;
-        if ((last_capteur_seconds == null) || (last_capteur_seconds == 0)){
-            last_capteur_seconds = timeNowValue - 600 - tempoWeb -60; //pour synchro des que possible
+        var getLastTemporalEventTime = Background.getLastTemporalEventTime();
+        var lastTemporalEventTime = 0;
+        if (getLastTemporalEventTime != null) {
+            lastTemporalEventTime = getLastTemporalEventTime.value();
         }
+        //var lastTemporalEventTime = Application.Storage.getValue("lastTemporalEventTime"); //last temporal Event time in sec
+        if (lastTemporalEventTime == null) {
+            lastTemporalEventTime = timeNowValue - 600;
+            //Application.Storage.setValue("lastTemporalEventTime", lastTemporalEventTime);
+        }
+        var nextCallEventTimeMini = lastTemporalEventTime + 300; //next call mini 5 min after last temporal event
+        var nextCapteurTimeMini = last_capteur_seconds_time + 300 + TEMPO_WEB; //next call mini after last capteur + tempo
+        var delaiMin = nextCallEventTimeMini - timeNowValue;
+        var delaiCapteur = nextCapteurTimeMini - timeNowValue;
+        //delaiMin = 60;
+        //delaiCapteur = -200;
+        var tempo = delaiMin;
+        if (delaiMin > 0) {
+            if (delaiCapteur < delaiMin - 10 && delaiCapteur > 10) {
+               tempo = (delaiCapteur % 300)  + 300;
+            }
+        }
+        if (tempo<1) {tempo = 1;}
+        if (tempo < delaiMin) {tempo = delaiMin;}
 
-        var capteurElapsed = timeNowValue - last_capteur_seconds;
-        delaiCapteurRestantMini = 300 - capteurElapsed + tempoWeb; //
-        var delaicapteurCorrige = delaiCapteurRestantMini;
-        if ((delaiCapteurRestantMini >-300 ) && (delaiCapteurRestantMini <295)){
-            delaicapteurCorrige = delaiCapteurRestantMini % 300 +300; // de 300 à 599
-        }
-        var temporalMinRestant = ProjectsWatchApp.DelaiTemporalEventSecondRestant();
-        var timeTempo = temporalMinRestant;
+        Sys.println("RESYNC fin OK---tempo = " + tempo + " delaiMin = "+delaiMin+"  delaiCapteur = "+(delaiCapteur));
 
-        if ((delaicapteurCorrige < 595) && (temporalMinRestant<delaicapteurCorrige)) {
-            timeTempo = delaicapteurCorrige; //correction en rallongeant
-        }
-
-        Background.registerForTemporalEvent(Time.now().add(new Time.Duration(timeTempo))); 
-        Sys.println("RESYNC fin OK---Tempo final posee = " + timeTempo);
+        Background.registerForTemporalEvent(Time.now().add(new Time.Duration(tempo))); 
+        //Background.registerForTemporalEvent(new Time.Duration(tempo)); 
     }
 
     function onBackgroundData(data) { //data=[sgv,delta,timeSecondes]
-	    Sys.println("onBackground "+data);
+	    Sys.println("onBackgroundData "+data);
         if (data[0]>0) {
             enregistreDernierCapteur(data);
             var capteurSecondes = data[2];
-            Sys.println("onBackground secondes = "+capteurSecondes);
+            Sys.println("onBackgroundData secondes capteur= "+capteurSecondes);
             if (capteurSecondes > 0) {
                 Sys.println("onBackgroundData call resync(capteurSecondes) "+capteurSecondes);
-                resync(capteurSecondes); 
+                resync(); 
                 return;           
             } 
         }
         Sys.println("onBackgroundData invalid data pose 300 sec");
         Background.registerForTemporalEvent(new Time.Duration(300));
-        resync(0);
+
     }
 
 const NBRE_MAXI_DATA = 5;
+
     function enregistreDernierCapteur(capteur) {//capteur=[sgv,delta,timeSecondes]
         //if (capteur[0] ==0) { return;}
         System.println("enregistreDernierCapteur "+capteur);

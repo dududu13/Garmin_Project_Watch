@@ -188,6 +188,7 @@ class MenusFieldsDelegate extends Ui.InputDelegate {
         //menuView.item_menu_fields = 
         Ui.popView(Ui.SLIDE_IMMEDIATE);
         Ui.requestUpdate();
+        ProjectsWatchApp.resync();
         return true;
     }
 
