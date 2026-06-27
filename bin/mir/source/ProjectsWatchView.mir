@@ -725,7 +725,7 @@ D__gduriez_Perso_Dossiers_DossiersVS_ProjectsWatch_source_ProjectsWatchView_mc_1
         %tmp.8 = getm $.Toybox.System;
         symbol [ println %tmp.9 142 15 22 ];
         %tmp.9 = getv function %tmp.8 :println;
-        %tmp.10 = "My logo chargÃ©";
+        %tmp.10 = "My logo chargé";
         invoke %tmp.8 %tmp.9(%tmp.10);
 [ "D:\gduriez\Perso\Dossiers\DossiersVS\ProjectsWatch\source\ProjectsWatchView.mc" 143 8 ]
         [ "D__gduriez_Perso_Dossiers_DossiersVS_ProjectsWatch_source_ProjectsWatchView_mc_140_29_166_4_start" "D__gduriez_Perso_Dossiers_DossiersVS_ProjectsWatch_source_ProjectsWatchView_mc_140_29_166_4_stop" ]
@@ -4586,10 +4586,13 @@ D__gduriez_Perso_Dossiers_DossiersVS_ProjectsWatch_source_ProjectsWatchView_mc_5
         %tmp.541 = lgetv %r.12;
         symbol [ r %tmp.541 538 13 14 ];
         %tmp.542 = as %tmp.541 { (!Null) };
-        symbol [ toString %tmp.543 538 15 23 ];
-        %tmp.543 = getv function %tmp.542 :toString;
-        %tmp.544 = invoke %tmp.542 %tmp.543();
-        lputv %result.1 %tmp.544;
+        symbol [ format %tmp.543 538 15 21 ];
+        %tmp.543 = getv function %tmp.542 :format;
+        %tmp.544 = "%01d";
+        %tmp.545 = invoke %tmp.542 %tmp.543(%tmp.544);
+        %tmp.546 = "%";
+        %tmp.547 = add %tmp.545 %tmp.546;
+        lputv %result.1 %tmp.547;
         symbol [ result %result.1 538 4 10 ];
 D__gduriez_Perso_Dossiers_DossiersVS_ProjectsWatch_source_ProjectsWatchView_mc_537_18_539_3_stop:
         goto @D__gduriez_Perso_Dossiers_DossiersVS_ProjectsWatch_source_ProjectsWatchView_mc_537_3_539_3_if_end;
@@ -4599,394 +4602,394 @@ D__gduriez_Perso_Dossiers_DossiersVS_ProjectsWatch_source_ProjectsWatchView_mc_5
 D__gduriez_Perso_Dossiers_DossiersVS_ProjectsWatch_source_ProjectsWatchView_mc_531_7_582_2_if_false:
 [ "D:\gduriez\Perso\Dossiers\DossiersVS\ProjectsWatch\source\ProjectsWatchView.mc" 541 7 ]
 D__gduriez_Perso_Dossiers_DossiersVS_ProjectsWatch_source_ProjectsWatchView_mc_541_7_582_2_if_stmt:
-        %tmp.545 = lgetv %fieldType;
-        symbol [ fieldType %tmp.545 541 11 20 ];
-        symbol [ Seconds %tmp.547 541 22 29 ];
-        %tmp.547 = getv ? :Seconds;
-        %tmp.548 = eq %tmp.545 %tmp.547;
-        bf %tmp.548 @D__gduriez_Perso_Dossiers_DossiersVS_ProjectsWatch_source_ProjectsWatchView_mc_541_7_582_2_if_false;
+        %tmp.548 = lgetv %fieldType;
+        symbol [ fieldType %tmp.548 541 11 20 ];
+        symbol [ Seconds %tmp.550 541 22 29 ];
+        %tmp.550 = getv ? :Seconds;
+        %tmp.551 = eq %tmp.548 %tmp.550;
+        bf %tmp.551 @D__gduriez_Perso_Dossiers_DossiersVS_ProjectsWatch_source_ProjectsWatchView_mc_541_7_582_2_if_false;
 D__gduriez_Perso_Dossiers_DossiersVS_ProjectsWatch_source_ProjectsWatchView_mc_541_7_582_2_if_true:
 D__gduriez_Perso_Dossiers_DossiersVS_ProjectsWatch_source_ProjectsWatchView_mc_541_32_543_2_start:
 [ "D:\gduriez\Perso\Dossiers\DossiersVS\ProjectsWatch\source\ProjectsWatchView.mc" 542 3 ]
-        %tmp.549 = lgetv %clockTime;
-        symbol [ clockTime %tmp.549 542 13 22 ];
-        symbol [ sec %tmp.550 542 23 26 ];
-        %tmp.550 = getv %tmp.549 :sec;
-        lputv %result.1 %tmp.550;
+        %tmp.552 = lgetv %clockTime;
+        symbol [ clockTime %tmp.552 542 13 22 ];
+        symbol [ sec %tmp.553 542 23 26 ];
+        %tmp.553 = getv %tmp.552 :sec;
+        lputv %result.1 %tmp.553;
         symbol [ result %result.1 542 3 9 ];
 D__gduriez_Perso_Dossiers_DossiersVS_ProjectsWatch_source_ProjectsWatchView_mc_541_32_543_2_stop:
         goto @D__gduriez_Perso_Dossiers_DossiersVS_ProjectsWatch_source_ProjectsWatchView_mc_541_7_582_2_if_end;
 D__gduriez_Perso_Dossiers_DossiersVS_ProjectsWatch_source_ProjectsWatchView_mc_541_7_582_2_if_false:
 [ "D:\gduriez\Perso\Dossiers\DossiersVS\ProjectsWatch\source\ProjectsWatchView.mc" 544 7 ]
 D__gduriez_Perso_Dossiers_DossiersVS_ProjectsWatch_source_ProjectsWatchView_mc_544_7_582_2_if_stmt:
-        %tmp.551 = lgetv %fieldType;
-        symbol [ fieldType %tmp.551 544 11 20 ];
-        symbol [ Digital_Time %tmp.553 544 24 36 ];
-        %tmp.553 = getv ? :Digital_Time;
-        %tmp.554 = eq %tmp.551 %tmp.553;
-        bf %tmp.554 @D__gduriez_Perso_Dossiers_DossiersVS_ProjectsWatch_source_ProjectsWatchView_mc_544_7_582_2_if_false;
+        %tmp.554 = lgetv %fieldType;
+        symbol [ fieldType %tmp.554 544 11 20 ];
+        symbol [ Digital_Time %tmp.556 544 24 36 ];
+        %tmp.556 = getv ? :Digital_Time;
+        %tmp.557 = eq %tmp.554 %tmp.556;
+        bf %tmp.557 @D__gduriez_Perso_Dossiers_DossiersVS_ProjectsWatch_source_ProjectsWatchView_mc_544_7_582_2_if_false;
 D__gduriez_Perso_Dossiers_DossiersVS_ProjectsWatch_source_ProjectsWatchView_mc_544_7_582_2_if_true:
 D__gduriez_Perso_Dossiers_DossiersVS_ProjectsWatch_source_ProjectsWatchView_mc_544_38_552_2_start:
 [ "D:\gduriez\Perso\Dossiers\DossiersVS\ProjectsWatch\source\ProjectsWatchView.mc" 545 12 ]
         [ "D__gduriez_Perso_Dossiers_DossiersVS_ProjectsWatch_source_ProjectsWatchView_mc_544_38_552_2_start" "D__gduriez_Perso_Dossiers_DossiersVS_ProjectsWatch_source_ProjectsWatchView_mc_544_38_552_2_stop" ]
         %form.13 = local;
         symbol [ form %form.13 545 16 20 ];
-        %tmp.555 = "%02d";
-        lputv %form.13 %tmp.555;
+        %tmp.558 = "%02d";
+        lputv %form.13 %tmp.558;
         symbol [ form %form.13 545 16 20 ];
 [ "D:\gduriez\Perso\Dossiers\DossiersVS\ProjectsWatch\source\ProjectsWatchView.mc" 546 12 ]
         [ "D__gduriez_Perso_Dossiers_DossiersVS_ProjectsWatch_source_ProjectsWatchView_mc_544_38_552_2_start" "D__gduriez_Perso_Dossiers_DossiersVS_ProjectsWatch_source_ProjectsWatchView_mc_544_38_552_2_stop" ]
         %h.14 = local;
         symbol [ h %h.14 546 16 17 ];
-        %tmp.556 = lgetv %clockTime;
-        symbol [ clockTime %tmp.556 546 20 29 ];
-        symbol [ hour %tmp.557 546 30 34 ];
-        %tmp.557 = getv %tmp.556 :hour;
-        lputv %h.14 %tmp.557;
+        %tmp.559 = lgetv %clockTime;
+        symbol [ clockTime %tmp.559 546 20 29 ];
+        symbol [ hour %tmp.560 546 30 34 ];
+        %tmp.560 = getv %tmp.559 :hour;
+        lputv %h.14 %tmp.560;
         symbol [ h %h.14 546 16 17 ];
 [ "D:\gduriez\Perso\Dossiers\DossiersVS\ProjectsWatch\source\ProjectsWatchView.mc" 547 12 ]
 D__gduriez_Perso_Dossiers_DossiersVS_ProjectsWatch_source_ProjectsWatchView_mc_547_12_550_12_if_stmt:
-        symbol [ params %tmp.559 547 18 24 ];
-        %tmp.559 = getv ? :params;
-        symbol [ is24h %tmp.561 547 25 30 ];
-        %tmp.561 = getv ? :is24h;
-        %tmp.562 = agetv %tmp.559 %tmp.561;
-        %tmp.563 = not %tmp.562;
-        bf %tmp.563 @D__gduriez_Perso_Dossiers_DossiersVS_ProjectsWatch_source_ProjectsWatchView_mc_547_12_550_12_if_end;
+        symbol [ params %tmp.562 547 18 24 ];
+        %tmp.562 = getv ? :params;
+        symbol [ is24h %tmp.564 547 25 30 ];
+        %tmp.564 = getv ? :is24h;
+        %tmp.565 = agetv %tmp.562 %tmp.564;
+        %tmp.566 = not %tmp.565;
+        bf %tmp.566 @D__gduriez_Perso_Dossiers_DossiersVS_ProjectsWatch_source_ProjectsWatchView_mc_547_12_550_12_if_end;
 D__gduriez_Perso_Dossiers_DossiersVS_ProjectsWatch_source_ProjectsWatchView_mc_547_12_550_12_if_true:
 D__gduriez_Perso_Dossiers_DossiersVS_ProjectsWatch_source_ProjectsWatchView_mc_547_33_550_12_start:
 [ "D:\gduriez\Perso\Dossiers\DossiersVS\ProjectsWatch\source\ProjectsWatchView.mc" 548 16 ]
-        %tmp.564 = lgetv %h.14;
-        symbol [ h %tmp.564 548 20 21 ];
-        %tmp.565 = 12;
-        %tmp.566 = mod %tmp.564 %tmp.565;
-        lputv %h.14 %tmp.566;
+        %tmp.567 = lgetv %h.14;
+        symbol [ h %tmp.567 548 20 21 ];
+        %tmp.568 = 12;
+        %tmp.569 = mod %tmp.567 %tmp.568;
+        lputv %h.14 %tmp.569;
         symbol [ h %h.14 548 16 17 ];
 [ "D:\gduriez\Perso\Dossiers\DossiersVS\ProjectsWatch\source\ProjectsWatchView.mc" 549 16 ]
-        %tmp.567 = "%01d";
-        lputv %form.13 %tmp.567;
+        %tmp.570 = "%01d";
+        lputv %form.13 %tmp.570;
         symbol [ form %form.13 549 16 20 ];
 D__gduriez_Perso_Dossiers_DossiersVS_ProjectsWatch_source_ProjectsWatchView_mc_547_33_550_12_stop:
         goto @D__gduriez_Perso_Dossiers_DossiersVS_ProjectsWatch_source_ProjectsWatchView_mc_547_12_550_12_if_end;
 D__gduriez_Perso_Dossiers_DossiersVS_ProjectsWatch_source_ProjectsWatchView_mc_547_12_550_12_if_end:
 [ "D:\gduriez\Perso\Dossiers\DossiersVS\ProjectsWatch\source\ProjectsWatchView.mc" 551 12 ]
-        %tmp.568 = lgetv %h.14;
-        symbol [ h %tmp.568 551 21 22 ];
-        symbol [ format %tmp.569 551 23 29 ];
-        %tmp.569 = getv function %tmp.568 :format;
-        %tmp.570 = lgetv %form.13;
-        symbol [ form %tmp.570 551 30 34 ];
-        %tmp.571 = invoke %tmp.568 %tmp.569(%tmp.570);
-        %tmp.572 = ":";
-        %tmp.573 = add %tmp.571 %tmp.572;
-        %tmp.574 = lgetv %clockTime;
-        symbol [ clockTime %tmp.574 551 40 49 ];
-        symbol [ min %tmp.575 551 50 53 ];
-        %tmp.575 = getv %tmp.574 :min;
-        symbol [ format %tmp.576 551 54 60 ];
-        %tmp.576 = getv function %tmp.575 :format;
-        %tmp.577 = "%02d";
-        %tmp.578 = invoke %tmp.575 %tmp.576(%tmp.577);
-        %tmp.579 = add %tmp.573 %tmp.578;
-        lputv %result.1 %tmp.579;
+        %tmp.571 = lgetv %h.14;
+        symbol [ h %tmp.571 551 21 22 ];
+        symbol [ format %tmp.572 551 23 29 ];
+        %tmp.572 = getv function %tmp.571 :format;
+        %tmp.573 = lgetv %form.13;
+        symbol [ form %tmp.573 551 30 34 ];
+        %tmp.574 = invoke %tmp.571 %tmp.572(%tmp.573);
+        %tmp.575 = ":";
+        %tmp.576 = add %tmp.574 %tmp.575;
+        %tmp.577 = lgetv %clockTime;
+        symbol [ clockTime %tmp.577 551 40 49 ];
+        symbol [ min %tmp.578 551 50 53 ];
+        %tmp.578 = getv %tmp.577 :min;
+        symbol [ format %tmp.579 551 54 60 ];
+        %tmp.579 = getv function %tmp.578 :format;
+        %tmp.580 = "%02d";
+        %tmp.581 = invoke %tmp.578 %tmp.579(%tmp.580);
+        %tmp.582 = add %tmp.576 %tmp.581;
+        lputv %result.1 %tmp.582;
         symbol [ result %result.1 551 12 18 ];
 D__gduriez_Perso_Dossiers_DossiersVS_ProjectsWatch_source_ProjectsWatchView_mc_544_38_552_2_stop:
         goto @D__gduriez_Perso_Dossiers_DossiersVS_ProjectsWatch_source_ProjectsWatchView_mc_544_7_582_2_if_end;
 D__gduriez_Perso_Dossiers_DossiersVS_ProjectsWatch_source_ProjectsWatchView_mc_544_7_582_2_if_false:
 [ "D:\gduriez\Perso\Dossiers\DossiersVS\ProjectsWatch\source\ProjectsWatchView.mc" 553 7 ]
 D__gduriez_Perso_Dossiers_DossiersVS_ProjectsWatch_source_ProjectsWatchView_mc_553_7_582_2_if_stmt:
-        %tmp.580 = lgetv %fieldType;
-        symbol [ fieldType %tmp.580 553 11 20 ];
-        symbol [ MoisJour %tmp.582 553 22 30 ];
-        %tmp.582 = getv ? :MoisJour;
-        %tmp.583 = eq %tmp.580 %tmp.582;
-        bf %tmp.583 @D__gduriez_Perso_Dossiers_DossiersVS_ProjectsWatch_source_ProjectsWatchView_mc_553_7_582_2_if_false;
+        %tmp.583 = lgetv %fieldType;
+        symbol [ fieldType %tmp.583 553 11 20 ];
+        symbol [ MoisJour %tmp.585 553 22 30 ];
+        %tmp.585 = getv ? :MoisJour;
+        %tmp.586 = eq %tmp.583 %tmp.585;
+        bf %tmp.586 @D__gduriez_Perso_Dossiers_DossiersVS_ProjectsWatch_source_ProjectsWatchView_mc_553_7_582_2_if_false;
 D__gduriez_Perso_Dossiers_DossiersVS_ProjectsWatch_source_ProjectsWatchView_mc_553_7_582_2_if_true:
 D__gduriez_Perso_Dossiers_DossiersVS_ProjectsWatch_source_ProjectsWatchView_mc_553_33_556_2_start:
 [ "D:\gduriez\Perso\Dossiers\DossiersVS\ProjectsWatch\source\ProjectsWatchView.mc" 554 12 ]
         [ "D__gduriez_Perso_Dossiers_DossiersVS_ProjectsWatch_source_ProjectsWatchView_mc_553_33_556_2_start" "D__gduriez_Perso_Dossiers_DossiersVS_ProjectsWatch_source_ProjectsWatchView_mc_553_33_556_2_stop" ]
         %today.15 = local;
         symbol [ today %today.15 554 16 21 ];
-        symbol [ Toybox %tmp.585 554 24 30 ];
-        %tmp.585 = getv ? :Toybox;
-        symbol [ Time %tmp.586 554 31 35 ];
-        %tmp.586 = getv %tmp.585 :Time;
-        symbol [ Gregorian %tmp.587 554 36 45 ];
-        %tmp.587 = getv %tmp.586 :Gregorian;
-        symbol [ info %tmp.588 554 46 50 ];
-        %tmp.588 = getv function %tmp.587 :info;
-        symbol [ Time %tmp.590 554 51 55 ];
-        %tmp.590 = getv ? :Time;
-        symbol [ now %tmp.591 554 56 59 ];
-        %tmp.591 = getv function %tmp.590 :now;
-        %tmp.592 = invoke %tmp.590 %tmp.591();
-        symbol [ Time %tmp.594 554 63 67 ];
-        %tmp.594 = getv ? :Time;
-        symbol [ FORMAT_MEDIUM %tmp.595 554 68 81 ];
-        %tmp.595 = getv %tmp.594 :FORMAT_MEDIUM;
-        %tmp.596 = invoke %tmp.587 %tmp.588(%tmp.592, %tmp.595);
-        lputv %today.15 %tmp.596;
+        symbol [ Toybox %tmp.588 554 24 30 ];
+        %tmp.588 = getv ? :Toybox;
+        symbol [ Time %tmp.589 554 31 35 ];
+        %tmp.589 = getv %tmp.588 :Time;
+        symbol [ Gregorian %tmp.590 554 36 45 ];
+        %tmp.590 = getv %tmp.589 :Gregorian;
+        symbol [ info %tmp.591 554 46 50 ];
+        %tmp.591 = getv function %tmp.590 :info;
+        symbol [ Time %tmp.593 554 51 55 ];
+        %tmp.593 = getv ? :Time;
+        symbol [ now %tmp.594 554 56 59 ];
+        %tmp.594 = getv function %tmp.593 :now;
+        %tmp.595 = invoke %tmp.593 %tmp.594();
+        symbol [ Time %tmp.597 554 63 67 ];
+        %tmp.597 = getv ? :Time;
+        symbol [ FORMAT_MEDIUM %tmp.598 554 68 81 ];
+        %tmp.598 = getv %tmp.597 :FORMAT_MEDIUM;
+        %tmp.599 = invoke %tmp.590 %tmp.591(%tmp.595, %tmp.598);
+        lputv %today.15 %tmp.599;
         symbol [ today %today.15 554 16 21 ];
 [ "D:\gduriez\Perso\Dossiers\DossiersVS\ProjectsWatch\source\ProjectsWatchView.mc" 555 3 ]
-        %tmp.597 = lgetv %today.15;
-        symbol [ today %tmp.597 555 12 17 ];
-        symbol [ month %tmp.598 555 18 23 ];
-        %tmp.598 = getv %tmp.597 :month;
-        %tmp.599 = " ";
-        %tmp.600 = add %tmp.598 %tmp.599;
-        %tmp.601 = lgetv %today.15;
-        symbol [ today %tmp.601 555 30 35 ];
-        symbol [ day %tmp.602 555 36 39 ];
-        %tmp.602 = getv %tmp.601 :day;
-        %tmp.603 = add %tmp.600 %tmp.602;
-        lputv %result.1 %tmp.603;
+        %tmp.600 = lgetv %today.15;
+        symbol [ today %tmp.600 555 12 17 ];
+        symbol [ month %tmp.601 555 18 23 ];
+        %tmp.601 = getv %tmp.600 :month;
+        %tmp.602 = " ";
+        %tmp.603 = add %tmp.601 %tmp.602;
+        %tmp.604 = lgetv %today.15;
+        symbol [ today %tmp.604 555 30 35 ];
+        symbol [ day %tmp.605 555 36 39 ];
+        %tmp.605 = getv %tmp.604 :day;
+        %tmp.606 = add %tmp.603 %tmp.605;
+        lputv %result.1 %tmp.606;
         symbol [ result %result.1 555 3 9 ];
 D__gduriez_Perso_Dossiers_DossiersVS_ProjectsWatch_source_ProjectsWatchView_mc_553_33_556_2_stop:
         goto @D__gduriez_Perso_Dossiers_DossiersVS_ProjectsWatch_source_ProjectsWatchView_mc_553_7_582_2_if_end;
 D__gduriez_Perso_Dossiers_DossiersVS_ProjectsWatch_source_ProjectsWatchView_mc_553_7_582_2_if_false:
 [ "D:\gduriez\Perso\Dossiers\DossiersVS\ProjectsWatch\source\ProjectsWatchView.mc" 557 7 ]
 D__gduriez_Perso_Dossiers_DossiersVS_ProjectsWatch_source_ProjectsWatchView_mc_557_7_582_2_if_stmt:
-        %tmp.604 = lgetv %fieldType;
-        symbol [ fieldType %tmp.604 557 11 20 ];
-        symbol [ JourMois %tmp.606 557 22 30 ];
-        %tmp.606 = getv ? :JourMois;
-        %tmp.607 = eq %tmp.604 %tmp.606;
-        bf %tmp.607 @D__gduriez_Perso_Dossiers_DossiersVS_ProjectsWatch_source_ProjectsWatchView_mc_557_7_582_2_if_false;
+        %tmp.607 = lgetv %fieldType;
+        symbol [ fieldType %tmp.607 557 11 20 ];
+        symbol [ JourMois %tmp.609 557 22 30 ];
+        %tmp.609 = getv ? :JourMois;
+        %tmp.610 = eq %tmp.607 %tmp.609;
+        bf %tmp.610 @D__gduriez_Perso_Dossiers_DossiersVS_ProjectsWatch_source_ProjectsWatchView_mc_557_7_582_2_if_false;
 D__gduriez_Perso_Dossiers_DossiersVS_ProjectsWatch_source_ProjectsWatchView_mc_557_7_582_2_if_true:
 D__gduriez_Perso_Dossiers_DossiersVS_ProjectsWatch_source_ProjectsWatchView_mc_557_33_560_2_start:
 [ "D:\gduriez\Perso\Dossiers\DossiersVS\ProjectsWatch\source\ProjectsWatchView.mc" 558 12 ]
         [ "D__gduriez_Perso_Dossiers_DossiersVS_ProjectsWatch_source_ProjectsWatchView_mc_557_33_560_2_start" "D__gduriez_Perso_Dossiers_DossiersVS_ProjectsWatch_source_ProjectsWatchView_mc_557_33_560_2_stop" ]
         %today.16 = local;
         symbol [ today %today.16 558 16 21 ];
-        symbol [ Toybox %tmp.609 558 24 30 ];
-        %tmp.609 = getv ? :Toybox;
-        symbol [ Time %tmp.610 558 31 35 ];
-        %tmp.610 = getv %tmp.609 :Time;
-        symbol [ Gregorian %tmp.611 558 36 45 ];
-        %tmp.611 = getv %tmp.610 :Gregorian;
-        symbol [ info %tmp.612 558 46 50 ];
-        %tmp.612 = getv function %tmp.611 :info;
-        symbol [ Time %tmp.614 558 51 55 ];
-        %tmp.614 = getv ? :Time;
-        symbol [ now %tmp.615 558 56 59 ];
-        %tmp.615 = getv function %tmp.614 :now;
-        %tmp.616 = invoke %tmp.614 %tmp.615();
-        symbol [ Time %tmp.618 558 63 67 ];
-        %tmp.618 = getv ? :Time;
-        symbol [ FORMAT_MEDIUM %tmp.619 558 68 81 ];
-        %tmp.619 = getv %tmp.618 :FORMAT_MEDIUM;
-        %tmp.620 = invoke %tmp.611 %tmp.612(%tmp.616, %tmp.619);
-        lputv %today.16 %tmp.620;
+        symbol [ Toybox %tmp.612 558 24 30 ];
+        %tmp.612 = getv ? :Toybox;
+        symbol [ Time %tmp.613 558 31 35 ];
+        %tmp.613 = getv %tmp.612 :Time;
+        symbol [ Gregorian %tmp.614 558 36 45 ];
+        %tmp.614 = getv %tmp.613 :Gregorian;
+        symbol [ info %tmp.615 558 46 50 ];
+        %tmp.615 = getv function %tmp.614 :info;
+        symbol [ Time %tmp.617 558 51 55 ];
+        %tmp.617 = getv ? :Time;
+        symbol [ now %tmp.618 558 56 59 ];
+        %tmp.618 = getv function %tmp.617 :now;
+        %tmp.619 = invoke %tmp.617 %tmp.618();
+        symbol [ Time %tmp.621 558 63 67 ];
+        %tmp.621 = getv ? :Time;
+        symbol [ FORMAT_MEDIUM %tmp.622 558 68 81 ];
+        %tmp.622 = getv %tmp.621 :FORMAT_MEDIUM;
+        %tmp.623 = invoke %tmp.614 %tmp.615(%tmp.619, %tmp.622);
+        lputv %today.16 %tmp.623;
         symbol [ today %today.16 558 16 21 ];
 [ "D:\gduriez\Perso\Dossiers\DossiersVS\ProjectsWatch\source\ProjectsWatchView.mc" 559 3 ]
-        %tmp.621 = lgetv %today.16;
-        symbol [ today %tmp.621 559 12 17 ];
-        symbol [ day %tmp.622 559 18 21 ];
-        %tmp.622 = getv %tmp.621 :day;
-        %tmp.623 = " ";
-        %tmp.624 = add %tmp.622 %tmp.623;
-        %tmp.625 = lgetv %today.16;
-        symbol [ today %tmp.625 559 28 33 ];
-        symbol [ month %tmp.626 559 34 39 ];
-        %tmp.626 = getv %tmp.625 :month;
-        %tmp.627 = add %tmp.624 %tmp.626;
-        lputv %result.1 %tmp.627;
+        %tmp.624 = lgetv %today.16;
+        symbol [ today %tmp.624 559 12 17 ];
+        symbol [ day %tmp.625 559 18 21 ];
+        %tmp.625 = getv %tmp.624 :day;
+        %tmp.626 = " ";
+        %tmp.627 = add %tmp.625 %tmp.626;
+        %tmp.628 = lgetv %today.16;
+        symbol [ today %tmp.628 559 28 33 ];
+        symbol [ month %tmp.629 559 34 39 ];
+        %tmp.629 = getv %tmp.628 :month;
+        %tmp.630 = add %tmp.627 %tmp.629;
+        lputv %result.1 %tmp.630;
         symbol [ result %result.1 559 3 9 ];
 D__gduriez_Perso_Dossiers_DossiersVS_ProjectsWatch_source_ProjectsWatchView_mc_557_33_560_2_stop:
         goto @D__gduriez_Perso_Dossiers_DossiersVS_ProjectsWatch_source_ProjectsWatchView_mc_557_7_582_2_if_end;
 D__gduriez_Perso_Dossiers_DossiersVS_ProjectsWatch_source_ProjectsWatchView_mc_557_7_582_2_if_false:
 [ "D:\gduriez\Perso\Dossiers\DossiersVS\ProjectsWatch\source\ProjectsWatchView.mc" 561 7 ]
 D__gduriez_Perso_Dossiers_DossiersVS_ProjectsWatch_source_ProjectsWatchView_mc_561_7_582_2_if_stmt:
-        %tmp.628 = lgetv %fieldType;
-        symbol [ fieldType %tmp.628 561 11 20 ];
-        symbol [ JourSem %tmp.630 561 22 29 ];
-        %tmp.630 = getv ? :JourSem;
-        %tmp.631 = eq %tmp.628 %tmp.630;
-        bf %tmp.631 @D__gduriez_Perso_Dossiers_DossiersVS_ProjectsWatch_source_ProjectsWatchView_mc_561_7_582_2_if_false;
+        %tmp.631 = lgetv %fieldType;
+        symbol [ fieldType %tmp.631 561 11 20 ];
+        symbol [ JourSem %tmp.633 561 22 29 ];
+        %tmp.633 = getv ? :JourSem;
+        %tmp.634 = eq %tmp.631 %tmp.633;
+        bf %tmp.634 @D__gduriez_Perso_Dossiers_DossiersVS_ProjectsWatch_source_ProjectsWatchView_mc_561_7_582_2_if_false;
 D__gduriez_Perso_Dossiers_DossiersVS_ProjectsWatch_source_ProjectsWatchView_mc_561_7_582_2_if_true:
 D__gduriez_Perso_Dossiers_DossiersVS_ProjectsWatch_source_ProjectsWatchView_mc_561_32_564_2_start:
 [ "D:\gduriez\Perso\Dossiers\DossiersVS\ProjectsWatch\source\ProjectsWatchView.mc" 562 12 ]
         [ "D__gduriez_Perso_Dossiers_DossiersVS_ProjectsWatch_source_ProjectsWatchView_mc_561_32_564_2_start" "D__gduriez_Perso_Dossiers_DossiersVS_ProjectsWatch_source_ProjectsWatchView_mc_561_32_564_2_stop" ]
         %today.17 = local;
         symbol [ today %today.17 562 16 21 ];
-        symbol [ Toybox %tmp.633 562 24 30 ];
-        %tmp.633 = getv ? :Toybox;
-        symbol [ Time %tmp.634 562 31 35 ];
-        %tmp.634 = getv %tmp.633 :Time;
-        symbol [ Gregorian %tmp.635 562 36 45 ];
-        %tmp.635 = getv %tmp.634 :Gregorian;
-        symbol [ info %tmp.636 562 46 50 ];
-        %tmp.636 = getv function %tmp.635 :info;
-        symbol [ Time %tmp.638 562 51 55 ];
-        %tmp.638 = getv ? :Time;
-        symbol [ now %tmp.639 562 56 59 ];
-        %tmp.639 = getv function %tmp.638 :now;
-        %tmp.640 = invoke %tmp.638 %tmp.639();
-        symbol [ Time %tmp.642 562 63 67 ];
-        %tmp.642 = getv ? :Time;
-        symbol [ FORMAT_MEDIUM %tmp.643 562 68 81 ];
-        %tmp.643 = getv %tmp.642 :FORMAT_MEDIUM;
-        %tmp.644 = invoke %tmp.635 %tmp.636(%tmp.640, %tmp.643);
-        lputv %today.17 %tmp.644;
+        symbol [ Toybox %tmp.636 562 24 30 ];
+        %tmp.636 = getv ? :Toybox;
+        symbol [ Time %tmp.637 562 31 35 ];
+        %tmp.637 = getv %tmp.636 :Time;
+        symbol [ Gregorian %tmp.638 562 36 45 ];
+        %tmp.638 = getv %tmp.637 :Gregorian;
+        symbol [ info %tmp.639 562 46 50 ];
+        %tmp.639 = getv function %tmp.638 :info;
+        symbol [ Time %tmp.641 562 51 55 ];
+        %tmp.641 = getv ? :Time;
+        symbol [ now %tmp.642 562 56 59 ];
+        %tmp.642 = getv function %tmp.641 :now;
+        %tmp.643 = invoke %tmp.641 %tmp.642();
+        symbol [ Time %tmp.645 562 63 67 ];
+        %tmp.645 = getv ? :Time;
+        symbol [ FORMAT_MEDIUM %tmp.646 562 68 81 ];
+        %tmp.646 = getv %tmp.645 :FORMAT_MEDIUM;
+        %tmp.647 = invoke %tmp.638 %tmp.639(%tmp.643, %tmp.646);
+        lputv %today.17 %tmp.647;
         symbol [ today %today.17 562 16 21 ];
 [ "D:\gduriez\Perso\Dossiers\DossiersVS\ProjectsWatch\source\ProjectsWatchView.mc" 563 3 ]
-        %tmp.645 = lgetv %today.17;
-        symbol [ today %tmp.645 563 12 17 ];
-        symbol [ day_of_week %tmp.646 563 18 29 ];
-        %tmp.646 = getv %tmp.645 :day_of_week;
-        lputv %result.1 %tmp.646;
+        %tmp.648 = lgetv %today.17;
+        symbol [ today %tmp.648 563 12 17 ];
+        symbol [ day_of_week %tmp.649 563 18 29 ];
+        %tmp.649 = getv %tmp.648 :day_of_week;
+        lputv %result.1 %tmp.649;
         symbol [ result %result.1 563 3 9 ];
 D__gduriez_Perso_Dossiers_DossiersVS_ProjectsWatch_source_ProjectsWatchView_mc_561_32_564_2_stop:
         goto @D__gduriez_Perso_Dossiers_DossiersVS_ProjectsWatch_source_ProjectsWatchView_mc_561_7_582_2_if_end;
 D__gduriez_Perso_Dossiers_DossiersVS_ProjectsWatch_source_ProjectsWatchView_mc_561_7_582_2_if_false:
 [ "D:\gduriez\Perso\Dossiers\DossiersVS\ProjectsWatch\source\ProjectsWatchView.mc" 565 7 ]
 D__gduriez_Perso_Dossiers_DossiersVS_ProjectsWatch_source_ProjectsWatchView_mc_565_7_582_2_if_stmt:
-        %tmp.647 = lgetv %fieldType;
-        symbol [ fieldType %tmp.647 565 11 20 ];
-        symbol [ JourSemJour %tmp.649 565 22 33 ];
-        %tmp.649 = getv ? :JourSemJour;
-        %tmp.650 = eq %tmp.647 %tmp.649;
-        bf %tmp.650 @D__gduriez_Perso_Dossiers_DossiersVS_ProjectsWatch_source_ProjectsWatchView_mc_565_7_582_2_if_false;
+        %tmp.650 = lgetv %fieldType;
+        symbol [ fieldType %tmp.650 565 11 20 ];
+        symbol [ JourSemJour %tmp.652 565 22 33 ];
+        %tmp.652 = getv ? :JourSemJour;
+        %tmp.653 = eq %tmp.650 %tmp.652;
+        bf %tmp.653 @D__gduriez_Perso_Dossiers_DossiersVS_ProjectsWatch_source_ProjectsWatchView_mc_565_7_582_2_if_false;
 D__gduriez_Perso_Dossiers_DossiersVS_ProjectsWatch_source_ProjectsWatchView_mc_565_7_582_2_if_true:
 D__gduriez_Perso_Dossiers_DossiersVS_ProjectsWatch_source_ProjectsWatchView_mc_565_36_568_2_start:
 [ "D:\gduriez\Perso\Dossiers\DossiersVS\ProjectsWatch\source\ProjectsWatchView.mc" 566 12 ]
         [ "D__gduriez_Perso_Dossiers_DossiersVS_ProjectsWatch_source_ProjectsWatchView_mc_565_36_568_2_start" "D__gduriez_Perso_Dossiers_DossiersVS_ProjectsWatch_source_ProjectsWatchView_mc_565_36_568_2_stop" ]
         %today.18 = local;
         symbol [ today %today.18 566 16 21 ];
-        symbol [ Toybox %tmp.652 566 24 30 ];
-        %tmp.652 = getv ? :Toybox;
-        symbol [ Time %tmp.653 566 31 35 ];
-        %tmp.653 = getv %tmp.652 :Time;
-        symbol [ Gregorian %tmp.654 566 36 45 ];
-        %tmp.654 = getv %tmp.653 :Gregorian;
-        symbol [ info %tmp.655 566 46 50 ];
-        %tmp.655 = getv function %tmp.654 :info;
-        symbol [ Time %tmp.657 566 51 55 ];
-        %tmp.657 = getv ? :Time;
-        symbol [ now %tmp.658 566 56 59 ];
-        %tmp.658 = getv function %tmp.657 :now;
-        %tmp.659 = invoke %tmp.657 %tmp.658();
-        symbol [ Time %tmp.661 566 63 67 ];
-        %tmp.661 = getv ? :Time;
-        symbol [ FORMAT_MEDIUM %tmp.662 566 68 81 ];
-        %tmp.662 = getv %tmp.661 :FORMAT_MEDIUM;
-        %tmp.663 = invoke %tmp.654 %tmp.655(%tmp.659, %tmp.662);
-        lputv %today.18 %tmp.663;
+        symbol [ Toybox %tmp.655 566 24 30 ];
+        %tmp.655 = getv ? :Toybox;
+        symbol [ Time %tmp.656 566 31 35 ];
+        %tmp.656 = getv %tmp.655 :Time;
+        symbol [ Gregorian %tmp.657 566 36 45 ];
+        %tmp.657 = getv %tmp.656 :Gregorian;
+        symbol [ info %tmp.658 566 46 50 ];
+        %tmp.658 = getv function %tmp.657 :info;
+        symbol [ Time %tmp.660 566 51 55 ];
+        %tmp.660 = getv ? :Time;
+        symbol [ now %tmp.661 566 56 59 ];
+        %tmp.661 = getv function %tmp.660 :now;
+        %tmp.662 = invoke %tmp.660 %tmp.661();
+        symbol [ Time %tmp.664 566 63 67 ];
+        %tmp.664 = getv ? :Time;
+        symbol [ FORMAT_MEDIUM %tmp.665 566 68 81 ];
+        %tmp.665 = getv %tmp.664 :FORMAT_MEDIUM;
+        %tmp.666 = invoke %tmp.657 %tmp.658(%tmp.662, %tmp.665);
+        lputv %today.18 %tmp.666;
         symbol [ today %today.18 566 16 21 ];
 [ "D:\gduriez\Perso\Dossiers\DossiersVS\ProjectsWatch\source\ProjectsWatchView.mc" 567 3 ]
-        %tmp.664 = lgetv %today.18;
-        symbol [ today %tmp.664 567 12 17 ];
-        symbol [ day_of_week %tmp.665 567 18 29 ];
-        %tmp.665 = getv %tmp.664 :day_of_week;
-        %tmp.666 = " ";
-        %tmp.667 = add %tmp.665 %tmp.666;
-        %tmp.668 = lgetv %today.18;
-        symbol [ today %tmp.668 567 35 40 ];
-        symbol [ day %tmp.669 567 41 44 ];
-        %tmp.669 = getv %tmp.668 :day;
-        %tmp.670 = add %tmp.667 %tmp.669;
-        lputv %result.1 %tmp.670;
+        %tmp.667 = lgetv %today.18;
+        symbol [ today %tmp.667 567 12 17 ];
+        symbol [ day_of_week %tmp.668 567 18 29 ];
+        %tmp.668 = getv %tmp.667 :day_of_week;
+        %tmp.669 = " ";
+        %tmp.670 = add %tmp.668 %tmp.669;
+        %tmp.671 = lgetv %today.18;
+        symbol [ today %tmp.671 567 35 40 ];
+        symbol [ day %tmp.672 567 41 44 ];
+        %tmp.672 = getv %tmp.671 :day;
+        %tmp.673 = add %tmp.670 %tmp.672;
+        lputv %result.1 %tmp.673;
         symbol [ result %result.1 567 3 9 ];
 D__gduriez_Perso_Dossiers_DossiersVS_ProjectsWatch_source_ProjectsWatchView_mc_565_36_568_2_stop:
         goto @D__gduriez_Perso_Dossiers_DossiersVS_ProjectsWatch_source_ProjectsWatchView_mc_565_7_582_2_if_end;
 D__gduriez_Perso_Dossiers_DossiersVS_ProjectsWatch_source_ProjectsWatchView_mc_565_7_582_2_if_false:
 [ "D:\gduriez\Perso\Dossiers\DossiersVS\ProjectsWatch\source\ProjectsWatchView.mc" 569 7 ]
 D__gduriez_Perso_Dossiers_DossiersVS_ProjectsWatch_source_ProjectsWatchView_mc_569_7_582_2_if_stmt:
-        %tmp.671 = lgetv %fieldType;
-        symbol [ fieldType %tmp.671 569 11 20 ];
-        symbol [ JourSemMoisJour %tmp.673 569 22 37 ];
-        %tmp.673 = getv ? :JourSemMoisJour;
-        %tmp.674 = eq %tmp.671 %tmp.673;
-        bf %tmp.674 @D__gduriez_Perso_Dossiers_DossiersVS_ProjectsWatch_source_ProjectsWatchView_mc_569_7_582_2_if_false;
+        %tmp.674 = lgetv %fieldType;
+        symbol [ fieldType %tmp.674 569 11 20 ];
+        symbol [ JourSemMoisJour %tmp.676 569 22 37 ];
+        %tmp.676 = getv ? :JourSemMoisJour;
+        %tmp.677 = eq %tmp.674 %tmp.676;
+        bf %tmp.677 @D__gduriez_Perso_Dossiers_DossiersVS_ProjectsWatch_source_ProjectsWatchView_mc_569_7_582_2_if_false;
 D__gduriez_Perso_Dossiers_DossiersVS_ProjectsWatch_source_ProjectsWatchView_mc_569_7_582_2_if_true:
 D__gduriez_Perso_Dossiers_DossiersVS_ProjectsWatch_source_ProjectsWatchView_mc_569_40_578_2_start:
 [ "D:\gduriez\Perso\Dossiers\DossiersVS\ProjectsWatch\source\ProjectsWatchView.mc" 570 12 ]
         [ "D__gduriez_Perso_Dossiers_DossiersVS_ProjectsWatch_source_ProjectsWatchView_mc_569_40_578_2_start" "D__gduriez_Perso_Dossiers_DossiersVS_ProjectsWatch_source_ProjectsWatchView_mc_569_40_578_2_stop" ]
         %today.19 = local;
         symbol [ today %today.19 570 16 21 ];
-        symbol [ Toybox %tmp.676 570 24 30 ];
-        %tmp.676 = getv ? :Toybox;
-        symbol [ Time %tmp.677 570 31 35 ];
-        %tmp.677 = getv %tmp.676 :Time;
-        symbol [ Gregorian %tmp.678 570 36 45 ];
-        %tmp.678 = getv %tmp.677 :Gregorian;
-        symbol [ info %tmp.679 570 46 50 ];
-        %tmp.679 = getv function %tmp.678 :info;
-        symbol [ Time %tmp.681 570 51 55 ];
-        %tmp.681 = getv ? :Time;
-        symbol [ now %tmp.682 570 56 59 ];
-        %tmp.682 = getv function %tmp.681 :now;
-        %tmp.683 = invoke %tmp.681 %tmp.682();
-        symbol [ Time %tmp.685 570 63 67 ];
-        %tmp.685 = getv ? :Time;
-        symbol [ FORMAT_MEDIUM %tmp.686 570 68 81 ];
-        %tmp.686 = getv %tmp.685 :FORMAT_MEDIUM;
-        %tmp.687 = invoke %tmp.678 %tmp.679(%tmp.683, %tmp.686);
-        lputv %today.19 %tmp.687;
+        symbol [ Toybox %tmp.679 570 24 30 ];
+        %tmp.679 = getv ? :Toybox;
+        symbol [ Time %tmp.680 570 31 35 ];
+        %tmp.680 = getv %tmp.679 :Time;
+        symbol [ Gregorian %tmp.681 570 36 45 ];
+        %tmp.681 = getv %tmp.680 :Gregorian;
+        symbol [ info %tmp.682 570 46 50 ];
+        %tmp.682 = getv function %tmp.681 :info;
+        symbol [ Time %tmp.684 570 51 55 ];
+        %tmp.684 = getv ? :Time;
+        symbol [ now %tmp.685 570 56 59 ];
+        %tmp.685 = getv function %tmp.684 :now;
+        %tmp.686 = invoke %tmp.684 %tmp.685();
+        symbol [ Time %tmp.688 570 63 67 ];
+        %tmp.688 = getv ? :Time;
+        symbol [ FORMAT_MEDIUM %tmp.689 570 68 81 ];
+        %tmp.689 = getv %tmp.688 :FORMAT_MEDIUM;
+        %tmp.690 = invoke %tmp.681 %tmp.682(%tmp.686, %tmp.689);
+        lputv %today.19 %tmp.690;
         symbol [ today %today.19 570 16 21 ];
 [ "D:\gduriez\Perso\Dossiers\DossiersVS\ProjectsWatch\source\ProjectsWatchView.mc" 571 3 ]
-        %tmp.688 = lgetv %today.19;
-        symbol [ today %tmp.688 571 12 17 ];
-        symbol [ day_of_week %tmp.689 571 18 29 ];
-        %tmp.689 = getv %tmp.688 :day_of_week;
-        lputv %result.1 %tmp.689;
+        %tmp.691 = lgetv %today.19;
+        symbol [ today %tmp.691 571 12 17 ];
+        symbol [ day_of_week %tmp.692 571 18 29 ];
+        %tmp.692 = getv %tmp.691 :day_of_week;
+        lputv %result.1 %tmp.692;
         symbol [ result %result.1 571 3 9 ];
 [ "D:\gduriez\Perso\Dossiers\DossiersVS\ProjectsWatch\source\ProjectsWatchView.mc" 572 3 ]
 D__gduriez_Perso_Dossiers_DossiersVS_ProjectsWatch_source_ProjectsWatchView_mc_572_3_577_16_if_stmt:
-        %tmp.690 = lgetv %result.1;
-        symbol [ result %tmp.690 572 7 13 ];
-        symbol [ equals %tmp.691 572 14 20 ];
-        %tmp.691 = getv function %tmp.690 :equals;
-        %tmp.692 = "Dim";
-        %tmp.693 = invoke %tmp.690 %tmp.691(%tmp.692);
-        bf %tmp.693 @D__gduriez_Perso_Dossiers_DossiersVS_ProjectsWatch_source_ProjectsWatchView_mc_572_3_577_16_if_else_false;
+        %tmp.693 = lgetv %result.1;
+        symbol [ result %tmp.693 572 7 13 ];
+        symbol [ equals %tmp.694 572 14 20 ];
+        %tmp.694 = getv function %tmp.693 :equals;
+        %tmp.695 = "Dim";
+        %tmp.696 = invoke %tmp.693 %tmp.694(%tmp.695);
+        bf %tmp.696 @D__gduriez_Perso_Dossiers_DossiersVS_ProjectsWatch_source_ProjectsWatchView_mc_572_3_577_16_if_else_false;
 D__gduriez_Perso_Dossiers_DossiersVS_ProjectsWatch_source_ProjectsWatchView_mc_572_3_577_16_if_true:
 D__gduriez_Perso_Dossiers_DossiersVS_ProjectsWatch_source_ProjectsWatchView_mc_572_29_574_4_start:
 [ "D:\gduriez\Perso\Dossiers\DossiersVS\ProjectsWatch\source\ProjectsWatchView.mc" 573 8 ]
-        %tmp.694 = lgetv %result.1;
-        symbol [ result %tmp.694 573 17 23 ];
-        %tmp.695 = "\n";
-        %tmp.696 = add %tmp.694 %tmp.695;
-        %tmp.697 = lgetv %today.19;
-        symbol [ today %tmp.697 573 31 36 ];
-        symbol [ day %tmp.698 573 37 40 ];
-        %tmp.698 = getv %tmp.697 :day;
-        symbol [ format %tmp.699 573 41 47 ];
-        %tmp.699 = getv function %tmp.698 :format;
-        %tmp.700 = "%02d";
-        %tmp.701 = invoke %tmp.698 %tmp.699(%tmp.700);
-        %tmp.702 = add %tmp.696 %tmp.701;
-        %tmp.703 = " ";
-        %tmp.704 = add %tmp.702 %tmp.703;
-        %tmp.705 = lgetv %today.19;
-        symbol [ today %tmp.705 573 63 68 ];
-        symbol [ month %tmp.706 573 69 74 ];
-        %tmp.706 = getv %tmp.705 :month;
-        %tmp.707 = add %tmp.704 %tmp.706;
-        lputv %result.1 %tmp.707;
+        %tmp.697 = lgetv %result.1;
+        symbol [ result %tmp.697 573 17 23 ];
+        %tmp.698 = "\n";
+        %tmp.699 = add %tmp.697 %tmp.698;
+        %tmp.700 = lgetv %today.19;
+        symbol [ today %tmp.700 573 31 36 ];
+        symbol [ day %tmp.701 573 37 40 ];
+        %tmp.701 = getv %tmp.700 :day;
+        symbol [ format %tmp.702 573 41 47 ];
+        %tmp.702 = getv function %tmp.701 :format;
+        %tmp.703 = "%02d";
+        %tmp.704 = invoke %tmp.701 %tmp.702(%tmp.703);
+        %tmp.705 = add %tmp.699 %tmp.704;
+        %tmp.706 = " ";
+        %tmp.707 = add %tmp.705 %tmp.706;
+        %tmp.708 = lgetv %today.19;
+        symbol [ today %tmp.708 573 63 68 ];
+        symbol [ month %tmp.709 573 69 74 ];
+        %tmp.709 = getv %tmp.708 :month;
+        %tmp.710 = add %tmp.707 %tmp.709;
+        lputv %result.1 %tmp.710;
         symbol [ result %result.1 573 8 14 ];
 D__gduriez_Perso_Dossiers_DossiersVS_ProjectsWatch_source_ProjectsWatchView_mc_572_29_574_4_stop:
         goto @D__gduriez_Perso_Dossiers_DossiersVS_ProjectsWatch_source_ProjectsWatchView_mc_572_3_577_16_if_end;
 D__gduriez_Perso_Dossiers_DossiersVS_ProjectsWatch_source_ProjectsWatchView_mc_572_3_577_16_if_else_false:
 D__gduriez_Perso_Dossiers_DossiersVS_ProjectsWatch_source_ProjectsWatchView_mc_575_21_577_16_start:
 [ "D:\gduriez\Perso\Dossiers\DossiersVS\ProjectsWatch\source\ProjectsWatchView.mc" 576 20 ]
-        %tmp.708 = lgetv %result.1;
-        symbol [ result %tmp.708 576 29 35 ];
-        %tmp.709 = "\n";
-        %tmp.710 = add %tmp.708 %tmp.709;
-        %tmp.711 = lgetv %today.19;
-        symbol [ today %tmp.711 576 43 48 ];
-        symbol [ month %tmp.712 576 49 54 ];
-        %tmp.712 = getv %tmp.711 :month;
-        %tmp.713 = add %tmp.710 %tmp.712;
-        %tmp.714 = " ";
-        %tmp.715 = add %tmp.713 %tmp.714;
-        %tmp.716 = lgetv %today.19;
-        symbol [ today %tmp.716 576 59 64 ];
-        symbol [ day %tmp.717 576 65 68 ];
-        %tmp.717 = getv %tmp.716 :day;
-        %tmp.718 = add %tmp.715 %tmp.717;
-        lputv %result.1 %tmp.718;
+        %tmp.711 = lgetv %result.1;
+        symbol [ result %tmp.711 576 29 35 ];
+        %tmp.712 = "\n";
+        %tmp.713 = add %tmp.711 %tmp.712;
+        %tmp.714 = lgetv %today.19;
+        symbol [ today %tmp.714 576 43 48 ];
+        symbol [ month %tmp.715 576 49 54 ];
+        %tmp.715 = getv %tmp.714 :month;
+        %tmp.716 = add %tmp.713 %tmp.715;
+        %tmp.717 = " ";
+        %tmp.718 = add %tmp.716 %tmp.717;
+        %tmp.719 = lgetv %today.19;
+        symbol [ today %tmp.719 576 59 64 ];
+        symbol [ day %tmp.720 576 65 68 ];
+        %tmp.720 = getv %tmp.719 :day;
+        %tmp.721 = add %tmp.718 %tmp.720;
+        lputv %result.1 %tmp.721;
         symbol [ result %result.1 576 20 26 ];
 D__gduriez_Perso_Dossiers_DossiersVS_ProjectsWatch_source_ProjectsWatchView_mc_575_21_577_16_stop:
 D__gduriez_Perso_Dossiers_DossiersVS_ProjectsWatch_source_ProjectsWatchView_mc_572_3_577_16_if_end:
@@ -4995,57 +4998,57 @@ D__gduriez_Perso_Dossiers_DossiersVS_ProjectsWatch_source_ProjectsWatchView_mc_5
 D__gduriez_Perso_Dossiers_DossiersVS_ProjectsWatch_source_ProjectsWatchView_mc_569_7_582_2_if_false:
 [ "D:\gduriez\Perso\Dossiers\DossiersVS\ProjectsWatch\source\ProjectsWatchView.mc" 579 7 ]
 D__gduriez_Perso_Dossiers_DossiersVS_ProjectsWatch_source_ProjectsWatchView_mc_579_7_582_2_if_stmt:
-        %tmp.719 = lgetv %fieldType;
-        symbol [ fieldType %tmp.719 579 11 20 ];
-        symbol [ Week_number %tmp.721 579 22 33 ];
-        %tmp.721 = getv ? :Week_number;
-        %tmp.722 = eq %tmp.719 %tmp.721;
-        bf %tmp.722 @D__gduriez_Perso_Dossiers_DossiersVS_ProjectsWatch_source_ProjectsWatchView_mc_579_7_582_2_if_end;
+        %tmp.722 = lgetv %fieldType;
+        symbol [ fieldType %tmp.722 579 11 20 ];
+        symbol [ Week_number %tmp.724 579 22 33 ];
+        %tmp.724 = getv ? :Week_number;
+        %tmp.725 = eq %tmp.722 %tmp.724;
+        bf %tmp.725 @D__gduriez_Perso_Dossiers_DossiersVS_ProjectsWatch_source_ProjectsWatchView_mc_579_7_582_2_if_end;
 D__gduriez_Perso_Dossiers_DossiersVS_ProjectsWatch_source_ProjectsWatchView_mc_579_7_582_2_if_true:
 D__gduriez_Perso_Dossiers_DossiersVS_ProjectsWatch_source_ProjectsWatchView_mc_579_36_582_2_start:
 [ "D:\gduriez\Perso\Dossiers\DossiersVS\ProjectsWatch\source\ProjectsWatchView.mc" 580 12 ]
         [ "D__gduriez_Perso_Dossiers_DossiersVS_ProjectsWatch_source_ProjectsWatchView_mc_579_36_582_2_start" "D__gduriez_Perso_Dossiers_DossiersVS_ProjectsWatch_source_ProjectsWatchView_mc_579_36_582_2_stop" ]
         %today.20 = local;
         symbol [ today %today.20 580 16 21 ];
-        symbol [ Toybox %tmp.724 580 24 30 ];
-        %tmp.724 = getv ? :Toybox;
-        symbol [ Time %tmp.725 580 31 35 ];
-        %tmp.725 = getv %tmp.724 :Time;
-        symbol [ Gregorian %tmp.726 580 36 45 ];
-        %tmp.726 = getv %tmp.725 :Gregorian;
-        symbol [ info %tmp.727 580 46 50 ];
-        %tmp.727 = getv function %tmp.726 :info;
-        symbol [ Time %tmp.729 580 51 55 ];
-        %tmp.729 = getv ? :Time;
-        symbol [ now %tmp.730 580 56 59 ];
-        %tmp.730 = getv function %tmp.729 :now;
-        %tmp.731 = invoke %tmp.729 %tmp.730();
-        symbol [ Time %tmp.733 580 63 67 ];
-        %tmp.733 = getv ? :Time;
-        symbol [ FORMAT_SHORT %tmp.734 580 68 80 ];
-        %tmp.734 = getv %tmp.733 :FORMAT_SHORT;
-        %tmp.735 = invoke %tmp.726 %tmp.727(%tmp.731, %tmp.734);
-        lputv %today.20 %tmp.735;
+        symbol [ Toybox %tmp.727 580 24 30 ];
+        %tmp.727 = getv ? :Toybox;
+        symbol [ Time %tmp.728 580 31 35 ];
+        %tmp.728 = getv %tmp.727 :Time;
+        symbol [ Gregorian %tmp.729 580 36 45 ];
+        %tmp.729 = getv %tmp.728 :Gregorian;
+        symbol [ info %tmp.730 580 46 50 ];
+        %tmp.730 = getv function %tmp.729 :info;
+        symbol [ Time %tmp.732 580 51 55 ];
+        %tmp.732 = getv ? :Time;
+        symbol [ now %tmp.733 580 56 59 ];
+        %tmp.733 = getv function %tmp.732 :now;
+        %tmp.734 = invoke %tmp.732 %tmp.733();
+        symbol [ Time %tmp.736 580 63 67 ];
+        %tmp.736 = getv ? :Time;
+        symbol [ FORMAT_SHORT %tmp.737 580 68 80 ];
+        %tmp.737 = getv %tmp.736 :FORMAT_SHORT;
+        %tmp.738 = invoke %tmp.729 %tmp.730(%tmp.734, %tmp.737);
+        lputv %today.20 %tmp.738;
         symbol [ today %today.20 580 16 21 ];
 [ "D:\gduriez\Perso\Dossiers\DossiersVS\ProjectsWatch\source\ProjectsWatchView.mc" 581 3 ]
-        symbol [ ProjectsWatchView %tmp.737 581 12 29 ];
-        %tmp.737 = getv ? :ProjectsWatchView;
-        symbol [ iso_week_number %tmp.738 581 30 45 ];
-        %tmp.738 = getv function %tmp.737 :iso_week_number;
-        %tmp.739 = lgetv %today.20;
-        symbol [ today %tmp.739 581 46 51 ];
-        symbol [ year %tmp.740 581 52 56 ];
-        %tmp.740 = getv %tmp.739 :year;
-        %tmp.741 = lgetv %today.20;
-        symbol [ today %tmp.741 581 58 63 ];
-        symbol [ month %tmp.742 581 64 69 ];
-        %tmp.742 = getv %tmp.741 :month;
-        %tmp.743 = lgetv %today.20;
-        symbol [ today %tmp.743 581 71 76 ];
-        symbol [ day %tmp.744 581 77 80 ];
-        %tmp.744 = getv %tmp.743 :day;
-        %tmp.745 = invoke %tmp.737 %tmp.738(%tmp.740, %tmp.742, %tmp.744);
-        lputv %result.1 %tmp.745;
+        symbol [ ProjectsWatchView %tmp.740 581 12 29 ];
+        %tmp.740 = getv ? :ProjectsWatchView;
+        symbol [ iso_week_number %tmp.741 581 30 45 ];
+        %tmp.741 = getv function %tmp.740 :iso_week_number;
+        %tmp.742 = lgetv %today.20;
+        symbol [ today %tmp.742 581 46 51 ];
+        symbol [ year %tmp.743 581 52 56 ];
+        %tmp.743 = getv %tmp.742 :year;
+        %tmp.744 = lgetv %today.20;
+        symbol [ today %tmp.744 581 58 63 ];
+        symbol [ month %tmp.745 581 64 69 ];
+        %tmp.745 = getv %tmp.744 :month;
+        %tmp.746 = lgetv %today.20;
+        symbol [ today %tmp.746 581 71 76 ];
+        symbol [ day %tmp.747 581 77 80 ];
+        %tmp.747 = getv %tmp.746 :day;
+        %tmp.748 = invoke %tmp.740 %tmp.741(%tmp.743, %tmp.745, %tmp.747);
+        lputv %result.1 %tmp.748;
         symbol [ result %result.1 581 3 9 ];
 D__gduriez_Perso_Dossiers_DossiersVS_ProjectsWatch_source_ProjectsWatchView_mc_579_36_582_2_stop:
         goto @D__gduriez_Perso_Dossiers_DossiersVS_ProjectsWatch_source_ProjectsWatchView_mc_579_7_582_2_if_end;
@@ -5076,9 +5079,9 @@ D__gduriez_Perso_Dossiers_DossiersVS_ProjectsWatch_source_ProjectsWatchView_mc_4
 D__gduriez_Perso_Dossiers_DossiersVS_ProjectsWatch_source_ProjectsWatchView_mc_415_7_582_2_if_end:
 D__gduriez_Perso_Dossiers_DossiersVS_ProjectsWatch_source_ProjectsWatchView_mc_412_2_582_2_if_end:
 [ "D:\gduriez\Perso\Dossiers\DossiersVS\ProjectsWatch\source\ProjectsWatchView.mc" 584 2 ]
-        %tmp.746 = lgetv %result.1;
-        symbol [ result %tmp.746 584 9 15 ];
-        ret %tmp.746;
+        %tmp.749 = lgetv %result.1;
+        symbol [ result %tmp.749 584 9 15 ];
+        ret %tmp.749;
 D__gduriez_Perso_Dossiers_DossiersVS_ProjectsWatch_source_ProjectsWatchView_mc_407_44_585_1_stop:
     }
     [ @file = "D:\gduriez\Perso\Dossiers\DossiersVS\ProjectsWatch\source\ProjectsWatchView.mc"; @line = 589; @symbol_functiondef = [iso_week_number,589,13,28]; @symbol_param<0> = [year,589,29,33]; @symbol_param<1> = [month,589,35,40]; @symbol_param<2> = [day,589,42,45]; ]

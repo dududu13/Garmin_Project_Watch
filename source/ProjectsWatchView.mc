@@ -535,7 +535,7 @@ class ProjectsWatchView extends WatchUi.WatchFace {
 				if (r != null) { r = r.next().data;}
 			}
 			if (r != null) {
-				result = r.toString();
+				result = r.format("%01d")+"%";
 			}
 		}			
 		else if (fieldType==Seconds)  {
