@@ -40,11 +40,12 @@ module Rez {
         (:initialized) var PresentColor as ResourceId;
         (:initialized) var is24h_2 as ResourceId;
         (:initialized) var Blue_Sky as ResourceId;
-        (:initialized) var BloodGlucose as ResourceId;
         (:initialized) var Yellow as ResourceId;
         (:initialized) var HourColor as ResourceId;
         (:initialized) var Indigo as ResourceId;
         (:initialized) var Turquoise_Light as ResourceId;
+        (:initialized) var sunrise as ResourceId;
+        (:initialized) var BG as ResourceId;
         (:initialized) var Mois as ResourceId;
         (:initialized) var Rose as ResourceId;
         (:initialized) var Gray_40 as ResourceId;
@@ -60,6 +61,7 @@ module Rez {
         (:initialized) var JourSemMoisJour as ResourceId;
         (:initialized) var Red as ResourceId;
         (:initialized) var PastFutureColor as ResourceId;
+        (:initialized) var sunset as ResourceId;
         (:initialized) var Yellow_Light as ResourceId;
         (:initialized) var Blue_Pale as ResourceId;
         (:initialized) var Green_Sea as ResourceId;
@@ -112,6 +114,7 @@ module Rez {
         (:initialized) var White as ResourceId;
         (:initialized) var Field3 as ResourceId;
         (:initialized) var MinutesColor as ResourceId;
+        (:initialized) var spo2 as ResourceId;
         (:initialized) var Coral as ResourceId;
         (:initialized) var NSurl as ResourceId;
         (:initialized) var Blue_Light as ResourceId;

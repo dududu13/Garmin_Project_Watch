@@ -75,7 +75,8 @@ class KeyboardListener extends Ui.TextPickerDelegate {
         _view = view;
     }
     public function onTextEntered(text, changed ) {
-        Application.Properties.setValue("param"+code,text);
+        params[code] = text;
+        //Application.Properties.setValue("param"+code,text);
         var myTimer = new Timer.Timer();
         _view.codeIsOK = codeIsOK(text);
         myTimer.start(method(:timerCallback), 700, false);

@@ -1,12 +1,11 @@
 <resources>
 
 
-
 <settings>
 
 <setting propertyKey="@Properties.param15" title="@Strings.code_setting"><settingConfig type="alphaNumeric" /> </setting>
 
-<setting propertyKey="@Properties.param0" title="@Strings.BackGroundColor"><settingConfig type="list">
+<setting propertyKey="@Properties.param00" title="@Strings.BackGroundColor"><settingConfig type="list">
 <listEntry value="0">@Strings.Aqua</listEntry>
 <listEntry value="1">@Strings.Black</listEntry>
 <listEntry value="2">@Strings.Blue</listEntry>
@@ -56,57 +55,7 @@
 </settingConfig></setting>
 
 
-<setting propertyKey="@Properties.param1" title="@Strings.PresentColor"><settingConfig type="list" >
-<listEntry value="0">@Strings.Aqua</listEntry>
-<listEntry value="1">@Strings.Black</listEntry>
-<listEntry value="2">@Strings.Blue</listEntry>
-<listEntry value="3">@Strings.Blue_Dark</listEntry>
-<listEntry value="4">@Strings.Blue_Ice</listEntry>
-<listEntry value="5">@Strings.Blue_Light</listEntry>
-<listEntry value="6">@Strings.Blue_Ocean</listEntry>
-<listEntry value="7">@Strings.Blue_Pale</listEntry>
-<listEntry value="8">@Strings.Blue_Sky</listEntry>
-<listEntry value="9">@Strings.Brown</listEntry>
-<listEntry value="10">@Strings.Coral</listEntry>
-<listEntry value="11">@Strings.Gold</listEntry>
-<listEntry value="12">@Strings.Gray_25</listEntry>
-<listEntry value="13">@Strings.Gray_40</listEntry>
-<listEntry value="14">@Strings.Gray_50</listEntry>
-<listEntry value="15">@Strings.Gray_80</listEntry>
-<listEntry value="16">@Strings.Gray_Blue</listEntry>
-<listEntry value="17">@Strings.Green</listEntry>
-<listEntry value="18">@Strings.Green_Bright</listEntry>
-<listEntry value="19">@Strings.Green_Dark</listEntry>
-<listEntry value="20">@Strings.Green_Light</listEntry>
-<listEntry value="21">@Strings.Green_Olive</listEntry>
-<listEntry value="22">@Strings.Green_Sea</listEntry>
-<listEntry value="23">@Strings.Indigo</listEntry>
-<listEntry value="24">@Strings.Ivory</listEntry>
-<listEntry value="25">@Strings.Lavender</listEntry>
-<listEntry value="26">@Strings.Lime</listEntry>
-<listEntry value="27">@Strings.Orange</listEntry>
-<listEntry value="28">@Strings.Orange_Light</listEntry>
-<listEntry value="29">@Strings.Periwinkle</listEntry>
-<listEntry value="30">@Strings.Pink</listEntry>
-<listEntry value="31">@Strings.Plum</listEntry>
-<listEntry value="32">@Strings.Purple_Dark</listEntry>
-<listEntry value="33">@Strings.Red</listEntry>
-<listEntry value="34">@Strings.Red_Dark</listEntry>
-<listEntry value="35">@Strings.Rose</listEntry>
-<listEntry value="36">@Strings.Tan</listEntry>
-<listEntry value="37">@Strings.Teal</listEntry>
-<listEntry value="38">@Strings.Teal_Dark</listEntry>
-<listEntry value="39">@Strings.Turquoise</listEntry>
-<listEntry value="40">@Strings.Turquoise_Light</listEntry>
-<listEntry value="41">@Strings.Violet</listEntry>
-<listEntry value="42">@Strings.White</listEntry>
-<listEntry value="43">@Strings.Yellow</listEntry>
-<listEntry value="44">@Strings.Yellow_Dark</listEntry>
-<listEntry value="45">@Strings.Yellow_Light</listEntry>
-<listEntry value="46">@Strings.Transparent</listEntry>
-</settingConfig></setting>
-
-<setting propertyKey="@Properties.param2" title="@Strings.PastFutureColor"><settingConfig type="list" >
+<setting propertyKey="@Properties.param01" title="@Strings.PresentColor"><settingConfig type="list" >
 <listEntry value="0">@Strings.Aqua</listEntry>
 <listEntry value="1">@Strings.Black</listEntry>
 <listEntry value="2">@Strings.Blue</listEntry>
@@ -156,7 +105,7 @@
 <listEntry value="46">@Strings.Transparent</listEntry>
 </settingConfig></setting>
 
-<setting propertyKey="@Properties.param3" title="@Strings.HourColor"><settingConfig type="list" >
+<setting propertyKey="@Properties.param02" title="@Strings.PastFutureColor"><settingConfig type="list" >
 <listEntry value="0">@Strings.Aqua</listEntry>
 <listEntry value="1">@Strings.Black</listEntry>
 <listEntry value="2">@Strings.Blue</listEntry>
@@ -206,7 +155,7 @@
 <listEntry value="46">@Strings.Transparent</listEntry>
 </settingConfig></setting>
 
-<setting propertyKey="@Properties.param4" title="@Strings.MinutesColor"><settingConfig type="list" >
+<setting propertyKey="@Properties.param03" title="@Strings.HourColor"><settingConfig type="list" >
 <listEntry value="0">@Strings.Aqua</listEntry>
 <listEntry value="1">@Strings.Black</listEntry>
 <listEntry value="2">@Strings.Blue</listEntry>
@@ -256,9 +205,59 @@
 <listEntry value="46">@Strings.Transparent</listEntry>
 </settingConfig></setting>
 
-<setting propertyKey="@Properties.param5" title="@Strings.is24h" ><settingConfig type="boolean" /></setting>
+<setting propertyKey="@Properties.param04" title="@Strings.MinutesColor"><settingConfig type="list" >
+<listEntry value="0">@Strings.Aqua</listEntry>
+<listEntry value="1">@Strings.Black</listEntry>
+<listEntry value="2">@Strings.Blue</listEntry>
+<listEntry value="3">@Strings.Blue_Dark</listEntry>
+<listEntry value="4">@Strings.Blue_Ice</listEntry>
+<listEntry value="5">@Strings.Blue_Light</listEntry>
+<listEntry value="6">@Strings.Blue_Ocean</listEntry>
+<listEntry value="7">@Strings.Blue_Pale</listEntry>
+<listEntry value="8">@Strings.Blue_Sky</listEntry>
+<listEntry value="9">@Strings.Brown</listEntry>
+<listEntry value="10">@Strings.Coral</listEntry>
+<listEntry value="11">@Strings.Gold</listEntry>
+<listEntry value="12">@Strings.Gray_25</listEntry>
+<listEntry value="13">@Strings.Gray_40</listEntry>
+<listEntry value="14">@Strings.Gray_50</listEntry>
+<listEntry value="15">@Strings.Gray_80</listEntry>
+<listEntry value="16">@Strings.Gray_Blue</listEntry>
+<listEntry value="17">@Strings.Green</listEntry>
+<listEntry value="18">@Strings.Green_Bright</listEntry>
+<listEntry value="19">@Strings.Green_Dark</listEntry>
+<listEntry value="20">@Strings.Green_Light</listEntry>
+<listEntry value="21">@Strings.Green_Olive</listEntry>
+<listEntry value="22">@Strings.Green_Sea</listEntry>
+<listEntry value="23">@Strings.Indigo</listEntry>
+<listEntry value="24">@Strings.Ivory</listEntry>
+<listEntry value="25">@Strings.Lavender</listEntry>
+<listEntry value="26">@Strings.Lime</listEntry>
+<listEntry value="27">@Strings.Orange</listEntry>
+<listEntry value="28">@Strings.Orange_Light</listEntry>
+<listEntry value="29">@Strings.Periwinkle</listEntry>
+<listEntry value="30">@Strings.Pink</listEntry>
+<listEntry value="31">@Strings.Plum</listEntry>
+<listEntry value="32">@Strings.Purple_Dark</listEntry>
+<listEntry value="33">@Strings.Red</listEntry>
+<listEntry value="34">@Strings.Red_Dark</listEntry>
+<listEntry value="35">@Strings.Rose</listEntry>
+<listEntry value="36">@Strings.Tan</listEntry>
+<listEntry value="37">@Strings.Teal</listEntry>
+<listEntry value="38">@Strings.Teal_Dark</listEntry>
+<listEntry value="39">@Strings.Turquoise</listEntry>
+<listEntry value="40">@Strings.Turquoise_Light</listEntry>
+<listEntry value="41">@Strings.Violet</listEntry>
+<listEntry value="42">@Strings.White</listEntry>
+<listEntry value="43">@Strings.Yellow</listEntry>
+<listEntry value="44">@Strings.Yellow_Dark</listEntry>
+<listEntry value="45">@Strings.Yellow_Light</listEntry>
+<listEntry value="46">@Strings.Transparent</listEntry>
+</settingConfig></setting>
 
-<setting propertyKey="@Properties.param6" title="@Strings.Field1"><settingConfig type="list" >
+<setting propertyKey="@Properties.param05" title="@Strings.is24h" ><settingConfig type="boolean" /></setting>
+
+<setting propertyKey="@Properties.param06" title="@Strings.Field1"><settingConfig type="list" >
 <listEntry value="0">@Strings.Nothing</listEntry>
 <listEntry value="1">@Strings.Battery</listEntry>
 <listEntry value="2">@Strings.Steps</listEntry>
@@ -275,18 +274,21 @@
 <listEntry value="13">@Strings.BodyBattery</listEntry>
 <listEntry value="14">@Strings.ActiveMinutesDay</listEntry>
 <listEntry value="15">@Strings.ActiveMinutesWeek</listEntry>
-<listEntry value="16">@Strings.BloodGlucose</listEntry>
-<listEntry value="17">@Strings.Seconds</listEntry>
-<listEntry value="18">@Strings.Digital_Time</listEntry>
-<listEntry value="19">@Strings.MoisJour</listEntry>
-<listEntry value="20">@Strings.JourMois</listEntry>
-<listEntry value="21">@Strings.JourSem</listEntry>
-<listEntry value="22">@Strings.JourSemJour</listEntry>
-<listEntry value="23">@Strings.JourSemMoisJour</listEntry>
-<listEntry value="24">@Strings.Week_number</listEntry>
+<listEntry value="16">@Strings.BG</listEntry>
+<listEntry value="17">@Strings.sunset</listEntry>
+<listEntry value="18">@Strings.sunrise</listEntry>
+<listEntry value="19">@Strings.spo2</listEntry>
+<listEntry value="20">@Strings.Seconds</listEntry>
+<listEntry value="21">@Strings.Digital_Time</listEntry>
+<listEntry value="22">@Strings.MoisJour</listEntry>
+<listEntry value="23">@Strings.JourMois</listEntry>
+<listEntry value="24">@Strings.JourSem</listEntry>
+<listEntry value="25">@Strings.JourSemJour</listEntry>
+<listEntry value="26">@Strings.JourSemMoisJour</listEntry>
+<listEntry value="27">@Strings.Week_number</listEntry>
 </settingConfig></setting>
 
-<setting propertyKey="@Properties.param7" title="@Strings.Field1Color"><settingConfig type="list" >
+<setting propertyKey="@Properties.param07" title="@Strings.Field1Color"><settingConfig type="list" >
 <listEntry value="0">@Strings.Aqua</listEntry>
 <listEntry value="1">@Strings.Black</listEntry>
 <listEntry value="2">@Strings.Blue</listEntry>
@@ -336,7 +338,7 @@
 <listEntry value="46">@Strings.Transparent</listEntry>
 </settingConfig></setting>
 
-<setting propertyKey="@Properties.param8" title="@Strings.Field2"><settingConfig type="list" >
+<setting propertyKey="@Properties.param08" title="@Strings.Field2"><settingConfig type="list" >
 <listEntry value="0">@Strings.Nothing</listEntry>
 <listEntry value="1">@Strings.Battery</listEntry>
 <listEntry value="2">@Strings.Steps</listEntry>
@@ -353,18 +355,21 @@
 <listEntry value="13">@Strings.BodyBattery</listEntry>
 <listEntry value="14">@Strings.ActiveMinutesDay</listEntry>
 <listEntry value="15">@Strings.ActiveMinutesWeek</listEntry>
-<listEntry value="16">@Strings.BloodGlucose</listEntry>
-<listEntry value="17">@Strings.Seconds</listEntry>
-<listEntry value="18">@Strings.Digital_Time</listEntry>
-<listEntry value="19">@Strings.MoisJour</listEntry>
-<listEntry value="20">@Strings.JourMois</listEntry>
-<listEntry value="21">@Strings.JourSem</listEntry>
-<listEntry value="22">@Strings.JourSemJour</listEntry>
-<listEntry value="23">@Strings.JourSemMoisJour</listEntry>
-<listEntry value="24">@Strings.Week_number</listEntry>
+<listEntry value="16">@Strings.BG</listEntry>
+<listEntry value="17">@Strings.sunset</listEntry>
+<listEntry value="18">@Strings.sunrise</listEntry>
+<listEntry value="19">@Strings.spo2</listEntry>
+<listEntry value="20">@Strings.Seconds</listEntry>
+<listEntry value="21">@Strings.Digital_Time</listEntry>
+<listEntry value="22">@Strings.MoisJour</listEntry>
+<listEntry value="23">@Strings.JourMois</listEntry>
+<listEntry value="24">@Strings.JourSem</listEntry>
+<listEntry value="25">@Strings.JourSemJour</listEntry>
+<listEntry value="26">@Strings.JourSemMoisJour</listEntry>
+<listEntry value="27">@Strings.Week_number</listEntry>
 </settingConfig></setting>
 
-<setting propertyKey="@Properties.param9" title="@Strings.Field2Color"><settingConfig type="list" >
+<setting propertyKey="@Properties.param09" title="@Strings.Field2Color"><settingConfig type="list" >
 <listEntry value="0">@Strings.Aqua</listEntry>
 <listEntry value="1">@Strings.Black</listEntry>
 <listEntry value="2">@Strings.Blue</listEntry>
@@ -431,15 +436,18 @@
 <listEntry value="13">@Strings.BodyBattery</listEntry>
 <listEntry value="14">@Strings.ActiveMinutesDay</listEntry>
 <listEntry value="15">@Strings.ActiveMinutesWeek</listEntry>
-<listEntry value="16">@Strings.BloodGlucose</listEntry>
-<listEntry value="17">@Strings.Seconds</listEntry>
-<listEntry value="18">@Strings.Digital_Time</listEntry>
-<listEntry value="19">@Strings.MoisJour</listEntry>
-<listEntry value="20">@Strings.JourMois</listEntry>
-<listEntry value="21">@Strings.JourSem</listEntry>
-<listEntry value="22">@Strings.JourSemJour</listEntry>
-<listEntry value="23">@Strings.JourSemMoisJour</listEntry>
-<listEntry value="24">@Strings.Week_number</listEntry>
+<listEntry value="16">@Strings.BG</listEntry>
+<listEntry value="17">@Strings.sunset</listEntry>
+<listEntry value="18">@Strings.sunrise</listEntry>
+<listEntry value="19">@Strings.spo2</listEntry>
+<listEntry value="20">@Strings.Seconds</listEntry>
+<listEntry value="21">@Strings.Digital_Time</listEntry>
+<listEntry value="22">@Strings.MoisJour</listEntry>
+<listEntry value="23">@Strings.JourMois</listEntry>
+<listEntry value="24">@Strings.JourSem</listEntry>
+<listEntry value="25">@Strings.JourSemJour</listEntry>
+<listEntry value="26">@Strings.JourSemMoisJour</listEntry>
+<listEntry value="27">@Strings.Week_number</listEntry>
 </settingConfig></setting>
 
 <setting propertyKey="@Properties.param11" title="@Strings.Field3Color"><settingConfig type="list" >
@@ -509,15 +517,18 @@
 <listEntry value="13">@Strings.BodyBattery</listEntry>
 <listEntry value="14">@Strings.ActiveMinutesDay</listEntry>
 <listEntry value="15">@Strings.ActiveMinutesWeek</listEntry>
-<listEntry value="16">@Strings.BloodGlucose</listEntry>
-<listEntry value="17">@Strings.Seconds</listEntry>
-<listEntry value="18">@Strings.Digital_Time</listEntry>
-<listEntry value="19">@Strings.MoisJour</listEntry>
-<listEntry value="20">@Strings.JourMois</listEntry>
-<listEntry value="21">@Strings.JourSem</listEntry>
-<listEntry value="22">@Strings.JourSemJour</listEntry>
-<listEntry value="23">@Strings.JourSemMoisJour</listEntry>
-<listEntry value="24">@Strings.Week_number</listEntry>
+<listEntry value="16">@Strings.BG</listEntry>
+<listEntry value="17">@Strings.sunset</listEntry>
+<listEntry value="18">@Strings.sunrise</listEntry>
+<listEntry value="19">@Strings.spo2</listEntry>
+<listEntry value="20">@Strings.Seconds</listEntry>
+<listEntry value="21">@Strings.Digital_Time</listEntry>
+<listEntry value="22">@Strings.MoisJour</listEntry>
+<listEntry value="23">@Strings.JourMois</listEntry>
+<listEntry value="24">@Strings.JourSem</listEntry>
+<listEntry value="25">@Strings.JourSemJour</listEntry>
+<listEntry value="26">@Strings.JourSemMoisJour</listEntry>
+<listEntry value="27">@Strings.Week_number</listEntry>
 </settingConfig></setting>
 
 <setting propertyKey="@Properties.param13" title="@Strings.Field4Color"><settingConfig type="list" >
@@ -579,26 +590,6 @@
 <setting propertyKey="@Properties.param17" title="@Strings.NStoken"><settingConfig type="alphaNumeric" /> </setting>
 </settings>
 
-<properties>
-<property id="param0" type="number">42</property>
-<property id="param1" type="number">33</property>
-<property id="param2" type="number">14</property>
-<property id="param3" type="number">1</property>
-<property id="param4" type="number">1</property>
-<property id="param5" type="boolean">true</property>
-<property id="param6" type="number">0</property>
-<property id="param7" type="number">1</property>
-<property id="param8" type="number">0</property>
-<property id="param9" type="number">1</property>
-<property id="param10" type="number">0</property>
-<property id="param11" type="number">1</property>
-<property id="param12" type="number">0</property>
-<property id="param13" type="number">1</property>
-<property id="param14" type="number">0</property>
-<property id="param15" type="string"></property>
-<property id="param16" type="string"></property>
-<property id="param17" type="string"></property>
-</properties>
 
 
 

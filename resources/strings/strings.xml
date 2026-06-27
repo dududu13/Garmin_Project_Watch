@@ -18,7 +18,11 @@
     <string id="BodyBattery">Body battery</string>
     <string id="ActiveMinutesDay">Active minutes day</string>
     <string id="ActiveMinutesWeek">Active minutes week</string>
-    <string id="BloodGlucose">Blood glucose</string>
+    <string id="BG">Blood glucose</string>
+    <string id="sunset">Sunset hour</string>
+    <string id="sunrise">Sunrise hour</string>
+    <string id="spo2">Spo2</string>
+
     <string id="Seconds">Seconds</string>
     <string id="Digital_Time">Digital Time</string>
     <string id="MoisJour">Month, day</string>

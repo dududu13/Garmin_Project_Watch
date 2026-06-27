@@ -51,6 +51,9 @@ BodyBattery,
 ActiveMinutesDay,
 ActiveMinutesWeek,
 BG,
+sunset,
+sunrise,
+spo2,
 Seconds,
 Digital_Time,
 MoisJour,
@@ -61,9 +64,10 @@ JourSemMoisJour,
 Week_number,
 	}
 
-var ParametresChanges = true;
+var ParametresChanges = false; //pour les modifications avec le telephone
+var haveToSaveParams = false; //pour les modifications avec la montre
 var params ;
-var oldParams;
+//var oldParams;
 //var paramNamesTab;
     var couleurFond,couleurChiffresH,couleurChiffresM;
 
@@ -85,6 +89,10 @@ var oldParams;
     var locked = false;
     var codeOK = false;
     var timeInstallation = 0;
+
+	var lastD,lastLng,locLueString; //pour le sunset
+    var hLever = 0.0;
+    var hCoucher = 0.0;
 
 
 
@@ -151,19 +159,20 @@ tab.add(WatchUi.loadResource(Rez.Strings.Nstoken));
     }
 
     function onSettingsChanged() {
-        System.println("onSettingsChanged");
+        System.println("-----------------------onSettingsChanged---------------------------");
 		ParametresChanges = true;
-        resync();
+        
 		WatchUi.requestUpdate();
 	}
 
     function resync() { // réglage prochain temporal event, 5 min au moins après le précédent, et juste après la prochaine lecture du capteur + tempo
         var isThereBG = (params[Field1] == BG) || (params[Field2] == BG) || (params[Field3] == BG) || (params[Field4] == BG);
         if (! isThereBG) {
-            Sys.println("resync no BG field, return");
+            Sys.println("stop RESYNC, no BG field, return");
             return;
         }
         Sys.println("start RESYNC ---");
+        Background.deleteTemporalEvent();
         var TEMPO_WEB = [15,10,15][params[sourceBG]];  //tempo pour que la nouvelle glycemie soit dispo sur Nightscout, Xdrip ou AAPS 
         var timeNowValue = Time.now().value();
         var last_capteur_seconds_time = bgSecondes;
@@ -175,10 +184,8 @@ tab.add(WatchUi.loadResource(Rez.Strings.Nstoken));
         if (getLastTemporalEventTime != null) {
             lastTemporalEventTime = getLastTemporalEventTime.value();
         }
-        //var lastTemporalEventTime = Application.Storage.getValue("lastTemporalEventTime"); //last temporal Event time in sec
-        if (lastTemporalEventTime == null) {
+        else {
             lastTemporalEventTime = timeNowValue - 600;
-            //Application.Storage.setValue("lastTemporalEventTime", lastTemporalEventTime);
         }
         var nextCallEventTimeMini = lastTemporalEventTime + 300; //next call mini 5 min after last temporal event
         var nextCapteurTimeMini = last_capteur_seconds_time + 300 + TEMPO_WEB; //next call mini after last capteur + tempo
@@ -188,8 +195,11 @@ tab.add(WatchUi.loadResource(Rez.Strings.Nstoken));
         //delaiCapteur = -200;
         var tempo = delaiMin;
         if (delaiMin > 0) {
-            if (delaiCapteur < delaiMin - 10 && delaiCapteur > 10) {
+            if (delaiCapteur < delaiMin - 10 && delaiCapteur > 5) {
                tempo = (delaiCapteur % 300)  + 300;
+            }
+            if (delaiCapteur > delaiMin && delaiCapteur - delaiMin < 10) {
+                tempo = delaiCapteur;
             }
         }
         if (tempo<1) {tempo = 1;}
@@ -198,7 +208,6 @@ tab.add(WatchUi.loadResource(Rez.Strings.Nstoken));
         Sys.println("RESYNC fin OK---tempo = " + tempo + " delaiMin = "+delaiMin+"  delaiCapteur = "+(delaiCapteur));
 
         Background.registerForTemporalEvent(Time.now().add(new Time.Duration(tempo))); 
-        //Background.registerForTemporalEvent(new Time.Duration(tempo)); 
     }
 
     function onBackgroundData(data) { //data=[sgv,delta,timeSecondes]
@@ -221,19 +230,16 @@ tab.add(WatchUi.loadResource(Rez.Strings.Nstoken));
 const NBRE_MAXI_DATA = 5;
 
     function enregistreDernierCapteur(capteur) {//capteur=[sgv,delta,timeSecondes]
-        //if (capteur[0] ==0) { return;}
-        System.println("enregistreDernierCapteur "+capteur);
+        System.println("enregistre Dernier Capteur "+capteur);
         
         tabData.add(capteur);// ajoute a la fin
         if (tabData.size()>NBRE_MAXI_DATA) {
             tabData.remove(tabData[0]); // enleve le 1er
         }
-        storeAllData(tabData);
+        storeAllBGData(tabData);
         bgBg = capteur[0];
         bgDelta = capteur[1];
         bgSecondes = capteur[2];
-        //Application.Storage.setValue("CapteurChanged",true);
-        System.println("enregistreDernierCapteur FIN, secondes = "+capteur[2]);
     }
 
     function readLastData() {
@@ -249,7 +255,7 @@ const NBRE_MAXI_DATA = 5;
     
     function readAllData() {
         //System.println("start readAllData ");
-        var st = Application.Storage.getValue("data");
+        var st = Application.Storage.getValue("BGdata");
        
         tabData=new[0];
         if ((st == null) || (st.length() < 3)) {
@@ -315,16 +321,16 @@ const NBRE_MAXI_DATA = 5;
     }
             
 
-    function storeAllData(myTab) {
-      System.println("debut storeAllData "+myTab);
-      var st = "";
-      for (var i = 0;i<myTab.size();i++) {
-        if ((myTab[i] !=null) && (myTab[i][0] !=null) && (myTab[i][1] !=null) && (myTab[i][2] !=null)) {
-        st=st+myTab[i][0].toString()+","+myTab[i][1].toString()+","+myTab[i][2].toString()+";";
+    function storeAllBGData(myTab) {
+        System.println("debut storeAllBGData "+myTab);
+        var st = "";
+        for (var i = 0;i<myTab.size();i++) {
+            if ((myTab[i] !=null) && (myTab[i][0] !=null) && (myTab[i][1] !=null) && (myTab[i][2] !=null)) {
+            st=st+myTab[i][0].toString()+","+myTab[i][1].toString()+","+myTab[i][2].toString()+";";
+            }
         }
-      }
-      Application.Storage.setValue("data",st);
-      System.println("fin storeAllData st = "+st);
+        Application.Storage.setValue("BGdata",st);
+        System.println("fin storeAllBGData st = "+st);
      }
 
 

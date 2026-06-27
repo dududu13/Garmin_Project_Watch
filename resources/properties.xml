@@ -1,0 +1,21 @@
+<properties>
+<property id="param00" type="number">42</property>
+<property id="param01" type="number">33</property>
+<property id="param02" type="number">14</property>
+<property id="param03" type="number">1</property>
+<property id="param04" type="number">1</property>
+<property id="param05" type="boolean">true</property>
+<property id="param06" type="number">0</property>
+<property id="param07" type="number">1</property>
+<property id="param08" type="number">0</property>
+<property id="param09" type="number">1</property>
+<property id="param10" type="number">0</property>
+<property id="param11" type="number">1</property>
+<property id="param12" type="number">0</property>
+<property id="param13" type="number">1</property>
+<property id="param14" type="number">0</property>
+<property id="param15" type="string"></property>
+<property id="param16" type="string"></property>
+<property id="param17" type="string"></property>
+<property id="param18" type="string">lastParametre</property>
+</properties>

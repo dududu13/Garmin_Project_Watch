@@ -26,27 +26,39 @@ class ProjectsWatchView extends WatchUi.WatchFace {
         if (ParametresChanges) {
             loadParams(true);
         }
+        if (haveToSaveParams) {
+            saveParamsOnProperties();
+            haveToSaveParams = false;
+        }
         View.onUpdate(dc);
         if (! codeOK) {testTimeInstallation();}
         else {locked = false;}
         dessineTout(dc,fenetre_heures,iconsFieldsFont,false);
     }
 
+    function saveParamsOnProperties() {
+        var thisListParamNames = ProjectsWatchApp.listParamNames();
+        for (var j = 0; j < lastParametre; j++) {
+            System.println("Saving parameter: " +j.format("%02d")+"  "+ thisListParamNames[j] +" = "+ params[j]);
+            Application.Properties.setValue("param"+j.format("%02d"),params[j]);
+        }
+    }
+
+
     function loadParams(testTheCode) {
-        //params = [42, 33, 14, 1, 1, true, 0, 1, 0, 1, 0, 1, 0, 1,0,0];
         params = [];
         var thisListParamNames = ProjectsWatchApp.listParamNames();
-        for (var j = 0; j < thisListParamNames.size(); j++) {
-            System.println("Loading parameter: " + thisListParamNames[j]);
-            params.add(Application.Properties.getValue("param"+j));
+        for (var j = 0; j < lastParametre; j++) {
+            params.add(Application.Properties.getValue("param"+j.format("%02d")));
         }
-        System.println(params);
+        System.println("Load params = "+params);
         couleurFond = Colors.colorValuesTab()[params[BackGroundColor]];
         couleurChiffresH = Colors.colorValuesTab()[params[HourColor]];
         couleurChiffresM = Colors.colorValuesTab()[params[MinutesColor]];
         if (testTheCode) {
             ProjectsWatchView.testeCode();
         }
+        ProjectsWatchApp.resync();
         ParametresChanges = false;
     }
 
@@ -508,6 +520,24 @@ class ProjectsWatchView extends WatchUi.WatchFace {
 		else if (fieldType==BG)  {
 			result =  ProjectsWatchView.updatedBG();
 		}			
+		else if (fieldType==sunset || fieldType==sunrise)  {
+			var Location = ProjectsWatchView.recupCoord();
+			if (Location[0] != 0.0) {
+				result = ProjectsWatchView.calculateSunsetSunrise(Location,fieldType==sunset);
+			} else {
+				result = "no GPS info";
+			}
+		}			
+		else if (fieldType==spo2)  {
+			var r = Activity.getActivityInfo().currentOxygenSaturation ;
+			if ((r == null) && (Toybox has :SensorHistory) && (Toybox.SensorHistory has :getOxygenSaturationHistory)) {
+				r = Toybox.SensorHistory.getOxygenSaturationHistory({:period=>1});
+				if (r != null) { r = r.next().data;}
+			}
+			if (r != null) {
+				result = r.toString();
+			}
+		}			
 		else if (fieldType==Seconds)  {
 			result =  clockTime.sec;
 		}			
@@ -607,7 +637,88 @@ class ProjectsWatchView extends WatchUi.WatchFace {
 	    return day + ((153 * m + 2) / 5) + (365 * y) + (y / 4) - (y / 100) + (y / 400) - 32045;
 	}
 
+    function recupCoord() {
+        if (locLueString  == null) {
+            locLueString = Application.Storage.getValue("Position");
+            if (locLueString == null) {
+                locLueString = "0.0;0.0";
+                Application.Storage.setValue("Position","0.0;0.0");
+            }
+        }
+        //System.print("emplacement stocke  "+locLueString);
+		if ((Toybox.Activity.Info has :currentLocation) and (Activity.getActivityInfo().currentLocation != null)) {
+			var newCoord =  Activity.getActivityInfo().currentLocation.toDegrees();
+            var newCoordString = newCoord[0].format("%1.1f")+";"+newCoord[1].format("%1.1f");
+            if (! newCoordString.equals(locLueString)) { //nouvel emplacement
+                //System.println("     nouveau --->  " + newCoordString);
+                Application.Storage.setValue("Position",newCoordString);
+                locLueString = newCoordString;
+                return [newCoord[0],newCoord[1]];
+            } 
+        }
+        var	n1 = locLueString.find(";");
+        if (n1 != null) {
+            //System.println("     ---> inchange ");
+            var lat = locLueString.substring(0,n1);
+            var lon = locLueString.substring(n1+1,locLueString.length());
+            return [lat.toFloat(),lon.toFloat()];
+        } 
+        //System.println("return [0.0,0.0]");
+        return [0.0,0.0];
 
+    }
+
+
+    function calculateSunsetSunrise(pos,isSunset) {
+        //var moment = Time.now();
+		var DELTAJ = 10957;
+		var lat = Math.toRadians(pos[0]);
+		var lng = Math.toRadians(pos[1]);
+		var d = Time.now().value().toDouble() / Time.Gregorian.SECONDS_PER_DAY - DELTAJ + 0.5;
+        if ((lastD != Math.round(d*240)) or (lastLng != Math.round(pos[1]*100))) {
+            lastD = Math.round(d*240);
+            lastLng = Math.round(pos[1]*100);
+			var n = Math.round(d - 0.0009 + lng / Math.PI / 2);
+			var ds = 0.0009 - lng / Math.PI / 2 + n - 1.1574e-5 * 68;
+			var M = 6.240059967 + 0.0172019715 * ds;
+			var sinM = Math.sin(M);
+			var C = (1.9148 * sinM + 0.02 * Math.sin(2 * M) + 0.0003 * Math.sin(3 * M)) * Math.PI / 180.0;
+			var L = M + C + 1.796593063 + Math.PI;
+			var sin2L = Math.sin(2 * L);
+			var dec = Math.asin( 0.397783703 * Math.sin(L) );
+			var x = (-0.014538 - Math.sin(lat) * Math.sin(dec)) / (Math.cos(lat) * Math.cos(dec));
+	        if (x > 1.0 || x < -1.0) {
+	            return "--:--";
+			}
+			var Jnoon =  (ds + (0.0053 * sinM) - (0.0069 * sin2L) +  0.5 + DELTAJ) ;
+        	ds = 0.0009 + (Math.acos(x) - lng) / Math.PI / 2 + n - 1.1574e-5 * 68;
+        	hCoucher  = ( ds + 0.0053 * sinM - 0.0069 * sin2L +  0.5 + DELTAJ); 
+        	hLever = Jnoon - (hCoucher - Jnoon);
+            //System.println("lever "+hLever+"   coucher "+hCoucher  +  "is coucher ?"+isSunset);
+        	if (hCoucher < hLever) {
+		        var temp = hLever;
+		        hLever = hCoucher;
+		        hCoucher = temp;
+	        }
+        }
+        if (isSunset) {
+            return  ProjectsWatchView.formS(hCoucher);
+        } else {
+            return  ProjectsWatchView.formS(hLever);
+        }
+    }
+
+ 
+         
+
+    function formS(jour) {  //l'heure GMT est dans la partie décimale du jour
+        var secondsDecalage = System.getClockTime().timeZoneOffset;
+   		jour = jour + secondsDecalage/86400.0 ;
+    	var heure =  ((jour  - Math.floor(jour)) * 24);
+    	var minute = ((heure  - Math.floor(heure)) * 60).toLong() % 60;
+    	heure = heure.toLong() % 24;
+    	return heure+":"+minute.format("%02d");
+    }
 
 
 }

@@ -51,7 +51,7 @@ tab.add(WatchUi.loadResource(Rez.Strings.Field4Color));
             Ui.pushView(setttingAnalogView, new AnalogSettingsDelegate(setttingAnalogView,item), Ui.SLIDE_RIGHT);
         } else if (item == is24h)   { //is24h
             params[is24h] = ! params[is24h];
-            App.Properties.setValue("param"+is24h, params[is24h]);
+            //App.Properties.setValue("param"+is24h, params[is24h]);
             var st = WatchUi.loadResource(params[is24h] ? Rez.Strings.is24h_2 : Rez.Strings.is24h);
             menuView.itemString = st;
             menuView.tabLignesMenu[item] = st;
@@ -73,7 +73,7 @@ tab.add(WatchUi.loadResource(Rez.Strings.Field4Color));
     function onBack()    {
         Ui.popView(Ui.SLIDE_IMMEDIATE);
         Ui.requestUpdate();
-        ParametresChanges = true;
+        haveToSaveParams = true;
         return true;
     }
 
@@ -142,7 +142,10 @@ class MenusFieldsDelegate extends Ui.InputDelegate {
             tab.add(WatchUi.loadResource(Rez.Strings.BodyBattery));
             tab.add(WatchUi.loadResource(Rez.Strings.ActiveMinutesDay));
             tab.add(WatchUi.loadResource(Rez.Strings.ActiveMinutesWeek));
-            tab.add(WatchUi.loadResource(Rez.Strings.BloodGlucose));
+            tab.add(WatchUi.loadResource(Rez.Strings.BG));
+            tab.add(WatchUi.loadResource(Rez.Strings.sunset));
+            tab.add(WatchUi.loadResource(Rez.Strings.sunrise));
+            tab.add(WatchUi.loadResource(Rez.Strings.spo2));
             tab.add(WatchUi.loadResource(Rez.Strings.Seconds));
             tab.add(WatchUi.loadResource(Rez.Strings.Digital_Time));
             tab.add(WatchUi.loadResource(Rez.Strings.MoisJour));
@@ -257,7 +260,7 @@ class MenusBGDelegate extends Ui.InputDelegate {
     function onSelect()    {
         var item = menuView.item;
         params[sourceBG] = item;
-        Application.Properties.setValue("param"+sourceBG,item);
+        //Application.Properties.setValue("param"+sourceBG,item);
         Ui.popView(Ui.SLIDE_IMMEDIATE);
     }
 
@@ -316,84 +319,4 @@ class MenusBGDelegate extends Ui.InputDelegate {
 }
 
 
-class AnalogSettingsDelegate extends Ui.InputDelegate {
-    var setttingAnalogView;
-    var numParametre;
-
-
-    function initialize(_setttingAnalogView,_numParametre) {
-    	InputDelegate.initialize();
-    	numParametre = _numParametre;
-        setttingAnalogView = _setttingAnalogView;
-        
-    }
-
-
-    function onSelect()    {
-        var valeurChoisie = setttingAnalogView.numEnCours;
-        System.println("valeurChoisie "+valeurChoisie);
-        System.println("save  numParam "+numParametre+"  valeur "+params[numParametre]+"--->"+valeurChoisie);
-        params[numParametre] = valeurChoisie;
-        App.Properties.setValue("param"+numParametre, params[numParametre]);
-        Ui.popView(Ui.SLIDE_RIGHT);
-        Ui.requestUpdate();
-    }
-
-
-    function onBack()    {
-        if (oldParams != null) {
-            System.println("onBack   oldParams = "+oldParams);
-            params = oldParams;
-            oldParams = null;
-        }
-        Ui.popView(Ui.SLIDE_IMMEDIATE);
-        //Ui.requestUpdate();
-        return true;
-    }
-
- 
-
-	function onTap(clickEvent) {
-        return onSelect();
-    }
-
-    function onSwipe(evt) {
-		var direction = evt.getDirection();
-		if (direction == Ui.SWIPE_DOWN) {
-			return onPreviousPage();
-		}
-		if (direction == Ui.SWIPE_UP) {
-			return onNextPage();
-		}
-		if (direction == Ui.SWIPE_RIGHT) {
-			return onBack();
-		}
-        return true;
-    }
-	function onKey(keyEvent) {
-         if (keyEvent.getKey() == keyEvent.KEY_ENTER || keyEvent.getKey() == keyEvent.KEY_START) {
-            return onSelect();
-        }
-        else if (keyEvent.getKey() == keyEvent.KEY_UP) {
-            return onPreviousPage();
-        }
-        else if (keyEvent.getKey() == keyEvent.KEY_DOWN) {
-            return onNextPage();
-        }
-        else if (keyEvent.getKey() == keyEvent.KEY_ESC) {
-            return onBack();
-        }
-       return true;
-    }
-    
-    function onNextPage()    {
-    	setttingAnalogView.next();
-    }
-    
-    function onPreviousPage() 	{
-    	setttingAnalogView.prev();
-	}    
-
-
-}
 
