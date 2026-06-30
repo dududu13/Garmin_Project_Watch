@@ -1,13 +1,6 @@
 <drawables xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://developer.garmin.com/downloads/connect-iq/resources.xsd">
     <bitmap id="LauncherIcon" filename="launcher_icon.svg" dithering="none" />
     <bitmap id="fenetre_heures" filename="fenetre_heures.png"  packingFormat="jpg" scaleX="100%" scaleRelativeTo="screen"/>
-    <bitmap id="BatteryOK" filename="BatteryOK.png" packingFormat="jpg"/>
-    <bitmap id="BatteryPasOK"  filename="BatteryPasOK.png" packingFormat="jpg"/>
-    <bitmap id="Steps" filename="Steps.png" packingFormat="jpg"/>
-    <bitmap id="Distance" filename="Distance.png" packingFormat="jpg"/>
-    <bitmap id="Notifs" filename="Notifs.png" packingFormat="jpg"/>
-    <bitmap id="Altitude" filename="Altitude.png" packingFormat="jpg"/>
-    <bitmap id="Pressure" filename="Pressure.png" packingFormat="jpg"/>
 
     <bitmap id="myLogo" filename="myLogo.png" scaleX="100%"  scaleRelativeTo="screen" packingFormat="jpg"/>`
 </drawables>

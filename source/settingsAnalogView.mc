@@ -9,28 +9,18 @@ class SettingsAnalogView extends Ui.View {
 	var element_promptTab;
 	var titre;
 	var numEnCours;
-	//var clock;
     var largEcran;
 	var largIndicateur;
-	var fenetre_heures;
-	var iconFont;
-
-
-
 
     function initialize(_numParametre,_element_promptTab,_titre) {
     	numEnCours = params[_numParametre];
 		numParametre = _numParametre; //numero parametre en cours de modif
 		element_promptTab = _element_promptTab; //liste des choix possibles en texte
 		titre = _titre;
-		couleurFond = Colors.colorValuesTab()[params[0]];
-        couleurChiffresH = Colors.colorValuesTab()[params[HourColor]];
-        couleurChiffresM = Colors.colorValuesTab()[params[MinutesColor]];
-		fenetre_heures = WatchUi.loadResource(Rez.Drawables.fenetre_heures);
+		ProjectsWatchView.loadParams(false);
 		var divis = 180;
 		if (element_promptTab.size()>15) {divis = 360;}
 		largIndicateur = divis.toFloat()/(element_promptTab.size());
-		iconFont = WatchUi.loadResource(Rez.Fonts.AllIcons);
 		View.initialize();
 	}
 
@@ -39,7 +29,7 @@ class SettingsAnalogView extends Ui.View {
         couleurChiffresH = Colors.colorValuesTab()[params[HourColor]];
         couleurChiffresM = Colors.colorValuesTab()[params[MinutesColor]];
         largEcran = dc.getHeight();
-		ProjectsWatchView.dessineTout(dc,fenetre_heures,iconFont,true);
+		ProjectsWatchView.dessineTout(dc,true);
 		dessineIndicateur(dc);
 	}
 

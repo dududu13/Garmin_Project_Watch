@@ -15,11 +15,9 @@ class ProjectsWatchView extends WatchUi.WatchFace {
 
     function initialize() {
         WatchFace.initialize();
-        iconsFieldsFont = WatchUi.loadResource(Rez.Fonts.AllIcons);
     
     }
     function onShow() {
-        fenetre_heures = WatchUi.loadResource(Rez.Drawables.fenetre_heures);
     }
 
     function onUpdate(dc as Dc) as Void {
@@ -33,7 +31,7 @@ class ProjectsWatchView extends WatchUi.WatchFace {
         View.onUpdate(dc);
         if (! codeOK) {testTimeInstallation();}
         else {locked = false;}
-        dessineTout(dc,fenetre_heures,iconsFieldsFont,false);
+        dessineTout(dc,false);
     }
 
     function saveParamsOnProperties() {
@@ -58,6 +56,9 @@ class ProjectsWatchView extends WatchUi.WatchFace {
         if (testTheCode) {
             ProjectsWatchView.testeCode();
         }
+        iconsFieldsFont = WatchUi.loadResource(Rez.Fonts.AllIcons);        
+        fenetre_heures = WatchUi.loadResource(Rez.Drawables.fenetre_heures);
+        fontPresentPastFuture = WatchUi.loadResource(Rez.Fonts.PresentPastFuture);
         ProjectsWatchApp.resync();
         ParametresChanges = false;
     }
@@ -185,7 +186,7 @@ class ProjectsWatchView extends WatchUi.WatchFace {
 	}
 
 
-    function dessineTout(dc,fenetre_heures,thisIconFont,isInSetting) {
+    function dessineTout(dc,isInSetting) {
         var larg = dc.getHeight();
         var clockTime = System.getClockTime();
         dc.setColor(couleurFond,couleurFond);
@@ -193,7 +194,7 @@ class ProjectsWatchView extends WatchUi.WatchFace {
         ProjectsWatchView.dessineHour(dc,clockTime,larg);
         ProjectsWatchView.dessineMinutes(dc,clockTime,larg);
         ProjectsWatchView.dessineFond(dc,larg,fenetre_heures);
-        ProjectsWatchView.dessineChamps(dc,clockTime,larg,thisIconFont);
+        ProjectsWatchView.dessineChamps(dc,clockTime,larg);
         if (! isInSetting) { dessineLockSiBesoin(dc,larg);}
 		if ((! isAwake) && (larg>280)){ProjectsWatchView.quadrille(dc,larg);}
     }
@@ -243,7 +244,8 @@ class ProjectsWatchView extends WatchUi.WatchFace {
     function dessineFond(dc,larg,fenetre_heure) {
         var height = (130.0*larg/454).toNumber();
         //if (fenetre_heures != null) {dc.drawScaledBitmap(0,0, larg, height , fenetre_heures);}
-        if (fenetre_heures != null) {dc.drawBitmap(0,0, fenetre_heures);}
+        //if (fenetre_heures != null) {dc.drawBitmap(0,0, fenetre_heures);}
+        dc.drawBitmap(0,0, fenetre_heures);
         dc.setColor(couleurFond,couleurFond);
         dc.fillPolygon([[.767*larg,.134*larg],[.639*larg,.267*larg],[.705*larg,.551*larg],[larg,.57*larg]]);
         dc.fillPolygon([[.233*larg,.134*larg],[.361*larg,.267*larg],[.295*larg,.449*larg],[0,.57*larg]]);
@@ -252,13 +254,13 @@ class ProjectsWatchView extends WatchUi.WatchFace {
         dc.setPenWidth(3);
         dc.drawLine(larg*.5-1,larg*.05,larg*.5-1,larg*.55);
 
-        var font = WatchUi.loadResource(Rez.Fonts.PresentPastFuture);
-        if (font != null) {
-            dc.drawText(0.48*larg,0.57*larg,font,"0",Graphics.TEXT_JUSTIFY_LEFT);//present
+        //var fontPresentPastFuture = WatchUi.loadResource(Rez.Fonts.PresentPastFuture);
+        //if (font != null) {
+            dc.drawText(0.48*larg,0.57*larg,fontPresentPastFuture,"0",Graphics.TEXT_JUSTIFY_LEFT);//present
             dc.setColor(ProjectsWatchView.modifParam(PastFutureColor),Graphics.COLOR_TRANSPARENT);
-            dc.drawText(0.21*larg,0.218*larg,font,"1",Graphics.TEXT_JUSTIFY_LEFT);//past
-            dc.drawText(0.6*larg,0.176*larg,font,"2",Graphics.TEXT_JUSTIFY_LEFT);//future
-        }
+            dc.drawText(0.21*larg,0.218*larg,fontPresentPastFuture,"1",Graphics.TEXT_JUSTIFY_LEFT);//past
+            dc.drawText(0.6*larg,0.176*larg,fontPresentPastFuture,"2",Graphics.TEXT_JUSTIFY_LEFT);//future
+        //}
     }
 
     function dessineHour(dc,clockTime,larg) {
@@ -357,7 +359,7 @@ class ProjectsWatchView extends WatchUi.WatchFace {
         //dc.drawText(larg/2, larg*.6, Graphics.FONT_NUMBER_MILD, clockTime.hour+":"+clockTime.min+":"+clockTime.sec, Graphics.TEXT_JUSTIFY_CENTER);  
     }
 
-    function dessineChamps(dc,clockTime,larg,thisIconFont) {
+    function dessineChamps(dc,clockTime,larg) {
         var positions = [[.154,.4],[.28,.65],[.72,.65],[.757,.4]];
         var hauteurIcon = 50*larg/454;
         for (var numParam = Field1 ; numParam<=Field4 ; numParam = numParam +2) {
@@ -368,19 +370,18 @@ class ProjectsWatchView extends WatchUi.WatchFace {
                 dc.setColor(ProjectsWatchView.modifParam(numParam+1),Graphics.COLOR_TRANSPARENT);
                 if (params[numParam] < Seconds) { // dans ce cas il y a un icone a dessiner
                     var symbol = (params[numParam]+65).toChar().toString();
-                    dc.drawText(x,y  ,thisIconFont,symbol,Graphics.TEXT_JUSTIFY_CENTER);   
-                    //System.println("dessine icone "+params[numParam]+"  symbole "+symbol);
+                    dc.drawText(x,y  ,iconsFieldsFont,symbol,Graphics.TEXT_JUSTIFY_CENTER);   
                 } else {
                     y = y - .05*larg;
                 }
                 var text = ProjectsWatchView.getFieldText(params[numParam],clockTime).toString();
-                var f  = Graphics.FONT_SMALL;
-                if (dc.getTextWidthInPixels(text, f) > larg * .3) {
-                    f = Graphics.FONT_XTINY;
+                var font  = Graphics.FONT_SMALL;
+                if (dc.getTextWidthInPixels(text, font) > larg * .3) {
+                    font = Graphics.FONT_XTINY;
                 }
                 y = y + hauteurIcon;
                 //System.println("dessine champs "+pos+" (valeur = "+params[numParam]+")   xy = "+x+ " "+y+"   --> "+text);
-                dc.drawText(x,y ,f,text,Graphics.TEXT_JUSTIFY_CENTER);   
+                dc.drawText(x,y ,font,text,Graphics.TEXT_JUSTIFY_CENTER);   
                 if (params[numParam] == BG)  {
                     var timeNowValue = Time.now().value();
                     var nextTemporalEventTimeValue = timeNowValue;
@@ -394,8 +395,8 @@ class ProjectsWatchView extends WatchUi.WatchFace {
                     dc.drawText(x+hauteurIcon/3,y - hauteurIcon*0.5 ,Graphics.FONT_SYSTEM_XTINY," "+timeCapteur+"'",Graphics.TEXT_JUSTIFY_LEFT);  
                     if (timeCapteur > 11) { // si plus de 11 minutes je barre le champ BG pour signaler que c'est trop vieux
                         var h2 = hauteurIcon/4;
-                        var l = dc.getTextWidthInPixels(text, f)/2;
-                        var h = dc.getFontHeight(f);
+                        var l = dc.getTextWidthInPixels(text, font)/2;
+                        var h = dc.getFontHeight(font);
                         dc.drawLine(x-l,y+2*h2,x+l,y+2*h2);
                         dc.drawLine(x-l,y+2.5*h2,x+l,y+2.5*h2);
                     } 
